@@ -1,17 +1,16 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-
 const { frontmatter } = Astro.props;
 import { AstroSeo } from "@astrolib/seo";
 ---
 
 <AstroSeo
-  title="Title"
-  description="Descripton"
+  title={frontmatter.title}
+  description={frontmatter.description}
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
     url: "https://www.lexingtonthemes.com",
-    title: "Title}",
+    title: "Title",
     description: "Description",
     images: [
       {
@@ -40,34 +39,184 @@ import { AstroSeo } from "@astrolib/seo";
   }}
 />
 <BaseLayout>
-  <section>
+  <section class="bg-white">
     <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-start">
-      <div>
-        <div class="items-center grid gap-12">
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+        <div class="lg:col-span-2">
+          <h2 class="inline-flex items-center text-blue-600">
+            <ul class="flex flex-wrap gap-2 mt-5" role="list">
+              {frontmatter.tags.map((tag) => (
+                <a href={`/suite/apps`}>
+                  <li 
+                    class="flex items-center justify-center h-8 px-4 py-2 text-xs font-semibold text-blue-600 rounded-lg bg-white transition-all"
+                    style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9);"
+                    onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+                    onmouseout="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+                  >
+                    {tag}
+                  </li>
+                </a>
+              ))}
+            </ul>            
+          </h2>
+          <h2
+            class="text-purple-900 font-semibold mt-6 tracking-tighter lg:text-5xl text-3xl">
+            {frontmatter.title}
+          </h2>
+          <p class="prose-lg hover:prose-a:text-blue-500 prose prose-a:font-semibold prose-a:text-blue-300 prose-blockquote:text-blue-600 prose-h3:text-purple-900 text-slate-500 mt-12">{frontmatter.description}</p>
+        </div>
+        
+        <div class="bg-slate-50 rounded-lg p-4 lg:p-8">
+          <span>
+            <img src="/images/integrations/logo.svg" alt="" style="width: 35px;" />
+          </span>
           <div>
-            <h2
-              class="text-purple-900 font-semibold text-3xl lg:text-9xl tracking-tighter">
-              {frontmatter.title}
-            </h2><p class="text-xl text-slate-500 mt-12">
-              {frontmatter.description}
+            <h3 class="text-lg text-purple-900 mt-3">Author</h3>
+            <p class="text-slate-500">{frontmatter.author}</p>
+          </div>
+          <div>
+            <h3 class="text-lg text-purple-900 mt-3">Category</h3>
+            <p class="text-slate-500">{frontmatter.tags}</p>
+          </div>
+          <div>
+            <h3 class="text-lg text-purple-900 mt-3">Website</h3>
+            <p>
+              <a class="text-blue-500 hover:text-blue-600" href="www.empress.eco"
+                >www.empress.eco</a
+              >
             </p>
-            <div class="mt-6">
-              <div class="flex items-center">
-                <div>
-                  <img
-                    class="inline-block h-9 w-9 rounded-full"
-                    src={frontmatter.image.url}
-                    alt={frontmatter.image.alt}
-                  />
-                </div>
-                <div class="ml-3">
-                  <p
-                    class="text-sm font-medium text-slate-500 group-hover:text-purple-900">
-                    {frontmatter.author}
+          </div>
+  
+          <div>
+            <div class="mt-10 flex">
+              <a
+                class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-full"
+                href="#">
+                Add Application
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="prose-lg hover:prose-a:text-blue-500 prose prose-a:font-semibold prose-a:text-blue-300 prose-blockquote:text-blue-600 prose-h3:text-purple-900 text-slate-500 mt-12">
+        <slot />
+      </div>
+    </div>
+  </section>
+  <section class="bg-slate-50">
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-purple-900 font-semibold tracking-tighter text-3xl">
+            Ready to get connected?
+          </h2>
+          <div class="max-w-xl mt-6">
+            <p class="text-slate-500">
+              Contact us to learn more about working with partners.
+            </p>
+          </div>
+          <div class="mt-10">
+            <a
+              class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto"
+              href="/contact">
+              Contact Empress
+            </a>
+          </div>
+        </div>
+        <div class="mx-auto text-left">
+          <div>
+            <div
+              class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
+              <div>
+                <div class="space-y-3">
+                  <div class="lg:inline-flex lg:items-center lg:gap-3">
+                    <div
+                      class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-5 h-5">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
+                        ></path>
+                      </svg>
+                    </div>
+                    <p class="mt-5 font-semibold text-purple-900 lg:mt-0">
+                      Read customer stories
+                    </p>
+                  </div>
+                  <p class="text-sm text-slate-500 mt-5">
+                    See how Spazio Bianco is helping businesses of all sizes.
                   </p>
-                  <p class="text-xs text-slate-500 uppercase">
-                    {frontmatter.pubDate.toString().slice(0, 10)}
+                  <p class="mt-5">
+                    <a
+                      href=""
+                      class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                      See all stories
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div class="space-y-3">
+                  <div class="lg:inline-flex lg:items-center lg:gap-3">
+                    <div
+                      class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-5 h-5">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
+                        ></path>
+                      </svg>
+                    </div>
+                    <p class="mt-5 font-semibold text-purple-900 lg:mt-0">
+                      Become a partner
+                    </p>
+                  </div>
+                  <p class="text-sm text-slate-500 mt-5">
+                    Interested in becoming one of our partners?
+                  </p>
+                  <p class="mt-5">
+                    <a
+                      href="/about"
+                      class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                      Learn more
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -76,13 +225,5 @@ import { AstroSeo } from "@astrolib/seo";
         </div>
       </div>
     </div>
-  </section>
-  <section class="bg-white">
-    <div class="px-8 max-w-7xl lg:px-24 mx-auto py-12">
-      <div
-        class="max-w-[40rem] prose-lg hover:prose-a:text-blue-500 prose prose-a:font-semibold prose-a:text-blue-300 prose-blockquote:text-blue-600 prose-h3:text-purple-900 text-slate-500">
-        <slot />
-      </div>
-    </div>
-  </section>
+  </section>  
 </BaseLayout>
