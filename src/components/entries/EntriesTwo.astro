@@ -1,0 +1,38 @@
+---
+const { title, url, description, pubDate, author, image, authorImage } =
+  Astro.props;
+---
+
+<li class="group rounded-xl overflow-hidden transition-all">
+    <a href={url} title={title}>
+      <div class="bg-white rounded-xl"
+           style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9); transition: all 0.2s ease;"
+           onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+           onmouseout="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+           onmousedown="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+           onmouseup="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';">
+        <div class="flex items-end justify-center overflow-hidden rounded-t-xl">
+          <img class="group-hover:scale-110 transition-transform duration-300 aspect-[2/1] object-cover"
+               loading="lazy"
+               src={image}
+               alt={title}
+               width="560"/>
+        </div>
+        <div class="p-8">
+          <p>
+            <time class="items-center px-3 py-1 text-xs font-semibold rounded-full bg-gray-100"
+                  datetime={pubDate}>
+              {pubDate}
+            </time>
+          </p>
+          <h3 class="mt-5 text-sm font-medium leading-6 text-gray-800">
+            {title}
+          </h3>
+          <p class="mt-2 text-sm text-gray-600 line-clamp-2">
+            {description}
+          </p>
+        </div>
+      </div>
+    </a>
+  </li>
+  

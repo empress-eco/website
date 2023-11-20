@@ -1,72 +1,51 @@
+---
+// Define your JSON data
+const statsContent = {
+  sectionTitle: "Stats",
+  mainHeading: "It's business as usual...made beautiful",
+  statsData: [
+    {
+      value: "$70M",
+      description: "total increase in Lexington"
+    },
+    {
+      value: "3m faster",
+      description: "Spazio to launch a platform"
+    },
+    {
+      value: "5%",
+      description: "uplift in Unwrapped payment"
+    },
+    {
+      value: "5 days",
+      description: "Ike expansion in one lexington"
+    }
+  ]
+};
+---
+
 <section class="bg-white">
-  <div
-    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
     <div>
       <h2 class="inline-flex items-center text-blue-600">
-        <span class="text-base font-medium tracking-tight">Stats</span>
+        <span class="text-base font-medium tracking-tight">{statsContent.sectionTitle}</span>
       </h2>
-
-      <h2
-        class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-        Creative layouts for your App or Saas
+      <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+        {statsContent.mainHeading}
       </h2>
     </div>
     <div class="mx-auto text-left mt-12">
-      <div>
-        <div class="gap-6 grid grid-cols-1 lg:grid-cols-4">
-          <div>
-            <div>
-              <div>
-                <p
-                  class="text-4xl font-light tracking-tight lg:text-5xl text-blue-500">
-                  $70M
-                </p>
-              </div>
-              <p class="text-slate-500 mt-6 border-blue-500">
-                total increase in Lexington
-              </p>
-            </div>
+      <div class="gap-6 grid grid-cols-1 lg:grid-cols-4">
+        {statsContent.statsData.map((stat) => (
+          <div key={stat.value}>
+            <p class="text-4xl font-light tracking-tight lg:text-5xl text-blue-500">
+              {stat.value}
+            </p>
+            <p class="text-slate-500 mt-6 border-blue-500">
+              {stat.description}
+            </p>
           </div>
-          <div>
-            <div>
-              <div>
-                <p
-                  class="text-4xl font-light tracking-tight lg:text-5xl text-blue-500">
-                  3m faster
-                </p>
-              </div>
-              <p class="text-slate-500 mt-6 border-blue-500">
-                Spazio to launch a platform
-              </p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div>
-                <p
-                  class="text-4xl font-light tracking-tight lg:text-5xl text-blue-500">
-                  5%
-                </p>
-              </div>
-              <p class="text-slate-500 mt-6 border-blue-500">
-                uplift in Unwrapped payment
-              </p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div>
-                <p
-                  class="text-4xl font-light tracking-tight lg:text-5xl text-blue-500">
-                  5 days
-                </p>
-              </div>
-              <p class="text-slate-500 mt-6 border-blue-500">
-                Ike expansion in one lexington
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </div>

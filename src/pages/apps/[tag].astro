@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../..//layouts/BaseLayout.astro";
+import BlogPost from "../..//components/BlogPost.astro";
+import EntriesOne from "../..//components/entries/EntriesTwo.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("apps");
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout pageTitle={tag}>
+  <section>
+    <div
+      class="max-w-7xl px-8 md:px-12 lg:px-32 mx-auto py-32 lg:py-36 relative">
+      <div>
+        <p class="text-sm text-blue-600 uppercase">
+          App categories
+        </p>
+        <p class="mt-8 text-4xl font-normal tracking-tighter text-purple-900 sm:text-5xl">
+          Apps tagged with {tag}
+        </p>
+        <form class="mt-0 sm:flex sm:max-w-md">
+          <label for="email-address" class="sr-only">Email address</label>
+          <!-- <input
+            type="email"
+            name="email-address"
+            id="email-address"
+            autocomplete="email"
+            required
+            class="block w-full h-10 px-4 py-2 text-sm text-gray-700 bg-white border rounded-lg border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+            placeholder="Enter your email"
+          /> -->
+          <div class="mt-4 sm:ml-2 sm:mt-0 sm:flex-shrink-0">
+            <div class="mt-10 flex">
+              <a href="/suite/apps" 
+              class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4"
+              style="background-color: #5046e4; color: #fff; border: 2px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
+              onmouseover="this.style.backgroundColor='#6767ff'; this.style.borderColor='#5046e4';"
+              onmouseout="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';"
+              onmousedown="this.style.backgroundColor='#3838b1'; this.style.borderColor='#6767ff';"
+              onmouseup="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';">
+             View All Applications
+           </a>
+           
+           <a href="/pricing" 
+           class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium"
+           style="background-color: #fff; color: #333; border: none; border-radius: 30px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
+           onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+           onmouseout="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+           onmousedown="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+           onmouseup="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';">
+          Get Started
+        </a>
+        
+            </div>         
+          </div>
+        </form>
+      </div>
+
+      <div class="py-24">
+        <ol
+          class="grid grid-cols-1 gap-4 lg:grid-cols-3 sm:grid-cols-2"
+          role="list">
+          {
+            posts.map((post) => (
+              <EntriesOne
+                url={"/suite/" + post.slug}
+                title={post.data.title}
+                description={post.data.description}
+                alt={post.data.title}
+                pubDate={post.data.tags}
+                author={post.data.author}
+                image={post.data.image.url}
+              />
+            ))
+          }
+        </ol>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
