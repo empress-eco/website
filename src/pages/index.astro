@@ -49,7 +49,7 @@ const statsContent = {
 
 const sectionTwo = {
   mainContent: {
-    title: "Module Solutions",
+    title: "Modular Solutions",
     subtitle: "A fully integrated suite of modern business products",
     paragraphs: [
       "At Empress, we go beyond just creating technology; we're revolutionizing how startups like yours scale and succeed.",
@@ -62,42 +62,50 @@ const sectionTwo = {
     {
       title: "Simplify Your Finances",
       description: "Unleash the power of advanced analytics and intuitive tools with Empress. Make smarter financial decisions, gain pivotal insights, and master your financial landscape for sustainable growth.",
-      linkHref: "/applications"
+      linkHref: "/finance",
+      linkTitle: "Start with Finances"
     },
     {
       title: "Close More Deals",
       description: "Revolutionize your sales strategy with Empress. Harness innovative solutions to enhance customer relationships, streamline your sales process, and elevate your deal-closing efficiency.",
-      linkHref: "/applications"
+      linkHref: "/sales",
+      linkTitle: "Start with Sales"
     },
     {
       title: "Streamline Your Production",
       description: "Fast-track your product development with Empress. Utilize our comprehensive tools for efficient production, collaborative innovation, and quicker market launches, setting new industry standards.",
-      linkHref: "/applications"
+      linkHref: "/product",
+      linkTitle: "Start with Product"
     },
     {
       title: "Optimize Your Workflow",
       description: "Transform your operations with Empress. Leverage process automation and analytical insights to streamline workflows, cut costs, and drive operational excellence across your business.",
-      linkHref: "/applications"
+      linkHref: "/operations",
+      linkTitle: "Start with Operations"
     },
     {
       title: "Amplify Your Reach",
       description: "Expand your market footprint with Empress's dynamic marketing strategies. Engage your audience like never before, boost brand visibility, and create impactful campaigns that captivate and convert.",
-      linkHref: "/applications"
+      linkHref: "/marketing",
+      linkTitle: "Start with Marketing"
     },
     {
       title: "Empower Your Workforce",
       description: "Cultivate a winning team with Empress’s all-encompassing talent management. Attract, nurture, and retain the best in the business, fostering a culture that drives innovation and productivity.",
-      linkHref: "/applications"
+      linkHref: "/talent",
+      linkTitle: "Start with Talent"
     },
     {
       title: "Elevate Your Services",
       description: "Redefine customer service excellence with Empress. Deliver unparalleled experiences, forge lasting relationships, and build a loyal customer base through our service solutions.",
-      linkHref: "/applications"
+      linkHref: "/experience",
+      linkTitle: "Start with Experience"
     },
     {
       title: "Accelerate Your Innovation",
       description: "Lead your industry with Empress. Stay ahead with our cutting-edge tools and expertise, fueling your growth and ensuring your business is always at the edge of innovation.",
-      linkHref: "/applications"
+      linkHref: "/innovation",
+      linkTitle: "Start with Innovation"
     },
     
   ]
@@ -423,7 +431,7 @@ const sectionEleven = {
       integrationImage: "/images/integrations/notion.svg",
       text: "Collaborate with Empress experts to build solutions tailored to your business needs.",
       url: "/build-with-empress",
-      linkText:"Build with Empress Experts"
+      linkText:"Find Empress Experts"
     },
     {
       imageUrl: "https://images.unsplash.com/photo-1522932753915-9ee97e43e3d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90oy1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
@@ -708,7 +716,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
                 <div class="mt-2 text-slate-500">{item.description}</div>
                 <p class="mt-5">
                   <a href={item.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
-                    {sectionTwo.mainContent.linkText}
+                    {item.linkTitle}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
