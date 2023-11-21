@@ -1,3 +1,4 @@
+
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
@@ -54,7 +55,8 @@ const navLinks = [
 const sectionOne = {
   title: "Finance",
   description: "Spazio Bianco creates the financial foundation that enables ambitious companies to launch their most innovative products. Our customers range from newly established startups to large-scale international businesses, all working together to drive the internet's economic growth. By joining us, you have the opportunity to contribute to this mission.",
-  buttonText: "See all open roles",
+  buttonText: "Get Started",
+  buttonTextTwo: "Contact Sales",
   imageRows: [
     [
       {
@@ -559,45 +561,63 @@ const sectionNine = {
   </nav>
   
 
-  <!-- SecionOne  -->
 
-  <section class="relative overflow-hidden border-b">
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center lg:py-44">
+  <section>
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 mt-24 z-50 items-center">
       <div class="items-start gap-12 grid grid-cols-1 md:grid-cols-2">
         <div>
-          <div class="lg:pr-24 md:pr-12">
-            <h2 class="text-purple-900 font-semibold text-4xl lg:text-7xl tracking-tighter">
+          <div class="lg:pr-24 md:pr-12 pb-12 lg:pb-0">
+            <h2
+              class="text-purple-900 font-semibold mt-6 text-4xl lg:text-7xl tracking-tighter">
               {sectionOne.title}
             </h2>
             <p class="text-slate-500 mt-5">
               {sectionOne.description}
             </p>
           </div>
-          <div class="mt-10">
-            <a class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto" href="/job-post">
-              {sectionOne.buttonText}
-            </a>
-          </div>
         </div>
-        <div class="lg:mt-0 lg:ml-auto">
-          <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-            <div class="flex items-center space-x-6 lg:space-x-8">
-              {sectionOne.imageRows.map((row, rowIndex) => (
-                <div class={`grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8 ${rowIndex % 2 === 0 ? '' : 'lg:mt-10'}`}>
-                  {row.map(image => (
-                    <div class={image.class}>
-                      <img src={image.url} alt={image.alt} class="drop-shadow-2xl rounded-2xl" />
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
+      </div>
+      <a href="/suite/apps" 
+      class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4 mt-5"
+      style="background-color: #5046e4; color: #fff; border: px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
+      onmouseover="this.style.backgroundColor='#6767ff'; this.style.borderColor='#5046e4';"
+      onmouseout="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';"
+      onmousedown="this.style.backgroundColor='#3838b1'; this.style.borderColor='#6767ff';"
+      onmouseup="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';">
+      {sectionOne.buttonText}
+   </a>
+   
+   <a href="/suite/apps" 
+   class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium"
+   style="background-color: #fff; color: #333; border: none; border-radius: 30px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
+   onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+   onmouseout="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+   onmousedown="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+   onmouseup="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';">
+   {sectionOne.buttonTextTwo}
+</a>
+    </div>
+  
+    <section>
+      <div
+        class="h-64 justify-center lg:px-0 max-h-full md:px-12 overflow-hidden relativ -skew-y-[16deg] transform mb-24">
+        <div class="bg-white block lg:flex-1 lg:relative sm:contents">
+          <div class="bg-white absolute h-full inset-0 object-cover w-full">
+            <video
+              autoplay=""
+              class="bg-white absolute max-w-none min-h-full min-w-full w-auto z-10"
+              loop=""
+              muted=""
+              ><source src="/images/gradientA.mp4" type="video/mp4" />Your browser
+              does not support the video tag.</video
+            >
           </div>
         </div>
       </div>
-    </div>
-</section>
-  
+    </section>
+  </section>
+
 
   <!-- SectionTwo -->
   
