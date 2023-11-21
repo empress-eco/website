@@ -1,127 +1,426 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-import AboutOne from "../../components/about/AboutOne.astro";
-import FeatureEleven from "../../components/features/FeatureEleven.astro";
-import TestimonialFour from "../../components/testimonials/TestimonialFour.astro";
-import FeatureTwelve from "../../components/features/FeatureTwelve.astro";
-import FeatureFive from "../../components/features/FeatureFive.astro";
-import FeatureSix from "....//components/features/FeatureSix.astro";
-import StatsTwo from "../../components/stats/StatsTwo.astro";
-import FeatureTen from "../../components/features/FeatureTen.astro";
-import FeatureNine from "../../components/features/FeatureNine.astro";
-import CtaThree from "../../components/cta/CtaThree.astro";
-import FaqTwo from "../../components/infopages/FaqTwo.astro";
-import CtaTwo from "../../components/cta/CtaTwo.astro";
-import { Code } from "astro/components";
-import { Icon } from "astro-icon";
-import { Code } from "astro/components";
+import PricingThree from "../../components/pricing/PricingThree.astro";
+import PricingThreeExtended from "../../components/pricing/PricingThreeExtended.astro";
+import TestimonialThree from "../../components/testimonials/TestimonialThree.astro";
+import FaqOne from "../../components/infopages/FaqOne.astro";
 import CtaOne from "../../components/cta/CtaOne.astro";
 
 import { AstroSeo } from "@astrolib/seo";
+import TestimonialOne from "../../components/testimonials/TestimonialOne.astro";
 
-// Example variable to set the active link (you might have a more dynamic way to set this)
-const currentPath = Astro.request.url.pathname;
-const isActive = (path) => currentPath === path;
+// Navigation Links
 
-// Define your JSON data
-const statsContent = {
-  sectionTitle: "Applications",
-  mainHeading: "Discover tools to scale your business",
-  statsData: [
-    {
-      value: "$70M",
-      description: "total increase in Lexington"
-    },
-    {
-      value: "3m faster",
-      description: "Spazio to launch a platform"
-    },
-    {
-      value: "5%",
-      description: "uplift in Unwrapped payment"
-    },
-    {
-      value: "5 days",
-      description: "Ike expansion in one lexington"
-    }
-  ]
-};
+const navLinks = [
+{
+    title: "Experience",
+    link: "/experience",
+    logo: "/images/logo.png"
+  },
+  {
+    name: "Overview",
+    href: "/experience"
+  },
+  {
+    name: "Features",
+    href: "/experience/features"
+  },
+  {
+    name: "Applications",
+    href: "/apps/experience"
+  },
+  {
+    name: "Docs",
+    href: "/billing/docs"
+  }
+];
+
 
 const features = [
 {
-    "title": "Finances",
-    "description": "Simplify Your Finances",
-    "icon": "ph:money-duotone",
-    "link": "/apps/finances",
-    "button": "Learn More",
-     "color": "blue"
-  },
-  {
-    "title": "Sales",
-    "description": "Close More Deals",
-    "icon": "ph:tag-duotone",
-    "link": "/apps/sales",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Product",
-    "description": "Streamline Your Production",
-    "icon": "ph:archive-box-duotone",
-    "link": "/apps/product",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Operations",
-    "description": "Optimize Your Workflow",
-    "icon": "ph:clock-counter-clockwise-duotone",
-    "link": "/apps/operations",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Marketing",
-    "description": "Amplify Your Reach",
-    "icon": "ph:share-network-duotone",
-    "link": "/apps/marketing",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Talent",
-    "description": "Empower Your Workforce",
-    "icon": "ph:users-duotone",
-    "link": "/apps/talent",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Experience",
-    "description": "Elevate Your Service",
-    "icon": "ph:heart-straight-duotone",
-    "link": "/apps/experience",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Technology",
-    "description": "Accelerate Your Innovation",
-    "icon": "ph:device-mobile-camera-duotone",
-    "link": "/apps/technology",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Other",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/apps/other",
-    "button": "Learn More",
-    "color": "blue"
-  }
+    header: {
+        mainTitle: "Helpdesk Ticket Management",
+        subTitle: "Streamline Customer Support and Issue Resolution",
+        description: "Optimize customer support processes, from issue tracking to resolution, ensuring high-quality service and customer satisfaction."
+    },
+    featureSections: [
+        {
+            title: "Helpdesk Ticket Tracking",
+            description: "Efficiently manage customer support tickets with unique Ticket IDs, offering a systematic approach for tracking each issue and inquiry.",
+            listItems: [
+                "Unique Ticket IDs for Organized Tracking",
+                "Streamlined Management of Support Tickets",
+                "Efficient Issue Tracking and Resolution"
+            ]
+        },
+        {
+            title: "Customer Issue Documentation",
+            description: "Record and manage detailed descriptions of customer issues, ensuring a clear understanding and focused approach to problem-solving.",
+            listItems: [
+                "Detailed Recording of Issue Descriptions",
+                "Clear Understanding of Customer Problems",
+                "Focused and Effective Problem-Solving"
+            ]
+        },
+        {
+            title: "Ticket Assignment and Prioritization",
+            description: "Assign tickets to appropriate team members and set priority levels, ensuring timely and effective responses to customer needs.",
+            listItems: [
+                "Effective Assignment of Tickets to Employees",
+                "Strategic Prioritization of Issues",
+                "Timely Responses to Customer Inquiries"
+            ]
+        },
+        {
+            title: "Issue Resolution and Feedback Collection",
+            description: "Monitor resolution dates and collect customer feedback scores, focusing on continuous improvement of service quality and customer satisfaction.",
+            listItems: [
+                "Tracking of Resolution Dates",
+                "Collection of Customer Feedback Scores",
+                "Emphasis on Service Quality and Customer Satisfaction"
+            ]
+        },
+        {
+            title: "Real-Time Status Updates",
+            description: "Stay updated with the real-time status of each ticket, from open to closed, ensuring proactive management and communication.",
+            listItems: [
+                "Real-Time Ticket Status Monitoring",
+                "Proactive Management of Customer Issues",
+                "Effective Communication Throughout the Resolution Process"
+            ]
+        },
+        {
+            title: "Comprehensive Ticket Records",
+            description: "Utilize the notes section for additional details and insights, supporting thorough documentation and analysis of each support interaction.",
+            listItems: [
+                "Space for Detailed Ticket Notes",
+                "Comprehensive Documentation of Customer Interactions",
+                "Support for In-depth Analysis and Review"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Dynamic Live Chat Support",
+        subTitle: "Enhance Customer Service with Real-Time Interactions",
+        description: "Facilitate immediate communication with customers, providing efficient resolution of inquiries and enhancing customer satisfaction."
+    },
+    featureSections: [
+        {
+            title: "Live Chat Session Tracking",
+            description: "Manage and track live chat sessions with unique Chat IDs, offering a systematic approach to handle customer interactions efficiently.",
+            listItems: [
+                "Unique Chat IDs for Systematic Tracking",
+                "Organized Management of Live Chat Sessions",
+                "Efficient Customer Interaction and Support"
+            ]
+        },
+        {
+            title: "Agent-Customer Interaction",
+            description: "Record and manage interactions between customers and agents, ensuring a personalized and effective communication experience.",
+            listItems: [
+                "Recording of Agent Names for Accountability",
+                "Personalized Customer-Agent Interactions",
+                "Effective and Empathetic Communication"
+            ]
+        },
+        {
+            title: "Chat Transcript Accessibility",
+            description: "Maintain access to chat transcripts, providing valuable context and history for customer service and follow-up actions.",
+            listItems: [
+                "Easy Access to Chat Transcripts",
+                "Valuable Context and History of Interactions",
+                "Support for Customer Service Follow-up"
+            ]
+        },
+        {
+            title: "Issue Resolution and Status",
+            description: "Monitor the resolution status of each chat, focusing on effective problem-solving and customer satisfaction.",
+            listItems: [
+                "Real-Time Monitoring of Resolution Status",
+                "Effective Problem-Solving and Issue Resolution",
+                "Focus on Enhancing Customer Satisfaction"
+            ]
+        },
+        {
+            title: "Follow-up Requirement Indication",
+            description: "Indicate the necessity for follow-up actions, ensuring that all customer issues are addressed promptly and thoroughly.",
+            listItems: [
+                "Clear Indication of Follow-up Requirements",
+                "Prompt and Thorough Addressing of Customer Issues",
+                "Ensuring Complete Customer Service"
+            ]
+        },
+        {
+            title: "Comprehensive Interaction Records",
+            description: "Utilize the notes section for additional details and observations, supporting thorough documentation and analysis of each interaction.",
+            listItems: [
+                "Space for Detailed Chat Notes",
+                "Comprehensive Documentation of Interactions",
+                "Support for In-depth Analysis and Review"
+            ]
+        }
+    ]
+}, 
+{
+    header: {
+        mainTitle: "Customer Feedback Management",
+        subTitle: "Capture, Analyze, and Respond to Customer Feedback",
+        description: "Capture customer feedback, analyze it for valuable insights, and facilitate responsive actions to enhance customer experience."
+    },
+    featureSections: [
+        {
+            title: "Feedback Tracking and Organization",
+            description: "Efficiently manage customer feedback with unique Feedback IDs, offering a systematic approach for organizing and referencing each feedback entry.",
+            listItems: [
+                "Unique Feedback IDs for Systematic Tracking",
+                "Organized Management of Customer Feedback",
+                "Streamlined Feedback Collection and Organization"
+            ]
+        },
+        {
+            title: "Customer Feedback Recording",
+            description: "Record and manage detailed customer feedback, ensuring a comprehensive understanding of customer experiences and perceptions.",
+            listItems: [
+                "Detailed Recording of Customer Feedback",
+                "Comprehensive Understanding of Customer Experiences",
+                "Effective Management of Customer Perceptions"
+            ]
+        },
+        {
+            title: "Feedback Type and Rating Analysis",
+            description: "Classify feedback by type and analyze customer ratings, gaining insights into customer satisfaction and areas for service improvement.",
+            listItems: [
+                "Classification of Feedback by Type",
+                "Analysis of Customer Ratings",
+                "Insights into Customer Satisfaction and Service Areas"
+            ]
+        },
+        {
+            title: "Action and Follow-up Tracking",
+            description: "Monitor actions taken in response to feedback and plan follow-up activities, ensuring proactive and responsive customer service.",
+            listItems: [
+                "Tracking of Actions Taken in Response to Feedback",
+                "Planning and Scheduling of Follow-up Activities",
+                "Proactive and Responsive Customer Service"
+            ]
+        },
+        {
+            title: "Customer Relationship Enhancement",
+            description: "Utilize feedback to strengthen customer relationships, using insights to tailor services and communications for improved customer engagement.",
+            listItems: [
+                "Enhancement of Customer Relationships",
+                "Tailored Services Based on Customer Insights",
+                "Improved Customer Engagement and Loyalty"
+            ]
+        },
+        {
+            title: "Comprehensive Feedback Documentation",
+            description: "Utilize the notes section for additional details and observations, supporting thorough documentation and analysis of customer feedback.",
+            listItems: [
+                "Space for Detailed Feedback Notes",
+                "Comprehensive Documentation of Customer Opinions",
+                "Support for In-depth Analysis and Strategic Planning"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Community Forum Management",
+        subTitle: "Facilitate Discussions, Share Knowledge, and Foster Community",
+        description: "Drive community engagement, knowledge sharing, and effective moderation, enhancing the collaborative experience."
+    },
+    featureSections: [
+        {
+            title: "Forum Post Tracking and Management",
+            description: "Manage forum posts with unique Post IDs, offering a systematic approach to organize and monitor community discussions.",
+            listItems: [
+                "Unique Post IDs for Efficient Tracking",
+                "Organized Management of Forum Discussions",
+                "Systematic Monitoring of Community Engagement"
+            ]
+        },
+        {
+            title: "Authorship and Content Creation",
+            description: "Link posts to their authors and manage the content creation process, encouraging quality contributions and meaningful discussions.",
+            listItems: [
+                "Clear Authorship for Accountability",
+                "Effective Management of Post Content",
+                "Encouragement of Quality Contributions"
+            ]
+        },
+        {
+            title: "Topic Categorization and Participation",
+            description: "Categorize forum topics and track user participation, fostering focused discussions and active community involvement.",
+            listItems: [
+                "Categorization of Topics for Focused Discussions",
+                "Tracking of User Participation and Replies",
+                "Active Community Involvement and Interaction"
+            ]
+        },
+        {
+            title: "Community Feedback and Interaction",
+            description: "Monitor community feedback through metrics like upvotes and replies, gaining insights into the popularity and relevance of posts.",
+            listItems: [
+                "Tracking of Upvotes and Replies",
+                "Insights into Post Popularity and Relevance",
+                "Responsive Community Feedback Mechanisms"
+            ]
+        },
+        {
+            title: "Issue Reporting and Moderation",
+            description: "Manage reported issues and moderator notes, ensuring a safe and respectful forum environment in line with community guidelines.",
+            listItems: [
+                "Effective Handling of Reported Issues",
+                "Comprehensive Moderation Notes",
+                "Maintenance of a Safe and Respectful Environment"
+            ]
+        },
+        {
+            title: "Comprehensive Forum Analytics",
+            description: "Utilize analytics tools to evaluate forum activity, user engagement, and content impact, supporting strategic community growth and management.",
+            listItems: [
+                "Analytical Tools for Forum Activity Evaluation",
+                "Assessment of User Engagement and Content Impact",
+                "Strategic Community Growth and Management"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Loyalty Program Management",
+        subTitle: "Enhance Customer Engagement and Reward Loyalty",
+        description: "Foster customer relationships, track loyalty metrics, and manage rewards, enhancing customer retention and satisfaction."
+    },
+    featureSections: [
+        {
+            title: "Loyalty Program Participant Tracking",
+            description: "Efficiently manage loyalty program participants with linked Customer IDs, ensuring a personalized and data-driven approach to customer loyalty.",
+            listItems: [
+                "Linked Customer IDs for Personalized Management",
+                "Systematic Tracking of Loyalty Program Participants",
+                "Data-Driven Approach to Customer Loyalty"
+            ]
+        },
+        {
+            title: "Loyalty Points Accumulation and Usage",
+            description: "Monitor the accumulation and redemption of loyalty points, providing customers with tangible rewards for their continued patronage.",
+            listItems: [
+                "Accurate Tracking of Loyalty Points",
+                "Rewarding Customer Patronage and Engagement",
+                "Effective Management of Points Redemption"
+            ]
+        },
+        {
+            title: "Customer Interaction and Reward History",
+            description: "Record customer interactions and reward redemption history, gaining insights into customer preferences and behavior patterns.",
+            listItems: [
+                "Recording of Last Interaction Dates",
+                "Tracking of Reward Redemption History",
+                "Insights into Customer Preferences and Behaviors"
+            ]
+        },
+        {
+            title: "Tier Level Advancement and Incentives",
+            description: "Manage tier levels and track customer progress towards the next tier, motivating continued engagement with tailored incentives.",
+            listItems: [
+                "Tier Level Management for Customer Motivation",
+                "Tracking of Progress Towards Next Tier",
+                "Tailored Incentives for Enhanced Engagement"
+            ]
+        },
+        {
+            title: "Comprehensive Loyalty Program Analysis",
+            description: "Utilize the notes section for additional details and observations, supporting thorough analysis and strategic planning of the loyalty program.",
+            listItems: [
+                "Space for Detailed Program Notes and Insights",
+                "Comprehensive Analysis of Loyalty Metrics",
+                "Strategic Planning for Program Improvement"
+            ]
+        },
+        {
+            title: "Customer Satisfaction and Loyalty Enhancement",
+            description: "Focus on enhancing customer satisfaction and loyalty through strategic program management, fostering long-term customer relationships.",
+            listItems: [
+                "Enhancement of Customer Satisfaction",
+                "Strategic Management of Loyalty Programs",
+                "Fostering Long-Term Customer Relationships"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Appointment Scheduling System",
+        subTitle: "Optimize Customer Service and Staff Scheduling",
+        description: "Streamline the process of booking, managing, and tracking customer appointments, ensuring effective time management."
+    },
+    featureSections: [
+        {
+            title: "Appointment Identification and Tracking",
+            description: "Manage appointments efficiently with unique Appointment IDs, ensuring organized tracking and systematic handling of each booking.",
+            listItems: [
+                "Unique Appointment IDs for Systematic Tracking",
+                "Organized Management of Bookings",
+                "Efficient Handling of Customer Appointments"
+            ]
+        },
+        {
+            title: "Customer Booking Management",
+            description: "Link appointments to customer profiles in the CRM, providing personalized service and a comprehensive view of customer interactions.",
+            listItems: [
+                "Integration with Customer CRM Profiles",
+                "Personalized Service for Each Appointment",
+                "Comprehensive View of Customer Interactions"
+            ]
+        },
+        {
+            title: "Appointment Scheduling and Timing",
+            description: "Record and manage appointment dates and times, ensuring accurate scheduling and effective time management for staff and customers.",
+            listItems: [
+                "Accurate Recording of Dates and Times",
+                "Effective Scheduling for Optimal Time Management",
+                "Streamlined Appointment Timing"
+            ]
+        },
+        {
+            title: "Service Type Classification and Staff Assignment",
+            description: "Categorize appointments by service type and assign staff members, ensuring the right resources are allocated for each service.",
+            listItems: [
+                "Classification of Appointments by Service Type",
+                "Strategic Staff Assignment for Each Service",
+                "Optimal Resource Allocation"
+            ]
+        },
+        {
+            title: "Appointment Status Monitoring",
+            description: "Track the status of each appointment, from scheduled to completed, ensuring proactive management and responsiveness.",
+            listItems: [
+                "Real-Time Monitoring of Appointment Status",
+                "Proactive Management of Scheduling Changes",
+                "Responsiveness to Customer Needs"
+            ]
+        },
+        {
+            title: "Rescheduling and Comprehensive Notes",
+            description: "Facilitate appointment rescheduling and utilize notes for additional details, supporting flexibility and thorough documentation of each booking.",
+            listItems: [
+                "Flexibility in Rescheduling Appointments",
+                "Space for Detailed Booking Notes",
+                "Thorough Documentation for Each Appointment"
+            ]
+        }
+    ]
+}
 ];
+
+
+
+
 
 ---
 
@@ -129,7 +428,7 @@ const features = [
 Use AstroSeo in all the pages you want different Seo than the index page
 -->
 <AstroSeo
-  title="About 01"
+  title="Pricing One"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -162,2804 +461,98 @@ Use AstroSeo in all the pages you want different Seo than the index page
     cardType: "summary_large_image",
   }}
 />
+
+
+
+
 <BaseLayout>
 
-    
+ 
+   <!-- NAVIGATION BAR -->
 
-    <nav style="position: sticky; top: 0; z-index: 10; background-color: #fff; box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);">
-        <div style="max-width: 1240px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+   <nav style="background-color: #fff; box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
       <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <img src="/images/logo.png" alt="Logo" style="height: 32px; width: auto;" />
-          <a href="/billing/features" 
+        <img src={navLinks[0].logo} alt="Logo" style="height: 32px; width: auto;" />
+        <a href={navLinks[0].link} 
           class="inline-flex items-center justify-center font-medium"
           style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
           onmouseover="this.style.color='#333';"
           onmouseout="this.style.color='#5046e4';">
-         Finance
-       </a>
+          {navLinks[0].title}
+        </a>
       </div>
       <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
-        <li>
-          <a href="/billing/overview" 
-          class="inline-flex items-center justify-center font-medium"
-          style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
-          onmouseover="this.style.color='#333';"
-          onmouseout="this.style.color='#5046e4';">
-         Overview
-       </a>
-        <li>
-          <a href="/billing/features" 
-          class="inline-flex items-center justify-center font-medium"
-          style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
-          onmouseover="this.style.color='#333';"
-          onmouseout="this.style.color='#5046e4';">
-         Features
-       </a>
-        </li>
-        <li>
-          <a href="/billing/apps" 
-          class="inline-flex items-center justify-center font-medium"
-          style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
-          onmouseover="this.style.color='#333';"
-          onmouseout="this.style.color='#5046e4';">
-         Applications
-       </a>
-       <li>
-        <a href="/billing/features" 
-        class="inline-flex items-center justify-center font-medium"
-        style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
-        onmouseover="this.style.color='#333';"
-        onmouseout="this.style.color='#5046e4';">
-       Docs
-     </a>
+        {navLinks.slice(1).map(link => (
+          <li key={link.href}>
+            <a href={link.href} 
+              class="inline-flex items-center justify-center font-medium"
+              style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+              onmouseover="this.style.color='#333';"
+              onmouseout="this.style.color='#5046e4';">
+              {link.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   </nav>
 
-  <section class="relative overflow-hidden border-b">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center lg:py-44">
-      <div class="items-start gap-12 grid grid-cols-1 md:grid-cols-2">
-        <div>
-          <div class="lg:pr-24 md:pr-12">
-            <h2
-              class="text-purple-900 font-semibold text-4xl lg:text-7xl tracking-tighter">
-              Finance
-            </h2>
-            <p class="text-slate-500 mt-5">
-              Spazio Bianco creates the financial foundation that enables
-              ambitious companies to launch their most innovative products. Our
-              customers range from newly established startups to large-scale
-              international businesses, all working together to drive the
-              internet's economic growth. By joining us, you have the opportunity
-              to contribute to this mission.
-            </p>
-          </div>
-          <div class="mt-10">
-            <a
-              class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto"
-              href="/job-post">
-              See all open roles
-            </a>
-          </div>
-        </div>
-        <div class="lg:mt-0 lg:ml-auto">
-          <div
-            class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-            <div class="flex items-center space-x-6 lg:space-x-8">
-              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                <div class="h-full w-44 osm:opacity-0 lg:opacity-100">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-                <div class="h-full w-44">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1661775434014-9c0e8d71de03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-              </div>
-              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                <div class="h-full w-44">
-                  <img
-                    src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-                <div class="h-full w-44">
-                  <img
-                    src="https://images.unsplash.com/photo-1600275669439-14e40452d20b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8b2ZmaWNlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-                <div class="h-full w-44">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-              </div>
-              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                <div class="h-full w-44">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1661771825670-1720428a80ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-                <div class="h-full w-44">
-                  <img
-                    src="https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  
+  
   <section class="bg-white">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div class="max-w-xl">
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">Feature</span>
-        </h2>
-  
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          App One
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-slate-500">Because we wonder all day around</p>
-        </div>
-      </div>
-      <div>
-        <ul
-          role="list"
-          class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-12">
-          <li>
-            <div>
-              <div
-                class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                1
-              </div>
-              <p class="mt-5 font-semibold text-purple-900">
-                Prebuilt integrations
-              </p>
-            </div>
-            <div class="mt-2 text-slate-500 text-sm">
-              Municipal management performance corporate investment grade bonds.
-            </div>
-          </li>
-          <li>
-            <div>
-              <div
-                class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                2
-              </div>
-              <p class="mt-5 font-semibold text-purple-900">
-                Tools for every stack
-              </p>
-            </div>
-            <div class="mt-2 text-slate-500 text-sm">
-              Corporate bonds debt fiat risk return municipal retirement interest
-              rate.
-            </div>
-          </li>
-          <li>
-            <div>
-              <div
-                class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                3
-              </div>
-              <p class="mt-5 font-semibold text-purple-900">
-                Prebuilt integrations
-              </p>
-            </div>
-            <div class="mt-2 text-slate-500 text-sm">
-              Municipal management performance corporate investment grade bonds.
-            </div>
-          </li>
-          <li>
-            <div>
-              <div
-                class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                4
-              </div>
-              <p class="mt-5 font-semibold text-purple-900">
-                Tools for every stack
-              </p>
-            </div>
-            <div class="mt-2 text-slate-500 text-sm">
-              Corporate bonds debt fiat risk return municipal retirement interest
-              rate.
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-12 lg:mt-24">
-        <div class="lg:pr-24 md:pr-12">
-          <h2
-            class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-            Stunning layouts
-          </h2>
-          <p class="text-slate-500 mt-5">
-            Your implementation includes relevant deep dive workshops so we can
-            understand your requirements and create tailored integration guides
-            for your teams to build faster.
-          </p>
-          <ul role="list" class="list-none mt-12">
-            <li>
-              <div>
-                <p class="mt-12 font-semibold text-purple-900 text-2xl">
-                  Prebuilt integrations
-                </p>
-              </div>
-              <div class="mt-5">
-                <ul
-                  role="list"
-                  class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Embeddable checkout</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Custom UI toolkit</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Invoice support</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Payment optimization</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4">Data migration</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Product monetization strategy</span>
-                  </li>
-                </ul>
-                <p class="text-slate-500 mt-12">
-                    Your implementation includes relevant deep dive workshops so we can
-                    understand your requirements and create tailored integration guides
-                    for your teams to build faster.
-                  </p>
-                  <p class="mt-5">
-                    <a
-                      href=""
-                      class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
-                      See libraries
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                        <path
-                          fill-rule="evenodd"
-                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                    </a>
-                  </p>
-              </div>
-            </li>
-            <li>
-              <div>
-              </div>
-              <div class="mt-5">
-                <ul
-                  role="list"
-                  class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div
-        class="lg:mt-0 mt-12 md:pl-12 md:border-l lg:pl-24 border-slate-200 h-full">
-        <div class="lg:mt-0 mt-12 h-full">
-          <div
-            x-data="{
-        tabSelected: 1,
-        tabId: $id('tabs'),
-        tabButtonClicked(tabButton){
-            this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-            this.tabRepositionMarker(tabButton);
-        },
-        tabRepositionMarker(tabButton){
-            this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-            this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-            this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-        },
-        tabContentActive(tabContent){
-            return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-        }
-    }"
-            x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-            class="relative lg:rounded-3xl lg:p-10 text-purple-900">
-            <div
-              x-ref="tabButtons"
-              class="relative inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-slate-100 rounded-full select-none">
-              <button
-                :id="$id(tabId)"
-                @click="tabButtonClicked($el);"
-                type="button"
-                class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
-                >Account</button
-              >
-              <button
-                :id="$id(tabId)"
-                @click="tabButtonClicked($el);"
-                type="button"
-                class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
-                >Password</button
-              >
-              <div
-                x-ref="tabMarker"
-                class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
-                x-cloak>
-                <div class="w-full h-full bg-white rounded-full shadow-sm">
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full mt-2 content">
-              <div
-                :id="$id(tabId + '-content')"
-                x-show="tabContentActive($el)"
-                class="relative">
-                <!-- Tab Content 1 - Replace with your content -->
-                <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                  <img
-                    src="/images/ModalOne.png"
-                    alt="thumbnail"
-                    class="ring-1 ring-slate-300 rounded-2xl"
-                  />
-                </section>
-                <!-- End Tab Content 1 -->
-              </div>
-
-              <div
-                :id="$id(tabId + '-content')"
-                x-show="tabContentActive($el)"
-                class="relative"
-                x-cloak>
-                <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                  <img
-                    src="/images/ModalTwo.png"
-                    alt="thumbnail"
-                    class="ring-1 ring-slate-300 rounded-2xl"
-                  />
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div
-      class="h-64 justify-center lg:px-0 max-h-full md:px-12 overflow-hidden relativ -skew-y-[16deg] transform mb-24 mt-15">
-      <div class="bg-white block lg:flex-1 lg:relative sm:contents">
-        <div class="bg-white absolute h-full inset-0 object-cover w-full">
-          <video
-            autoplay=""
-            class="bg-white absolute max-w-none min-h-full min-w-full w-auto z-10"
-            loop=""
-            muted=""
-            ><source src="/images/gradientA.mp4" type="video/mp4" />Your browser
-            does not support the video tag.</video
-          >
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-white">
-
-    <section class="bg-white">
-        <div
-          class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-          <div class="max-w-xl">
-            <h2 class="inline-flex items-center text-blue-600">
-              <span class="text-base font-medium tracking-tight">Feature</span>
-            </h2>
-      
-            <h2
-              class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-              App One
-            </h2>
-            <div class="max-w-xl mt-6">
-              <p class="text-slate-500">Because we wonder all day around</p>
-            </div>
-          </div>
-          <div>
-            <ul
-              role="list"
-              class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-12">
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    1
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Municipal management performance corporate investment grade bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    2
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Corporate bonds debt fiat risk return municipal retirement interest
-                  rate.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    3
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Municipal management performance corporate investment grade bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    4
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Corporate bonds debt fiat risk return municipal retirement interest
-                  rate.
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-12 lg:mt-24">
-            <div class="lg:pr-24 md:pr-12">
-              <h2
-                class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-                Stunning layouts
-              </h2>
-              <p class="text-slate-500 mt-5">
-                Your implementation includes relevant deep dive workshops so we can
-                understand your requirements and create tailored integration guides
-                for your teams to build faster.
-              </p>
-              <ul role="list" class="list-none mt-12">
-                <li>
-                  <div>
-                    <p class="mt-12 font-semibold text-purple-900 text-2xl">
-                      Prebuilt integrations
-                    </p>
-                  </div>
-                  <div class="mt-5">
-                    <ul
-                      role="list"
-                      class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Embeddable checkout</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Custom UI toolkit</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Invoice support</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Payment optimization</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4">Data migration</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Product monetization strategy</span>
-                      </li>
-                    </ul>
-                    <p class="text-slate-500 mt-12">
-                        Your implementation includes relevant deep dive workshops so we can
-                        understand your requirements and create tailored integration guides
-                        for your teams to build faster.
-                      </p>
-                      <p class="mt-5">
-                        <a
-                          href=""
-                          class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
-                          See libraries
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-                        </a>
-                      </p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                  </div>
-                  <div class="mt-5">
-                    <ul
-                      role="list"
-                      class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div
-            class="lg:mt-0 mt-12 md:pl-12 md:border-l lg:pl-24 border-slate-200 h-full">
-            <div class="lg:mt-0 mt-12 h-full">
-              <div
-                x-data="{
-            tabSelected: 1,
-            tabId: $id('tabs'),
-            tabButtonClicked(tabButton){
-                this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-                this.tabRepositionMarker(tabButton);
-            },
-            tabRepositionMarker(tabButton){
-                this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-                this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-                this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-            },
-            tabContentActive(tabContent){
-                return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-            }
-        }"
-                x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-                class="relative lg:rounded-3xl lg:p-10 text-purple-900">
-                <div
-                  x-ref="tabButtons"
-                  class="relative inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-slate-100 rounded-full select-none">
-                  <button
-                    :id="$id(tabId)"
-                    @click="tabButtonClicked($el);"
-                    type="button"
-                    class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
-                    >Account</button
-                  >
-                  <button
-                    :id="$id(tabId)"
-                    @click="tabButtonClicked($el);"
-                    type="button"
-                    class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
-                    >Password</button
-                  >
-                  <div
-                    x-ref="tabMarker"
-                    class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
-                    x-cloak>
-                    <div class="w-full h-full bg-white rounded-full shadow-sm">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
+            {feature.header.mainTitle}
+           </h2>
+           <p class="mt-4 text-slate-600 text-lg">
+            {feature.header.description}
+        </p>
+          <div class="mt-16">
+            {feature.featureSections.map((section, index) => (
+              <div key={index} class="lg:col-span-3 lg:col-start-3">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                  <div class="bg-slate-50 border-l-2 border-blue-500">
+                    <div class="p-6 border-t">
+                      <p class="font-semibold text-purple-900">{section.title}</p>
                     </div>
                   </div>
-                </div>
-                <div class="relative w-full mt-2 content">
-                  <div
-                    :id="$id(tabId + '-content')"
-                    x-show="tabContentActive($el)"
-                    class="relative">
-                    <!-- Tab Content 1 - Replace with your content -->
-                    <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                      <img
-                        src="/images/ModalOne.png"
-                        alt="thumbnail"
-                        class="ring-1 ring-slate-300 rounded-2xl"
-                      />
-                    </section>
-                    <!-- End Tab Content 1 -->
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l border-l-0">
+                    <p class="text-slate-500 text-sm">{section.description}</p>
                   </div>
-    
-                  <div
-                    :id="$id(tabId + '-content')"
-                    x-show="tabContentActive($el)"
-                    class="relative"
-                    x-cloak>
-                    <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                      <img
-                        src="/images/ModalTwo.png"
-                        alt="thumbnail"
-                        class="ring-1 ring-slate-300 rounded-2xl"
-                      />
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-    
-      <section>
-        <div
-          class="h-64 justify-center lg:px-0 max-h-full md:px-12 overflow-hidden relativ -skew-y-[16deg] transform mb-24 mt-15">
-          <div class="bg-white block lg:flex-1 lg:relative sm:contents">
-            <div class="bg-white absolute h-full inset-0 object-cover w-full">
-              <video
-                autoplay=""
-                class="bg-white absolute max-w-none min-h-full min-w-full w-auto z-10"
-                loop=""
-                muted=""
-                ><source src="/images/gradientA.mp4" type="video/mp4" />Your browser
-                does not support the video tag.</video
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-white">
-        <div
-          class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-          <div class="max-w-xl">
-            <h2 class="inline-flex items-center text-blue-600">
-              <span class="text-base font-medium tracking-tight">Feature</span>
-            </h2>
-      
-            <h2
-              class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-              App One
-            </h2>
-            <div class="max-w-xl mt-6">
-              <p class="text-slate-500">Because we wonder all day around</p>
-            </div>
-          </div>
-          <div>
-            <ul
-              role="list"
-              class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-12">
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    1
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Municipal management performance corporate investment grade bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    2
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Corporate bonds debt fiat risk return municipal retirement interest
-                  rate.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    3
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Municipal management performance corporate investment grade bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    4
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Corporate bonds debt fiat risk return municipal retirement interest
-                  rate.
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-12 lg:mt-24">
-            <div class="lg:pr-24 md:pr-12">
-              <h2
-                class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-                Stunning layouts
-              </h2>
-              <p class="text-slate-500 mt-5">
-                Your implementation includes relevant deep dive workshops so we can
-                understand your requirements and create tailored integration guides
-                for your teams to build faster.
-              </p>
-              <ul role="list" class="list-none mt-12">
-                <li>
-                  <div>
-                    <p class="mt-12 font-semibold text-purple-900 text-2xl">
-                      Prebuilt integrations
-                    </p>
-                  </div>
-                  <div class="mt-5">
-                    <ul
-                      role="list"
-                      class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Embeddable checkout</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Custom UI toolkit</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Invoice support</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Payment optimization</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4">Data migration</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Product monetization strategy</span>
-                      </li>
-                    </ul>
-                    <p class="text-slate-500 mt-12">
-                        Your implementation includes relevant deep dive workshops so we can
-                        understand your requirements and create tailored integration guides
-                        for your teams to build faster.
-                      </p>
-                      <p class="mt-5">
-                        <a
-                          href=""
-                          class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
-                          See libraries
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                              clip-rule="evenodd"></path>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l">
+                    <ul role="list" class="order-last flex flex-col gap-y-3 text-sm text-slate-500">
+                      {section.listItems.map((item, itemIndex) => (
+                        <li key={itemIndex} class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M9 12l2 2l4 -4"></path>
                           </svg>
-                        </a>
-                      </p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                  </div>
-                  <div class="mt-5">
-                    <ul
-                      role="list"
-                      class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
+                          <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
-                </li>
-              </ul>
-            </div>
-            <div
-            class="lg:mt-0 mt-12 md:pl-12 md:border-l lg:pl-24 border-slate-200 h-full">
-            <div class="lg:mt-0 mt-12 h-full">
-              <div
-                x-data="{
-            tabSelected: 1,
-            tabId: $id('tabs'),
-            tabButtonClicked(tabButton){
-                this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-                this.tabRepositionMarker(tabButton);
-            },
-            tabRepositionMarker(tabButton){
-                this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-                this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-                this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-            },
-            tabContentActive(tabContent){
-                return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-            }
-        }"
-                x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-                class="relative lg:rounded-3xl lg:p-10 text-purple-900">
-                <div
-                  x-ref="tabButtons"
-                  class="relative inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-slate-100 rounded-full select-none">
-                  <button
-                    :id="$id(tabId)"
-                    @click="tabButtonClicked($el);"
-                    type="button"
-                    class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
-                    >Account</button
-                  >
-                  <button
-                    :id="$id(tabId)"
-                    @click="tabButtonClicked($el);"
-                    type="button"
-                    class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
-                    >Password</button
-                  >
-                  <div
-                    x-ref="tabMarker"
-                    class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
-                    x-cloak>
-                    <div class="w-full h-full bg-white rounded-full shadow-sm">
-                    </div>
-                  </div>
-                </div>
-                <div class="relative w-full mt-2 content">
-                  <div
-                    :id="$id(tabId + '-content')"
-                    x-show="tabContentActive($el)"
-                    class="relative">
-                    <!-- Tab Content 1 - Replace with your content -->
-                    <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                      <img
-                        src="/images/ModalOne.png"
-                        alt="thumbnail"
-                        class="ring-1 ring-slate-300 rounded-2xl"
-                      />
-                    </section>
-                    <!-- End Tab Content 1 -->
-                  </div>
-    
-                  <div
-                    :id="$id(tabId + '-content')"
-                    x-show="tabContentActive($el)"
-                    class="relative"
-                    x-cloak>
-                    <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                      <img
-                        src="/images/ModalTwo.png"
-                        alt="thumbnail"
-                        class="ring-1 ring-slate-300 rounded-2xl"
-                      />
-                    </section>
-                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-          </div>
+          {featureIndex < features.length - 1 && (
+            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
+          )}
         </div>
-      </section>
-    
-      <section>
-        <div
-          class="h-64 justify-center lg:px-0 max-h-full md:px-12 overflow-hidden relativ -skew-y-[16deg] transform mb-24 mt-15">
-          <div class="bg-white block lg:flex-1 lg:relative sm:contents">
-            <div class="bg-white absolute h-full inset-0 object-cover w-full">
-              <video
-                autoplay=""
-                class="bg-white absolute max-w-none min-h-full min-w-full w-auto z-10"
-                loop=""
-                muted=""
-                ><source src="/images/gradientA.mp4" type="video/mp4" />Your browser
-                does not support the video tag.</video
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-white">
-        <div
-          class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-          <div class="max-w-xl">
-            <h2 class="inline-flex items-center text-blue-600">
-              <span class="text-base font-medium tracking-tight">Feature</span>
-            </h2>
-      
-            <h2
-              class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-              App One
-            </h2>
-            <div class="max-w-xl mt-6">
-              <p class="text-slate-500">Because we wonder all day around</p>
-            </div>
-          </div>
-          <div>
-            <ul
-              role="list"
-              class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-12">
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    1
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Municipal management performance corporate investment grade bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    2
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Corporate bonds debt fiat risk return municipal retirement interest
-                  rate.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    3
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Municipal management performance corporate investment grade bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    4
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Corporate bonds debt fiat risk return municipal retirement interest
-                  rate.
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-12 lg:mt-24">
-            <div class="lg:pr-24 md:pr-12">
-              <h2
-                class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-                Stunning layouts
-              </h2>
-              <p class="text-slate-500 mt-5">
-                Your implementation includes relevant deep dive workshops so we can
-                understand your requirements and create tailored integration guides
-                for your teams to build faster.
-              </p>
-              <ul role="list" class="list-none mt-12">
-                <li>
-                  <div>
-                    <p class="mt-12 font-semibold text-purple-900 text-2xl">
-                      Prebuilt integrations
-                    </p>
-                  </div>
-                  <div class="mt-5">
-                    <ul
-                      role="list"
-                      class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Embeddable checkout</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Custom UI toolkit</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Invoice support</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Payment optimization</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4">Data migration</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Product monetization strategy</span>
-                      </li>
-                    </ul>
-                    <p class="text-slate-500 mt-12">
-                        Your implementation includes relevant deep dive workshops so we can
-                        understand your requirements and create tailored integration guides
-                        for your teams to build faster.
-                      </p>
-                      <p class="mt-5">
-                        <a
-                          href=""
-                          class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
-                          See libraries
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-                        </a>
-                      </p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                  </div>
-                  <div class="mt-5">
-                    <ul
-                      role="list"
-                      class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div
-            class="lg:mt-0 mt-12 md:pl-12 md:border-l lg:pl-24 border-slate-200 h-full">
-            <div class="lg:mt-0 mt-12 h-full">
-              <div
-                x-data="{
-            tabSelected: 1,
-            tabId: $id('tabs'),
-            tabButtonClicked(tabButton){
-                this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-                this.tabRepositionMarker(tabButton);
-            },
-            tabRepositionMarker(tabButton){
-                this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-                this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-                this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-            },
-            tabContentActive(tabContent){
-                return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-            }
-        }"
-                x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-                class="relative lg:rounded-3xl lg:p-10 text-purple-900">
-                <div
-                  x-ref="tabButtons"
-                  class="relative inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-slate-100 rounded-full select-none">
-                  <button
-                    :id="$id(tabId)"
-                    @click="tabButtonClicked($el);"
-                    type="button"
-                    class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
-                    >Account</button
-                  >
-                  <button
-                    :id="$id(tabId)"
-                    @click="tabButtonClicked($el);"
-                    type="button"
-                    class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
-                    >Password</button
-                  >
-                  <div
-                    x-ref="tabMarker"
-                    class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
-                    x-cloak>
-                    <div class="w-full h-full bg-white rounded-full shadow-sm">
-                    </div>
-                  </div>
-                </div>
-                <div class="relative w-full mt-2 content">
-                  <div
-                    :id="$id(tabId + '-content')"
-                    x-show="tabContentActive($el)"
-                    class="relative">
-                    <!-- Tab Content 1 - Replace with your content -->
-                    <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                      <img
-                        src="/images/ModalOne.png"
-                        alt="thumbnail"
-                        class="ring-1 ring-slate-300 rounded-2xl"
-                      />
-                    </section>
-                    <!-- End Tab Content 1 -->
-                  </div>
-    
-                  <div
-                    :id="$id(tabId + '-content')"
-                    x-show="tabContentActive($el)"
-                    class="relative"
-                    x-cloak>
-                    <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                      <img
-                        src="/images/ModalTwo.png"
-                        alt="thumbnail"
-                        class="ring-1 ring-slate-300 rounded-2xl"
-                      />
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-    
-      <section>
-        <div
-          class="h-64 justify-center lg:px-0 max-h-full md:px-12 overflow-hidden relativ -skew-y-[16deg] transform mb-24 mt-15">
-          <div class="bg-white block lg:flex-1 lg:relative sm:contents">
-            <div class="bg-white absolute h-full inset-0 object-cover w-full">
-              <video
-                autoplay=""
-                class="bg-white absolute max-w-none min-h-full min-w-full w-auto z-10"
-                loop=""
-                muted=""
-                ><source src="/images/gradientA.mp4" type="video/mp4" />Your browser
-                does not support the video tag.</video
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-white">
-        <div
-          class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-          <div class="max-w-xl">
-            <h2 class="inline-flex items-center text-blue-600">
-              <span class="text-base font-medium tracking-tight">Feature</span>
-            </h2>
-      
-            <h2
-              class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-              App One
-            </h2>
-            <div class="max-w-xl mt-6">
-              <p class="text-slate-500">Because we wonder all day around</p>
-            </div>
-          </div>
-          <div>
-            <ul
-              role="list"
-              class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-12">
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    1
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Municipal management performance corporate investment grade bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    2
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Corporate bonds debt fiat risk return municipal retirement interest
-                  rate.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    3
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Municipal management performance corporate investment grade bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    4
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-500 text-sm">
-                  Corporate bonds debt fiat risk return municipal retirement interest
-                  rate.
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-12 lg:mt-24">
-            <div class="lg:pr-24 md:pr-12">
-              <h2
-                class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-                Stunning layouts
-              </h2>
-              <p class="text-slate-500 mt-5">
-                Your implementation includes relevant deep dive workshops so we can
-                understand your requirements and create tailored integration guides
-                for your teams to build faster.
-              </p>
-              <ul role="list" class="list-none mt-12">
-                <li>
-                  <div>
-                    <p class="mt-12 font-semibold text-purple-900 text-2xl">
-                      Prebuilt integrations
-                    </p>
-                  </div>
-                  <div class="mt-5">
-                    <ul
-                      role="list"
-                      class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Embeddable checkout</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Custom UI toolkit</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Invoice support</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Payment optimization</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4">Data migration</span>
-                      </li>
-                      <li class="flex items-start">
-                        —
-                        <span class="ml-4"> Product monetization strategy</span>
-                      </li>
-                    </ul>
-                    <p class="text-slate-500 mt-12">
-                        Your implementation includes relevant deep dive workshops so we can
-                        understand your requirements and create tailored integration guides
-                        for your teams to build faster.
-                      </p>
-                      <p class="mt-5">
-                        <a
-                          href=""
-                          class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
-                          See libraries
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-                        </a>
-                      </p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                  </div>
-                  <div class="mt-5">
-                    <ul
-                      role="list"
-                      class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div
-            class="lg:mt-0 mt-12 md:pl-12 md:border-l lg:pl-24 border-slate-200 h-full">
-            <div class="lg:mt-0 mt-12 h-full">
-              <div
-                x-data="{
-            tabSelected: 1,
-            tabId: $id('tabs'),
-            tabButtonClicked(tabButton){
-                this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-                this.tabRepositionMarker(tabButton);
-            },
-            tabRepositionMarker(tabButton){
-                this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-                this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-                this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-            },
-            tabContentActive(tabContent){
-                return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-            }
-        }"
-                x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-                class="relative lg:rounded-3xl lg:p-10 text-purple-900">
-                <div
-                  x-ref="tabButtons"
-                  class="relative inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-slate-100 rounded-full select-none">
-                  <button
-                    :id="$id(tabId)"
-                    @click="tabButtonClicked($el);"
-                    type="button"
-                    class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
-                    >Account</button
-                  >
-                  <button
-                    :id="$id(tabId)"
-                    @click="tabButtonClicked($el);"
-                    type="button"
-                    class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
-                    >Password</button
-                  >
-                  <div
-                    x-ref="tabMarker"
-                    class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
-                    x-cloak>
-                    <div class="w-full h-full bg-white rounded-full shadow-sm">
-                    </div>
-                  </div>
-                </div>
-                <div class="relative w-full mt-2 content">
-                  <div
-                    :id="$id(tabId + '-content')"
-                    x-show="tabContentActive($el)"
-                    class="relative">
-                    <!-- Tab Content 1 - Replace with your content -->
-                    <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                      <img
-                        src="/images/ModalOne.png"
-                        alt="thumbnail"
-                        class="ring-1 ring-slate-300 rounded-2xl"
-                      />
-                    </section>
-                    <!-- End Tab Content 1 -->
-                  </div>
-    
-                  <div
-                    :id="$id(tabId + '-content')"
-                    x-show="tabContentActive($el)"
-                    class="relative"
-                    x-cloak>
-                    <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                      <img
-                        src="/images/ModalTwo.png"
-                        alt="thumbnail"
-                        class="ring-1 ring-slate-300 rounded-2xl"
-                      />
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-    
-      <section>
-        <div
-          class="h-64 justify-center lg:px-0 max-h-full md:px-12 overflow-hidden relativ -skew-y-[16deg] transform mb-24 mt-15">
-          <div class="bg-white block lg:flex-1 lg:relative sm:contents">
-            <div class="bg-white absolute h-full inset-0 object-cover w-full">
-              <video
-                autoplay=""
-                class="bg-white absolute max-w-none min-h-full min-w-full w-auto z-10"
-                loop=""
-                muted=""
-                ><source src="/images/gradientA.mp4" type="video/mp4" />Your browser
-                does not support the video tag.</video
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-  </section>
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div class="max-w-xl">
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">Feature</span>
-        </h2>
-  
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          App One
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-slate-500">Because we wonder all day around</p>
-        </div>
-      </div>
-      <div>
-        <ul
-          role="list"
-          class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-12">
-          <li>
-            <div>
-              <div
-                class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                1
-              </div>
-              <p class="mt-5 font-semibold text-purple-900">
-                Prebuilt integrations
-              </p>
-            </div>
-            <div class="mt-2 text-slate-500 text-sm">
-              Municipal management performance corporate investment grade bonds.
-            </div>
-          </li>
-          <li>
-            <div>
-              <div
-                class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                2
-              </div>
-              <p class="mt-5 font-semibold text-purple-900">
-                Tools for every stack
-              </p>
-            </div>
-            <div class="mt-2 text-slate-500 text-sm">
-              Corporate bonds debt fiat risk return municipal retirement interest
-              rate.
-            </div>
-          </li>
-          <li>
-            <div>
-              <div
-                class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                3
-              </div>
-              <p class="mt-5 font-semibold text-purple-900">
-                Prebuilt integrations
-              </p>
-            </div>
-            <div class="mt-2 text-slate-500 text-sm">
-              Municipal management performance corporate investment grade bonds.
-            </div>
-          </li>
-          <li>
-            <div>
-              <div
-                class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                4
-              </div>
-              <p class="mt-5 font-semibold text-purple-900">
-                Tools for every stack
-              </p>
-            </div>
-            <div class="mt-2 text-slate-500 text-sm">
-              Corporate bonds debt fiat risk return municipal retirement interest
-              rate.
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-12 lg:mt-24">
-        <div class="lg:pr-24 md:pr-12">
-          <h2
-            class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-            Stunning layouts
-          </h2>
-          <p class="text-slate-500 mt-5">
-            Your implementation includes relevant deep dive workshops so we can
-            understand your requirements and create tailored integration guides
-            for your teams to build faster.
-          </p>
-          <ul role="list" class="list-none mt-12">
-            <li>
-              <div>
-                <p class="mt-12 font-semibold text-purple-900 text-2xl">
-                  Prebuilt integrations
-                </p>
-              </div>
-              <div class="mt-5">
-                <ul
-                  role="list"
-                  class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Embeddable checkout</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Custom UI toolkit</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Invoice support</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Payment optimization</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4">Data migration</span>
-                  </li>
-                  <li class="flex items-start">
-                    —
-                    <span class="ml-4"> Product monetization strategy</span>
-                  </li>
-                </ul>
-                <p class="text-slate-500 mt-12">
-                    Your implementation includes relevant deep dive workshops so we can
-                    understand your requirements and create tailored integration guides
-                    for your teams to build faster.
-                  </p>
-                  <p class="mt-5">
-                    <a
-                      href=""
-                      class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
-                      See libraries
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                        <path
-                          fill-rule="evenodd"
-                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                    </a>
-                  </p>
-              </div>
-            </li>
-            <li>
-              <div>
-              </div>
-              <div class="mt-5">
-                <ul
-                  role="list"
-                  class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div
-        class="lg:mt-0 mt-12 md:pl-12 md:border-l lg:pl-24 border-slate-200 h-full">
-        <div class="lg:mt-0 mt-12 h-full">
-          <div
-            x-data="{
-        tabSelected: 1,
-        tabId: $id('tabs'),
-        tabButtonClicked(tabButton){
-            this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-            this.tabRepositionMarker(tabButton);
-        },
-        tabRepositionMarker(tabButton){
-            this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-            this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-            this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-        },
-        tabContentActive(tabContent){
-            return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-        }
-    }"
-            x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-            class="relative lg:rounded-3xl lg:p-10 text-purple-900">
-            <div
-              x-ref="tabButtons"
-              class="relative inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-slate-100 rounded-full select-none">
-              <button
-                :id="$id(tabId)"
-                @click="tabButtonClicked($el);"
-                type="button"
-                class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
-                >Account</button
-              >
-              <button
-                :id="$id(tabId)"
-                @click="tabButtonClicked($el);"
-                type="button"
-                class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
-                >Password</button
-              >
-              <div
-                x-ref="tabMarker"
-                class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
-                x-cloak>
-                <div class="w-full h-full bg-white rounded-full shadow-sm">
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full mt-2 content">
-              <div
-                :id="$id(tabId + '-content')"
-                x-show="tabContentActive($el)"
-                class="relative">
-                <!-- Tab Content 1 - Replace with your content -->
-                <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                  <img
-                    src="/images/ModalOne.png"
-                    alt="thumbnail"
-                    class="ring-1 ring-slate-300 rounded-2xl"
-                  />
-                </section>
-                <!-- End Tab Content 1 -->
-              </div>
-
-              <div
-                :id="$id(tabId + '-content')"
-                x-show="tabContentActive($el)"
-                class="relative"
-                x-cloak>
-                <section class="mt-4 rounded-2xl h-full drop-shadow-xl">
-                  <img
-                    src="/images/ModalTwo.png"
-                    alt="thumbnail"
-                    class="ring-1 ring-slate-300 rounded-2xl"
-                  />
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div
-      class="h-64 justify-center lg:px-0 max-h-full md:px-12 overflow-hidden relativ -skew-y-[16deg] transform mb-24 mt-15">
-      <div class="bg-white block lg:flex-1 lg:relative sm:contents">
-        <div class="bg-white absolute h-full inset-0 object-cover w-full">
-          <video
-            autoplay=""
-            class="bg-white absolute max-w-none min-h-full min-w-full w-auto z-10"
-            loop=""
-            muted=""
-            ><source src="/images/gradientA.mp4" type="video/mp4" />Your browser
-            does not support the video tag.</video
-          >
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  
-</section>
-
-<section
-  aria-labelledby="pricing-three-extended"
-  id="pricing-three-extended"
-  class="bg-white">
-  <div
-    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-    <div>
-      <h2 class="inline-flex items-center text-blue-600">
-        <span class="text-base font-medium tracking-tight"
-          >Extended Pricing</span
-        >
-      </h2>
-
-      <h2
-        class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-        What's in the box
-      </h2>
-    </div>
-    <div class="mx-auto text-left mt-12">
-      <div>
-        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-4">
-          <div>
-            <div>
-              <div>
-                <p class="font-semibold text-purple-500">Finances</p>
-              </div>
-
-              <div class="mt-6">
-                <ul
-                  role="list"
-                  class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">70+ Sections</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">40+ Ready demo pages</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Well thought out layouts</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> 100+ components</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">custom color palette</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">100% Responsive</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Built with Astrojs</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Styled with Tailwind CSS</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div>
-                <p class="font-semibold text-purple-500">Sales</p>
-              </div>
-
-              <div class="mt-6">
-                <ul
-                  role="list"
-                  class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Astro Seo</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Astro compress</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Partytown</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Image</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Sitemap</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div>
-                <p class="font-semibold text-purple-500">Product</p>
-              </div>
-
-              <div class="mt-6">
-                <ul
-                  role="list"
-                  class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">70+ Sections</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">40+ Ready demo pages</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Well thought out layouts</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> 100+ components</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">custom color palette</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">100% Responsive</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Built with Astrojs</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Styled with Tailwind CSS</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Astro Seo</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Astro compress</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Partytown</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Image</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Sitemap</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div>
-                <p class="font-semibold text-purple-500">Operations</p>
-              </div>
-
-              <div class="mt-6">
-                <ul
-                  role="list"
-                  class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">custom color palette</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">100% Responsive</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Built with Astrojs</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Styled with Tailwind CSS</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Astro Seo</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4">Astro compress</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Partytown</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Image</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-circle-check"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                      ></path>
-                      <path d="M9 12l2 2l4 -4"></path>
-                    </svg>
-
-                    <span class="ml-4"> Sitemap</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-<section class="relative overflow-hidden bg-white mb-24">
-  <div class="bg-purple-900 max-w-7xl mx-auto rounded-3xl">
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
-        <div>
-          <h2 class="inline-flex items-center text-white">
-            <span class="text-base font-medium tracking-tight">Feature</span>
-          </h2>
-          <h2
-            class="text-white font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-            Style code snippets with Shiki and CSS Variables
-          </h2>
-          <p class="text-slate-400 mt-5">
-            Receive dividends bull investment mutual funds rise federal funds
-            strategy substantially treasury municipal public index funds.
-          </p>
-          <p class="text-slate-400 mt-3">
-            Municipal management performance corporate investment grade bonds.
-            Fall volatile rates funds Standard & Poor's market index upswing
-            financial health growth bear. Treasury 401k potential.
-          </p>
-          <ul
-            role="list"
-            class="grid grid-cols-2 gap-4 list-none lg:gap-6 mt-12">
-            <li>
-              <div>
-                <p class="font-semibold text-white text-base">
-                  Prebuilt integrations
-                </p>
-              </div>
-              <div class="mt-2 text-slate-400 text-sm">
-                Municipal management performance corporate investment grade
-                bonds.
-              </div>
-            </li>
-            <li>
-              <div>
-                <p class="font-semibold text-white text-base">
-                  Tools for every stack
-                </p>
-              </div>
-              <div class="mt-2 text-slate-400 text-sm">
-                Municipal management performance corporate investment grade
-                bonds.
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="lg:mt-0 mt-12 h-full">
-          <div
-            x-data="{
-        tabSelected: 1,
-        tabId: $id('tabs'),
-        tabButtonClicked(tabButton){
-            this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-            this.tabRepositionMarker(tabButton);
-        },
-        tabRepositionMarker(tabButton){
-            this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-            this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-            this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-        },
-        tabContentActive(tabContent){
-            return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-        }
-    }"
-            x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-            class="relative lg:rounded-3xl lg:p-10 text-white">
-            <div
-              x-ref="tabButtons"
-              class="relative inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-purple-900 rounded-full select-none">
-              <button
-                :id="$id(tabId)"
-                @click="tabButtonClicked($el);"
-                type="button"
-                class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
-                >Account</button
-              >
-              <button
-                :id="$id(tabId)"
-                @click="tabButtonClicked($el);"
-                type="button"
-                class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
-                >Password</button
-              >
-              <div
-                x-ref="tabMarker"
-                class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
-                x-cloak>
-                <div class="w-full h-full bg-white/10 rounded-full shadow-sm">
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full mt-2 content">
-              <div
-                :id="$id(tabId + '-content')"
-                x-show="tabContentActive($el)"
-                class="relative">
-                <!-- Tab Content 1 - Replace with your content -->
-                <section
-                  class="text-xs font-mono shadow-3xl mt-4 rounded-2xl overflowhidden h-full">
-                  <Code
-                    code={`
-import { defineConfig } from 'astro/config';
-import compress from "astro-compress";
-import partytown from "@astrojs/partytown";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import image from "@astrojs/image";
-import image from "@astrojs/image";
-import compress from "astro-compress";
-import partytown from "@astrojs/partytown";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import image from "@astrojs/image";
-import compress from "astro-compress";
-import partytown from "@astrojs/partytown";
-import sitemap from "@astrojs/sitemap";
-// https://astro.build/config
-export default defineConfig({
-   site: 'https://lexingtonthemes.com',
-  integrations: [tailwind(), image(), sitemap()]
-});}'`}
-                    lang="js"
-                    theme="css-variables"
-                  />
-                </section>
-                <!-- End Tab Content 1 -->
-              </div>
-
-              <div
-                :id="$id(tabId + '-content')"
-                x-show="tabContentActive($el)"
-                class="relative"
-                x-cloak>
-                <section
-                  class="text-xs font-mono mt-4 rounded-3xl hadow-2xl overflow-hidden h-full">
-                  <Code
-                    code={`
-import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import image from "@astrojs/image";
-import compress from "astro-compress";
-import partytown from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import image from "@astrojs/image";
-import compress from "astro-vue";
-import partytown from "@astrojs/partytown";
-import sitemap from "@astrojs/sitemap";
-// https://astro.build/config
-export default defineConfig({
-   site: 'https://lexingtonthemes.com',
-  integrations: [tailwind(),  sitemap()]
-});}'`}
-                    lang="js"
-                    theme="css-variables"
-                  />
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-  <section>
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div>
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">FAQ</span>
-        </h2>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          Frequent questions
-          <span class="lg:block"> and answers</span>
-        </h2>
-        <div
-          class="mt-12 space-y-12 bg-slate-50 rounded-3xl p-4 lg:p-10 divide-y">
-          <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-            <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:pr-12">
-              <span class="font-semibold text-purple-900"
-                >Spazio identified charges on my account as unauthorized. What
-                should I do?</span
-              >
-            </div>
-            <div class="lg:col-span-2">
-              <p class="text-slate-500 space-y-3">
-                If we got in touch with you about unauthorized charges and you
-                think we have made a mistake, we will gladly look into this for
-                you. We will have sent you a form that we need you to fill out in
-                order for Spazio to revisit your account. Please fill out the
-                verification form that was sent to you. Once you have completed
-                the verification, we will revisit your account and follow up with
-                you.
-              </p>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 gap-4 pt-4 lg:pt-12 lg:grid-cols-3">
-            <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:pr-12">
-              <span class="font-semibold text-purple-900"
-                >I recently received a request for my photo ID. Why does Spazio
-                need this? What should I do next?
-              </span>
-            </div>
-            <div class="lg:col-span-2 space-y-3">
-              <p class="text-slate-500">
-                Spazio is legally required to complete what is called a KYC (Know
-                Your Customer) Survey for every user that signs up, which includes
-                completing identity verification for the person who chooses to be
-                the owner, administrator, and representative of a Spazio account.
-                These requirements are intended to promote transparency and
-                prevent individuals from using complex company structures to hide
-                terrorist financing, money laundering, tax evasion, and other
-                financial crimes. Usually, we are able to verify our users'
-                identities automatically, but once in a while we are unable to and
-                have to reach out for more information.
-              </p>
-              <p class="text-sm text-slate-500">
-                If you have not yet done so, visit the Verifications section of
-                your Dashboard to upload your photo ID in your dashboard.
-              </p>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 gap-4 pt-4 lg:pt-12 lg:grid-cols-3">
-            <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:pr-12">
-              <span class="font-semibold text-purple-900"
-                >Why has Spazio placed a reserve on my new account?</span
-              >
-            </div>
-            <div class="lg:col-span-2">
-              <p class="text-slate-500">
-                Reserves are utilized to keep processing volume available within
-                your Spazio account to fund refunds or chargebacks. There are
-                several possible reasons a reserve may be placed at onboarding. It
-                could be that your business operates in an industry or with a
-                business model that potentially creates additional credit risk,
-                even if you are not yet receiving chargebacks. Some businesses may
-                also collect payment far in advance, creating additional risk.
-                Most reserves are temporary, however, and we are happy to revisit
-                if you provide additional information by replying to the
-                notification email you received.
-              </p>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 gap-4 pt-4 lg:pt-12 lg:grid-cols-3">
-            <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:pr-12">
-              <span class="font-semibold text-purple-900"
-                >I just opened a new account but Spazio told me I cannot process
-                payments yet.
-              </span>
-            </div>
-            <div class="lg:col-span-2">
-              <p class="text-slate-500">
-                We know how important it is to be able to accept transactions and
-                payouts quickly in order for a business to continue running
-                smoothly. Spazio is currently reviewing your submitted details so
-                that we have a full understanding of your business. Unless we have
-                requested more information, there is no action for you to take,
-                and we will do our best to wrap our routine review up so you can
-                get up and running.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   </section>
   
+  
+
+
+
+
+
   <CtaOne />
-
-  
-</section>
-
+</BaseLayout>

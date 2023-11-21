@@ -27,7 +27,7 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Sales",
+    title: "sales",
     link: "/sales",
     logo: "/images/logo.png"
   },
@@ -54,51 +54,17 @@ const navLinks = [
 
 const sectionOne = {
   title: "Sales",
-  description: "Spazio Bianco creates the financial foundation that enables ambitious companies to launch their most innovative products. Our customers range from newly established startups to large-scale international businesses, all working together to drive the internet's economic growth. By joining us, you have the opportunity to contribute to this mission.",
-  buttonText: "Get Started",
+  description: "Empress empowers your sales force with advanced CRM tools, optimizing every interaction and driving business growth. Tailored for dynamic sales environments, our suite of tools ensures efficient customer management and enhanced sales performance.",
+  buttonText: "Discover Sales Tools",
   buttonTextTwo: "Contact Sales",
   imageRows: [
+    // Image URLs and alt texts can be updated here
+    // Example structure:
     [
-      {
-        url: "https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-        alt: "Thumbnail 1",
-        class: "h-full w-44 osm:opacity-0 lg:opacity-100"
-      },
-      {
-        url: "https://plus.unsplash.com/premium_photo-1661775434014-9c0e8d71de03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-        alt: "Thumbnail 2",
-        class: "h-full w-44"
-      }
+      { url: "path/to/image1.jpg", alt: "Sales Team Collaboration", class: "image-class" },
+      { url: "path/to/image2.jpg", alt: "Customer Relationship Management", class: "image-class" }
     ],
-    [
-      {
-        url: "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-        alt: "Thumbnail 3",
-        class: "h-full w-44"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1600275669439-14e40452d20b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8b2ZmaWNlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60",
-        alt: "Thumbnail 4",
-        class: "h-full w-44"
-      },
-      {
-        url: "https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-        alt: "Thumbnail 5",
-        class: "h-full w-44"
-      }
-    ],
-    [
-      {
-        url: "https://plus.unsplash.com/premium_photo-1661771825670-1720428a80ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
-        alt: "Thumbnail 6",
-        class: "h-full w-44"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-        alt: "Thumbnail 7",
-        class: "h-full w-44"
-      }
-    ]
+    // Additional rows of images can be added here
   ]
 };
 
@@ -106,55 +72,49 @@ const sectionOne = {
 
 const sectionTwo = {
   mainSection: {
-    title: "Feature",
-    subtitle: "Smooth unified experiences harmoniously",
-    subtitleTwo: "integrated with your business."
+    title: "Core Sales Features",
+    subtitle: "Efficient Customer Management",
+    subtitleTwo: "Enhance Sales Performance"
   },
   businessSection: {
-    title: "Business made beautiful",
-    description: "Receive dividends bull investment mutual funds rise federal funds strategy substantially treasury municipal public index funds.",
+    title: "Advanced CRM Solutions",
+    description: "Optimize customer interactions and sales processes with Empress CRM. Gain valuable insights to understand and engage your customer base better.",
     listItems: [
-      {
-        title: "Prebuilt integrations",
-        description: "Municipal management performance corporate investment grade bonds."
-      },
-      {
-        title: "Tools for every stack",
-        description: "Municipal management performance corporate investment grade bonds."
-      }
+      { title: "Quick Customer Data Access", description: "Efficiently manage customer information for improved communication." },
+      { title: "Comprehensive Contact Details", description: "Keep essential contact information at your fingertips for effective client engagement." }
     ],
-    additionalInfo: "Municipal management performance corporate investment grade bonds. Fall volatile rates funds Standard & Poor's market index upswing financial health growth bear. Treasury 401k potential."
+    additionalInfo: "Streamline your sales cycle with Empress’s advanced CRM tools."
   },
   tabImages: [
     "/images/ModalOne.png",
     "/images/ModalTwo.png"
   ],
-    firstTab: "Account",
-    secondTab: "Password",
+  firstTab: "CRM Overview",
+  secondTab: "Customer Management",
   layoutsSection: {
-    title: "Stunning layouts",
-    description: "Your implementation includes relevant deep dive workshops so we can understand your requirements and create tailored integration guides for your teams to build faster.",
+    title: "Client Interaction Tracking",
+    description: "Monitor interactions with customers to ensure timely and effective communication, enhancing relationship building.",
     howItWorks: {
-      title: "How it works",
-      description: "Customers can choose to save their payment details at any Link-supported site across the Lexingtonnetwork, and Link autofills those details for future purchases. When customers use Link on a new site or new device, they receive a one-time code to verify their identity."
+      title: "Enhanced Sales Accountability",
+      description: "Easily track sales representatives’ interactions, ensuring personalized customer service."
     },
-    seeLibrariesLink: "",
-    seeLibrariesText: "See libraries",
+    seeLibrariesLink: "link/to/detailed-crm-info",
+    seeLibrariesText: "Learn More",
     imageRightSrc: "/images/payments.png",
-    imageRightAlt: "Payments Illustration"
+    imageRightAlt: "Client Interaction Management"
   }
 };
 
 // Section Three
 
 const sectionThree = {
-  featureTitle: "Feature",
-  mainTitle: "Sapziobianco includes everything you need to",
-  mainSubtitle: "build a beautiful website for your SaaS",
-  description: "Spaziobianco allows you to create different",
+  featureTitle: "Streamlined Order Fulfillment",
+  mainTitle: "Optimize Order Processing",
+  mainSubtitle: "Efficiency in Every Step",
+  description: "Enhance order fulfillment efficiency, from placement to delivery, with Empress's streamlined system.",
   tabs: [
     {
-      title: "Open Accounts",
+      title: "Order Tracking",
       image: "/images/ModalOne.png",
       codeSnippet: `import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
@@ -177,7 +137,7 @@ export default defineConfig({
 });`,
     },
     {
-      title: "Create cards",
+      title: "Delivery Scheduling",
       image: "/images/ModalTwo.png",
       codeSnippet: `// Similar code for 'Create cards' tab`
     }
@@ -188,30 +148,30 @@ export default defineConfig({
 
 const sectionFour = {
   header: {
-    title: "Testimonial",
-    subtitle: "Spazio Bianco is love around the world.",
+    title: "Real Sales Success Stories",
+    subtitle: "Empress Driving Sales Growth",
   },
-  description: "Snowflake is a cloud data platform that enables data storage, processing, and analytics solutions for businesses. With the Data Cloud platform, Snowflake manages the complexities of data storage infrastructure, enabling organizations to focus on building data-driven solutions.",
+  description: "Discover firsthand how Empress's innovative sales tools have significantly enhanced the sales performance and customer engagement strategies of diverse businesses.",
   challenges: [
     {
-      title: "Challenge",
-      description: "Upswing securities passively index inverse bondholders capitalization financial health Moody's debt managed. Receive bondholders called capitalization investment grade bonds bills management district stocks. Potential funds consulting expenses.",
+      title: "Efficient Quote Management",
+      description: "Dive into the story of a consulting firm that revolutionized its quoting process using Empress. Learn how they achieved faster quote turnaround, increased quote accuracy, and improved customer satisfaction, leading to higher sales conversion rates.",
     },
     {
-      title: "Solution",
-      description: "Debt bills lucrative capitalization municipal bonds government 401k bear bull credit corporate bonds called NYSE finance. Managed prices bondholders federal risk NASDAQ hedge fund expenses municipal bonds management.",
-    }
+      title: "Advanced POS System",
+      description: "Explore how a retail chain implemented Empress's POS system to enhance customer checkout experiences. See how this solution helped them handle high-volume transactions with ease, provide detailed sales itemization, and improve overall sales tracking and inventory management.",
+    },
   ],
   productsUsed: [
-    "Deployments",
-    "Analytics",
-    "Payments",
-    "Checkouts"
+    "Efficient CRM Solutions",
+    "Streamlined Order Fulfillment",
+    "Advanced Quote Management",
+    "Comprehensive CRM Integration"
   ],
   testimonial: {
-    text: "Spaziobianco Public rollover performance exchange traded funds junk bonds passively NASDAQ bills upswing retirement corporate market exposure.",
-    caseStudyLink: "", // Add your link here
-    caseStudyText: "Read case study"
+    text: "Empress has revolutionized our sales approach, making our processes more efficient and customer-focused. The integration and ease of use have dramatically improved our customer engagement and sales outcomes.",
+    caseStudyLink: "link/to/case-study",
+    caseStudyText: "Read Success Stories"
   },
   images: {
     background: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
@@ -220,76 +180,54 @@ const sectionFour = {
   }
 };
 
+
 // Section Five
 
 const sectionFive = {
   mainSection: {
-    title: "Feature",
-    subtitle: "We create the next wave of technology.",
-    description1: "We help startups like yours grow revenue and improve customer loyalty with beautifully designed templates.",
-    description2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum.",
-    viewApplicationsLink: "/suite/apps",
-    viewApplicationsText: "View Applications"
+    title: "Sales Feature Spotlight",
+    subtitle: "Enhancing Customer Engagement",
+    description1: "Discover the extensive range of sales-focused features designed to boost your team's performance.",
+    description2: "From client management to transaction processing, Empress equips your sales team with the tools they need to succeed.",
+    viewApplicationsLink: "/explore-sales-features",
+    viewApplicationsText: "Explore Sales Features"
   },
   contentSections: [
-    {
-      title: "Tools for every stack",
-      description: "Competing in the $5 trillion global ecommerce market requires an international presence that doesn’t get lost in translation. Join us as we traverse the globe to explore the many benefits of offering localized, optimized payment experiences that are achievable in minutes, not months."
+  {
+      title: "Comprehensive Rental Management",
+      description: "Streamline the management of rental transactions, from start to end, ensuring a smooth process for both staff and customers. Track every rental with ease, providing real-time status updates and detailed inventory management."
     },
     {
-      title: "Prebuilt integrations",
-      description: "Join Lexingtonengineers and designers for a technical look at LexingtonApps. You’ll hear directly from the makers, get a full developer demo, and leave the session with everything you need to get started."
+      title: "Efficient Invoice Management",
+      description: "Automate and optimize your invoicing process with Empress, enhancing billing efficiency, reducing manual errors, and improving cash flow management. Access real-time financial overviews and tailored invoicing solutions."
     },
     {
-      title: "Prebuilt integrations",
-      description: "Join Lexingtonengineers and designers for a technical look at LexingtonApps. You’ll hear directly from the makers, get a full developer demo, and leave the session with everything you need to get started."
-    },
-    {
-      title: "Prebuilt integrations",
-      description: "Join Lexingtonengineers and designers for a technical look at LexingtonApps. You’ll hear directly from the makers, get a full developer demo, and leave the session with everything you need to get started."
-    },
-    {
-      title: "Prebuilt integrations",
-      description: "Join Lexingtonengineers and designers for a technical look at LexingtonApps. You’ll hear directly from the makers, get a full developer demo, and leave the session with everything you need to get started."
-    },
-    {
-      title: "Prebuilt integrations",
-      description: "Join Lexingtonengineers and designers for a technical look at LexingtonApps. You’ll hear directly from the makers, get a full developer demo, and leave the session with everything you need to get started."
-    },
-    {
-      title: "Prebuilt integrations",
-      description: "Join Lexingtonengineers and designers for a technical look at LexingtonApps. You’ll hear directly from the makers, get a full developer demo, and leave the session with everything you need to get started."
-    },
-    {
-      title: "Prebuilt integrations",
-      description: "Join Lexingtonengineers and designers for a technical look at LexingtonApps. You’ll hear directly from the makers, get a full developer demo, and leave the session with everything you need to get started."
-    },
-    {
-      title: "Prebuilt integrations",
-      description: "Join Lexingtonengineers and designers for a technical look at LexingtonApps. You’ll hear directly from the makers, get a full developer demo, and leave the session with everything you need to get started."
+      title: "Advanced CRM Integration",
+      description: "Seamlessly integrate Empress with your existing CRM systems for enhanced customer data management, personalized service, and streamlined sales processes. Gain valuable insights into customer behaviors and preferences."
     },
     // Add more items as per your content
   ]
 };
 
+
 // Section Six
 
 const sectionSix = {
-  title: "Feature",
-  subtitle: "Sapziobianco includes everything you need to build a beautiful website for your SaaS",
-  description: "Receive dividends bull investment mutual funds rise federal funds strategy substantially treasury municipal public index funds.",
+  title: "Seamless Integration with Sales Ecosystem",
+  subtitle: "Connecting Every Sales Aspect",
+  description: "Effortlessly integrate Empress with your existing sales and financial systems for a cohesive sales experience.",
   items: [
     {
-      title: "Conect your SaaS",
-      description: "Debt bills lucrative capitalization municipal bonds government 401k bear bull credit corporate bonds called NYSE finance."
+      title: "Data Sync Across Platforms",
+      description: "Ensure seamless data flow between sales and financial systems for comprehensive insights."
     },
     {
-      title: "Conect your SaaS",
-      description: "Debt bills lucrative capitalization municipal bonds government 401k bear bull credit corporate bonds called NYSE finance."
+      title: "Unified Sales and Financial Data",
+      description: "Connect all your sales tools for a unified and efficient sales management experience."
     },
     {
-      title: "Conect your SaaS",
-      description: "Debt bills lucrative capitalization municipal bonds government 401k bear bull credit corporate bonds called NYSE finance."
+      title: "Instant Access to Sales Data",
+      description: "Keep up with real-time sales updates to drive strategic decision-making."
     }
   ]
 };
@@ -297,200 +235,140 @@ const sectionSix = {
 // Section Seven
 
 const sectionSeven = {
-  "sectionTitle": "Feature",
-  "heading": "Top notch company",
-  "description": "Receive dividends bull investment mutual funds rise federal funds strategy substantially treasury municipal public index funds.",
-  "items": [
+  sectionTitle: "In-Depth Sales Features Exploration",
+  heading: "Dive Deeper into Empress's Sales Capabilities",
+  description: "Empress offers a suite of advanced tools and features, meticulously designed to enhance every aspect of your sales operations and customer relationship management.",
+  items: [
     {
-      "number": "1",
-      "title": "Tools for every stack",
-      "detail": "Corporate bonds debt fiat risk return municipal bonds retirement interest."
+      number: "1",
+      title: "Customer Insights Analytics",
+      detail: "Harness the power of Empress Analytics to gain deep insights into customer behaviors and preferences, driving informed sales strategies."
     },
     {
-      "number": "2",
-      "title": "Prebuilt integrations",
-      "detail": "Municipal management performance corporate investment grade bonds."
+      number: "2",
+      title: "Efficient Sales Workflow Management",
+      detail: "Utilize Empress Workflow to streamline your sales processes, reducing manual efforts and increasing productivity."
     },
     {
-      "number": "3",
-      "title": "Tools for every stack",
-      "detail": "Corporate bonds debt fiat risk return municipal bonds retirement interest."
+      number: "3",
+      title: "Sales Task Automation",
+      detail: "Automate routine sales tasks with Empress Zaps, allowing your team to focus on strategic sales initiatives and customer engagement."
     },
     {
-      "number": "4",
-      "title": "Use Shiki for code",
-      "detail": "Corporate bonds debt fiat risk return municipal bonds retirement interest."
+      number: "4",
+      title: "AI-Enhanced Customer Support",
+      detail: "Leverage AI-driven support from Empress to provide exceptional service and promptly address customer inquiries and issues."
     },
     {
-      "number": "5",
-      "title": "Tools for every stack",
-      "detail": "Corporate bonds debt fiat risk return municipal bonds retirement interest."
+      number: "5",
+      title: "Market Trend Prediction",
+      detail: "Stay ahead of the curve with Empress Forecast's predictive analysis, anticipating market shifts and customer needs for strategic planning."
     },
     {
-      "number": "6",
-      "title": "Prebuilt integrations",
-      "detail": "Municipal management performance corporate investment grade bonds."
+      number: "6",
+      title: "Collaborative Sales Tools",
+      detail: "Enhance team collaboration in sales with Empress Bridge, fostering a synergistic environment for sales success."
     },
     {
-      "number": "7",
-      "title": "Tools for every stack",
-      "detail": "Corporate bonds debt fiat risk return municipal bonds retirement interest."
+      number: "7",
+      title: "Comprehensive Sales Oversight",
+      detail: "Maintain stringent control over your sales operations with Empress Administration, ensuring security and compliance."
     },
     {
-      "number": "8",
-      "title": "Tools for every stack",
-      "detail": "Corporate bonds debt fiat risk return municipal bonds retirement interest."
+      number: "8",
+      title: "Seamless Sales System Integration",
+      detail: "Effortlessly integrate your existing sales tools with Empress for a cohesive and efficient sales management system."
     }
+    // Additional features can be listed here
   ]
-}
+};
 
 // Section Eight
 
 const sectionEight = {
-  "sectionTitle": "Extended Pricing",
-  "subTitle": "What's in the box",
-  "categories": [
+  sectionTitle: "Sales Solutions Overview",
+  subTitle: "Comprehensive Sales Tools for Every Need",
+  categories: [
     {
-      "categoryName": "Finances",
-      "items": [
-        {
-          "label": "70+ Sections"
-        },
-        {
-          "label": "40+ Ready demo pages"
-        },
-        {
-          "label": "Well thought out layouts"
-        },
-        {
-          "label": "100+ components"
-        },
-        {
-          "label": "custom color palette"
-        },
-        {
-          "label": "100% Responsive"
-        },
-        {
-          "label": "Built with Astrojs"
-        },
-        {
-          "label": "Styled with Tailwind CSS"
-        }
+      categoryName: "Core Sales Features",
+      items: [
+        { label: "CRM Integration" },
+        { label: "Customer Data Access" },
+        { label: "Contact Details Management" },
+        { label: "Client Interaction Tracking" },
+        { label: "Sales Rep Assignment" },
+        { label: "Customer Segmentation" }
       ]
     },
     {
-      "categoryName": "Sales",
-      "items": [
-        {
-          "label": "Astro Seo"
-        },
-        {
-          "label": "Astro compress"
-        },
-        {
-          "label": "Partytown"
-        },
-        {
-          "label": "Image"
-        },
-        {
-          "label": "Sitemap"
-        }
+      categoryName: "Sales Process Enhancements",
+      items: [
+        { label: "Order Fulfillment Tracking" },
+        { label: "Delivery Scheduling" },
+        { label: "Order Management" },
+        { label: "Quote Management" },
+        { label: "Price Estimation" },
+        { label: "Terms Customization" }
       ]
     },
     {
-      "categoryName": "Product",
-      "items": [
-        {
-          "label": "70+ Sections"
-        },
-        {
-          "label": "40+ Ready demo pages"
-        },
-        {
-          "label": "Well thought out layouts"
-        },
-        {
-          "label": "100+ components"
-        },
-        {
-          "label": "custom color palette"
-        },
-        {
-          "label": "100% Responsive"
-        },
-        {
-          "label": "Built with Astrojs"
-        },
-        {
-          "label": "Styled with Tailwind CSS"
-        }
+      categoryName: "Operational Efficiency Tools",
+      items: [
+        { label: "Automated Alerts" },
+        { label: "Seamless System Integration" },
+        { label: "Real-Time Data Updates" },
+        { label: "Efficient Document Management" },
+        { label: "Reimbursement Processes" },
+        { label: "Approval Workflows" }
       ]
     },
     {
-      "categoryName": "Operations",
-      "items": [
-        {
-          "label": "custom color palette"
-        },
-        {
-          "label": "100% Responsive"
-        },
-        {
-          "label": "Built with Astrojs"
-        },
-        {
-          "label": "Styled with Tailwind CSS"
-        },
-        {
-          "label": "Astro Seo"
-        },
-        {
-          "label": "Astro compress"
-        },
-        {
-          "label": "Partytown"
-        },
-        {
-          "label": "Image"
-        },
-        {
-          "label": "Sitemap"
-        }
+      categoryName: "Advanced Sales Systems",
+      items: [
+        { label: "POS System Integration" },
+        { label: "Sales Itemization" },
+        { label: "Payment Method Diversity" },
+        { label: "Sales Rep Accountability" },
+        { label: "Rental Transaction Management" },
+        { label: "Financial Rental Oversight" }
       ]
     }
   ]
 };
 
+
+
+
 // Section Nine
 
 const sectionNine = {
-  title: "FAQ",
-  subtitle: "Frequent questions and answers",
+  title: "Sales FAQs",
+  subtitle: "Empress Sales Queries Answered",
   questions: [
     {
-      question: "Spazio identified charges on my account as unauthorized. What should I do?",
-      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
+      question: "How does Empress CRM enhance customer management?",
+      answer: "Empress CRM optimizes customer interactions, providing key insights and streamlined processes for effective client management and improved sales outcomes."
     },
     {
-      question: "Spazio identified charges on my account as unauthorized. What should I do?",
-      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
+      question: "Can Empress integrate with my existing sales tools?",
+      answer: "Yes, Empress offers seamless integration capabilities with a variety of sales tools, ensuring cohesive and efficient sales operations."
     },
     {
-      question: "Spazio identified charges on my account as unauthorized. What should I do?",
-      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
+      question: "How does Empress support different sales team sizes?",
+      answer: "Empress scales to fit sales teams of all sizes, offering customizable tools and features to match the unique needs of your business."
     },
     {
-      question: "Spazio identified charges on my account as unauthorized. What should I do?",
-      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
+      question: "What features does Empress offer for order fulfillment?",
+      answer: "Empress streamlines order fulfillment with features like seamless order tracking, precise delivery scheduling, and integrated customer management."
     },
     {
-      question: "Spazio identified charges on my account as unauthorized. What should I do?",
-      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
-    },
+      question: "Does Empress provide solutions for rental management?",
+      answer: "Yes, Empress offers a comprehensive rental management system to efficiently track and manage rental transactions, enhancing customer satisfaction and operational efficiency."
+    }
   ]
 };
+
+
 
 ---
 
