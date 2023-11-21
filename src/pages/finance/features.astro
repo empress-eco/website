@@ -564,15 +564,13 @@ Use AstroSeo in all the pages you want different Seo than the index page
   </nav>
 
   
+  
   <section class="bg-white">
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
       {features.map((feature, featureIndex) => (
         <div key={featureIndex}>
-          <h2 class="inline-flex items-center text-blue-600">
-            <span class="text-base font-medium tracking-tight">{feature.header.mainTitle}</span>
-          </h2>
           <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
-             {feature.header.subTitle}
+            {feature.header.mainTitle}
            </h2>
            <p class="mt-4 text-slate-600 text-lg">
             {feature.header.description}
