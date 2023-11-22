@@ -11,129 +11,300 @@ import CtaOne from "../components/cta/CtaOne.astro";
 import { Code } from "astro/components";
 import { AstroSeo } from "@astrolib/seo";
 
-// Section Nine
 
-const faq = {
-  title: "FAQ",
-  subtitle: "Your Questions, Answered",
-  questions: [
+// Header
+
+const header = {
+  title: "Empress Forecast",
+  subtitle: "Predict Trends,",
+  subtitleCont: "Optimize Your Business.",
+  imageSrc: "/images/chart.jpg"
+};
+
+// Feature 1
+
+const featureOne = {
+  sections: [
     {
-      question: "Can Empress integrate with my existing business tools?",
-      answer: "Yes, Empress seamlessly integrates with a variety of business tools, ensuring smooth interoperability and data synchronization across your entire business ecosystem."
+      type: "feature",
+      title: "Predictive Market Insights",
+      mainTitle: "Stay Ahead of Market Trends",
+      descriptions: [
+        "Discover the power of foresight with Empress Forecast. Our AI-driven analysis delves deep into market data, equipping your business with the insights needed to stay ahead in a rapidly evolving market. ",
+        "Empress Forecast transforms your approach to market dynamics. By predicting customer behavior and market demands, we empower your business to not just respond to change, but to anticipate it."
+      ],
+      imagePaths: [
+        "/images/creditcardTwo.png",
+        "/images/balance.png",
+        "/images/notification.png",
+        "/images/miniNotification.png",
+        "/images/payments.png",
+        "/images/payments.png",
+        "/images/creditcardTwo.png"
+      ],
+      bgColor: "white",
+      textColor: "blue-600",
+      gridCols: "lg:grid-cols-2"
     },
     {
-      question: "How user-friendly is Empress for non-technical staff?",
-      answer: "Empress is designed with simplicity in mind. Our intuitive interfaces and dashboards make it easy for all users, regardless of their technical background, to navigate and utilize the platform effectively."
-    },
-    {
-      question: "What kind of support does Empress provide for new users?",
-      answer: "We offer comprehensive support including Empress Academy for tutorials and best practices, a dedicated Help Center for guidance, and responsive customer support for any immediate queries."
-    },
-    {
-      question: "Does Empress offer features for automating business processes?",
-      answer: "Absolutely! Empress features, like Empress Zaps, allow you to automate routine tasks, saving time and increasing efficiency within your operations."
-    },
-    {
-      question: "How does Empress ensure the security and privacy of our data?",
-      answer: "Empress prioritizes data security with robust protocols such as encryption and secure cloud storage, ensuring your business data is always protected from unauthorized access."
+      type: "featureSkewed",
+      title: "Operational Forecasting",
+      mainTitle: "Optimize Business Operations",
+      description: "Empress Forecast analyzes operational data to identify efficiency improvements, cost-saving opportunities, and productivity enhancements.",
+      points: [
+        {
+          title: "Resource Allocation Insights",
+          description: "Optimize resource allocation and streamline operations with data-driven insights."
+        },
+        {
+          title: "Process Improvement",
+          description: "Identify and implement process improvements for enhanced operational efficiency."
+        },
+        {
+          title: "Risk Assessment",
+          description: "Predict potential risks and develop strategies to proactively mitigate them."
+        }
+      ],
+      bgColor: "purple-900",
+      textColor: "white",
+      gridCols: "lg:grid-cols-3",
+      transform: "skew-y-6",
+      marginAdjustment: "-mt-72 lg:-mt-[26rem]"
     }
   ]
 };
 
-const features = [
-{
+// Feature Two
+const featureTwo = {
   header: {
-    mainTitle: "Control Your Accounts",
-    subTitle: "Track Your Spending",
-    description: "Empower your financial journey with tools designed for simplicity and efficiency."
-  },
-  featureSections: [
-    {
-      title: "Efficient Balance Tracking",
-      description: "Easily access and review your account balances to make informed decisions. Ideal for budgeting, financial planning, and ensuring your accounts are always adequately funded.",
-      listItems: [
-        "User-friendly Dashboard",
-        "Real-time Balance Updates",
-        "Intuitive Financial Overview",
-      ]
-    },
-    {
-      title: "Organized Account Types",
-      description: "Manage various account types all in one place. Whether it’s personal, savings, or business accounts, our system categorizes and simplifies them for you.",
-      listItems: [
-        "Multiple Account Management",
-        "Custom Account Categorization",
-        "Simplified Account Navigation",
-      ]
-    },
-    {
-      title: "Personalized Account Names",
-      description: "Label your accounts with names that make sense to you. This personal touch helps you navigate and manage your finances more intuitively.",
-      listItems: [
-        "Easy Account Identification",
-        "Personalized Naming System",
-        "Effortless Account Tracking",
-      ]
-    },
-    {
-      title: "Precise Balance Calculations",
-      description: "Get accurate financial figures with our precise balance calculations. Ideal for maintaining exact records and planning future expenses.",
-      listItems: [
-        "Highly Accurate Reporting",
-        "Detailed Financial Breakdowns",
-        "Trustworthy Data Accuracy",
-      ]
-    },
-    {
-      title: "Multi-Currency Support",
-      description: "Whether you’re dealing in dollars, euros, or yen, our platform supports multiple currencies, making it perfect for international transactions and travel.",
-      listItems: [
-        "Global Currency Compatibility",
-        "Automatic Currency Conversion",
-        "Seamless International Transactions",
-      ]
-    },
-    {
-      title: "Connected Account Overview",
-      description: "Link related accounts to see a comprehensive financial picture. Ideal for tracking business and personal finances or managing family budgets.",
-      listItems: [
-        "Unified Account Views",
-        "Easy Tracking of Related Finances",
-        "Consolidated Financial Reports",
-      ]
-    },
-  ]
-}
-
-
-];
-
-const sectionFour = {
-  header: {
-    title: "Revolutionize Your Approach",
-    mainTitle: "Business Made Beautiful",
-    subTitle: "Empress redefines business management by blending sophisticated AI Assistants and predictive analytics with elegantly designed dashboards."
+    title: "Actionable Business Intelligence",
+    mainTitle: "Data-Driven Decision Making",
+    subTitle: "Leverage insights for informed business strategies and growth."
   },
   columns: [
     {
-      title: "AI-Powered Business Intelligence",
+      title: "Real-Time Analytics",
       listItems: [
-        "Advanced AI Assistants for real-time decision support",
-        "Predictive analytics for forecasting market trends",
-        "Intelligent insights into customer behavior and preferences"
+        "Access real-time data for immediate strategic decision-making",
+        "Monitor key performance indicators to track business health",
+        "Adapt quickly to market changes with up-to-date analytics"
       ]
     },
     {
-      title: "Elegant, Insightful Dashboards",
+      title: "Custom Reporting",
       listItems: [
-        "Visually stunning dashboards for instant overview",
-        "Customizable interfaces to suit your unique business needs",
-        "Seamless integration of data for holistic management"
+        "Create customized reports focusing on specific business areas",
+        "Utilize data visualizations for clear, concise insights",
+        "Empower teams with actionable information for strategic planning"
       ]
     }
   ],
   imageSrc: "/images/chart.jpg"
 };
+
+// Feature List
+
+const features = [
+  {
+    header: {
+      mainTitle: "Transform Your Business Landscape",
+      subTitle: "Predictive Analytics for Every Aspect",
+      description: "Empress Forecast provides comprehensive predictive analytics, enabling businesses to anticipate and prepare for future trends across various departments."
+    },
+    featureSections: [
+      {
+        title: "Sales Optimization",
+        description: "Enhance inventory management and sales strategy with insights into future sales trends and customer purchasing habits.",
+        listItems: [
+          "Predict future sales trends",
+          "Understand customer purchasing habits",
+          "Match supply with anticipated demand"
+        ]
+      },
+      {
+        title: "Marketing Strategy Development",
+        description: "Craft effective marketing campaigns by predicting customer engagement and tailoring efforts to customer needs.",
+        listItems: [
+          "Forecast customer engagement trends",
+          "Tailor marketing efforts for maximum impact",
+          "Improve customer retention through targeted campaigns"
+        ]
+      },
+      {
+        title: "Financial Planning and Analysis",
+        description: "Use predictive insights for accurate budgeting and strategic investment planning, reducing financial risks.",
+        listItems: [
+          "Project financial outcomes accurately",
+          "Plan budgets and investments strategically",
+          "Mitigate risks and ensure financial stability"
+        ]
+      },
+      {
+        title: "Product Development and Innovation",
+        description: "Stay ahead in the market by forecasting trends and customer preferences, guiding product innovation strategies.",
+        listItems: [
+          "Forecast market trends and customer preferences",
+          "Guide product development strategies",
+          "Maintain competitive advantage with innovative products"
+        ]
+      },
+      {
+        title: "Operational Efficiency Improvement",
+        description: "Optimize processes and resource allocation by predicting operational challenges and identifying efficiency opportunities.",
+        listItems: [
+          "Predict operational challenges",
+          "Identify opportunities for efficiency improvement",
+          "Optimize resource allocation and workflows"
+        ]
+      },
+      {
+        title: "Supply Chain Management",
+        description: "Manage inventory and foresee supply chain disruptions with predictive analytics, essential for seamless operations.",
+        listItems: [
+          "Foresee supply chain disruptions",
+          "Effectively manage inventory levels",
+          "Maintain a seamless supply chain in manufacturing and distribution"
+        ]
+      }
+    ]
+  }
+];
+
+
+// Dark Background
+const sectionSeven = {
+  featureTitle: "Advanced Analytics Tools",
+  mainTitle: "Harness the Power of Data",
+  description: "Empress Forecast equips your business with powerful tools to understand and predict future trends, ensuring you're always ahead.",
+  tabs: [
+    {
+      title: "Data Integration",
+      image: "/images/ModalOne.png",
+      codeSnippet: `import EmpressAPI from 'empress-sdk';
+import { Forecasting } from 'empress-models';
+
+const empress = new EmpressAPI({
+  apiKey: 'YOUR_API_KEY'
+});
+
+export async function integrateData(dataSources) {
+  try {
+    const forecasting = new Forecasting(dataSources);
+    await empress.forecasting.integrate(forecasting);
+    return 'Data integrated successfully';
+  } catch (error) {
+    console.error('Error integrating data:', error);
+  }
+};`
+    },
+    {
+      title: "Custom Forecast Models",
+      image: "/images/ModalTwo.png",
+      codeSnippet: `import EmpressAPI from 'empress-sdk';
+import { CustomForecast } from 'empress-models';
+
+const empress = new EmpressAPI({
+  apiKey: 'YOUR_API_KEY'
+});
+
+export async function createCustomModel(modelData) {
+  try {
+    const customForecast = new CustomForecast(modelData);
+    await empress.forecasting.createModel(customForecast);
+    return 'Custom forecast model created successfully';
+  } catch (error) {
+    console.error('Error creating model:', error);
+  }
+};`
+    }
+  ]
+};
+
+// Check Marks
+const sectionData = {
+  mainTitle: "Empress Forecast Features",
+  mainSubTitle: "Unleash the Power of Predictive Analytics",
+  description: "Empress Forecast provides an array of advanced features to empower businesses with actionable insights and predictive capabilities.",
+  articles: [
+    {
+      title: "Trend Identification",
+      features: [
+        "Real-time trend tracking",
+        "Historical data analysis",
+        "Emerging pattern recognition"
+      ]
+    },
+    {
+      title: "Demand Forecasting",
+      features: [
+        "Predict future customer demand",
+        "Analyze seasonal market fluctuations",
+        "Adapt strategies to changing consumer needs"
+      ]
+    },
+    {
+      title: "Risk Analysis",
+      features: [
+        "Identify potential business risks",
+        "Evaluate financial vulnerabilities",
+        "Develop effective mitigation strategies"
+      ]
+    },
+    {
+      title: "Sales Prediction",
+      features: [
+        "Forecast sales growth and dips",
+        "Analyze sales data for trend prediction",
+        "Optimize sales strategies based on forecasts"
+      ]
+    },
+    {
+      title: "Resource Allocation",
+      features: [
+        "Optimize resource distribution",
+        "Forecast resource needs based on trends",
+        "Improve operational efficiency"
+      ]
+    },
+    {
+      title: "Market Adaptation",
+      features: [
+        "Adapt to market changes proactively",
+        "Strategize based on market forecasts",
+        "Stay ahead in a dynamic market environment"
+      ]
+    }
+  ]
+};
+
+// FAQs
+const faq = {
+  title: "FAQ",
+  subtitle: "Your Predictive Analytics Questions, Answered",
+  questions: [
+    {
+      question: "How does Empress Forecast enhance decision-making?",
+      answer: "Empress Forecast provides predictive insights into various aspects of your business, from market trends to operational efficiencies, enabling data-driven decision-making for strategic planning and growth."
+    },
+    {
+      question: "Can Empress Forecast be integrated with existing systems?",
+      answer: "Yes, Empress Forecast is designed for seamless integration with your existing business systems, ensuring cohesive data analysis and insights across your entire operational ecosystem."
+    },
+    {
+      question: "What kind of support does Empress offer for predictive analytics?",
+      answer: "We provide a comprehensive support system, including user guides, responsive customer service, and for our Enterprise plan users, dedicated technical support to assist with custom model creation and data integration."
+    },
+    {
+      question: "Are there customization options in Empress Forecast?",
+      answer: "Empress Forecast offers extensive customization options, allowing you to tailor predictive models and analytics to your specific business needs and goals."
+    },
+    {
+      question: "How secure is my data with Empress Forecast?",
+      answer: "Empress Forecast employs robust security protocols to ensure the protection and confidentiality of your data. We adhere to industry-standard data protection regulations to safeguard your information."
+    }
+  ]
+};
+
 
 ---
 
@@ -178,60 +349,52 @@ Use AstroSeo in all the pages you want different Seo than the index page
 />
 <BaseLayout>
 
+
+<!-- Header -->
+
   <section>
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
       <div class="lg:text-center">
         <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">Pricing</span>
+          <span class="text-base font-medium tracking-tight">{header.title}</span>
         </h2>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          Always know what you’ll pay,
-  
-          <span class="lg:block"> transparent pricing for everyone.</span>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {header.subtitle}
+          <span class="lg:block">{header.subtitleCont}</span>
         </h2>
       </div>
       <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
-        <img src={sectionFour.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+        <img src={header.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
       </div>
     </div>
   </section>
 
 
-  <TestimonialFour />
-
+  <!-- Feature 1 -->
 
   <section >
     <div
       class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
       <div>
         <h2 class="inline-flex items-center rounded-full text-blue-600">
-          <span class="text-base font-medium tracking-tight">Feature</span>
+          <span class="text-base font-medium tracking-tight">{featureOne.sections[0].title}</span>
         </h2>
         <h2
           class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          Spaziobianco is a well crafted
-          <span class="lg:block">multipage UI Kit for your SaaS</span>
+          {featureOne.sections[0].mainTitle}
+          <span class="lg:block">{featureOne.sections[0].secondaryTitle}</span>
         </h2>
         <div class="mx-auto text-left mt-12">
           <div>
             <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
               <div>
                 <p class="text-slate-500">
-                  Use blockchain technology to create decentralized autonomous
-                  organizations and manage them with ease. Control and added
-                  security. With decentralization, users have more control over
-                  their data and transactions, and the platform is less
-                  susceptible.
+                  {featureOne.sections[0].descriptions[0]}
                 </p>
               </div>
               <div>
                 <p class="text-slate-500">
-                  Our platform is built on blockchain technology, which allows for
-                  decentralized control and added security. With decentralization,
-                  users have more control over their data and transactions, and
-                  the platform is less susceptible to malicious attacks.
+                  {featureOne.sections[0].descriptions[1]}
                 </p>
               </div>
             </div>
@@ -241,41 +404,41 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <div class="grid lg:grid-cols-4 grid-cols-2 mt-24 gap-3">
           <div>
             <img
-              src="/images/creditcardTwo.png"
+              src={featureOne.sections[0].imagePaths[0]}
               alt="thumbnail"
               class="rounded-2xl drop-shadow-2xl"
             />
             <img
-              src="/images/balance.png"
+            src={featureOne.sections[0].imagePaths[1]}
               alt="thumbnail"
               class="drop-shadow-2xl mt-6"
             />
           </div>
           <div class="lg:col-span-2">
             <img
-              src="/images/notification.png"
+            src={featureOne.sections[0].imagePaths[2]}
               alt="thumbnail"
               class="drop-shadow-2xl"
             />
             <img
-              src="/images/miniNotification.png"
+            src={featureOne.sections[0].imagePaths[3]}
               alt="thumbnail"
               class="drop-shadow-2xl mt-6"
             />
             <img
-              src="/images/payments.png"
+            src={featureOne.sections[0].imagePaths[4]}
               alt="thumbnail"
               class="drop-shadow-2xl mt-6 lg:hidden block"
             />
           </div>
           <div class="hidden lg:block">
             <img
-              src="/images/payments.png"
+            src={featureOne.sections[0].imagePaths[5]}
               alt="thumbnail"
               class="drop-shadow-2xl"
             />
             <img
-              src="/images/creditcardTwo.png"
+            src={featureOne.sections[0].imagePaths[6]}
               alt="thumbnail"
               class="rounded-2xl drop-shadow-2xl mt-6"
             />
@@ -285,191 +448,89 @@ Use AstroSeo in all the pages you want different Seo than the index page
     </div>
   </section>
   <section class="bg-purple-900 transform skew-y-6 -mt-72 lg:-mt-[26rem]">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
-      <div>
-        <h2 class="inline-flex items-center text-white">
-          <span class="text-base font-medium tracking-tight">Feature</span>
-        </h2>
-        <h2
-          class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
-          Sapziobianco includes everything you need to <span class="lg:block"
-            >build a beautiful website for your SaaS</span
-          >
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-white">
-            Receive dividends bull investment mutual funds rise federal funds
-            strategy substantially treasury municipal public index funds.
-          </p>
-        </div>
+  <div
+    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
+    <div>
+      <h2 class="inline-flex items-center text-white">
+        <span class="text-base font-medium tracking-tight">{featureOne.sections[1].title}</span>
+      </h2>
+      <h2
+        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
+        {featureOne.sections[1].mainTitle} <span class="lg:block"
+          >{featureOne.sections[1].secondaryTitle}</span
+        >
+      </h2>
+      <div class="max-w-xl mt-6">
+        <p class="text-white">
+          {featureOne.sections[1].description}
+        </p>
       </div>
-      <div class="mx-auto text-left mt-12">
-        <div>
-          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
-            <div>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">
-                    Conect your SaaS
-                  </p>
-                </div>
-                <p class="text-sm text-white">
-                  Debt bills lucrative capitalization municipal bonds government
-                  401k bear bull credit corporate bonds called NYSE finance.
+    </div>
+    <div class="mx-auto text-left mt-12">
+      <div>
+        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+          <div>
+            <div class="space-y-3">
+              <div>
+                <p class="mt-5 font-semibold text-white text-base">
+                  {featureOne.sections[1].points[0].title}
                 </p>
               </div>
+              <p class="text-sm text-white">
+                {featureOne.sections[1].points[0].description}
+              </p>
             </div>
-            <div>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">
-                    Conect your SaaS
-                  </p>
-                </div>
-                <p class="text-sm text-white">
-                  Debt bills lucrative capitalization municipal bonds government
-                  401k bear bull credit corporate bonds called NYSE finance.
+          </div>
+          <div>
+            <div class="space-y-3">
+              <div>
+                <p class="mt-5 font-semibold text-white text-base">
+                  {featureOne.sections[1].points[1].title}
                 </p>
               </div>
+              <p class="text-sm text-white">
+                {featureOne.sections[1].points[1].description}
+              </p>
             </div>
-            <div>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">
-                    Conect your SaaS
-                  </p>
-                </div>
-                <p class="text-sm text-white">
-                  Debt bills lucrative capitalization municipal bonds government
-                  401k bear bull credit corporate bonds called NYSE finance.
+          </div>
+          <div>
+            <div class="space-y-3">
+              <div>
+                <p class="mt-5 font-semibold text-white text-base">
+                  {featureOne.sections[1].points[2].title}
                 </p>
               </div>
+              <p class="text-sm text-white">
+                {featureOne.sections[1].points[2].description}
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  
-
-  <!-- <section class="overflow-hidden border-b">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 pt-24 items-center">
-      <div>
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">Feature</span>
-        </h2>
-  
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          A Symphony of Efficiency
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-slate-500">
-            Build quicker and don't waste time building your website. Combine
-            layouts and customize them as you wish.Swap sections and create your
-            landing page in minutes
-          </p>
-        </div>
-      </div>
-      <div class="mx-auto text-left mt-12">
-        <div>
-          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
-            <div>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900">
-                    Tools to build optimized checkout flows
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                    <li class="flex items-start">
-                      —
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      —
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      —
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900">
-                    Global payments with a single integration
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
-                    <li class="flex items-start">
-                      —
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      —
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      —
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
-            <img
-              src="/images/chart.jpg"
-              alt="thumbnail"
-              class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  
+  </div>
+</section>
 
 
-
-  
-
-  <!-- <AboutOne /> -->
-  <!-- <FeatureEleven /> -->
-
+<!-- Feature Two -->
 
   <section class="overflow-hidden border-b">
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 pt-24 items-center">
       <div>
         <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">{sectionFour.header.title}</span>
+          <span class="text-base font-medium tracking-tight">{featureTwo.header.title}</span>
         </h2>
         <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {sectionFour.header.mainTitle}
+          {featureTwo.header.mainTitle}
         </h2>
         <div class="max-w-xl mt-6">
-          <p class="text-slate-500">{sectionFour.header.subTitle}</p>
+          <p class="text-slate-500">{featureTwo.header.subTitle}</p>
         </div>
       </div>
       <div class="mx-auto text-left mt-12">
         <div>
           <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
-            {sectionFour.columns.map(column => (
+            {featureTwo.columns.map(column => (
               <div>
                 <div>
                   <p class="font-semibold text-purple-900">{column.title}</p>
@@ -487,7 +548,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
             ))}
           </div>
           <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
-            <img src={sectionFour.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+            <img src={featureTwo.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
           </div>
         </div>
       </div>
@@ -495,8 +556,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
   </section>
 
 
-
-
+  <!-- Feature List -->
 
 
   <section class="bg-white">
@@ -547,211 +607,149 @@ Use AstroSeo in all the pages you want different Seo than the index page
     </div>
   </section>
 
-  <section class="relative overflow-hidden bg-white"></section>
-    <div class="bg-purple-900 max-w-7xl mx-auto rounded-3xl">
-      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
-          <div>
-            <h2 class="inline-flex items-center text-white">
-              <span class="text-base font-medium tracking-tight">Feature</span>
-            </h2>
-            <h2
-              class="text-white font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-              Style code snippets with Shiki and CSS Variables
-            </h2>
-            <p class="text-slate-400 mt-5">
-              Receive dividends bull investment mutual funds rise federal funds
-              strategy substantially treasury municipal public index funds.
-            </p>
-            <p class="text-slate-400 mt-3">
-              Municipal management performance corporate investment grade bonds.
-              Fall volatile rates funds Standard & Poor's market index upswing
-              financial health growth bear. Treasury 401k potential.
-            </p>
-            <ul
-              role="list"
-              class="grid grid-cols-2 gap-4 list-none lg:gap-6 mt-12">
-              <li>
-                <div>
-                  <p class="font-semibold text-white text-base">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-400 text-sm">
-                  Municipal management performance corporate investment grade
-                  bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <p class="font-semibold text-white text-base">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-400 text-sm">
-                  Municipal management performance corporate investment grade
-                  bonds.
-                </div>
-              </li>
-            </ul>
+
+
+  <!-- Dark Tab -->
+
+  <section class="bg-purple-900 transform skew-y-6">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:pt-42 pb-52 items-center transform -skew-y-6">
+      <div>
+        <h2 class="inline-flex items-center rounded-full text-white">
+          <span class="text-base font-medium tracking-tight">{sectionSeven.featureTitle}</span>
+        </h2>
+        <h2 class="text-white font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionSeven.mainTitle} <span class="lg:block">{sectionSeven.mainSubtitle}</span>
+        </h2>
+        <div class="max-w-xl mt-6">
+          <p class="text-white">{sectionSeven.description}</p>
+        </div>
+      </div>
+    <div class="mx-auto text-left mt-12">
+      <div
+        x-data="{
+        tabSelected: 1,
+        tabId: $id('tabs'),
+        tabButtonClicked(tabButton){
+            this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
+            this.tabRepositionMarker(tabButton);
+        },
+        tabRepositionMarker(tabButton){
+            this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
+            this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
+            this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
+        },
+        tabContentActive(tabContent){
+            return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
+        }
+    }"
+        x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
+        class="relative lg:rounded-3xl lg:p-10 text-white">
+        <div
+          x-ref="tabButtons"
+          class="relative inline-grid items-center justify-center h-10 grid-cols-2 p-1 bg-purple-900 rounded-full select-none">
+          <button
+            :id="$id(tabId)"
+            @click="tabButtonClicked($el);"
+            type="button"
+            class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
+            >{sectionSeven.tabs[0].title}</button
+          >
+          <button
+            :id="$id(tabId)"
+            @click="tabButtonClicked($el);"
+            type="button"
+            class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
+            >{sectionSeven.tabs[1].title}</button
+          >
+          <div
+            x-ref="tabMarker"
+            class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
+            x-cloak>
+            <div class="w-full h-full bg-white/10 rounded-full shadow-sm"></div>
           </div>
-          <div class="lg:mt-0 mt-12 h-full">
-            <div
-              x-data="{
-          tabSelected: 1,
-          tabId: $id('tabs'),
-          tabButtonClicked(tabButton){
-              this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-              this.tabRepositionMarker(tabButton);
-          },
-          tabRepositionMarker(tabButton){
-              this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-              this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-              this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-          },
-          tabContentActive(tabContent){
-              return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-          }
-      }"
-              x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-              class="relative lg:rounded-3xl lg:p-10 text-white">
+        </div>
+        <div class="relative w-full mt-2 content">
+          <div
+            :id="$id(tabId + '-content')"
+            x-show="tabContentActive($el)"
+            class="relative">
+            <section
+              class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24 lg:bg-[#14162c] lg:p-10 rounded-3xl">
               <div
-                x-ref="tabButtons"
-                class="relative inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-purple-900 rounded-full select-none">
-                <button
-                  :id="$id(tabId)"
-                  @click="tabButtonClicked($el);"
-                  type="button"
-                  class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
-                  >Account</button
-                >
-                <button
-                  :id="$id(tabId)"
-                  @click="tabButtonClicked($el);"
-                  type="button"
-                  class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
-                  >Password</button
-                >
-                <div
-                  x-ref="tabMarker"
-                  class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
-                  x-cloak>
-                  <div class="w-full h-full bg-white/10 rounded-full shadow-sm">
-                  </div>
-                </div>
+                class="text-xs font-mono mt-4 rounded-2xl overflowhidden p-4 bg-[#14162c] 00">
+                <Code
+                  code={sectionSeven.tabs[0].codeSnippet}
+                  lang="js"
+                  theme="css-variables"
+                />
               </div>
-              <div class="relative w-full mt-2 content">
-                <div
-                  :id="$id(tabId + '-content')"
-                  x-show="tabContentActive($el)"
-                  class="relative">
-                  <!-- Tab Content 1 - Replace with your content -->
-                  <section
-                    class="text-xs font-mono shadow-3xl mt-4 rounded-2xl overflowhidden h-full">
-                    <Code
-                      code={`
-  import { defineConfig } from 'astro/config';
-  import compress from "astro-compress";
-  import partytown from "@astrojs/partytown";
-  import sitemap from "@astrojs/sitemap";
-  import tailwind from "@astrojs/tailwind";
-  import image from "@astrojs/image";
-  import image from "@astrojs/image";
-  import compress from "astro-compress";
-  import partytown from "@astrojs/partytown";
-  import sitemap from "@astrojs/sitemap";
-  import tailwind from "@astrojs/tailwind";
-  import image from "@astrojs/image";
-  import compress from "astro-compress";
-  import partytown from "@astrojs/partytown";
-  import sitemap from "@astrojs/sitemap";
-  // https://astro.build/config
-  export default defineConfig({
-     site: 'https://lexingtonthemes.com',
-    integrations: [tailwind(), image(), sitemap()]
-  });}'`}
-                      lang="js"
-                      theme="css-variables"
-                    />
-                  </section>
-                  <!-- End Tab Content 1 -->
-                </div>
+              <div class="h-full lg:ml-auto lg:-m-24">
+                <img
+                  src={sectionSeven.tabs[0].image}
+                  alt="thumbnail"
+                  class="rounded-3xl"
+                />
+              </div>
+            </section>
+          </div>
   
-                <div
-                  :id="$id(tabId + '-content')"
-                  x-show="tabContentActive($el)"
-                  class="relative"
-                  x-cloak>
-                  <section
-                    class="text-xs font-mono mt-4 rounded-3xl hadow-2xl overflow-hidden h-full">
-                    <Code
-                      code={`
-  import { defineConfig } from 'astro/config';
-  import tailwind from "@astrojs/tailwind";
-  import image from "@astrojs/image";
-  import compress from "astro-compress";
-  import partytown from "@astrojs/mdx";
-  import sitemap from "@astrojs/sitemap";
-  import image from "@astrojs/image";
-  import compress from "astro-vue";
-  import partytown from "@astrojs/partytown";
-  import sitemap from "@astrojs/sitemap";
-  // https://astro.build/config
-  export default defineConfig({
-     site: 'https://lexingtonthemes.com',
-    integrations: [tailwind(),  sitemap()]
-  });}'`}
-                      lang="js"
-                      theme="css-variables"
-                    />
-                  </section>
-                </div>
+          <div
+            :id="$id(tabId + '-content')"
+            x-show="tabContentActive($el)"
+            class="relative"
+            x-cloak>
+            <section
+              class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24 lg:bg-[#14162c] lg:p-10 rounded-3xl">
+              <div
+                class="text-xs font-mono mt-4 rounded-2xl overflowhidden p-4 bg-[#14162c] 00">
+                <Code
+                  code={sectionSeven.tabs[0].codeSnippet}
+                  lang="js"
+                  theme="css-variables"
+                />
               </div>
-            </div>
+              <div class="h-full lg:ml-auto lg:-m-24">
+                <img
+                src={sectionSeven.tabs[1].image}
+                  alt="thumbnail"
+                  class="rounded-3xl"
+                />
+              </div>
+            </section>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </section>
 
 
+  <!-- Feature List -->
+
   <section>
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center mt-20">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center mt-20">
       <div>
         <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight"
-            >Extended Pricing</span
-          >
+          <span class="text-base font-medium tracking-tight">{sectionData.mainTitle}</span>
         </h2>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          What's included in our pricing
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionData.mainSubTitle}
         </h2>
         <div class="max-w-xl mt-6">
-          <p class="text-slate-500">
-            Build quicker and don't waste time building your website. Combine
-            layouts and customize them as you wish.
-          </p>
+          <p class="text-slate-500">{sectionData.description}</p>
         </div>
       </div>
       <div class="mx-auto text-left mt-12">
-        <div>
-          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+          {sectionData.articles.map((article) => (
             <article>
               <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Tools to build optimized checkout flows
-                  </p>
-                </div>
-  
+                <p class="font-semibold text-purple-900 text-base">{article.title}</p>
                 <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
+                  <ul role="list" class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    {article.features.map((feature) => (
+                      <li class="flex items-start">
+                        <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-circle-check"
                         width="20"
@@ -767,433 +765,20 @@ Use AstroSeo in all the pages you want different Seo than the index page
                         ></path>
                         <path d="M9 12l2 2l4 -4"></path>
                       </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
+                        <span class="ml-4">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Global payments with a single integration
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Comprehensive security
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Financial reconciliation and reporting
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Fast, predictable payouts
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    24×7 phone, chat, and email support
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-          </div>
+          ))}
         </div>
       </div>
     </div>
-  </section>
+  </section>  
+
+  <!-- Faqs -->
 
   <section>
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
@@ -1220,10 +805,6 @@ Use AstroSeo in all the pages you want different Seo than the index page
     </div>
   </section>
   
-
-  <!-- <FeatureTwelve /> -->
-
-  <!-- <FeatureFive /> -->
 
   <CtaOne />
 </BaseLayout>
