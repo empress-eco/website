@@ -1,10 +1,10 @@
 ---
 pubDate: 2022-08-08
 author: empress.eco
-title:  Talent
-description: "Getting the most out of your workouts is essential for achieving your fitness goals. In this post, we'll explore some tips and tricks to help you get the most out of your workouts. We'll also look at some ways to make the process easier and more enjoyable"
+title:  Forum
+description: "Municipal management performance corporate investment grade bonds."
 image:
-  url: "https://cdn.dribbble.com/userupload/11480913/file/original-462bb9cdaf4949f852c9acf01eecfbe5.png?resize=752x"
+  url: "/images/integrations/chrome.svg"
   alt: "The word “astro” against an illustration of planets and stars."
 tags: ["talent"]
 ---

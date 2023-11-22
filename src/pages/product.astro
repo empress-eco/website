@@ -196,22 +196,43 @@ const sectionFive = {
     viewApplicationsLink: "/explore-product-management",
     viewApplicationsText: "Discover Product Solutions"
   },
-  contentSections: [
+  contentSections: [   
     {
-      title: "Batch Production Tracking",
-      description: "Empress's Batch Production Tracking facilitates precise monitoring of manufacturing processes, enabling businesses to track each production batch for efficient scheduling, quality control, and cost management."
+      title: "Track Stock Accurately",
+      description: "Master your inventory with precision using our advanced tracking system. Tailored for product accuracy, it ensures a real-time overview of stock levels, enabling smarter inventory decisions and optimized stock management.",
+      linkHref: "/suite/inventory",
+      linkText: "View Inventory",
+
     },
     {
-      title: "PLM System Excellence",
-      description: "Our PLM (Product Lifecycle Management) system offers a holistic approach to managing the entire lifecycle of a product, from design and development to discontinuation, ensuring strategic decision-making at every stage."
+      title: "Streamline Purchasing Process",
+      description: "Revolutionize your procurement strategy with our streamlined purchasing system. Designed for operational efficiency, it simplifies the procurement process, enhancing supplier relations and ensuring timely acquisitions.",
+      linkHref: "/suite/procurement",
+      linkText: "View Procurement",
     },
     {
-      title: "Quality Check Perfection",
-      description: "Empress's Quality Check Management System assures the highest standards of product quality, featuring detailed inspections, issue tracking, and resolution, thereby fostering continuous product improvement."
+      title: "Efficient Production Management",
+      description: "Elevate your manufacturing processes with our efficient production management tools. Our solutions optimize production workflows, enhance operational efficiency, and reduce downtime, ensuring a seamless manufacturing cycle.",
+      linkHref: "/suite/manufacturing",
+      linkText: "View Manufacturing",
     },
     {
-      title: "Maintenance Management",
-      description: "Our advanced Maintenance Management System optimizes the upkeep of assets, scheduling maintenance activities, tracking costs, and managing technician assignments to ensure the longevity and efficiency of your assets."
+      title: "Manage Product Lifecycle",
+      description: "Take control of your product lifecycle with our comprehensive management system. From development to retirement, our platform offers insights and tools for every stage, ensuring a sustainable and profitable product journey.",
+      linkHref: "/suite/lifecycle",
+      linkText: "View Lifecycle",
+    },
+    {
+      title: "Ensure Quality Standards",
+      description: "Uphold the highest quality standards with our quality management system. It provides rigorous monitoring and assessment tools, guaranteeing that every product meets your stringent quality criteria.",
+      linkHref: "/suite/quality",
+      linkText: "View Quality",
+    },
+    {
+      title: "Optimize Asset Upkeep",
+      description: "Optimize your asset maintenance with our streamlined upkeep system. Designed for longevity and efficiency, it simplifies the maintenance process, ensuring your assets remain in peak condition for optimal operational performance.",
+      linkHref: "/suite/maintenance",
+      linkText: "View Maintenance",
     }
   ]
 };
@@ -927,13 +948,27 @@ const sectionNine = {
                 <div class="mt-2 text-slate-500">
                   {section.description}
                 </div>
+                <p class="mt-5"></p>
+                <a href={section.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {section.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
               </li>
+            </p>
             ))}
           </ul>
         </div>
       </div>
     </div>
-  </section>
   
 
 

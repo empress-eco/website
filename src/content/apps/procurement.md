@@ -1,10 +1,10 @@
 ---
 pubDate: 2022-07-15
 author: empress.eco
-title: Product
-description: "Self-care is important, and it's often overlooked in today's busy world. In this post, we'll explore why it's important to take time for yourself and how to make it happen. We'll also look at ways to make the most of your time off."
+title: Procurement
+description: "Municipal management performance corporate investment grade bonds."
 image:
-  url: "https://cdn.dribbble.com/userupload/11480913/file/original-462bb9cdaf4949f852c9acf01eecfbe5.png?resize=752x"
+  url: "/images/integrations/chrome.svg"
   alt: "The word community with a heart."
 tags: ["product"]
 ---

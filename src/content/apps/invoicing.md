@@ -1,10 +1,10 @@
 ---
 pubDate: 2022-07-08
 author: empress.eco
-title: Sales
-description: "Writing is an essential skill, no matter what profession you're in. In this post, we'll cover some tips and tricks to help you become a better writer. We'll also look at ways to make the writing process easier and more enjoyable."
+title: Invoicing
+description: "Municipal management performance corporate investment grade bonds."
 image:
-  url: "https://cdn.dribbble.com/userupload/11480913/file/original-462bb9cdaf4949f852c9acf01eecfbe5.png?resize=752x"
+  url: "/images/integrations/chrome.svg"
   alt: "Thumbnails of websites from the Astro Showcase site."
 tags: ["sales"]
 ---

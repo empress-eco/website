@@ -1,12 +1,12 @@
 ---
 pubDate: 2022-08-08
 author: empress.eco
-title:  Technology
-description: "Getting the most out of your workouts is essential for achieving your fitness goals. In this post, we'll explore some tips and tricks to help you get the most out of your workouts. We'll also look at some ways to make the process easier and more enjoyable"
+title:  Performance
+description: "Municipal management performance corporate investment grade bonds."
 image:
-  url: "https://cdn.dribbble.com/userupload/11480913/file/original-462bb9cdaf4949f852c9acf01eecfbe5.png?resize=752x"
+  url: "/images/integrations/chrome.svg"
   alt: "The word “astro” against an illustration of planets and stars."
-tags: ["technology"]
+tags: ["talent"]
 ---
 
 This theme comes with the [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) integration installed and configured in your `astro.config.mjs` config file. If you prefer not to use MDX, you can disable support by removing the integration from your config file.

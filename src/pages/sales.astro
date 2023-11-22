@@ -194,18 +194,41 @@ const sectionFive = {
   },
   contentSections: [
   {
-      title: "Comprehensive Rental Management",
-      description: "Streamline the management of rental transactions, from start to end, ensuring a smooth process for both staff and customers. Track every rental with ease, providing real-time status updates and detailed inventory management."
-    },
-    {
-      title: "Efficient Invoice Management",
-      description: "Automate and optimize your invoicing process with Empress, enhancing billing efficiency, reducing manual errors, and improving cash flow management. Access real-time financial overviews and tailored invoicing solutions."
-    },
-    {
-      title: "Advanced CRM Integration",
-      description: "Seamlessly integrate Empress with your existing CRM systems for enhanced customer data management, personalized service, and streamlined sales processes. Gain valuable insights into customer behaviors and preferences."
-    },
-    // Add more items as per your content
+    title: "Enhance Customer Relationships",
+    description: "Elevate your customer engagement to new heights with our CRM solutions. Designed to enrich interactions, our platform offers deep insights into client behaviors, boosting your sales strategy and fostering lasting relationships.",
+    linkHref: "/suite/crm",
+    linkText: "View CRM",
+  },
+  {
+    title: "Streamline Order Processing",
+    description: "Revolutionize your fulfillment operations with our optimized order processing system. Tailored for efficiency, it ensures rapid and accurate handling of orders, enhancing customer satisfaction and streamlining your sales workflow.",
+    linkHref: "/suite/fulfillment",
+    linkText: "View Fulfillment",
+  },
+  {
+    title: "Optimize Billing Systems",
+    description: "Transform your invoicing process with our advanced billing system. Built for sales professionals, it automates and simplifies invoicing, enhancing accuracy and saving valuable time for strategic sales activities.",
+    linkHref: "/suite/invoicing",
+    linkText: "View Invoicing",
+  },
+  {
+    title: "Generate Quick Estimates",
+    description: "Accelerate your quoting process with our rapid estimate generation tool. It's designed to provide quick, accurate quotes, enabling you to respond faster to client inquiries and stay ahead in the fast-paced sales environment.",
+    linkHref: "/suite/account",
+    linkText: "View Quotes",
+  },
+  {
+    title: "Simplify Retail Transactions",
+    description: "Our Point of Sale system is engineered for retail simplicity and efficiency. It streamlines transactions, making sales processes smoother and more customer-friendly, ultimately enhancing the retail experience.",
+    linkHref: "/suite/pos",
+    linkText: "View Point of Sale",
+  },
+  {
+    title: "Manage Rental Operations",
+    description: "Take control of your rental operations with our comprehensive rental management system. It simplifies the complexities of rental transactions, ensuring a seamless process from start to finish, enhancing both efficiency and customer satisfaction.",
+    linkHref: "/suite/rentals",
+    linkText: "View Rentals",
+  },
   ]
 };
 
@@ -923,13 +946,27 @@ const sectionNine = {
                 <div class="mt-2 text-slate-500">
                   {section.description}
                 </div>
+                <p class="mt-5"></p>
+                <a href={section.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {section.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
               </li>
+            </p>
             ))}
           </ul>
         </div>
       </div>
     </div>
-  </section>
   
 
 

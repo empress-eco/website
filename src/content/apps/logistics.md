@@ -1,12 +1,12 @@
 ---
 pubDate: 2022-08-08
 author: empress.eco
-title: Marketing
-description: "Stress can be a major obstacle in life. In this post, we'll cover some tips and tricks to help you manage stress and stay healthy. We'll also look at some strategies to help you stay calm and focused."
+title: Logistics
+description: "Municipal management performance corporate investment grade bonds."
 image:
-  url: "https://cdn.dribbble.com/userupload/11480913/file/original-462bb9cdaf4949f852c9acf01eecfbe5.png?resize=752x"
+  url: "/images/integrations/chrome.svg"
   alt: "The word “astro” against an illustration of planets and stars."
-tags: ["marketing"]
+tags: ["operations"]
 ---
 This theme comes with the [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) integration installed and configured in your `astro.config.mjs` config file. If you prefer not to use MDX, you can disable support by removing the integration from your config file.
 

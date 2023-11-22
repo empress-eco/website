@@ -1,15 +1,13 @@
 ---
 pubDate: 2022-08-08
 author: empress.eco
-title:  Other
-description: "Getting the most out of your workouts is essential for achieving your fitness goals. In this post, we'll explore some tips and tricks to help you get the most out of your workouts. We'll also look at some ways to make the process easier and more enjoyable"
+title: Email
+description: "Municipal management performance corporate investment grade bonds."
 image:
-  url: "https://cdn.dribbble.com/userupload/11480913/file/original-462bb9cdaf4949f852c9acf01eecfbe5.png?resize=752x"
-  alt: "T
-  he word “astro” against an illustration of planets and stars."
-tags: ["other"]
+  url: "/images/integrations/chrome.svg"
+  alt: "The word “astro” against an illustration of planets and stars."
+tags: ["marketing"]
 ---
-
 This theme comes with the [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) integration installed and configured in your `astro.config.mjs` config file. If you prefer not to use MDX, you can disable support by removing the integration from your config file.
 
 ## Why MDX?
@@ -22,6 +20,20 @@ If you have existing content authored in MDX, this integration will hopefully ma
 
 Here is how you import and use a UI component inside of MDX.
 When you open this page in the browser, you should see the clickable button below.
+
+
+
+
+
+## More Links
+
+- [MDX Syntax Documentation](https://mdxjs.com/docs/what-is-mdx)
+- [Astro Usage Documentation](https://docs.astro.build/en/guides/markdown-content/#markdown-and-mdx-pages)
+- **Note:** [Client Directives](https://docs.astro.build/en/reference/directives-reference/#client-directives) are still required to create interactive components. Otherwise, all components in your MDX will render as static HTML (no JavaScript) by default.
+
+
+
+
 
 ## More Links
 

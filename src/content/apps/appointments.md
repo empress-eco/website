@@ -1,13 +1,14 @@
 ---
 pubDate: 2022-08-08
 author: empress.eco
-title: Operations
-description: "Eating healthy is an important part of maintaining a healthy lifestyle. In this blog post, we'll explore the benefits of eating healthy and how it can help you reach your goals. We'll also look at some tips and tricks to make healthy eating easier."
+title:  Appointments
+description: "Municipal management performance corporate investment grade bonds."
 image:
-  url: "https://cdn.dribbble.com/userupload/11480913/file/original-462bb9cdaf4949f852c9acf01eecfbe5.png?resize=752x"
+  url: "/images/integrations/chrome.svg"
   alt: "The word “astro” against an illustration of planets and stars."
-tags: ["operations"]
+tags: ["talent"]
 ---
+
 This theme comes with the [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) integration installed and configured in your `astro.config.mjs` config file. If you prefer not to use MDX, you can disable support by removing the integration from your config file.
 
 ## Why MDX?
@@ -20,20 +21,6 @@ If you have existing content authored in MDX, this integration will hopefully ma
 
 Here is how you import and use a UI component inside of MDX.
 When you open this page in the browser, you should see the clickable button below.
-
-
-
-
-
-## More Links
-
-- [MDX Syntax Documentation](https://mdxjs.com/docs/what-is-mdx)
-- [Astro Usage Documentation](https://docs.astro.build/en/guides/markdown-content/#markdown-and-mdx-pages)
-- **Note:** [Client Directives](https://docs.astro.build/en/reference/directives-reference/#client-directives) are still required to create interactive components. Otherwise, all components in your MDX will render as static HTML (no JavaScript) by default.
-
-
-
-
 
 ## More Links
 

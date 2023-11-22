@@ -193,18 +193,44 @@ const sectionFive = {
     viewApplicationsText: "Explore Features"
   },
   contentSections: [
-    {
-      title: "Global Currency Flexibility",
-      description: "Empress's multi-currency support empowers you to conduct business across borders with ease. It simplifies currency conversions and financial reporting for international transactions, making global market navigation effortless and accurate."
-    },
-    {
-      title: "Tailored Transaction Categorization",
-      description: "Streamline your budgeting and financial analysis with Empress's customizable transaction categorization. This feature allows for precise tracking and sorting of expenses, revenue, and more, enabling you to gain deeper insights into your financial habits and trends."
-    },
-    {
-      title: "Comprehensive Account Connectivity",
-      description: "Gain a complete, integrated view of your financial status with Empress's account connectivity feature. Link various accounts including checking, savings, investments, and loans to a unified dashboard for a comprehensive overview, aiding in efficient financial decision-making and planning."
-    },
+  {
+    title: "Control Your Accounts",
+    description: "Experience unparalleled control over your financial flow with Empress. Our intuitive tools empower you to effortlessly navigate your accounts, bringing a new level of clarity and efficiency to your financial management.",
+    linkHref: "/suite/account",
+    linkText: "See Application",
+
+  },
+  {
+    title: "Redefine Invoice Management",
+    description: "Empress transforms how you handle invoices. Our advanced system streamlines your billing process, introducing simplicity and precision to your financial transactions, all designed with your efficiency in mind.",
+    linkHref: "/suite/invoice",
+    linkText: "See Application",
+  },
+  {
+    title: "Elevate Expense Tracking",
+    description: "Track your company spending with unmatched accuracy using Empress. Our sophisticated expense tracking tools offer insightful analysis, guiding you to smarter spending decisions and enhanced budget control.",
+    linkHref: "/suite/expense",
+    linkText: "See Application",
+    
+  },
+  {
+    title: "Simplify Tax Compliance",
+    description: "With Empress, navigating tax compliance becomes a stress-free experience. Our automated solutions adapt to evolving tax laws, ensuring accuracy and peace of mind in every financial calculation.",
+    linkHref: "/suite/tax",
+    linkText: "See Application",
+  },
+  {
+    title: "Optimize Your Budgeting",
+    description: "Empower your financial planning with Empress's budget optimization tools. Our solutions help you craft effective budgets and forecast future scenarios, enabling informed decisions that enhance your financial wellbeing.",
+    linkHref: "/suite/budget",
+    linkText: "See Application",
+  },
+  {
+    title: "Streamline Contract Management",
+    description: "Empress revolutionizes contract processing, offering efficiency and ease. Our platform simplifies the complexities of contract management, ensuring seamless business operations and compliance, tailored to your needs.",
+    linkHref: "/suite/contracts",
+    linkText: "See Application",
+  },
     // Add more items as per your content
   ]
 };
@@ -925,13 +951,29 @@ const sectionNine = {
                 <div class="mt-2 text-slate-500">
                   {section.description}
                 </div>
+                <p class="mt-5"></p>
+                <a href={section.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {section.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
               </li>
+            </p>
             ))}
           </ul>
+          
         </div>
       </div>
     </div>
-  </section>
+
   
 
 

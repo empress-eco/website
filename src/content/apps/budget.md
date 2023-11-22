@@ -1,12 +1,12 @@
 ---
 pubDate: 2022-07-01
 author: empress.eco
-title: Finances
-description: Learning a new language can open up a world of possibilities. It can help you gain new perspectives, make new friends, and even land a better job. In this post, we'll explore the benefits of learning a new language and why it's worth the effort."
+title: Budget
+description: "Municipal management performance corporate investment grade bonds."
 image:
-  url: "https://cdn.dribbble.com/userupload/11480913/file/original-462bb9cdaf4949f852c9acf01eecfbe5.png?resize=752x"
+  url: "/images/integrations/chrome.svg"
   alt: "The Astro logo with the word One."
-tags: ["finances"]
+tags: ["finance"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

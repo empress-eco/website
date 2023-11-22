@@ -43,15 +43,13 @@ import { AstroSeo } from "@astrolib/seo";
 />
 <BaseLayout>
   <section class="bg-white">
-    <div class="max-w-7xl px-8 md:px-12 lg:px-32 mx-auto py-32 lg:py-36 relative">
+    <div class="max-w-7xl px-8 md:px-12 lg:px-32 mx-auto py-32 lg:py-20 relative">
       <div class="max-w-2xl">
-        <p class="text-sm text-blue-600 uppercase">
-          Our Apps
-        </p>
-        <p class="mt-8 text-4xl font-normal tracking-tighter text-purple-900 sm:text-5xl">
-          All-In-One App Suite For Business 
-        </p>
-        <!-- <form class="mt-6 sm:flex sm:max-w-md">
+        <h2
+        class="text-purple-900 font-semibold tracking-tighter lg:text-5xl text-3xl mb-10">
+        One Platform, Infinite Possibilities.
+      </h2>
+        <form class="mt-6 sm:flex sm:max-w-md">
           <label for="email-address" class="sr-only">Email address</label>
           <input
             type="email"
@@ -60,7 +58,7 @@ import { AstroSeo } from "@astrolib/seo";
             autocomplete="email"
             required
             class="block w-full h-10 px-4 py-2 text-sm text-gray-700 bg-white border rounded-lg border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-            placeholder="Enter your email"
+            placeholder="Subscribe for the latest applications"
           />
           <div class="mt-4 sm:ml-2 sm:mt-0 sm:flex-shrink-0">
             <button
@@ -76,7 +74,7 @@ import { AstroSeo } from "@astrolib/seo";
             </button>
 
           </div>
-        </form> -->
+        </form>
       </div>
       <ul class="flex flex-wrap gap-2 mt-12" role="list">
         {tags.map((tag) => (
@@ -93,25 +91,26 @@ import { AstroSeo } from "@astrolib/seo";
         ))}
       </ul>      
       <div class="py-24">
-        <ol class="grid grid-cols-1 gap-4 lg:grid-cols-3 sm:grid-cols-2" role="list">
+        <ol class="grid grid-cols-1 gap-20 lg:grid-cols-3 sm:grid-cols-2" role="list">
           {allPosts
             .slice()
             .map((post) => (
-              <EntriesOne
-                url={"/suite/" + post.slug}
-                title={post.data.title}
-                description={post.data.description}
-                alt={post.data.title}
-                pubDate={post.data.tags}
-                author={post.data.author}
-                image={post.data.image.url}
-              />
+            <li>
+        <a href={"/suite/" + post.slug}>
+          <div>
+            <img src={post.data.image.url} alt="" />
+            <p class="mt-5 font-semibold text-purple-900">{post.data.title}</p>
+            <div class="mt-2 text-slate-500 text-sm">
+              {post.data.description}
+            </div>
+          </div>
+        </a>
+      </li>
             ))}
         </ol>
       </div>
     </div>
   </section>
-  <CtaFive />
 </BaseLayout>
 
 

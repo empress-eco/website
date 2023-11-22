@@ -1,0 +1,524 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import PricingThree from "../../components/pricing/PricingThree.astro";
+import PricingThreeExtended from "../../components/pricing/PricingThreeExtended.astro";
+import TestimonialThree from "../../components/testimonials/TestimonialThree.astro";
+import FaqOne from "../../components/infopages/FaqOne.astro";
+import CtaOne from "../../components/cta/CtaOne.astro";
+
+import { AstroSeo } from "@astrolib/seo";
+import TestimonialOne from "../../components/testimonials/TestimonialOne.astro";
+
+// Navigation Links
+
+const navLinks = [
+{
+    title: "Sustainability",
+    link: "/sustainability",
+    logo: "/images/logo.png"
+  },
+  {
+    name: "Overview",
+    href: "/sustainability"
+  },
+  {
+    name: "Features",
+    href: "/sustainability/features"
+  },
+  {
+    name: "Applications",
+    href: "/apps/sustainability"
+  },
+  {
+    name: "Docs",
+    href: "/billing/docs"
+  }
+];
+
+
+const features = [
+  {
+    header: {
+      mainTitle: "Advanced CRM Solutions",
+      subTitle: "Enhance Your Customer Relationships",
+      description: "Optimize your customer interactions, streamline sales processes, and provide valuable insights into your customer base."
+    },
+    featureSections: [
+      {
+        title: "Efficient Customer Management",
+        description: "Easily access and manage customer information, ensuring you have all the details you need for effective communication and relationship building.",
+        listItems: [
+          "Quick Access to Customer Data",
+          "Streamlined Customer Information Management",
+          "Enhanced Relationship Building Tools",
+        ]
+      },
+      {
+        title: "Comprehensive Contact Details",
+        description: "Keep track of essential contact details, including emails and phone numbers, to maintain effective communication channels with your clients.",
+        listItems: [
+          "Easy Contact Information Retrieval",
+          "Efficient Communication Management",
+          "Improved Client Engagement",
+        ]
+      },
+      {
+        title: "Client Interaction Tracking",
+        description: "Monitor your interactions with customers, including the last contact and follow-up dates, to ensure timely and effective client communication.",
+        listItems: [
+          "Timely Follow-Up Reminders",
+          "Comprehensive Interaction Logs",
+          "Effective Customer Engagement",
+        ]
+      },
+      {
+        title: "Assigned Sales Representative Oversight",
+        description: "Easily track which sales representatives are responsible for each client, enhancing accountability and ensuring personalized customer service.",
+        listItems: [
+          "Clear Sales Rep Assignments",
+          "Enhanced Sales Accountability",
+          "Personalized Customer Service",
+        ]
+      },
+      {
+        title: "Customer Type Categorization",
+        description: "Organize customers based on type or category, allowing for targeted marketing strategies and customized service approaches.",
+        listItems: [
+          "Targeted Customer Segmentation",
+          "Customized Marketing Strategies",
+          "Tailored Service Approaches",
+        ]
+      },
+      {
+        title: "Sales Status Monitoring",
+        description: "Keep track of where each customer is in the sales process, enabling strategic decision-making and focused customer relationship management.",
+        listItems: [
+          "Real-Time Sales Process Tracking",
+          "Strategic Customer Engagement",
+          "Focused Relationship Management",
+        ]
+      },
+    ]
+  },
+  {
+    header: {
+        mainTitle: "Streamlined Order Fulfillment System",
+        subTitle: "Efficient and Reliable Order Processing",
+        description: "Enhance your order fulfillment efficiency to streamline the entire process from order placement to delivery."
+    },
+    featureSections: [
+        {
+            title: "Seamless Order Tracking",
+            description: "Monitor each order effortlessly with unique Order IDs, ensuring accurate tracking from start to finish.",
+            listItems: [
+                "Unique Order ID Assignment",
+                "Real-Time Order Tracking",
+                "Enhanced Order Management"
+            ]
+        },
+        {
+            title: "Integrated Customer Management",
+            description: "Seamlessly connect with our CRM system for efficient customer data management and personalized service.",
+            listItems: [
+                "Automated Customer ID Linking",
+                "Personalized Customer Profiles",
+                "Streamlined Customer Data Access"
+            ]
+        },
+        {
+            title: "Precise Delivery Scheduling",
+            description: "Accurately schedule and track expected delivery dates, ensuring timely and reliable deliveries for your customers.",
+            listItems: [
+                "Accurate Delivery Date Forecasting",
+                "Timely Delivery Updates",
+                "Enhanced Customer Satisfaction"
+            ]
+        },
+        {
+            title: "Detailed Order Composition",
+            description: "Effortlessly manage complex orders with a detailed JSON-based product listing system.",
+            listItems: [
+                "Comprehensive Product Details",
+                "Flexible Order Customization",
+                "Easy Product Management"
+            ]
+        },
+        {
+            title: "Efficient Logistics Handling",
+            description: "Ensure your products reach the right destination with comprehensive shipping address management.",
+            listItems: [
+                "Accurate Shipping Address Recording",
+                "Streamlined Logistics Processes",
+                "Reliable Delivery Services"
+            ]
+        },
+        {
+            title: "Real-Time Fulfillment Status",
+            description: "Stay informed with up-to-date information on the fulfillment status of each order, from processing to delivery.",
+            listItems: [
+                "Dynamic Status Updates",
+                "Efficient Process Monitoring",
+                "Proactive Issue Resolution"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Efficient Quote Management System",
+        subTitle: "Generate Quick and Accurate Estimates",
+        description: "Streamline the process of creating and managing quotes, offering precise and timely estimates to enhance customer engagement."
+    },
+    featureSections: [
+        {
+            title: "Unique Quote Identification",
+            description: "Efficiently manage quotes with unique identifiers for each quote, ensuring easy tracking and referencing.",
+            listItems: [
+                "Auto-Generated or Manually Entered Quote IDs",
+                "Easy Quote Tracking and Retrieval",
+                "Secure and Reliable Quote Management"
+            ]
+        },
+        {
+            title: "Integrated Customer Data",
+            description: "Leverage our CRM integration to automatically populate customer information in quotes, saving time and reducing errors.",
+            listItems: [
+                "Seamless Integration with CRM",
+                "Automated Customer Information Filling",
+                "Enhanced Customer Data Accuracy"
+            ]
+        },
+        {
+            title: "Timely Quote Creation and Expiration",
+            description: "Track the creation and validity period of quotes, ensuring timely follow-ups and offer management.",
+            listItems: [
+                "Date and Time Stamping of Quote Creation",
+                "Clear Validity Periods",
+                "Efficient Time Management for Offers"
+            ]
+        },
+        {
+            title: "Detailed Products and Services Descriptions",
+            description: "Provide comprehensive descriptions of products and services offered, ensuring clarity and precision in every quote.",
+            listItems: [
+                "In-Depth Descriptions of Quoted Items",
+                "Customizable Service Detailing",
+                "Enhanced Clarity and Specification"
+            ]
+        },
+        {
+            title: "Accurate Price Estimation",
+            description: "Deliver precise cost estimates with our configurable decimal field, tailored for financial accuracy.",
+            listItems: [
+                "Precision in Financial Calculations",
+                "Configurable Price Estimation Fields",
+                "Reliable and Trustworthy Quotations"
+            ]
+        },
+        {
+            title: "Customizable Terms and Conditions",
+            description: "Add specific terms and conditions to each quote, ensuring all parties are aware of the agreement's nuances.",
+            listItems: [
+                "Flexible Terms and Conditions Input",
+                "Tailored Agreements for Each Quote",
+                "Legal Clarity and Compliance"
+            ]
+        },
+        {
+            title: "Comprehensive Quote Status Tracking",
+            description: "Monitor the progress and status of each quote, from creation to acceptance or rejection.",
+            listItems: [
+                "Real-Time Status Updates",
+                "Efficient Process Monitoring",
+                "Proactive Follow-Up and Adjustment Capabilities"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Advanced Point of Sale System",
+        subTitle: "Simplify Retail Transactions",
+        description: "Optimize retail operations with our robust POS , designed to streamline transactions, track sales, and enhance customer experiences."
+    },
+    featureSections: [
+        {
+            title: "Unique Transaction Management",
+            description: "Efficiently track every sale with unique Transaction IDs, ensuring quick access and accurate transaction history.",
+            listItems: [
+                "Auto-Generated Unique Transaction IDs",
+                "Easy Access to Transaction Records",
+                "Accurate Sales Tracking"
+            ]
+        },
+        {
+            title: "Real-Time Transaction Date Recording",
+            description: "Automatically capture the date and time of each transaction, providing a reliable record for sales analysis.",
+            listItems: [
+                "Accurate Date and Time Stamping",
+                "Essential for Sales Analysis",
+                "Historical Data Accuracy"
+            ]
+        },
+        {
+            title: "Detailed Sales Itemization",
+            description: "Record every product or service sold in each transaction, ensuring detailed and precise sales data.",
+            listItems: [
+                "Comprehensive Products/Services Listing",
+                "Enhanced Sales Data Detail",
+                "Facilitates Inventory Management"
+            ]
+        },
+        {
+            title: "Accurate Quantity and Pricing Tracking",
+            description: "Monitor the total quantity sold and unit price for each item, providing essential data for financial management.",
+            listItems: [
+                "Track Quantity of Products Sold",
+                "Record Precise Unit Prices",
+                "Essential for Revenue Calculation"
+            ]
+        },
+        {
+            title: "Total Amount Calculation",
+            description: "Automatically calculate the total amount of each transaction, streamlining the checkout process.",
+            listItems: [
+                "Automatic Total Amount Computation",
+                "High Precision in Financial Calculations",
+                "Efficient Checkout Experience"
+            ]
+        },
+        {
+            title: "Diverse Payment Method Processing",
+            description: "Handle various payment methods, from cash to credit cards, accommodating customer preferences.",
+            listItems: [
+                "Supports Multiple Payment Methods",
+                "Flexible Payment Processing",
+                "Enhances Customer Convenience"
+            ]
+        },
+        {
+            title: "Sales Representative Accountability",
+            description: "Link each transaction to a sales representative, ensuring accountability and performance tracking.",
+            listItems: [
+                "Assign Transactions to Sales Reps",
+                "Track Sales Representative Performance",
+                "Enhance Accountability in Sales"
+            ]
+        },
+        {
+            title: "Optional Customer Integration",
+            description: "Optionally link transactions to customer profiles in the CRM for a more personalized shopping experience.",
+            listItems: [
+                "Link to Customer CRM Profiles",
+                "Facilitate Personalized Customer Service",
+                "Strengthen Customer Relationships"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Comprehensive Rental Management System",
+        subTitle: "Manage Rental Operations Effectively",
+        description: "Simplify the process of tracking and managing rental transactions, ensuring efficient operations and customer satisfaction."
+    },
+    featureSections: [
+        {
+            title: "Unique Rental Transaction Identification",
+            description: "Efficiently track each rental with a unique Rental ID, ensuring seamless management and record-keeping.",
+            listItems: [
+                "Unique Identifier for Every Rental",
+                "Easy Tracking and Management",
+                "Secure and Organized Record-Keeping"
+            ]
+        },
+        {
+            title: "Integrated Customer Information",
+            description: "Leverage integrated customer data from our CRM system to personalize and streamline rental transactions.",
+            listItems: [
+                "Seamless CRM Integration",
+                "Automated Customer Data Retrieval",
+                "Enhanced Personalized Service"
+            ]
+        },
+        {
+            title: "Detailed Rental Item Tracking",
+            description: "Accurately track each rental item, ensuring precise management of inventory and availability.",
+            listItems: [
+                "Specific Identification of Rental Items",
+                "Efficient Inventory Management",
+                "Accurate Availability Tracking"
+            ]
+        },
+        {
+            title: "Quantity and Rental Period Monitoring",
+            description: "Monitor the quantity of items rented and manage rental periods effectively, from start to end dates.",
+            listItems: [
+                "Track Quantity of Items Rented",
+                "Manage Rental Start and End Dates",
+                "Ensure Timely Item Return"
+            ]
+        },
+        {
+            title: "Financial Management of Rentals",
+            description: "Manage rental rates and total charges with precision, ensuring accurate billing and financial tracking.",
+            listItems: [
+                "Set Precise Rental Rates",
+                "Calculate Total Charges Efficiently",
+                "Accurate Financial Records"
+            ]
+        },
+        {
+            title: "Dynamic Rental Status Updates",
+            description: "Stay updated with the real-time status of each rental, from active to completed or cancelled transactions.",
+            listItems: [
+                "Real-Time Status Monitoring",
+                "Proactive Management of Rental Lifecycle",
+                "Status Updates for Efficient Operations"
+            ]
+        }
+    ]
+},
+
+
+
+];
+
+
+
+
+
+---
+
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="Pricing One"
+  description="Your site description goes here"
+  canonical="https://www.lexingtonthemes.com"
+  openGraph={{
+    url: "https://www.lexingtonthemes.com",
+    title: "Open Graph Title",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
+/>
+
+
+
+
+<BaseLayout>
+
+ 
+   <!-- NAVIGATION BAR -->
+
+   <nav style="background-color: #fff; box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <img src={navLinks[0].logo} alt="Logo" style="height: 32px; width: auto;" />
+        <a href={navLinks[0].link} 
+          class="inline-flex items-center justify-center font-medium"
+          style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+          onmouseover="this.style.color='#333';"
+          onmouseout="this.style.color='#5046e4';">
+          {navLinks[0].title}
+        </a>
+      </div>
+      <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+        {navLinks.slice(1).map(link => (
+          <li key={link.href}>
+            <a href={link.href} 
+              class="inline-flex items-center justify-center font-medium"
+              style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+              onmouseover="this.style.color='#333';"
+              onmouseout="this.style.color='#5046e4';">
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+
+  
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
+            {feature.header.mainTitle}
+           </h2>
+           <p class="mt-4 text-slate-600 text-lg">
+            {feature.header.description}
+        </p>
+          <div class="mt-16">
+            {feature.featureSections.map((section, index) => (
+              <div key={index} class="lg:col-span-3 lg:col-start-3">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                  <div class="bg-slate-50 border-l-2 border-blue-500">
+                    <div class="p-6 border-t">
+                      <p class="font-semibold text-purple-900">{section.title}</p>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l border-l-0">
+                    <p class="text-slate-500 text-sm">{section.description}</p>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l">
+                    <ul role="list" class="order-last flex flex-col gap-y-3 text-sm text-slate-500">
+                      {section.listItems.map((item, itemIndex) => (
+                        <li key={itemIndex} class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M9 12l2 2l4 -4"></path>
+                          </svg>
+                          <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {featureIndex < features.length - 1 && (
+            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+  <CtaOne />
+</BaseLayout>
