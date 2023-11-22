@@ -7,9 +7,105 @@ import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
 import FeatureTwelve from "../components/features/FeatureTwelve.astro";
 import FeatureFive from "../components/features/FeatureFive.astro";
 import StatsTwo from "../components/stats/StatsTwo.astro";
-import CtaThree from "../components/cta/CtaThree.astro";
-
+import CtaOne from "../components/cta/CtaOne.astro";
+import { Code } from "astro/components";
 import { AstroSeo } from "@astrolib/seo";
+
+
+// Header
+
+const header = {
+  title: "Pricing",
+  subtitle: "Always know what you’ll pay,",
+  subtitleCont: "transparent pricing for everyone.",
+  imageSrc: "/images/chart.jpg"
+};
+
+// Feature 1
+
+const featureOne = {
+  sections: [
+    {
+      type: "feature",
+      title: "200+ Integrations",
+      mainTitle: "Seamless Connectivity, Simplified",
+      secondaryTitle: "",
+      descriptions: [
+        "Empress integrates diverse business tools, providing a centralized platform for streamlined management. Our system effortlessly connects with popular applications, enhancing efficiency and data coherence.",
+        "From CRM to ERP, and from e-commerce to analytics – Empress's integration capabilities ensure all your tools work in harmony, enabling a more unified and productive business environment."
+      ],
+      imagePaths: [
+        "/images/creditcardTwo.png",
+        "/images/balance.png",
+        "/images/notification.png",
+        "/images/miniNotification.png",
+        "/images/payments.png",
+        "/images/payments.png",
+        "/images/creditcardTwo.png"
+      ],
+      bgColor: "white",
+      textColor: "blue-600",
+      gridCols: "lg:grid-cols-2"
+    },
+    {
+      type: "featureSkewed",
+      title: "Optimized Workflow",
+      mainTitle: "Where Integration Meets Excellence",
+      secondaryTitle: "",
+      description: "Empress’s integrations not only connect systems but also optimize workflows. Experience the seamless synchronization of your operations, reducing manual efforts and errors.",
+      points: [
+        {
+          title: "Comprehensive Compatibility",
+          description: "Empress supports a wide range of integrations, ensuring compatibility with your existing tools, from accounting software to marketing platforms."
+        },
+        {
+          title: "Data Synchronization",
+          description: "Our platform synchronizes data across systems, providing accurate, real-time insights and a single source of truth for decision-making."
+        },
+        {
+          title: "Customizable Integration",
+          description: "Tailor Empress's integrations to fit your specific business needs, allowing for flexibility and scalability as your business grows and evolves."
+        }
+      ],
+      bgColor: "purple-900",
+      textColor: "white",
+      gridCols: "lg:grid-cols-3",
+      transform: "skew-y-6",
+      marginAdjustment: "-mt-72 lg:-mt-[26rem]"
+    }
+  ]
+};
+
+// Feature Two
+
+const featureTwo = {
+  header: {
+    title: "Revolutionize Your Approach",
+    mainTitle: "Business Made Beautiful",
+    subTitle: "Empress redefines business management by blending sophisticated AI Assistants and predictive analytics with elegantly designed dashboards."
+  },
+  columns: [
+    {
+      title: "AI-Powered Business Intelligence",
+      listItems: [
+        "Advanced AI Assistants for real-time decision support",
+        "Predictive analytics for forecasting market trends",
+        "Intelligent insights into customer behavior and preferences"
+      ]
+    },
+    {
+      title: "Elegant, Insightful Dashboards",
+      listItems: [
+        "Visually stunning dashboards for instant overview",
+        "Customizable interfaces to suit your unique business needs",
+        "Seamless integration of data for holistic management"
+      ]
+    }
+  ],
+  imageSrc: "/images/chart.jpg"
+};
+
+// Feature List
 
 const features = [
 {
@@ -75,36 +171,148 @@ const features = [
     },
   ]
 }
-
-
 ];
 
-const sectionFour = {
-  header: {
-    title: "Revolutionize Your Approach",
-    mainTitle: "Business Made Beautiful",
-    subTitle: "Empress redefines business management by blending sophisticated AI Assistants and predictive analytics with elegantly designed dashboards."
-  },
-  columns: [
+// Dark Background
+
+const sectionSeven = {
+  featureTitle: "Empower Developers",
+  mainTitle: "Develop, Launch, and Innovate",
+  mainSubtitle: "",
+  description: "Empress provides developers with robust tools and APIs to create custom solutions. Our platform is tailored for seamless integration, empowering you to develop innovative applications with efficiency.",
+  tabs: [
     {
-      title: "AI-Powered Business Intelligence",
-      listItems: [
-        "Advanced AI Assistants for real-time decision support",
-        "Predictive analytics for forecasting market trends",
-        "Intelligent insights into customer behavior and preferences"
+      title: "Open Accounts",
+      image: "/images/ModalOne.png",
+      codeSnippet: `import EmpressAPI from 'empress-sdk';
+import { UserAccount, Transaction } from 'empress-models';
+
+const empress = new EmpressAPI({
+  apiKey: 'YOUR_API_KEY'
+});
+
+export async function createAccount(userData) {
+  try {
+    const userAccount = new UserAccount(userData);
+    await empress.accounts.create(userAccount);
+    return 'Account created successfully';
+  } catch (error) {
+    console.error('Error creating account:', error);
+  }
+};`,
+    },
+    {
+      title: "Create Cards",
+      image: "/images/ModalTwo.png",
+      codeSnippet: `import EmpressAPI from 'empress-sdk';
+import { PaymentCard } from 'empress-models';
+
+const empress = new EmpressAPI({
+  apiKey: 'YOUR_API_KEY'
+});
+
+export async function createPaymentCard(cardData) {
+  try {
+    const paymentCard = new PaymentCard(cardData);
+    await empress.cards.create(paymentCard);
+    return 'Card created successfully';
+  } catch (error) {
+    console.error('Error creating card:', error);
+  }
+};`
+    }
+  ]
+};
+
+// Check Marks
+
+const sectionData = {
+  mainTitle: "Extended Pricing",
+  mainSubTitle: "What's included in our pricing",
+  description: "Build quicker and don't waste time building your website. Combine layouts and customize them as you wish.",
+  articles: [
+    {
+      title: "Tools to build optimized checkout flows",
+      features: [
+        "Embeddable checkout",
+        "Custom UI toolkit",
+        "Invoice support",
       ]
     },
     {
-      title: "Elegant, Insightful Dashboards",
-      listItems: [
-        "Visually stunning dashboards for instant overview",
-        "Customizable interfaces to suit your unique business needs",
-        "Seamless integration of data for holistic management"
+      title: "Global payments with a single integration",
+      features: [
+        "Embeddable checkout",
+        "Custom UI toolkit",
+        "Invoice support",
       ]
-    }
-  ],
-  imageSrc: "/images/chart.jpg"
+    },
+    {
+      title: "Global payments with a single integration",
+      features: [
+        "Embeddable checkout",
+        "Custom UI toolkit",
+        "Invoice support",
+      ]
+    },
+    {
+      title: "Global payments with a single integration",
+      features: [
+        "Embeddable checkout",
+        "Custom UI toolkit",
+        "Invoice support",
+      ]
+    },
+    {
+      title: "Global payments with a single integration",
+      features: [
+        "Embeddable checkout",
+        "Custom UI toolkit",
+        "Invoice support",
+      ]
+    },
+    {
+      title: "Global payments with a single integration",
+      features: [
+        "Embeddable checkout",
+        "Custom UI toolkit",
+        "Invoice support",
+      ]
+    },
+    // ... Repeat for other articles
+  ]
 };
+
+
+// FAQs
+
+const faq = {
+  title: "FAQ",
+  subtitle: "Your Questions, Answered",
+  questions: [
+    {
+      question: "Can Empress integrate with my existing business tools?",
+      answer: "Yes, Empress seamlessly integrates with a variety of business tools, ensuring smooth interoperability and data synchronization across your entire business ecosystem."
+    },
+    {
+      question: "How user-friendly is Empress for non-technical staff?",
+      answer: "Empress is designed with simplicity in mind. Our intuitive interfaces and dashboards make it easy for all users, regardless of their technical background, to navigate and utilize the platform effectively."
+    },
+    {
+      question: "What kind of support does Empress provide for new users?",
+      answer: "We offer comprehensive support including Empress Academy for tutorials and best practices, a dedicated Help Center for guidance, and responsive customer support for any immediate queries."
+    },
+    {
+      question: "Does Empress offer features for automating business processes?",
+      answer: "Absolutely! Empress features, like Empress Zaps, allow you to automate routine tasks, saving time and increasing efficiency within your operations."
+    },
+    {
+      question: "How does Empress ensure the security and privacy of our data?",
+      answer: "Empress prioritizes data security with robust protocols such as encryption and secure cloud storage, ensuring your business data is always protected from unauthorized access."
+    }
+  ]
+};
+
 
 ---
 
@@ -148,27 +356,189 @@ Use AstroSeo in all the pages you want different Seo than the index page
   }}
 />
 <BaseLayout>
-  <AboutOne />
-  <FeatureEleven />
-  <!-- <TestimonialFour /> -->
+
+
+<!-- Header -->
+
+  <section>
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div class="lg:text-center">
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{header.title}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {header.subtitle}
+          <span class="lg:block">{header.subtitleCont}</span>
+        </h2>
+      </div>
+      <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
+        <img src={header.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Feature 1 -->
+
+  <section >
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div>
+        <h2 class="inline-flex items-center rounded-full text-blue-600">
+          <span class="text-base font-medium tracking-tight">{featureOne.sections[0].title}</span>
+        </h2>
+        <h2
+          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {featureOne.sections[0].mainTitle}
+          <span class="lg:block">{featureOne.sections[0].secondaryTitle}</span>
+        </h2>
+        <div class="mx-auto text-left mt-12">
+          <div>
+            <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
+              <div>
+                <p class="text-slate-500">
+                  {featureOne.sections[0].descriptions[0]}
+                </p>
+              </div>
+              <div>
+                <p class="text-slate-500">
+                  {featureOne.sections[0].descriptions[1]}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="grid lg:grid-cols-4 grid-cols-2 mt-24 gap-3">
+          <div>
+            <img
+              src={featureOne.sections[0].imagePaths[0]}
+              alt="thumbnail"
+              class="rounded-2xl drop-shadow-2xl"
+            />
+            <img
+            src={featureOne.sections[0].imagePaths[1]}
+              alt="thumbnail"
+              class="drop-shadow-2xl mt-6"
+            />
+          </div>
+          <div class="lg:col-span-2">
+            <img
+            src={featureOne.sections[0].imagePaths[2]}
+              alt="thumbnail"
+              class="drop-shadow-2xl"
+            />
+            <img
+            src={featureOne.sections[0].imagePaths[3]}
+              alt="thumbnail"
+              class="drop-shadow-2xl mt-6"
+            />
+            <img
+            src={featureOne.sections[0].imagePaths[4]}
+              alt="thumbnail"
+              class="drop-shadow-2xl mt-6 lg:hidden block"
+            />
+          </div>
+          <div class="hidden lg:block">
+            <img
+            src={featureOne.sections[0].imagePaths[5]}
+              alt="thumbnail"
+              class="drop-shadow-2xl"
+            />
+            <img
+            src={featureOne.sections[0].imagePaths[6]}
+              alt="thumbnail"
+              class="rounded-2xl drop-shadow-2xl mt-6"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-purple-900 transform skew-y-6 -mt-72 lg:-mt-[26rem]">
+  <div
+    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
+    <div>
+      <h2 class="inline-flex items-center text-white">
+        <span class="text-base font-medium tracking-tight">{featureOne.sections[1].title}</span>
+      </h2>
+      <h2
+        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
+        {featureOne.sections[1].mainTitle} <span class="lg:block"
+          >{featureOne.sections[1].secondaryTitle}</span
+        >
+      </h2>
+      <div class="max-w-xl mt-6">
+        <p class="text-white">
+          {featureOne.sections[1].description}
+        </p>
+      </div>
+    </div>
+    <div class="mx-auto text-left mt-12">
+      <div>
+        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+          <div>
+            <div class="space-y-3">
+              <div>
+                <p class="mt-5 font-semibold text-white text-base">
+                  {featureOne.sections[1].points[0].title}
+                </p>
+              </div>
+              <p class="text-sm text-white">
+                {featureOne.sections[1].points[0].description}
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="space-y-3">
+              <div>
+                <p class="mt-5 font-semibold text-white text-base">
+                  {featureOne.sections[1].points[1].title}
+                </p>
+              </div>
+              <p class="text-sm text-white">
+                {featureOne.sections[1].points[1].description}
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="space-y-3">
+              <div>
+                <p class="mt-5 font-semibold text-white text-base">
+                  {featureOne.sections[1].points[2].title}
+                </p>
+              </div>
+              <p class="text-sm text-white">
+                {featureOne.sections[1].points[2].description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Feature Two -->
 
   <section class="overflow-hidden border-b">
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 pt-24 items-center">
       <div>
         <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">{sectionFour.header.title}</span>
+          <span class="text-base font-medium tracking-tight">{featureTwo.header.title}</span>
         </h2>
         <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {sectionFour.header.mainTitle}
+          {featureTwo.header.mainTitle}
         </h2>
         <div class="max-w-xl mt-6">
-          <p class="text-slate-500">{sectionFour.header.subTitle}</p>
+          <p class="text-slate-500">{featureTwo.header.subTitle}</p>
         </div>
       </div>
       <div class="mx-auto text-left mt-12">
         <div>
           <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
-            {sectionFour.columns.map(column => (
+            {featureTwo.columns.map(column => (
               <div>
                 <div>
                   <p class="font-semibold text-purple-900">{column.title}</p>
@@ -186,12 +556,15 @@ Use AstroSeo in all the pages you want different Seo than the index page
             ))}
           </div>
           <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
-            <img src={sectionFour.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+            <img src={featureTwo.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
+  <!-- Feature List -->
 
 
   <section class="bg-white">
@@ -242,11 +615,204 @@ Use AstroSeo in all the pages you want different Seo than the index page
     </div>
   </section>
 
-  <FeatureTwelve />
-
-  <FeatureFive />
 
 
-  <StatsTwo />
-  <CtaThree />
+  <!-- Dark Tab -->
+
+  <section class="bg-purple-900 transform skew-y-6">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:pt-42 pb-52 items-center transform -skew-y-6">
+      <div>
+        <h2 class="inline-flex items-center rounded-full text-white">
+          <span class="text-base font-medium tracking-tight">{sectionSeven.featureTitle}</span>
+        </h2>
+        <h2 class="text-white font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionSeven.mainTitle} <span class="lg:block">{sectionSeven.mainSubtitle}</span>
+        </h2>
+        <div class="max-w-xl mt-6">
+          <p class="text-white">{sectionSeven.description}</p>
+        </div>
+      </div>
+    <div class="mx-auto text-left mt-12">
+      <div
+        x-data="{
+        tabSelected: 1,
+        tabId: $id('tabs'),
+        tabButtonClicked(tabButton){
+            this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
+            this.tabRepositionMarker(tabButton);
+        },
+        tabRepositionMarker(tabButton){
+            this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
+            this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
+            this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
+        },
+        tabContentActive(tabContent){
+            return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
+        }
+    }"
+        x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
+        class="relative lg:rounded-3xl lg:p-10 text-white">
+        <div
+          x-ref="tabButtons"
+          class="relative inline-grid items-center justify-center h-10 grid-cols-2 p-1 bg-purple-900 rounded-full select-none">
+          <button
+            :id="$id(tabId)"
+            @click="tabButtonClicked($el);"
+            type="button"
+            class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
+            >{sectionSeven.tabs[0].title}</button
+          >
+          <button
+            :id="$id(tabId)"
+            @click="tabButtonClicked($el);"
+            type="button"
+            class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
+            >{sectionSeven.tabs[1].title}</button
+          >
+          <div
+            x-ref="tabMarker"
+            class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
+            x-cloak>
+            <div class="w-full h-full bg-white/10 rounded-full shadow-sm"></div>
+          </div>
+        </div>
+        <div class="relative w-full mt-2 content">
+          <div
+            :id="$id(tabId + '-content')"
+            x-show="tabContentActive($el)"
+            class="relative">
+            <section
+              class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24 lg:bg-[#14162c] lg:p-10 rounded-3xl">
+              <div
+                class="text-xs font-mono mt-4 rounded-2xl overflowhidden p-4 bg-[#14162c] 00">
+                <Code
+                  code={sectionSeven.tabs[0].codeSnippet}
+                  lang="js"
+                  theme="css-variables"
+                />
+              </div>
+              <div class="h-full lg:ml-auto lg:-m-24">
+                <img
+                  src={sectionSeven.tabs[0].image}
+                  alt="thumbnail"
+                  class="rounded-3xl"
+                />
+              </div>
+            </section>
+          </div>
+  
+          <div
+            :id="$id(tabId + '-content')"
+            x-show="tabContentActive($el)"
+            class="relative"
+            x-cloak>
+            <section
+              class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24 lg:bg-[#14162c] lg:p-10 rounded-3xl">
+              <div
+                class="text-xs font-mono mt-4 rounded-2xl overflowhidden p-4 bg-[#14162c] 00">
+                <Code
+                  code={sectionSeven.tabs[0].codeSnippet}
+                  lang="js"
+                  theme="css-variables"
+                />
+              </div>
+              <div class="h-full lg:ml-auto lg:-m-24">
+                <img
+                src={sectionSeven.tabs[1].image}
+                  alt="thumbnail"
+                  class="rounded-3xl"
+                />
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+  <!-- Feature List -->
+
+  <section>
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center mt-20">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{sectionData.mainTitle}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionData.mainSubTitle}
+        </h2>
+        <div class="max-w-xl mt-6">
+          <p class="text-slate-500">{sectionData.description}</p>
+        </div>
+      </div>
+      <div class="mx-auto text-left mt-12">
+        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+          {sectionData.articles.map((article) => (
+            <article>
+              <div>
+                <p class="font-semibold text-purple-900 text-base">{article.title}</p>
+                <div class="mt-6">
+                  <ul role="list" class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    {article.features.map((feature) => (
+                      <li class="flex items-start">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+                        <span class="ml-4">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Faqs -->
+
+  <section>
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{faq.title}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {faq.subtitle}
+        </h2>
+        <div class="mt-12 space-y-12 bg-slate-50 rounded-3xl p-4 lg:p-10 divide-y">
+          {faq.questions.map((faq, index) => (
+            <div key={index} class={`grid grid-cols-1 gap-4 ${index !== 0 ? 'pt-4 lg:pt-12' : ''} lg:grid-cols-3`}>
+              <div class="flex flex-col flex-shrink-0 mb-5 lg:pr-12">
+                <span class="font-semibold text-purple-900">{faq.question}</span>
+              </div>
+              <div class="lg:col-span-2">
+                <p class="text-slate-500">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <CtaOne />
 </BaseLayout>
