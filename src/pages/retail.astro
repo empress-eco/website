@@ -6,32 +6,31 @@ import JobsHome from "../components/jobs/JobsHome.astro";
 import { AstroSeo } from "@astrolib/seo";
 
 
-// Section Nine
 
-const faqs = {
-  title: "Product Management FAQs",
-  subtitle: "Answers to Your Key Questions",
-  questions: [
-    {
-      question: "How does the Inventory Management System enhance tracking?",
-      answer: "Our Inventory Management System uses unique Item IDs for precise tracking, ensuring accurate stock records and efficient item retrieval, streamlining the overall inventory process."
-    },
-    {
-      question: "Can I integrate supplier data into the Procurement Management System?",
-      answer: "Yes, our Procurement Management System allows seamless integration of supplier data, enabling efficient management of supplier relationships and orders, thus enhancing the procurement process."
-    },
-    {
-      question: "Does your system offer production batch tracking for manufacturing?",
-      answer: "Absolutely. Our Production Batch Tracking System offers unique IDs for each batch, linked directly to inventory products, aiding in efficient scheduling, cost analysis, and supervisor oversight."
-    },
-    {
-      question: "What features are included in the Product Lifecycle Management (PLM) System?",
-      answer: "The PLM System includes integrated product tracking, lifecycle timeline management, phase monitoring, and continuous update tracking to strategically manage each product's lifecycle stages."
-    },
-    {
-      question: "How does the Quality Check Management System ensure product standards?",
-      answer: "Our Quality Check Management System assigns unique IDs to each check, links to products for cohesive control, schedules quality checks, and records issues and resolutions to uphold high product standards."
-    }
+// Hero
+
+
+const hero = {
+  title: "Retail",
+  description: "Spazio Bianco creates the financial foundation that enables ambitious companies to launch their most innovative products. Our customers range from newly established startups to large-scale international businesses, all working together to drive the internet's economic growth. By joining us, you have the opportunity to contribute to this mission.",
+  callToAction: {
+    text: "See all open roles",
+    link: "/job-post"
+  },
+  imageGrid: [
+    [
+      "https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      "https://plus.unsplash.com/premium_photo-1661775434014-9c0e8d71de03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+    ],
+    [
+      "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1600275669439-14e40452d20b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8b2ZmaWNlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+      "https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+    ],
+    [
+      "https://plus.unsplash.com/premium_photo-1661771825670-1720428a80ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+      "https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+    ]
   ]
 };
 
@@ -68,6 +67,218 @@ const faqs = {
       }
     ]
   };
+
+
+// Overview
+
+
+const overview = {
+  title: "Who would you like to assist or work for in your professional life?",
+  paragraphs: [
+    "Our customers span across various industries and countries, and they are involved in a wide range of activities, such as feeding communities, providing healthcare, and facilitating transportation. They operate diverse establishments, including shops, gyms, and churches, and they also develop tools to assist others in running these establishments.",
+    "These customers are involved in everything from selling goods from their homes to managing large global enterprises. Ultimately, they rely on the infrastructure we build to carry out their activities effectively. Spazio Bianco processed $641 billion in payments in 2021. We have been entrusted with a significant portion of the global economy, and we need to continue to be reliable stewards of that trust."
+  ],
+  secondaryTitle: "What matters to us is what we enable for others",
+  secondaryParagraph: "Our customers span across various industries and countries, and they are involved in a wide range of activities, such as feeding communities, providing healthcare, and facilitating transportation. They operate diverse establishments, including shops, gyms, and churches, and they also develop tools to assist others in running these establishments.",
+  quote: "The pace of change and velocity of the product force you to pick up new skills, experiment with new tactics, and walk in a variety of users’ shoes.",
+  callToAction: {
+    text: "See open roles",
+    link: "/job-post"
+  },
+  image: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+};
+
+// Use Cases
+
+const features = [
+  {
+    header: {
+      mainTitle: "Empress Control",
+      subTitle: "Tailor Access, Secure Success",
+      description: "Empress Control redefines access management, offering versatile solutions to safeguard and manage data across departments."
+    },
+    featureSections: [
+      {
+        title: "Custom Access for Marketing Teams",
+        description: "Control access to marketing assets and campaign data, ensuring security and consistency in your brand messaging.",
+        listItems: [
+          "Selective access to marketing resources",
+          "Secure handling of campaign data",
+          "Streamlined marketing team collaboration"
+        ]
+      },
+      {
+        title: "Sales Data Security",
+        description: "Safeguard sensitive sales information by customizing access for your sales team, preserving data integrity.",
+        listItems: [
+          "Protected access to sales pipelines and client data",
+          "Tailored visibility for sales performance metrics",
+          "Enhanced confidentiality in sales strategies"
+        ]
+      },
+      {
+        title: "Customer Service Confidentiality",
+        description: "Empower your customer service team while keeping sensitive customer data under strict access control.",
+        listItems: [
+          "Controlled access to customer interaction data",
+          "Secure management of customer service records",
+          "Privacy-first approach in customer engagements"
+        ]
+      },
+      {
+        title: "HR Data Management",
+        description: "Manage HR data with custom access controls to maintain employee privacy and compliance with regulations.",
+        listItems: [
+          "Restricted access to employee personal information",
+          "Compliance-focused data handling in HR processes",
+          "Secure employee data storage and retrieval"
+        ]
+      },
+      {
+        title: "Financial Data Protection",
+        description: "Implement rigorous access controls for financial data, ensuring accuracy and compliance in financial reporting.",
+        listItems: [
+          "Secure management of sensitive financial records",
+          "Compliance-oriented access to accounting data",
+          "Protection of financial transaction details"
+        ]
+      },
+      {
+        title: "Supply Chain Access Management",
+        description: "Control access to supply chain information, balancing operational transparency with data security.",
+        listItems: [
+          "Restricted access to inventory and logistics data",
+          "Secure data sharing in supply chain operations",
+          "Protected management of supplier information"
+        ]
+      }
+    ]
+  }
+];
+
+
+// Check Marks
+
+const sectionData = {
+  mainTitle: "Empress Flows Features",
+  mainSubTitle: "Enhance Your Business with Advanced Automation",
+  description: "Empress Flows offers a wide range of features to automate and streamline your business processes.",
+  articles: [
+    {
+      title: "Process Automation",
+      features: [
+        "Automated Task Management",
+        "Efficient Resource Allocation",
+        "Streamlined Business Workflows"
+      ]
+    },
+    {
+      title: "Integration Capabilities",
+      features: [
+        "Seamless System Connectivity",
+        "Cross-Platform Data Synchronization",
+        "Easy-to-Use Integration Tools"
+      ]
+    },
+    {
+      title: "Customization and Flexibility",
+      features: [
+        "User-Friendly Flow Customization",
+        "Flexible Trigger and Action Settings",
+        "Adaptive to Changing Business Needs"
+      ]
+    },
+    {
+      title: "Real-Time Data Processing",
+      features: [
+        "Instant Data Analysis and Reporting",
+        "Live Monitoring of Business Metrics",
+        "Dynamic Data Update and Management"
+      ]
+    },
+    {
+      title: "Collaboration and Sharing",
+      features: [
+        "Team Collaboration within Workflows",
+        "Shared Access to Critical Data",
+        "Centralized Communication Platform"
+      ]
+    },
+    {
+      title: "Security and Compliance",
+      features: [
+        "Robust Data Encryption and Security",
+        "Compliance with Industry Standards",
+        "Secure Access Controls and Protocols"
+      ]
+    }
+  ]
+};
+
+
+// Contact
+
+const talkToYouSection = {
+  title: "We want to talk to you",
+  description: "It's evident that you have a purpose for visiting this page. We encourage you to take the next step and have a conversation with us to determine whether any of our available roles would be a good fit for you. We are continuously looking to employ skilled individuals like yourself, and we hope that you will be our next hire.",
+  callToAction: {
+    text: "See open roles",
+    link: "/job-post"
+  },
+  infoSections: [
+    {
+      title: "Life at Spaziobianco",
+      description: "Upswing securities passively index inverse bondholders capitalization financial health Moody's debt managed.",
+    },
+    {
+      title: "University recruiting",
+      description: "Upswing securities passively index inverse bondholders capitalization financial health Moody's debt managed.",
+    },
+    {
+      title: "Operating principles",
+      description: "Upswing securities passively index inverse bondholders capitalization financial health Moody's debt managed.",
+    }
+  ]
+};
+
+const infrastructureSection = {
+  title: "Help us build economic infrastructure for the internet",
+  description: [
+    "We embrace diverse perspectives, ideas, and backgrounds at Spaziobianco. We’re committed to providing equal employment opportunities for all applicants and employees. Spaziobianco doesn’t discriminate on the basis of any protected characteristic, including race, color, ancestry, national origin, religion (including religious dress), creed, age, disability (mental and physical), sex, gender (including pregnancy, childbirth, breastfeeding, or related medical conditions), sexual orientation, gender identity, gender expression, medical condition, genetic information, family care or medical leave status, marital status, domestic partner status, military and veteran status (including military spouse status).",
+    "Or any other characteristic protected by US federal, state or local laws, or the laws of the country or jurisdiction where you work."
+  ]
+};
+
+
+
+// Section Nine
+
+const faqs = {
+  title: "Product Management FAQs",
+  subtitle: "Answers to Your Key Questions",
+  questions: [
+    {
+      question: "How does the Inventory Management System enhance tracking?",
+      answer: "Our Inventory Management System uses unique Item IDs for precise tracking, ensuring accurate stock records and efficient item retrieval, streamlining the overall inventory process."
+    },
+    {
+      question: "Can I integrate supplier data into the Procurement Management System?",
+      answer: "Yes, our Procurement Management System allows seamless integration of supplier data, enabling efficient management of supplier relationships and orders, thus enhancing the procurement process."
+    },
+    {
+      question: "Does your system offer production batch tracking for manufacturing?",
+      answer: "Absolutely. Our Production Batch Tracking System offers unique IDs for each batch, linked directly to inventory products, aiding in efficient scheduling, cost analysis, and supervisor oversight."
+    },
+    {
+      question: "What features are included in the Product Lifecycle Management (PLM) System?",
+      answer: "The PLM System includes integrated product tracking, lifecycle timeline management, phase monitoring, and continuous update tracking to strategically manage each product's lifecycle stages."
+    },
+    {
+      question: "How does the Quality Check Management System ensure product standards?",
+      answer: "Our Quality Check Management System assigns unique IDs to each check, links to products for cohesive control, schedules quality checks, and records issues and resolutions to uphold high product standards."
+    }
+  ]
+};
 
   
 const darkBackground = {
@@ -123,56 +334,6 @@ const darkBackground = {
     ]
   };
 
-  // Section Ten
-
-const empressFeatures = {
-  sectionTitle: "Core Features",
-  heading: "Customize Your Workspace",
-  description: "Empress brings a suite of powerful features to revolutionize your business processes.",
-  items: [
-    {
-      number: "1",
-      title: "Unlock Data Insights",
-      detail: "Empower decision-making with actionable data insights from Empress Analytics."
-    },
-    {
-      number: "2",
-      title: "Optimize Your Workflow",
-      detail: "Enhance efficiency with Empress Workflow, streamlining your business operations."
-    },
-    {
-      number: "3",
-      title: "Automate Routine Tasks",
-      detail: "Save time with Empress Zaps by automating repetitive and routine tasks."
-    },
-    {
-      number: "4",
-      title: "Expert AI Chat Support",
-      detail: "Improve customer interactions with Empress's AI-driven chat support system."
-    },
-    {
-      number: "5",
-      title: "Anticipate Future Trends",
-      detail: "Stay ahead with Empress Forecast, predicting trends and customer needs."
-    },
-    {
-      number: "6",
-      title: "Connect With Collaborators",
-      detail: "Enhance teamwork with Empress Bridge, fostering effective collaboration."
-    },
-    {
-      number: "7",
-      title: "Control Access & Visibility",
-      detail: "Secure your operations with Empress Administration's robust access controls."
-    },
-    {
-      number: "8",
-      title: "Seamless Tool Integration",
-      detail: "Simplify integration with Empress's seamless compatibility with existing tools."
-    }
-  ]
-};
-
 
 ---
 
@@ -214,101 +375,51 @@ Use AstroSeo in all the pages you want different Seo than the index page
   }}
 />
 <BaseLayout>
-  <section class="relative overflow-hidden border-b">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center lg:py-44">
-      <div class="items-start gap-12 grid grid-cols-1 md:grid-cols-2">
-        <div>
-          <div class="lg:pr-24 md:pr-12">
-            <h2
-              class="text-purple-900 font-semibold text-4xl lg:text-7xl tracking-tighter">
-              Retail
-            </h2>
-            <p class="text-slate-500 mt-5">
-              Spazio Bianco creates the financial foundation that enables
-              ambitious companies to launch their most innovative products. Our
-              customers range from newly established startups to large-scale
-              international businesses, all working together to drive the
-              internet's economic growth. By joining us, you have the opportunity
-              to contribute to this mission.
-            </p>
-          </div>
-          <div class="mt-10">
-            <a
-              class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto"
-              href="/job-post">
-              See all open roles
-            </a>
-          </div>
+
+
+<section class="relative overflow-hidden border-b">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center lg:py-44">
+    <div class="items-start gap-12 grid grid-cols-1 md:grid-cols-2">
+      <div>
+        <div class="lg:pr-24 md:pr-12">
+          <h2 class="text-purple-900 font-semibold text-4xl lg:text-7xl tracking-tighter">
+            {hero.title}
+          </h2>
+          <p class="text-slate-500 mt-5">
+            {hero.description}
+          </p>
         </div>
-        <div class="lg:mt-0 lg:ml-auto">
-          <div
-            class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-            <div class="flex items-center space-x-6 lg:space-x-8">
-              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                <div class="h-full w-44 osm:opacity-0 lg:opacity-100">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-                <div class="h-full w-44">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1661775434014-9c0e8d71de03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
+        <div class="mt-10">
+          <a
+            class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto"
+            href={hero.callToAction.link}
+          >
+            {hero.callToAction.text}
+          </a>
+        </div>
+      </div>
+      <div class="lg:mt-0 lg:ml-auto">
+        <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+          <div class="flex items-center space-x-6 lg:space-x-8">
+            {hero.imageGrid.map((imageRow, index) => (
+              <div key={index} class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                {imageRow.map((image, imageIndex) => (
+                  <div key={imageIndex} class="h-full w-44">
+                    <img src={image} alt="thumbnail" class="drop-shadow-2xl rounded-2xl"/>
+                  </div>
+                ))}
               </div>
-              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                <div class="h-full w-44">
-                  <img
-                    src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-                <div class="h-full w-44">
-                  <img
-                    src="https://images.unsplash.com/photo-1600275669439-14e40452d20b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8b2ZmaWNlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-                <div class="h-full w-44">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-              </div>
-              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                <div class="h-full w-44">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1661771825670-1720428a80ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-                <div class="h-full w-44">
-                  <img
-                    src="https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-                    alt="thumbnail"
-                    class="drop-shadow-2xl rounded-2xl"
-                  />
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
 
   
+
+<!-- Stats Info -->
 
   
   <section>
@@ -342,83 +453,47 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
-  
-
-  
 
 
-  <!-- What matters to us -->
-
+  <!-- Information -->
 
   <section aria-labelledby="feature-four" id="feature-four">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
       <div>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl text-3xl w-1/2">
-          Who would you like to assist or work for in your professional life?
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl text-3xl w-1/2">
+          {overview.title}
         </h2>
         <div class="mx-auto text-left mt-12">
           <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
-            <div>
-              <p class="text-slate-500">
-                Our customers span across various industries and countries, and
-                they are involved in a wide range of activities, such as feeding
-                communities, providing healthcare, and facilitating
-                transportation. They operate diverse establishments, including
-                shops, gyms, and churches, and they also develop tools to assist
-                others in running these establishments.
-              </p>
-            </div>
-            <div>
-              <p class="text-slate-500">
-                These customers are involved in everything from selling goods from
-                their homes to managing large global enterprises. Ultimately, they
-                rely on the infrastructure we build to carry out their activities
-                effectively. Spazio Bianco processed $641 billion in payments in
-                2021. We have been entrusted with a significant portion of the
-                global economy, and we need to continue to be reliable stewards of
-                that trust.
-              </p>
-            </div>
+            {overview.paragraphs.map((paragraph, index) => (
+              <div key={index}>
+                <p class="text-slate-500">{paragraph}</p>
+              </div>
+            ))}
           </div>
           <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2 mt-24">
             <div>
-              <h2
-                class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-                What matters to us is what we enable for others
+              <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+                {overview.secondaryTitle}
               </h2>
               <p class="text-slate-500 mt-4">
-                Our customers span across various industries and countries, and
-                they are involved in a wide range of activities, such as feeding
-                communities, providing healthcare, and facilitating
-                transportation. They operate diverse establishments, including
-                shops, gyms, and churches, and they also develop tools to assist
-                others in running these establishments.
+                {overview.secondaryParagraph}
               </p>
               <blockquote class="text-slate-500 mt-4">
                 <p class="font-medium">
-                  The pace of change and velocity of the product force you to pick
-                  up new skills, experiment with new tactics, and walk in a
-                  variety of users’ shoes.
+                  {overview.quote}
                 </p>
               </blockquote>
               <p class="mt-12">
-                <a
-                  href="/job-post"
+                <a href={overview.callToAction.link}
                   class="text-blue-600 font-semibold hover:text-purple-900 text-sm inline-flex items-center group">
-                  See open roles &nbsp; &rarr;
+                  {overview.callToAction.text} &nbsp; &rarr;
                 </a>
               </p>
             </div>
-            <div
-              class="relative overflow-hidden rounded-2xl p-8 shadow-xl lg:py-12 h-full">
+            <div class="relative overflow-hidden rounded-2xl p-8 shadow-xl lg:py-12 h-full">
               <div class="absolute inset-0">
-                <img
-                  src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                  alt=""
-                  class="h-full w-full object-cover"
-                />
+                <img src={overview.image} alt="" class="h-full w-full object-cover"/>
               </div>
             </div>
           </div>
@@ -426,7 +501,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
-
+  
 
 
   <!-- Dark Background -->
@@ -573,236 +648,84 @@ Use AstroSeo in all the pages you want different Seo than the index page
   </section>
 
 
-<!-- Testimonials -->
+  <!-- Use Cases -->
 
-  <section>
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
-      <div class="items-end pb-12">
-        <div>
-          <div class="lg:grid lg:grid-cols-2 gap-3 lg:gap-24">
-            <div>
-              <h2 class="inline-flex items-center text-blue-600">
-                <span class="text-base font-medium tracking-tight"
-                  >Testimonial</span
-                >
-              </h2>
-              <h2
-                class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-                Reviews
-              </h2>
-              <p class="mt-12 text-slate-500 text-sm">
-                Spaziobianco Public rollover performance exchange traded funds
-                junk bonds passively NASDAQ bills upswing retirement corporate
-                market exposure.
-              </p>
-            </div>
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
+            {feature.header.mainTitle}
+           </h2>
+           <p class="mt-4 text-slate-600 text-lg">
+            {feature.header.description}
+        </p>
+          <div class="mt-16">
+            {feature.featureSections.map((section, index) => (
+              <div key={index} class="lg:col-span-3 lg:col-start-3">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                  <div class="bg-slate-50 border-l-2 border-blue-500">
+                    <div class="p-6 border-t">
+                      <p class="font-semibold text-purple-900">{section.title}</p>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l border-l-0">
+                    <p class="text-slate-500 text-sm">{section.description}</p>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l">
+                    <ul role="list" class="order-last flex flex-col gap-y-3 text-sm text-slate-500">
+                      {section.listItems.map((item, itemIndex) => (
+                        <li key={itemIndex} class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M9 12l2 2l4 -4"></path>
+                          </svg>
+                          <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-  
-          <ul class="w-full mt-12 relative" role="list">
-            <li class="lg:p-8 p-4 bg-slate-50 rounded-xl">
-              <div
-                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
-                <div class="lg:col-span-2 order-last">
-                  <p class="text-slate-500">
-                    "I couldn't be happier with the service I received. The team
-                    went above and beyond to ensure my needs were met"
-                  </p>
-                </div><div class="items-center inline-flex gap-3">
-                  <div class="flex-shrink-0">
-                    <img
-                      alt="a picture of "
-                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
-                      src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-                    />
-                  </div><div class="flex-1 min-w-0">
-                    <p class="text-sm text-black font-medium">
-                      David Gutierrez
-                    </p><p class="text-sm text-slate-500">
-                      Creator of @nocodegallery
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="lg:p-8 p-4">
-              <div
-                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
-                <div class="lg:col-span-2 order-last">
-                  <p class="text-slate-500">
-                    "I highly recommend this company. Their attention to detail
-                    and commitment to quality is unmatched."
-                  </p>
-                </div><div class="items-center inline-flex gap-3">
-                  <div class="flex-shrink-0">
-                    <img
-                      alt="a picture of "
-                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
-                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-                    />
-                  </div><div class="flex-1 min-w-0">
-                    <p class="text-sm text-black font-medium">Alonso</p><p
-                      class="text-sm text-slate-500">
-                      Entrepreneur
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="lg:p-8 p-4 bg-slate-50 rounded-xl">
-              <div
-                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
-                <div class="lg:col-span-2 order-last">
-                  <p class="text-slate-500">"Great work Michael!"</p>
-                </div><div class="items-center inline-flex gap-3">
-                  <div class="flex-shrink-0">
-                    <img
-                      alt="a picture of "
-                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
-                      src="https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-                    />
-                  </div><div class="flex-1 min-w-0">
-                    <p class="text-sm text-black font-medium">Adham Dannaway</p><p
-                      class="text-sm text-slate-500">
-                      practical-ui.com
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="lg:p-8 p-4">
-              <div
-                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
-                <div class="lg:col-span-2 order-last">
-                  <p class="text-slate-500">
-                    "Working with this team was an absolute pleasure. They were
-                    professional, efficient, and always available to answer any
-                    questions I had."
-                  </p>
-                </div><div class="items-center inline-flex gap-3">
-                  <div class="flex-shrink-0">
-                    <img
-                      alt="a picture of "
-                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
-                      src="https://images.unsplash.com/photo-1584996931193-59d1ddbd4cb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-                    />
-                  </div><div class="flex-1 min-w-0">
-                    <p class="text-sm text-black font-medium">
-                      Luis Eduardo Augusto Uyejara
-                    </p><p class="text-sm text-slate-500">
-                      Founder @manifiesto_dao
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li><li class="lg:p-8 p-4 bg-slate-50 rounded-xl">
-              <div
-                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
-                <div class="lg:col-span-2 order-last">
-                  <p class="text-slate-500">
-                    "I was blown away by the results. The work exceeded my
-                    expectations and I would definitely use their services again."
-                  </p>
-                </div><div class="items-center inline-flex gap-3">
-                  <div class="flex-shrink-0">
-                    <img
-                      alt="a picture of "
-                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
-                      src="https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2112&q=80"
-                    />
-                  </div><div class="flex-1 min-w-0">
-                    <p class="text-sm text-black font-medium">Eelco Wiersma</p><p
-                      class="text-sm text-slate-500">
-                      Creator of saas-ui.dev
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
+          {featureIndex < features.length - 1 && (
+            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
+          )}
         </div>
-      </div>
+      ))}
     </div>
   </section>
 
-
-  <!-- Empress Features -->
-
-
-  <section class="bg-white">
-    <section class="relative overflow-hidden">
-      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 mt-10 mb-24 items-center">
-        <div>
-          <h2 class="inline-flex items-center text-blue-600">
-            <span class="text-base font-medium tracking-tight">{empressFeatures.sectionTitle}</span>
-          </h2>
-          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-            {empressFeatures.heading}
-          </h2>
-          <p class="text-slate-500 mt-5">
-            {empressFeatures.description}
-          </p>
-        </div>
-        <ul role="list" class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-24">
-          {empressFeatures.items.map((item, index) => (
-            <li key={index}>
-              <div>
-                <div class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                  {item.number}
-                </div>
-                <p class="mt-5 font-semibold text-purple-900">
-                  {item.title}
-                </p>
-              </div>
-              <div class="mt-6 text-slate-500 text-sm border-l-4 pl-4">
-                {item.detail}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  </section>  
 
 
   <!-- Feature Details -->
 
   <section>
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
       <div>
         <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight"
-            >Extended Pricing</span
-          >
+          <span class="text-base font-medium tracking-tight">{sectionData.mainTitle}</span>
         </h2>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          What's included in our pricing
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionData.mainSubTitle}
         </h2>
         <div class="max-w-xl mt-6">
-          <p class="text-slate-500">
-            Build quicker and don't waste time building your website. Combine
-            layouts and customize them as you wish.
-          </p>
+          <p class="text-slate-500">{sectionData.description}</p>
         </div>
       </div>
       <div class="mx-auto text-left mt-12">
-        <div>
-          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+          {sectionData.articles.map((article) => (
             <article>
               <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Tools to build optimized checkout flows
-                  </p>
-                </div>
-  
+                <p class="font-semibold text-purple-900 text-base">{article.title}</p>
                 <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
+                  <ul role="list" class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    {article.features.map((feature) => (
+                      <li class="flex items-start">
+                        <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-circle-check"
                         width="20"
@@ -818,433 +741,18 @@ Use AstroSeo in all the pages you want different Seo than the index page
                         ></path>
                         <path d="M9 12l2 2l4 -4"></path>
                       </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
+                        <span class="ml-4">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Global payments with a single integration
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Comprehensive security
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Financial reconciliation and reporting
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Fast, predictable payouts
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    24×7 phone, chat, and email support
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-          </div>
+          ))}
         </div>
       </div>
     </div>
-  </section>
+  </section>  
   
 
   <!-- FAQS -->
@@ -1280,154 +788,56 @@ Use AstroSeo in all the pages you want different Seo than the index page
 
   <!-- Contact -->
 
-
   <section class="bg-white">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
       <div>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl text-3xl">
-          We want to talk to you
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl text-3xl">
+          {talkToYouSection.title}
         </h2>
         <div class="max-w-xl mt-6">
           <p class="text-slate-500">
-            It's evident that you have a purpose for visiting this page. We
-            encourage you to take the next step and have a conversation with us to
-            determine whether any of our available roles would be a good fit for
-            you. We are continuously looking to employ skilled individuals like
-            yourself, and we hope that you will be our next hire.
+            {talkToYouSection.description}
           </p>
         </div>
         <div class="mt-10">
-          <a
-            class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto"
-            href="/job-post">
-            See open roles
+          <a href={talkToYouSection.callToAction.link} class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto">
+            {talkToYouSection.callToAction.text}
           </a>
         </div>
-      </div>
-      <div class="mx-auto text-left mt-12">
-        <div>
+        <div class="mx-auto text-left mt-12">
           <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-4">
-            <div>
-              <div class="space-y-3">
+            {talkToYouSection.infoSections.map((section, index) => (
+              <div key={index} class="space-y-3">
                 <div class="lg:inline-flex lg:items-center lg:gap-3">
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-5 h-5">
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
-                      ></path>
-                    </svg>
-                  </div>
+                  {/* Icon rendering logic */}
                   <p class="mt-5 font-semibold text-purple-900 lg:mt-0">
-                    Life at Spaziobianco
+                    {section.title}
                   </p>
                 </div>
                 <p class="text-sm text-slate-500 mt-5">
-                  Upswing securities passively index inverse bondholders
-                  capitalization financial health Moody's debt managed.
+                  {section.description}
                 </p>
               </div>
-            </div>
-            <div>
-              <div class="space-y-3">
-                <div class="lg:inline-flex lg:items-center lg:gap-3">
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-5 h-5">
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
-                      ></path>
-                    </svg>
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900 lg:mt-0">
-                    University recruiting
-                  </p>
-                </div>
-                <p class="text-sm text-slate-500 mt-5">
-                  Upswing securities passively index inverse bondholders
-                  capitalization financial health Moody's debt managed.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="space-y-3">
-                <div class="lg:inline-flex lg:items-center lg:gap-3">
-                  <div
-                    class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-5 h-5">
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
-                      ></path>
-                    </svg>
-                  </div>
-                  <p class="mt-5 font-semibold text-purple-900 lg:mt-0">
-                    Operating principles
-                  </p>
-                </div>
-                <p class="text-sm text-slate-500 mt-5">
-                  Upswing securities passively index inverse bondholders
-                  capitalization financial health Moody's debt managed.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   </section>
+  
   <section class="bg-slate-50">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
       <div>
         <h2 class="text-purple-900 font-semibold">
-          Help us build economic infrastructure for the internet
+          {infrastructureSection.title}
         </h2>
-        <p class="text-slate-500 text-sm mt-6">
-          We embrace diverse perspectives, ideas, and backgrounds at Spaziobianco.
-          We’re committed to providing equal employment opportunities for all
-          applicants and employees. Spaziobianco doesn’t discriminate on the basis
-          of any protected characteristic, including race, color, ancestry,
-          national origin, religion (including religious dress), creed, age,
-          disability (mental and physical), sex, gender (including pregnancy,
-          childbirth, breastfeeding, or related medical conditions), sexual
-          orientation, gender identity, gender expression, medical condition,
-          genetic information, family care or medical leave status, marital
-          status, domestic partner status, military and veteran status (including
-          military spouse status).
-        </p>
-        <p class="text-slate-500 text-sm mt-3">
-          Or any other characteristic protected by US federal, state or local
-          laws, or the laws of the country or jurisdiction where you work.
-        </p>
+        {infrastructureSection.description.map((paragraph, index) => (
+          <p key={index} class="text-slate-500 text-sm mt-6">
+            {paragraph}
+          </p>
+        ))}
       </div>
     </div>
   </section>
-
   
 </BaseLayout>
