@@ -35,6 +35,41 @@ const faqs = {
   ]
 };
 
+
+  // Stats
+  const statsInfo = {
+    header: "Stats",
+    mainTitle: "A more efficient way to accept transfers and ACH",
+    subTitle: "While often more effective for larger invoice amounts, supporting payment methods like ACH and wires can require tedious and manual accounts receivable efforts. LexingtonBilling automates how businesses support B2B payment methods.",
+    statsData: [
+      {
+        value: "$70M",
+      },
+      {
+        value: "3 months faster",
+      },
+      {
+        value: "5%",
+      },
+      {
+        value: "50 new countries",
+      },
+      {
+        value: "600 Hours",
+      },
+      {
+        value: "3 days less",
+      },
+      {
+        value: "1 Million workers",
+      },
+      {
+        value: "3 head quarters",
+      }
+    ]
+  };
+
+  
 const darkBackground = {
     sections: [
       {
@@ -187,7 +222,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
           <div class="lg:pr-24 md:pr-12">
             <h2
               class="text-purple-900 font-semibold text-4xl lg:text-7xl tracking-tighter">
-              Technology
+              Retail
             </h2>
             <p class="text-slate-500 mt-5">
               Spazio Bianco creates the financial foundation that enables
@@ -273,7 +308,41 @@ Use AstroSeo in all the pages you want different Seo than the index page
   </section>
 
 
+  
 
+  
+  <section>
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div class="max-w-xl">
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{statsInfo.header}</span>
+        </h2>
+  
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {statsInfo.mainTitle}
+        </h2>
+        <div>
+          <p class="text-slate-500 mt-6">
+            {statsInfo.subTitle}
+          </p>
+        </div>
+      </div>
+      <div class="mx-auto text-left mt-12">
+        <div>
+          <div class="gap-6 grid grid-cols-1 lg:grid-cols-4">
+            {statsInfo.statsData.map((stat) => (
+              <div key={stat.value}>
+                <p class="border-l-4 pl-4 font-semibold border-blue-500 tracking-tight text-purple-900">
+                  {stat.value}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
   
 
@@ -357,6 +426,8 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
+
+
 
   <!-- Dark Background -->
 
@@ -496,6 +567,158 @@ Use AstroSeo in all the pages you want different Seo than the index page
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Testimonials -->
+
+  <section>
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
+      <div class="items-end pb-12">
+        <div>
+          <div class="lg:grid lg:grid-cols-2 gap-3 lg:gap-24">
+            <div>
+              <h2 class="inline-flex items-center text-blue-600">
+                <span class="text-base font-medium tracking-tight"
+                  >Testimonial</span
+                >
+              </h2>
+              <h2
+                class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+                Reviews
+              </h2>
+              <p class="mt-12 text-slate-500 text-sm">
+                Spaziobianco Public rollover performance exchange traded funds
+                junk bonds passively NASDAQ bills upswing retirement corporate
+                market exposure.
+              </p>
+            </div>
+          </div>
+  
+          <ul class="w-full mt-12 relative" role="list">
+            <li class="lg:p-8 p-4 bg-slate-50 rounded-xl">
+              <div
+                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
+                <div class="lg:col-span-2 order-last">
+                  <p class="text-slate-500">
+                    "I couldn't be happier with the service I received. The team
+                    went above and beyond to ensure my needs were met"
+                  </p>
+                </div><div class="items-center inline-flex gap-3">
+                  <div class="flex-shrink-0">
+                    <img
+                      alt="a picture of "
+                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
+                      src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                    />
+                  </div><div class="flex-1 min-w-0">
+                    <p class="text-sm text-black font-medium">
+                      David Gutierrez
+                    </p><p class="text-sm text-slate-500">
+                      Creator of @nocodegallery
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="lg:p-8 p-4">
+              <div
+                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
+                <div class="lg:col-span-2 order-last">
+                  <p class="text-slate-500">
+                    "I highly recommend this company. Their attention to detail
+                    and commitment to quality is unmatched."
+                  </p>
+                </div><div class="items-center inline-flex gap-3">
+                  <div class="flex-shrink-0">
+                    <img
+                      alt="a picture of "
+                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                    />
+                  </div><div class="flex-1 min-w-0">
+                    <p class="text-sm text-black font-medium">Alonso</p><p
+                      class="text-sm text-slate-500">
+                      Entrepreneur
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="lg:p-8 p-4 bg-slate-50 rounded-xl">
+              <div
+                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
+                <div class="lg:col-span-2 order-last">
+                  <p class="text-slate-500">"Great work Michael!"</p>
+                </div><div class="items-center inline-flex gap-3">
+                  <div class="flex-shrink-0">
+                    <img
+                      alt="a picture of "
+                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
+                      src="https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                    />
+                  </div><div class="flex-1 min-w-0">
+                    <p class="text-sm text-black font-medium">Adham Dannaway</p><p
+                      class="text-sm text-slate-500">
+                      practical-ui.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="lg:p-8 p-4">
+              <div
+                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
+                <div class="lg:col-span-2 order-last">
+                  <p class="text-slate-500">
+                    "Working with this team was an absolute pleasure. They were
+                    professional, efficient, and always available to answer any
+                    questions I had."
+                  </p>
+                </div><div class="items-center inline-flex gap-3">
+                  <div class="flex-shrink-0">
+                    <img
+                      alt="a picture of "
+                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
+                      src="https://images.unsplash.com/photo-1584996931193-59d1ddbd4cb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    />
+                  </div><div class="flex-1 min-w-0">
+                    <p class="text-sm text-black font-medium">
+                      Luis Eduardo Augusto Uyejara
+                    </p><p class="text-sm text-slate-500">
+                      Founder @manifiesto_dao
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li><li class="lg:p-8 p-4 bg-slate-50 rounded-xl">
+              <div
+                class="grid grid-cols-1 gap-6 items-start lg:gap-24 lg:grid-cols-3">
+                <div class="lg:col-span-2 order-last">
+                  <p class="text-slate-500">
+                    "I was blown away by the results. The work exceeded my
+                    expectations and I would definitely use their services again."
+                  </p>
+                </div><div class="items-center inline-flex gap-3">
+                  <div class="flex-shrink-0">
+                    <img
+                      alt="a picture of "
+                      class="rounded-full h-10 lg:h-16 lg:w-16 w-10 object-cover"
+                      src="https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2112&q=80"
+                    />
+                  </div><div class="flex-1 min-w-0">
+                    <p class="text-sm text-black font-medium">Eelco Wiersma</p><p
+                      class="text-sm text-slate-500">
+                      Creator of saas-ui.dev
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

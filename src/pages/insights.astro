@@ -1,0 +1,252 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import AboutOne from "../components/about/AboutOne.astro";
+import FeatureEleven from "../components/features/FeatureEleven.astro";
+import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
+import FeatureTwelve from "../components/features/FeatureTwelve.astro";
+import FeatureFive from "../components/features/FeatureFive.astro";
+import StatsTwo from "../components/stats/StatsTwo.astro";
+import CtaThree from "../components/cta/CtaThree.astro";
+
+import { AstroSeo } from "@astrolib/seo";
+
+const features = [
+{
+  header: {
+    mainTitle: "Control Your Accounts",
+    subTitle: "Track Your Spending",
+    description: "Empower your financial journey with tools designed for simplicity and efficiency."
+  },
+  featureSections: [
+    {
+      title: "Efficient Balance Tracking",
+      description: "Easily access and review your account balances to make informed decisions. Ideal for budgeting, financial planning, and ensuring your accounts are always adequately funded.",
+      listItems: [
+        "User-friendly Dashboard",
+        "Real-time Balance Updates",
+        "Intuitive Financial Overview",
+      ]
+    },
+    {
+      title: "Organized Account Types",
+      description: "Manage various account types all in one place. Whether it’s personal, savings, or business accounts, our system categorizes and simplifies them for you.",
+      listItems: [
+        "Multiple Account Management",
+        "Custom Account Categorization",
+        "Simplified Account Navigation",
+      ]
+    },
+    {
+      title: "Personalized Account Names",
+      description: "Label your accounts with names that make sense to you. This personal touch helps you navigate and manage your finances more intuitively.",
+      listItems: [
+        "Easy Account Identification",
+        "Personalized Naming System",
+        "Effortless Account Tracking",
+      ]
+    },
+    {
+      title: "Precise Balance Calculations",
+      description: "Get accurate financial figures with our precise balance calculations. Ideal for maintaining exact records and planning future expenses.",
+      listItems: [
+        "Highly Accurate Reporting",
+        "Detailed Financial Breakdowns",
+        "Trustworthy Data Accuracy",
+      ]
+    },
+    {
+      title: "Multi-Currency Support",
+      description: "Whether you’re dealing in dollars, euros, or yen, our platform supports multiple currencies, making it perfect for international transactions and travel.",
+      listItems: [
+        "Global Currency Compatibility",
+        "Automatic Currency Conversion",
+        "Seamless International Transactions",
+      ]
+    },
+    {
+      title: "Connected Account Overview",
+      description: "Link related accounts to see a comprehensive financial picture. Ideal for tracking business and personal finances or managing family budgets.",
+      listItems: [
+        "Unified Account Views",
+        "Easy Tracking of Related Finances",
+        "Consolidated Financial Reports",
+      ]
+    },
+  ]
+}
+
+
+];
+
+const sectionFour = {
+  header: {
+    title: "Revolutionize Your Approach",
+    mainTitle: "Business Made Beautiful",
+    subTitle: "Empress redefines business management by blending sophisticated AI Assistants and predictive analytics with elegantly designed dashboards."
+  },
+  columns: [
+    {
+      title: "AI-Powered Business Intelligence",
+      listItems: [
+        "Advanced AI Assistants for real-time decision support",
+        "Predictive analytics for forecasting market trends",
+        "Intelligent insights into customer behavior and preferences"
+      ]
+    },
+    {
+      title: "Elegant, Insightful Dashboards",
+      listItems: [
+        "Visually stunning dashboards for instant overview",
+        "Customizable interfaces to suit your unique business needs",
+        "Seamless integration of data for holistic management"
+      ]
+    }
+  ],
+  imageSrc: "/images/chart.jpg"
+};
+
+---
+
+
+
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="About 01"
+  description="Your site description goes here"
+  canonical="https://www.lexingtonthemes.com"
+  openGraph={{
+    url: "https://www.lexingtonthemes.com",
+    title: "Open Graph Title",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
+/>
+<BaseLayout>
+  <AboutOne />
+  <FeatureEleven />
+  <!-- <TestimonialFour /> -->
+
+  <section class="overflow-hidden border-b">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 pt-24 items-center">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{sectionFour.header.title}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionFour.header.mainTitle}
+        </h2>
+        <div class="max-w-xl mt-6">
+          <p class="text-slate-500">{sectionFour.header.subTitle}</p>
+        </div>
+      </div>
+      <div class="mx-auto text-left mt-12">
+        <div>
+          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
+            {sectionFour.columns.map(column => (
+              <div>
+                <div>
+                  <p class="font-semibold text-purple-900">{column.title}</p>
+                  <div class="mt-6">
+                    <ul role="list" class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
+                      {column.listItems.map(item => (
+                        <li class="flex items-start">
+                          — <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
+            <img src={sectionFour.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
+            {feature.header.mainTitle}
+           </h2>
+           <p class="mt-4 text-slate-600 text-lg">
+            {feature.header.description}
+        </p>
+          <div class="mt-16">
+            {feature.featureSections.map((section, index) => (
+              <div key={index} class="lg:col-span-3 lg:col-start-3">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                  <div class="bg-slate-50 border-l-2 border-blue-500">
+                    <div class="p-6 border-t">
+                      <p class="font-semibold text-purple-900">{section.title}</p>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l border-l-0">
+                    <p class="text-slate-500 text-sm">{section.description}</p>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l">
+                    <ul role="list" class="order-last flex flex-col gap-y-3 text-sm text-slate-500">
+                      {section.listItems.map((item, itemIndex) => (
+                        <li key={itemIndex} class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M9 12l2 2l4 -4"></path>
+                          </svg>
+                          <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {featureIndex < features.length - 1 && (
+            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <FeatureTwelve />
+
+  <FeatureFive />
+
+
+  <StatsTwo />
+  <CtaThree />
+</BaseLayout>
