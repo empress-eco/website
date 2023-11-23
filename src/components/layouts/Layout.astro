@@ -1,0 +1,106 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import { SEO } from "astro-seo";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import MobileNavbar from "@components/navbar/mobile-navbar.astro"; // Update the path accordingly.
+
+
+import "@fontsource-variable/inter/index.css";
+
+export interface Props {
+  title?: string;
+  footerMargin?: boolean;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  "/opengraph.jpg",
+  Astro.site,
+).toString();
+
+const { title, footerMargin = true } = Astro.props;
+
+const makeTitle = title
+  ? title + " | " + "empress.eco"
+  : "empress.eco - The Platform for Business Growth";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <SEO
+      title={makeTitle}
+      description="empress.eco - The Launchpad for Business Growth."
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@surjithctly",
+        site: "@web3templates",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `empress.eco - Launchpad for Business Growth`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "Empress Homepage Screenshot",
+        },
+      }}
+    />
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      img {
+        content-visibility: auto;
+      }
+    </style>
+    <ViewTransitions />
+  </head>
+  <body>
+    <!-- <div class="hidden md:block">
+      <Navbar />
+    </div>
+    <div class="block md:hidden">
+      <MobileNavbar />
+    </div> -->
+    <header class="sticky top-0 z-50 bg-white"> <!-- You can adjust the z-index and bg color as per your need -->
+      <div class="hidden md:block">
+        <Navbar />
+      </div>
+      <div class="block md:hidden">
+        <MobileNavbar />
+      </div>
+    </header>
+    <slot />
+    <Footer margin={footerMargin} />
+        <!-- Chat Embed Script -->
+        <!-- <script type="module">
+          import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+          Chatbot.init({
+              chatflowid: "1dd03657-db13-4108-861f-f386c49c46a5",
+              apiHost: "http://localhost:4000",
+          })
+      </script> -->
+      <script>
+        window.intercomSettings = {
+          api_base: "https://api-iam.intercom.io",
+          app_id: "r85kig20"
+        };
+      </script>
+      
+      <script>
+      // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/r85kig20'
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/r85kig20';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+      </script>
+  </body>
+</html>
+
