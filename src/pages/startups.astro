@@ -5,13 +5,15 @@ import JobsHome from "../components/jobs/JobsHome.astro";
 
 import { AstroSeo } from "@astrolib/seo";
 
+import Ecosystem from "../components/features/Ecosystem.astro";
+
 
 // Hero
 
 export const hero = {
   heroSection: {
     header: 'Empress for Startups',
-    title: 'Move Fast And Make Things',
+    title: 'Scale Fast And Make Things',
     description: 'Empress ignites startup growth with advanced tech solutions, enhancing agility and customer engagement. Join our network of dynamic startups harnessing our platform for innovation and efficiency.',
     caseStudyText: "Read case study",
     callToActionText: 'Get Started',
@@ -330,7 +332,7 @@ const sectionData = {
 
 const faqs = {
   title: "Startups FAQs",
-  subtitle: "Empowering Startups with Empress",
+  subtitle: "Your Questions, Answered",
   questions: [
     {
       question: "How does Empress support startup scalability?",
@@ -359,7 +361,7 @@ const faqs = {
 // Contact
 
 const talkToYouSection = {
-  title: "Connect with Empress for Startups",
+  title: "Connect With Us",
   description: "We're thrilled to discover how Empress can catalyze your startup's growth. Let's discuss how our innovative solutions can address your unique challenges and accelerate your journey to success.",
   callToAction: {
     text: "Discover Empress for Startups",
@@ -971,10 +973,12 @@ Use AstroSeo in all the pages you want different Seo than the index page
   </section>
 
 
+  <Ecosystem />
+
 
   <!-- Feature Details -->
 
-  <section>
+  <!-- <section>
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
       <div>
         <h2 class="inline-flex items-center text-blue-600">
@@ -1024,7 +1028,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   
   
 

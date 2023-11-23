@@ -5,6 +5,7 @@ import JobsHome from "../components/jobs/JobsHome.astro";
 
 import { AstroSeo } from "@astrolib/seo";
 
+import Ecosystem from "../components/features/Ecosystem.astro";
 
 
 // Hero
@@ -12,7 +13,7 @@ import { AstroSeo } from "@astrolib/seo";
 export const hero = {
   heroSection: {
     header: 'Empress for Retail',
-    title: 'Next Generation Retail Growth',
+    title: 'Next Generation Retail Success',
     description: 'Empress transforms retail operations by integrating innovative technology to enhance customer engagement and streamline sales processes.',
     caseStudyText: "Read case study",
     callToActionText: 'Get Started',
@@ -341,7 +342,7 @@ const sectionData = {
 
 const faqs = {
   title: "Retail Management FAQs",
-  subtitle: "Empowering Retail with Informed Solutions",
+  subtitle: "Your Questions, Answered",
   questions: [
     {
       question: "How does Empress enhance retail inventory tracking?",
@@ -981,7 +982,9 @@ Use AstroSeo in all the pages you want different Seo than the index page
 
   <!-- Feature Details -->
 
-  <section>
+  <Ecosystem/>
+
+  <!-- <section>
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
       <div>
         <h2 class="inline-flex items-center text-blue-600">
@@ -1031,7 +1034,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   
   
 

@@ -1,3 +1,24 @@
+---
+
+const pageContent = {
+  title: "Elevate Your Business with Empress",
+  description: "Embark on a journey of growth and innovation. Experience the transformation in every aspect of your business operations with Empress.",
+  buttons: [
+    { text: "Get Started", href: "/contact" },
+    { text: "View Pricing", href: "/pricing" }
+  ],
+  articles: [
+    { title: "Streamlined Operations", description: "Revolutionize your workflow with efficient, automated processes for enhanced productivity." },
+    { title: "Integrated Solutions", description: "Seamlessly connect and manage all your tools for cohesive business operations." },
+    { title: "Advanced Data Management", description: "Leverage our robust database solutions for secure and comprehensive data handling." },
+    { title: "Efficient Business Strategies", description: "Implement cutting-edge business techniques for quick and effective rollout." }
+  ]
+};
+
+
+
+---
+
 <section class="bg-white">
   <div class="lg:p-8">
     <div class="bg-purple-900 max-w-7xl mx-auto lg:rounded-3xl">
@@ -5,88 +26,40 @@
         <div class="grid grid-cols-1 gap-12 lg:gap-24 items-end md:grid-cols-2">
           <div>
             <h2 class="inline-flex items-center text-white">
-              <span class="text-base font-medium tracking-tight">CTA</span>
+              <span class="text-base font-medium tracking-tight"></span>
             </h2>
-            <h2
-              class="text-white font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-              Ready to get started with Spaziobianco?
+            <h2 class="text-white font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {pageContent.title}
             </h2>
             <p class="text-slate-400 mt-5">
-              Receive dividends bull investment mutual funds rise federal funds
-              strategy substantially treasury municipal public index funds.
+              {pageContent.description}
             </p>
             <div class="mt-10 flex flex-col lg:flex-row gap-6">
-              <a
-                class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto"
-                href="/overview">
-                Explor all pages
-              </a>
-              <a
-                href=""
-                class="text-white justify-center hover:text-blue-500 inline-flex items-center group">
-                See libraries
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                  <path
-                    fill-rule="evenodd"
-                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </a>
+              {pageContent.buttons.map(button => (
+                <a class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto"
+                   href={button.href}>
+                  {button.text}
+                </a>
+              ))}
             </div>
           </div>
           <div class="lg:mt-0 mt-12">
             <div class="mx-auto">
               <div class="gap-6 gap-y-14 lg:gap-12 grid grid-cols-2">
-                <article>
-                  <div class="space-y-3">
-                    <div>
-                      <p class="font-semibold text-white">
-                        Supervised deployments
+                {pageContent.articles.map(article => (
+                  <article>
+                    <div class="space-y-3">
+                      <div>
+                        <p class="font-semibold text-white">
+                          {article.title}
+                        </p>
+                      </div>
+                      <p class="text-sm text-slate-400">
+                        {article.description}
                       </p>
                     </div>
-                    <p class="text-sm text-slate-400">
-                      Debt bills lucrative capitalization municipal bonds
-                      government.
-                    </p>
-                  </div>
-                </article>
-                <article>
-                  <div class="space-y-3">
-                    <div>
-                      <p class="font-semibold text-white">Conect your SaaS</p>
-                    </div>
-                    <p class="text-sm text-slate-400">
-                      Debt bills lucrative capitalization municipal bonds
-                      government.
-                    </p>
-                  </div>
-                </article>
-                <article>
-                  <div class="space-y-3">
-                    <div>
-                      <p class="font-semibold text-white">Databse ready</p>
-                    </div>
-                    <p class="text-sm text-slate-400">
-                      Debt bills lucrative capitalization municipal bonds
-                      government.
-                    </p>
-                  </div>
-                </article>
-                <article>
-                  <div class="space-y-3">
-                    <div>
-                      <p class="font-semibold text-white">Deployments</p>
-                    </div>
-                    <p class="text-sm text-slate-400">
-                      Debt bills lucrative capitalization municipal bonds
-                      government.
-                    </p>
-                  </div>
-                </article>
+                  </article>
+                ))}
               </div>
             </div>
           </div>

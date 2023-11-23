@@ -17,6 +17,7 @@ import AllFeatures from "../components/features/AllFeatures.astro";
 import FeatureFour from "../components/features/FeatureFour.astro";
 import FeatureFive from "../components/features/FeatureFive.astro";
 import FeatureTwelve from "../components/features/FeatureTwelve.astro";
+import Ecosystem from "../components/features/Ecosystem.astro";
 import { Code } from "astro/components";
 
 import { AstroSeo } from "@astrolib/seo";
@@ -350,7 +351,7 @@ export async function createPaymentCard(cardData) {
 const sectionNine = {
   title: "Industry Solutions",
   mainTitle: "Empowering Diverse Industries",
-  backgroundImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+  backgroundImage: "https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
   testimonialText: "Empress is engineered to adapt and thrive across various industries. Whether you’re in tech, retail, finance, healthcare, or any other sector, our platform offers tailored solutions designed to meet your unique business challenges and drive growth. Discover how Empress can transform your industry with innovative, efficient, and scalable solutions.",
   author: "Explore Our Industry Solutions",
   industryLinkHref: "/industry-solutions",
@@ -415,54 +416,6 @@ const sectionTen = {
 
 // Section Eleven
 
-const sectionEleven = {
-  title: "Explore Empress Ecosystem",
-  subtitle: "On Your Mark. Get Set. Grow!",
-  blocks: [
-    {
-      imageUrl: "https://images.unsplash.com/photo-1642132652859-3ef5a1048fd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2660&q=80",
-      integrationImage: "/images/integrations/figma.svg",
-      text: "Seamlessly integrate your business operations with our robust suite of tools and APIs.",
-      url: "/integrate-your-business",
-      linkText:"Integrate Your Business"
-    },
-    {
-      imageUrl: "https://images.unsplash.com/photo-1522932753915-9ee97e43e3d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90oy1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-      integrationImage: "/images/integrations/notion.svg",
-      text: "Collaborate with Empress experts to build solutions tailored to your business needs.",
-      url: "/build-with-empress",
-      linkText:"Find Empress Experts"
-    },
-    {
-      imageUrl: "https://images.unsplash.com/photo-1522932753915-9ee97e43e3d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90oy1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-      integrationImage: "/images/integrations/notion.svg",
-      text: "Explore our range of no-code products and discover how they can elevate your business.",
-      url: "/no-code-products",
-      linkText:"Try No-Code Products"
-    },
-    {
-      imageUrl: "https://images.unsplash.com/photo-1522932753915-9ee97e43e3d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90oy1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-      integrationImage: "/images/integrations/notion.svg",
-      text: "Join Empress Academy for insights, tutorials, and best practices in utilizing our platform.",
-      url: "/empress-academy",
-      linkText:"Check Out Empress Academy"
-    },
-    {
-      imageUrl: "https://images.unsplash.com/photo-1522932753915-9ee97e43e3d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90oy1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-      integrationImage: "/images/integrations/notion.svg",
-      text: "Find comprehensive guides and FAQs in our Help Center to get the most out of Empress.",
-      url: "/help-center",
-      linkText:"View Help Center"
-    },
-    {
-      imageUrl: "https://images.unsplash.com/photo-1522932753915-9ee97e43e3d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90oy1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-      integrationImage: "/images/integrations/notion.svg",
-      text: "Connect with other professionals and experts in our vibrant Empress Community.",
-      url: "/community",
-      linkText:"Join our Community"
-    }
-  ]
-};
 
 
 // Section Nine
@@ -1293,7 +1246,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
                     </div>
                   </div>
                   <div class="lg:ml-auto">
-                    <svg
+                    <!-- <svg
                       width="143"
                       height="48"
                       viewBox="0 0 143 48"
@@ -1330,7 +1283,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
                       <path
                         d="M11.0707 13.8655C11.1409 13.413 11.4311 13.0433 11.8214 12.8568C11.9999 12.7716 12.1968 12.7244 12.4053 12.7244H20.8712C21.8742 12.7244 22.8103 12.79 23.6648 12.9282C23.9089 12.9673 24.1461 13.0122 24.3776 13.0629C24.6079 13.1147 24.8324 13.1723 25.05 13.2356C25.1583 13.2679 25.2654 13.3013 25.3702 13.3347C25.7905 13.474 26.1808 13.6387 26.5413 13.8287C26.965 11.1261 26.5378 9.28594 25.0765 7.6197C23.4656 5.78533 20.558 5 16.8374 5H6.03623C5.27623 5 4.62793 5.55273 4.51047 6.30467L0.0115023 34.8219C-0.0771644 35.3862 0.358108 35.8952 0.926957 35.8952H7.59538L9.26968 25.2724L11.0707 13.8655Z"
                         class="fill-[#253B80]"></path>
-                    </svg>
+                    </svg> -->
                   </div>
                 </div>
               </div>
@@ -1381,272 +1334,9 @@ Use AstroSeo in all the pages you want different Seo than the index page
 
 <!-- Section Eleven -->
 
-<section class="bg-white">
-  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-    <div class="max-w-xl">
-      <h2 class="inline-flex items-center rounded-full text-blue-600">
-        <span class="text-base font-medium tracking-tight">{sectionEleven.title}</span>
-      </h2>
-      <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-        {sectionEleven.subtitle}
-      </h2>
-    </div>
-    <div class="mx-auto mt-12">
-      <div class="flex flex-wrap md:-m-2 -m-1">
-        <!-- Loop through each block in the sectionEleven object -->
-      <div class="mx-auto mt-12">
-        <div class="flex flex-wrap md:-m-2 -m-1">
-          <div class="flex flex-wrap w-1/2">
-            <div class="md:p-2 p-1 w-1/2">
-              <div
-                class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-900 via-purple-600 to-purple-400 mix-blend-multiply p-8 shadow-xl lg:py-12 lg:gap-x-8">
-                <div
-                  class="absolute inset-0 opacity-30 mix-blend-multiply saturate-0 filter">
-                  <img
-                    src={sectionEleven.blocks[0].imageUrl}
-                    alt=""
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="relative lg:col-span-1">
-                  <span>
-                    <img src={sectionEleven.blocks[0].integrationImage} alt="" />
-                  </span>
-                  <blockquote class="mt-6 text-white lg:mt-32">
-                    <p class="font-medium">
-                      {sectionEleven.blocks[0].text}
-                    </p>
-                    <p class="mt-6">
-                      <a
-                        href=""
-                        class="text-white hover:text-blue-100 inline-flex items-center group">
-                        {sectionEleven.blocks[0].linkText}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                          <path
-                            fill-rule="evenodd"
-                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </a>
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-            <div class="md:p-2 p-1 w-1/2">
-              <div
-                class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-900 via-purple-600 to-purple-400 mix-blend-multiply p-8 shadow-xl lg:py-12 lg:gap-x-8">
-                <div
-                  class="absolute inset-0 opacity-30 mix-blend-multiply saturate-0 filter">
-                  <img
-                    src={sectionEleven.blocks[1].imageUrl}
-                    alt=""
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="relative lg:col-span-1">
-                  <span>
-                    <img src={sectionEleven.blocks[1].integrationImage} alt="" />
-                  </span>
-                  <blockquote class="mt-6 text-white lg:mt-32">
-                    <p class="font-medium">
-                      {sectionEleven.blocks[1].text}
-                    </p>
-                    <p class="mt-6">
-                      <a
-                        href=""
-                        class="text-white hover:text-blue-100 inline-flex items-center group">
-                        {sectionEleven.blocks[1].linkText}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                          <path
-                            fill-rule="evenodd"
-                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </a>
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-            <div class="md:p-2 p-1 w-full">
-              <div
-                 class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-900 via-purple-600 to-purple-400 mix-blend-multiply p-8 shadow-xl lg:py-12 lg:gap-x-8">
-                <div
-                  class="absolute inset-0 opacity-30 mix-blend-multiply saturate-0 filter">
-                  <img
-                    src={sectionEleven.blocks[2].imageUrl}
-                    alt=""
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="relative lg:col-span-1">
-                  <span>
-                    <img src={sectionEleven.blocks[2].integrationImage} alt="" />
-                  </span>
-                  <blockquote class="mt-6 text-white lg:mt-32">
-                    <p class="font-medium">
-                      {sectionEleven.blocks[2].text}
-                    </p>
-                    <p class="mt-6">
-                      <a
-                        href=""
-                        class="text-white hover:text-blue-100 inline-flex items-center group">
-                        {sectionEleven.blocks[2].linkText}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                          <path
-                            fill-rule="evenodd"
-                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </a>
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-wrap w-1/2">
-            <div class="md:p-2 p-1 w-full">
-              <div
-              class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-900 via-purple-600 to-purple-400 mix-blend-multiply p-8 shadow-xl lg:py-12 lg:gap-x-8">
-                <div
-                  class="absolute inset-0 opacity-30 mix-blend-multiply saturate-0 filter">
-                  <img
-                    src={sectionEleven.blocks[3].imageUrl}
-                    alt=""
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="relative lg:col-span-1">
-                  <span>
-                    <img src={sectionEleven.blocks[3].integrationImage} alt="" />
-                  </span>
-                  <blockquote class="mt-6 text-white lg:mt-32">
-                    <p class="font-medium">
-                      {sectionEleven.blocks[3].text}
-                    </p>
-                    <p class="mt-6">
-                      <a
-                        href=""
-                        class="text-white hover:text-blue-100 inline-flex items-center group">
-                        {sectionEleven.blocks[3].linkText}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                          <path
-                            fill-rule="evenodd"
-                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </a>
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-            <div class="md:p-2 p-1 w-1/2">
-              <div
-              class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-900 via-purple-600 to-purple-400 mix-blend-multiply p-8 shadow-xl lg:py-12 lg:gap-x-8">
-                <div
-                  class="absolute inset-0 opacity-30 mix-blend-multiply saturate-0 filter">
-                  <img
-                    src={sectionEleven.blocks[4].imageUrl}
-                    alt=""
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="relative lg:col-span-1">
-                  <span>
-                    <img src={sectionEleven.blocks[4].integrationImage} alt="" />
-                  </span>
-                  <blockquote class="mt-6 text-white lg:mt-32">
-                    <p class="font-medium">
-                      {sectionEleven.blocks[4].text}
-                    </p>
-                    <p class="mt-6">
-                      <a
-                        href=""
-                        class="text-white hover:text-blue-100 inline-flex items-center group">
-                        {sectionEleven.blocks[4].linkText}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                          <path
-                            fill-rule="evenodd"
-                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </a>
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-            <div class="md:p-2 p-1 w-1/2">
-              <div
-              class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-900 via-purple-600 to-purple-400 mix-blend-multiply p-8 shadow-xl lg:py-12 lg:gap-x-8">
-                <div
-                  class="absolute inset-0 opacity-30 mix-blend-multiply saturate-0 filter">
-                  <img
-                    src={sectionEleven.blocks[5].imageUrl}
-                    alt=""
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="relative lg:col-span-1">
-                  <span>
-                    <img src={sectionEleven.blocks[5].integrationImage} alt="" />
-                  </span>
-                  <blockquote class="mt-6 text-white lg:mt-32">
-                    <p class="font-medium">
-                      {sectionEleven.blocks[1].text}
-                    </p>
-                    <p class="mt-6">
-                      <a
-                        href=""
-                        class="text-white hover:text-blue-100 inline-flex items-center group">
-                        {sectionEleven.blocks[5].linkText}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                          <path
-                            fill-rule="evenodd"
-                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </a>
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-      </div>
-    </div>
-  </div>
-</section>
+<Ecosystem/>
+
+
 
   
 <section>
