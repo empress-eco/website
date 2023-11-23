@@ -9,71 +9,91 @@ import { AstroSeo } from "@astrolib/seo";
 
 // Hero
 
-
-const hero = {
-  title: "Empower Your Retail Business",
-  description: "Empress transforms retail operations by integrating innovative technology to enhance customer engagement and streamline sales processes. Join a community of forward-thinking retailers who leverage our platform for sustainable growth and market leadership.",
-  callToAction: {
-    text: "Discover Empress for Retail",
-    link: "/retail-solutions"
+export const hero = {
+  heroSection: {
+    header: 'Empress for Retail',
+    title: 'Next Generation Retail Growth',
+    description: 'Empress transforms retail operations by integrating innovative technology to enhance customer engagement and streamline sales processes.',
+    caseStudyText: "Read case study",
+    callToActionText: 'Get Started',
+    callToActionLink: '/contact',
+    callToActionTwoText: 'View Pricing',
+    callToActionTwoLink: '/pricing',
   },
   imageGrid: [
-    [
-      "https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      "https://plus.unsplash.com/premium_photo-1661775434014-9c0e8d71de03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-    ],
-    [
-      "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      "https://images.unsplash.com/photo-1600275669439-14e40452d20b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8b2ZmaWNlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60",
-      "https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-    ],
-    [
-      "https://plus.unsplash.com/premium_photo-1661771825670-1720428a80ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
-      "https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-    ]
-  ]
+    {
+      imageUrl: "https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco has Economy growth upswing market index funds capitalization corporate bonds mutual.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-pink-600",
+    },
+    {
+      imageUrl: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco Public rollover performance exchange traded funds junk bonds passively NASDAQ bills upswing retirement corporate market exposure.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-blue-600",
+    },
+    {
+      imageUrl: "https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco features advanced tools for market analysis and investment strategies.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-slate-600",
+    },
+    {
+      imageUrl: "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco features advanced tools for market analysis and investment strategies.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-slate-600",
+    },
+    {
+      imageUrl: "https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco features advanced tools for market analysis and investment strategies.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-pink-600",
+    }
+  ],
 };
 
 
-  // Stats
-  const statsInfo = {
-    header: "Retail Transformation",
-    mainTitle: "Enhancing Retail Efficiency with Empress",
-    subTitle: "Empress brings a new edge to the retail industry with its advanced analytical tools and intuitive solutions, making every transaction and operation more efficient and customer-centric.",
-    statsData: [
-      {
-        value: "$70M",
-      },
-      {
-        value: "3 months faster",
-      },
-      {
-        value: "5%",
-      },
-      {
-        value: "50 new countries",
-      },
-      {
-        value: "600 Hours",
-      },
-      {
-        value: "3 days less",
-      },
-      {
-        value: "1 Million workers",
-      },
-      {
-        value: "3 head quarters",
-      }
-    ]
-  };
+// src/data/statsContent.js
+export const statsContent = {
+  sectionTitle: "We Help You Achieve Stunning Results",
+  stats: [
+    {
+      figure: "$70M",
+      description: "Total increase in failures annual count",
+    },
+    {
+      figure: "3 months faster",
+      description: "Than our competence",
+    },
+    {
+      figure: "1 Million workers",
+      description: "Were injured in working hours",
+    },
+    {
+      figure: "50 new countries",
+      description: "That has banned our incompetence",
+    },
+  ],
+};
 
 
 // Overview
 
 
 const overview = {
-  title: "Revolutionize Your Retail Operations",
+  title: "Retail's Future, Today",
   paragraphs: [
     "Empress is at the forefront of reinventing retail experiences. From small boutiques to large retail chains, our platform is designed to meet diverse needs, ensuring seamless operations and unparalleled customer satisfaction.",
     "Our suite of tools enhances everything from inventory management to customer engagement, paving the way for retail success."
@@ -131,6 +151,43 @@ const darkBackground = {
       marginAdjustment: "-mt-72 lg:-mt-[26rem]"
     }
   ]
+};
+
+
+// Retail New
+
+const sectionFour = {
+  header: {
+    title: "Marketing Success Stories",
+    subtitle: "Real Impact with Empress",
+  },
+  description: "Explore how Empress has revolutionized marketing practices for diverse businesses, enhancing brand visibility and customer engagement.",
+  challenges: [
+    {
+      title: "Innovative Campaign Automation",
+      description: "Learn how Empress empowered a leading brand to automate their marketing campaigns, resulting in increased efficiency and audience reach.",
+    },
+    {
+      title: "Strategic Audience Targeting",
+      description: "Read how a startup leveraged Empress's tools for precise audience targeting and engagement, transforming their marketing approach.",
+    },
+  ],
+  productsUsed: [
+    "Automated Campaign Tracking",
+    "Content Management Systems",
+    "Audience Analytics",
+    "Multi-Channel Marketing Integration"
+  ],
+  testimonial: {
+    text: "Empress has been a game-changer for our marketing efforts, offering innovative solutions that have significantly boosted our brand presence.",
+    caseStudyLink: "link/to/case-study",
+    caseStudyText: "Read the Success Story"
+  },
+  images: {
+    background: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    modalOne: "/images/ModalOne.png",
+    modalTwo: "/images/ModalTwo.png"
+  }
 };
 
 
@@ -314,7 +371,7 @@ const faqs = {
 // Contact
 
 const talkToYouSection = {
-  title: "We want to talk to you",
+  title: "Connect with us",
   description: "We're eager to explore how Empress can revolutionize your retail business. Let's discuss your needs and see how our solutions can drive your retail success.",
   callToAction: {
     text: "Discover Empress for Retail",
@@ -385,83 +442,296 @@ Use AstroSeo in all the pages you want different Seo than the index page
 />
 <BaseLayout>
 
-
-<section class="relative overflow-hidden border-b">
-  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center lg:py-44">
-    <div class="items-start gap-12 grid grid-cols-1 md:grid-cols-2">
-      <div>
-        <div class="lg:pr-24 md:pr-12">
-          <h2 class="text-purple-900 font-semibold text-4xl lg:text-7xl tracking-tighter">
-            {hero.title}
-          </h2>
-          <p class="text-slate-500 mt-5">
-            {hero.description}
-          </p>
-        </div>
-        <div class="mt-10">
-          <a
-            class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto"
-            href={hero.callToAction.link}
-          >
-            {hero.callToAction.text}
-          </a>
-        </div>
-      </div>
-      <div class="lg:mt-0 lg:ml-auto">
-        <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-          <div class="flex items-center space-x-6 lg:space-x-8">
-            {hero.imageGrid.map((imageRow, index) => (
-              <div key={index} class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                {imageRow.map((image, imageIndex) => (
-                  <div key={imageIndex} class="h-full w-44">
-                    <img src={image} alt="thumbnail" class="drop-shadow-2xl rounded-2xl"/>
-                  </div>
-                ))}
+  <section class="relative overflow-hidden border-b">
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center lg:py-44">
+      <div class="items-start gap-12 grid grid-cols-1 md:grid-cols-2">
+        <div>
+          <div class="lg:pr-24 md:pr-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight mb-5">{hero.heroSection.header}</span>
+            </h2> 
+            <h2
+              class="text-purple-900 font-semibold text-4xl lg:text-7xl tracking-tighter">
+              {hero.heroSection.title}
+            </h2>
+            <p class="text-slate-500 mt-5">
+              {hero.heroSection.description}
+            </p>
+          </div>
+          <div class="mt-10">
+              <div class="mt-10 flex">
+                <a href={hero.heroSection.callToActionLink}
+                   class="inline-flex items-center justify-center px-6 lg:px-8 py-3.5 rounded-full w-auto font-medium mr-4"
+                   style="background-color: #5046e4; color: #fff; border: 2px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease;"
+                   onmouseover="this.style.backgroundColor='#6767ff'; this.style.borderColor='#5046e4';"
+                   onmouseout="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';"
+                   onmousedown="this.style.backgroundColor='#3838b1'; this.style.borderColor='#6767ff';"
+                   onmouseup="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';">
+                   {hero.heroSection.callToActionText}
+                </a>
+                <a href={hero.heroSection.callToActionTwoLink}
+                   class="inline-flex items-center justify-center px-6 lg:px-8 py-3.5 rounded-full w-auto font-medium"
+                   style="background-color: #fff; color: #333; border: none; border-radius: 30px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9); transition: all 0.2s ease;"
+                   onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+                   onmouseout="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+                   onmousedown="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+                   onmouseup="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';">
+                   {hero.heroSection.callToActionTwoText}
+                </a>
               </div>
-            ))}
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  
-
-<!-- Stats Info -->
-
-  
-  <section>
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div class="max-w-xl">
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">{statsInfo.header}</span>
-        </h2>
-  
-        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {statsInfo.mainTitle}
-        </h2>
-        <div>
-          <p class="text-slate-500 mt-6">
-            {statsInfo.subTitle}
-          </p>
-        </div>
-      </div>
-      <div class="mx-auto text-left mt-12">
-        <div>
-          <div class="gap-6 grid grid-cols-1 lg:grid-cols-4">
-            {statsInfo.statsData.map((stat) => (
-              <div key={stat.value}>
-                <p class="border-l-4 pl-4 font-semibold border-blue-500 tracking-tight text-purple-900">
-                  {stat.value}
-                </p>
+        <div class="lg:mt-0 lg:ml-auto">
+          <div
+            class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+            <div class="flex items-center space-x-6 lg:space-x-8">
+              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                  <div
+                    class="relative overflow-hidden rounded-2xl bg-pink-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                    <div
+                      class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                      <img
+                      src={hero.imageGrid[0].imageUrl}
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div class="relative">
+                      <span>
+                        <img src={hero.imageGrid[0].logoUrl} alt="" style="width: 30px; height: auto;" />
+                      </span>
+                      <blockquote class="mt-6 text-white lg:mt-32">
+                        <p class="font-medium">
+                          {hero.imageGrid[0].description}
+                        </p>
+                        <p class="mt-6">
+                          <a
+                            href="/case-study"
+                            class="text-white hover:text-blue-100 inline-flex items-center group">
+                            {hero.imageGrid[0].caseStudyText}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd"></path>
+                            </svg>
+                          </a>
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                  <div
+                    class="relative overflow-hidden rounded-2xl bg-blue-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                    <div
+                      class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                      <img
+                        src={hero.imageGrid[1].imageUrl}
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div class="relative">
+                      <span>
+                        <img src={hero.imageGrid[2].logoUrl} alt="" style="width: 30px; height: auto;" />
+                      </span>
+                      <blockquote class="mt-6 text-white lg:mt-32">
+                        <p class="font-medium">
+                          {hero.imageGrid[1].description}
+                        </p>
+                        <p class="mt-6">
+                          <a
+                            href="/case-study"
+                            class="text-white hover:text-blue-100 inline-flex items-center group">
+                            {hero.imageGrid[1].caseStudyText}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd"></path>
+                            </svg>
+                          </a>
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
+              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                  <div
+                    class="relative overflow-hidden rounded-2xl bg-indigo-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                    <div
+                      class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                      <img
+                        src={hero.imageGrid[2].imageUrl}
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div class="relative">
+                      <span>
+                        <img src={hero.imageGrid[3].logoUrl} alt="" style="width: 30px; height: auto;" />
+                      </span>
+                      <blockquote class="mt-6 text-white lg:mt-32">
+                        <p class="font-medium">
+                          {hero.imageGrid[2].description}
+                        </p>
+                        <p class="mt-6">
+                          <a
+                            href="/case-study"
+                            class="text-white hover:text-blue-100 inline-flex items-center group">
+                            {hero.imageGrid[2].caseStudyText}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd"></path>
+                            </svg>
+                          </a>
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                  <div
+                    class="relative overflow-hidden rounded-2xl bg-slate-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                    <div
+                      class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                      <img
+                        src={hero.imageGrid[3].imageUrl}
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div class="relative">
+                      <span>
+                        <img src={hero.imageGrid[4].logoUrl} alt="" style="width: 30px; height: auto;" />
+                      </span>
+                      <blockquote class="mt-6 text-white lg:mt-32">
+                        <p class="font-medium">
+                          {hero.imageGrid[3].description}
+                        </p>
+                        <p class="mt-6">
+                          <a
+                            href="/case-study"
+                            class="text-white hover:text-blue-100 inline-flex items-center group">
+                            {hero.imageGrid[3].caseStudyText}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd"></path>
+                            </svg>
+                          </a>
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                  <div
+                    class="relative overflow-hidden rounded-2xl bg-green-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                    <div
+                      class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                      <img
+                        src={hero.imageGrid[4].imageUrl}
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div class="relative">
+                      <span>
+                        <img src={hero.imageGrid[0].logoUrl} alt="" style="width: 30px; height: auto;" />
+                      </span>
+                      <blockquote class="mt-6 text-white lg:mt-32">
+                        <p class="font-medium">
+                          {hero.imageGrid[4].description}
+                        </p>
+                        <p class="mt-6">
+                          <a
+                            href="/case-study"
+                            class="text-white hover:text-blue-100 inline-flex items-center group">
+                            {hero.imageGrid[4].caseStudyText}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd"></path>
+                            </svg>
+                          </a>
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
+
+
+  <!-- Stats -->
+
+  <!-- <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl text-3xl">
+          {statsContent.sectionTitle}
+        </h2>
+      </div>
+      <div>
+        <ul role="list" class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-12">
+          {statsContent.stats.map((stat) => (
+            <li>
+              <div>
+                <p class="font-semibold text-purple-900">{stat.figure}</p>
+              </div>
+              <div class="mt-2 text-slate-500 text-sm">
+                {stat.description}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section> -->
+
+
+
+
+  
+
+  
 
 
   <!-- Information -->

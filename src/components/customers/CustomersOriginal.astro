@@ -1,0 +1,318 @@
+
+---
+import LogoCloudOne from "../../components/testimonials/LogoCloudOne.astro";
+import TestimonialTwo from "../../components/testimonials/TestimonialTwo.astro";
+
+
+export const hero = {
+  heroSection: {
+    title: 'The platform for financial transactions.',
+    description: 'Our goal is to create a platform that enables ambitious companies worldwide to move money with the same ease, lack of borders, and automation as other online activities.',
+    caseStudyText: "Read case study",
+    callToActionText: 'Get Started',
+    callToActionLink: '/contact',
+    callToActionTwoText: 'View Pricing',
+    callToActionTwoLink: '/pricing',
+  },
+  imageGrid: [
+    {
+      imageUrl: "https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco has Economy growth upswing market index funds capitalization corporate bonds mutual.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-pink-600",
+    },
+    {
+      imageUrl: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco Public rollover performance exchange traded funds junk bonds passively NASDAQ bills upswing retirement corporate market exposure.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-blue-600",
+    },
+    {
+      imageUrl: "https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco features advanced tools for market analysis and investment strategies.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-slate-600",
+    },
+    {
+      imageUrl: "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco features advanced tools for market analysis and investment strategies.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-slate-600",
+    },
+    {
+      imageUrl: "https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      // logoUrl: "/images/integrations/logo.svg",
+      description: "Spaziobianco features advanced tools for market analysis and investment strategies.",
+      caseStudyLink: "/blog",
+      caseStudyText: "Read case study",
+      bgColor: "bg-pink-600",
+    }
+  ],
+};
+
+
+
+
+---
+
+
+<section class="relative overflow-hidden border-b">
+  <div
+    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center lg:py-44">
+    <div class="items-start gap-12 grid grid-cols-1 md:grid-cols-2">
+      <div>
+        <div class="lg:pr-24 md:pr-12">
+          <h2
+            class="text-purple-900 font-semibold text-4xl lg:text-7xl tracking-tighter">
+            {hero.heroSection.title}
+          </h2>
+          <p class="text-slate-500 mt-5">
+            {hero.heroSection.description}
+          </p>
+        </div>
+        <div class="mt-10">
+            <div class="mt-10 flex">
+              <a href={hero.heroSection.callToActionLink}
+                 class="inline-flex items-center justify-center px-6 lg:px-8 py-3.5 rounded-full w-auto font-medium mr-4"
+                 style="background-color: #5046e4; color: #fff; border: 2px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease;"
+                 onmouseover="this.style.backgroundColor='#6767ff'; this.style.borderColor='#5046e4';"
+                 onmouseout="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';"
+                 onmousedown="this.style.backgroundColor='#3838b1'; this.style.borderColor='#6767ff';"
+                 onmouseup="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';">
+                 {hero.heroSection.callToActionText}
+              </a>
+              <a href={hero.heroSection.callToActionTwoLink}
+                 class="inline-flex items-center justify-center px-6 lg:px-8 py-3.5 rounded-full w-auto font-medium"
+                 style="background-color: #fff; color: #333; border: none; border-radius: 30px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9); transition: all 0.2s ease;"
+                 onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+                 onmouseout="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+                 onmousedown="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+                 onmouseup="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';">
+                 {hero.heroSection.callToActionTwoText}
+              </a>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="lg:mt-0 lg:ml-auto">
+        <div
+          class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+          <div class="flex items-center space-x-6 lg:space-x-8">
+            <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+              <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                <div
+                  class="relative overflow-hidden rounded-2xl bg-pink-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                  <div
+                    class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                    <img
+                    src={hero.imageGrid[0].imageUrl}
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="relative">
+                    <span>
+                      <img src={hero.imageGrid[0].logoUrl} alt="" style="width: 30px; height: auto;" />
+                    </span>
+                    <blockquote class="mt-6 text-white lg:mt-32">
+                      <p class="font-medium">
+                        {hero.imageGrid[0].description}
+                      </p>
+                      <p class="mt-6">
+                        <a
+                          href="/case-study"
+                          class="text-white hover:text-blue-100 inline-flex items-center group">
+                          {hero.imageGrid[0].caseStudyText}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                            <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </a>
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                <div
+                  class="relative overflow-hidden rounded-2xl bg-blue-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                  <div
+                    class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                    <img
+                      src={hero.imageGrid[1].imageUrl}
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="relative">
+                    <span>
+                      <img src={hero.imageGrid[2].logoUrl} alt="" style="width: 30px; height: auto;" />
+                    </span>
+                    <blockquote class="mt-6 text-white lg:mt-32">
+                      <p class="font-medium">
+                        {hero.imageGrid[1].description}
+                      </p>
+                      <p class="mt-6">
+                        <a
+                          href="/case-study"
+                          class="text-white hover:text-blue-100 inline-flex items-center group">
+                          {hero.imageGrid[1].caseStudyText}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                            <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </a>
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+              <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                <div
+                  class="relative overflow-hidden rounded-2xl bg-indigo-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                  <div
+                    class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                    <img
+                      src={hero.imageGrid[2].imageUrl}
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="relative">
+                    <span>
+                      <img src={hero.imageGrid[3].logoUrl} alt="" style="width: 30px; height: auto;" />
+                    </span>
+                    <blockquote class="mt-6 text-white lg:mt-32">
+                      <p class="font-medium">
+                        {hero.imageGrid[2].description}
+                      </p>
+                      <p class="mt-6">
+                        <a
+                          href="/case-study"
+                          class="text-white hover:text-blue-100 inline-flex items-center group">
+                          {hero.imageGrid[2].caseStudyText}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                            <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </a>
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                <div
+                  class="relative overflow-hidden rounded-2xl bg-slate-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                  <div
+                    class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                    <img
+                      src={hero.imageGrid[3].imageUrl}
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="relative">
+                    <span>
+                      <img src={hero.imageGrid[4].logoUrl} alt="" style="width: 30px; height: auto;" />
+                    </span>
+                    <blockquote class="mt-6 text-white lg:mt-32">
+                      <p class="font-medium">
+                        {hero.imageGrid[3].description}
+                      </p>
+                      <p class="mt-6">
+                        <a
+                          href="/case-study"
+                          class="text-white hover:text-blue-100 inline-flex items-center group">
+                          {hero.imageGrid[3].caseStudyText}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                            <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </a>
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full w-96 sm:opacity-0 lg:opacity-100">
+                <div
+                  class="relative overflow-hidden rounded-2xl bg-green-600 p-8 z-50 shadow-xl lg:py-12 lg:gap-x-8">
+                  <div
+                    class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                    <img
+                      src={hero.imageGrid[4].imageUrl}
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="relative">
+                    <span>
+                      <img src={hero.imageGrid[0].logoUrl} alt="" style="width: 30px; height: auto;" />
+                    </span>
+                    <blockquote class="mt-6 text-white lg:mt-32">
+                      <p class="font-medium">
+                        {hero.imageGrid[4].description}
+                      </p>
+                      <p class="mt-6">
+                        <a
+                          href="/case-study"
+                          class="text-white hover:text-blue-100 inline-flex items-center group">
+                          {hero.imageGrid[4].caseStudyText}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                            <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </a>
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
