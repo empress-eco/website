@@ -221,6 +221,13 @@ declare module 'astro:content' {
   collection: "apps";
   data: any
 } & { render(): Render[".md"] };
+"carbon-footprint.md": {
+	id: "carbon-footprint.md";
+  slug: "carbon-footprint";
+  body: string;
+  collection: "apps";
+  data: any
+} & { render(): Render[".md"] };
 "content.md": {
 	id: "content.md";
   slug: "content";
@@ -263,6 +270,20 @@ declare module 'astro:content' {
   collection: "apps";
   data: any
 } & { render(): Render[".md"] };
+"energy-efficiency.md": {
+	id: "energy-efficiency.md";
+  slug: "energy-efficiency";
+  body: string;
+  collection: "apps";
+  data: any
+} & { render(): Render[".md"] };
+"environmental-compliance.md": {
+	id: "environmental-compliance.md";
+  slug: "environmental-compliance";
+  body: string;
+  collection: "apps";
+  data: any
+} & { render(): Render[".md"] };
 "events.md": {
 	id: "events.md";
   slug: "events";
@@ -301,6 +322,13 @@ declare module 'astro:content' {
 "fulfillment.md": {
 	id: "fulfillment.md";
   slug: "fulfillment";
+  body: string;
+  collection: "apps";
+  data: any
+} & { render(): Render[".md"] };
+"governance-and-ethics.md": {
+	id: "governance-and-ethics.md";
+  slug: "governance-and-ethics";
   body: string;
   collection: "apps";
   data: any
@@ -445,6 +473,13 @@ declare module 'astro:content' {
   collection: "apps";
   data: any
 } & { render(): Render[".md"] };
+"social-responsibility.md": {
+	id: "social-responsibility.md";
+  slug: "social-responsibility";
+  body: string;
+  collection: "apps";
+  data: any
+} & { render(): Render[".md"] };
 "social.md": {
 	id: "social.md";
   slug: "social";
@@ -462,6 +497,13 @@ declare module 'astro:content' {
 "sustainability.md": {
 	id: "sustainability.md";
   slug: "sustainability";
+  body: string;
+  collection: "apps";
+  data: any
+} & { render(): Render[".md"] };
+"sustainable-supply-chain.md": {
+	id: "sustainable-supply-chain.md";
+  slug: "sustainable-supply-chain";
   body: string;
   collection: "apps";
   data: any
