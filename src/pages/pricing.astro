@@ -1,0 +1,1573 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import AboutOne from "../components/about/AboutOne.astro";
+import FeatureEleven from "../components/features/FeatureEleven.astro";
+import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
+import FeatureTwelve from "../components/features/FeatureTwelve.astro";
+import FeatureFive from "../components/features/FeatureFive.astro";
+import StatsTwo from "../components/stats/StatsTwo.astro";
+import CtaTwo from "../components/cta/CtaTwo.astro";
+import { Code } from "astro/components";
+import { AstroSeo } from "@astrolib/seo";
+import PricingThree from "./pricing-three.astro";
+
+
+// FAQs
+
+const faqs = {
+  title: "Agency Solutions FAQs",
+  subtitle: "Your Questions, Answered",
+  questions: [
+    {
+      question: "How does Empress enhance agency workflow and productivity?",
+      answer: "Empress equips agencies with advanced tools for workflow optimization and productivity, including automated processes and real-time project tracking, tailored to the dynamic needs of creative environments."
+    },
+    {
+      question: "Can Empress seamlessly integrate with specialized agency tools?",
+      answer: "Yes, Empress is designed for seamless integration, ensuring compatibility with a variety of agency-specific tools and systems for efficient creative and operational management."
+    },
+    {
+      question: "Does Empress improve client engagement for agencies?",
+      answer: "Absolutely. Empress provides innovative tools for enhanced client communication and relationship management, crucial for agencies aiming to expand their client base and deepen relationships."
+    },
+    {
+      question: "What unique features does Empress offer for creative agencies?",
+      answer: "Empress empowers agencies with features like sophisticated client data insights, campaign management automation, and marketing strategy tools, all vital for creative excellence and client satisfaction."
+    },
+    {
+      question: "How does Empress ensure data security and compliance for agencies?",
+      answer: "Empress prioritizes data security with robust encryption and compliance protocols, offering agencies advanced measures to protect sensitive client information and creative assets."
+    }
+  ]
+};
+
+
+---
+
+
+
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="About 01"
+  description="Your site description goes here"
+  canonical="https://www.lexingtonthemes.com"
+  openGraph={{
+    url: "https://www.lexingtonthemes.com",
+    title: "Open Graph Title",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
+/>
+<BaseLayout>
+
+
+  <section>
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div class="lg:text-center">
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">Pricing</span>
+        </h2>
+        <h2
+          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          Always know what you’ll pay,
+  
+          <span class="lg:block"> transparent pricing for everyone.</span>
+        </h2>
+      </div>
+      <div
+        class="mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:max-w-none lg:grid-cols-3 xl:gap-x-4">
+        <section class="flex flex-col rounded-3xl px-6 sm:px-8 lg:py-8">
+          <h3 class="mt-5 text-lg text-purple-900">Wannabe</h3><p
+            class="mt-2 text-sm text-slate-400">
+            Good for those trying to get there.
+          </p>
+          <p
+            class="order-first text-5xl font-light tracking-tight text-purple-900">
+            $2
+          </p>
+          <ul
+            role="list"
+            class="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-500">
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Connect 1 websites</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Connect up to 2 bank accounts</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Track up to 15 credit cards</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Analytics support</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Export up to 3 months data</span>
+            </li>
+          </ul>
+          <div class="mt-8">
+            <a
+              class="text-blue-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-100 hover:bg-blue-50 w-full"
+              aria-label="#"
+              href="/register">Get started</a
+            >
+          </div>
+        </section>
+        <section
+          class="flex flex-col rounded-3xl px-6 sm:px-8 order-first py-8 lg:order-none">
+          <h3 class="mt-5 text-lg text-purple-900">Indie Hacker</h3><p
+            class="mt-2 text-sm text-slate-400">
+            Perfect for those leaving 9-5.
+          </p><p
+            class="order-first text-5xl font-light tracking-tight text-purple-900">
+            $29
+          </p>
+          <ul
+            role="list"
+            class="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-500">
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Connect 80 websites</span>
+            </li>
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Connect up to 5 bank accounts</span>
+            </li>
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Track up to 50 credit cards</span>
+            </li>
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Analytics support</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Export up to 12 months data</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Cloud service 24/7</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Track in multiple users</span>
+            </li>
+          </ul>
+          <div class="mt-8">
+            <a
+              class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-full"
+              aria-label="#"
+              href="/register">Get started</a
+            >
+          </div>
+        </section>
+        <section class="flex flex-col rounded-3xl px-6 sm:px-8 lg:py-8">
+          <h3 class="mt-5 text-lg text-purple-900">Big fish</h3><p
+            class="mt-2 text-sm text-slate-400">
+            For even the biggest enterprise companies.
+          </p><p
+            class="order-first text-5xl font-light tracking-tight text-purple-900">
+            $99
+          </p>
+          <ul
+            role="list"
+            class="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-500">
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Connect unlimited websites</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Connect up to 15 bank accounts</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Track up to 200 credit cards</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Analytics support</span>
+            </li><li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-circle-check"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg><span class="ml-4">Export up to 24 months data</span>
+            </li>
+          </ul><div class="mt-8">
+            <a
+              class="text-blue-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-100 hover:bg-blue-50 w-full"
+              aria-label="#"
+              href="/register">Get started</a
+            >
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="bg-white">
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">Pricing</span>
+        </h2>
+  
+        <h2
+          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          Flexible pricing that scales as you grow
+        </h2>
+        <div class="mt-12 space-y-4">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-5 border rounded-xl overflow-clip">
+            <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:col-span-2">
+              <div class="p-4">
+                <span class="font-semibold text-purple-900 text-xl"
+                  >Pay-as-you-go
+                </span>
+              </div>
+            </div>
+            <div class="lg:col-span-3">
+              <div class="grid grid-cols-1 lg:grid-cols-3">
+                <div
+                  class="lg:col-span-2 p-4 border-t border-l-0 lg:border-l lg:border-t-0">
+                  <p class="font-semibold text-purple-900">
+                    Instant bank account verifications
+                  </p>
+                  <p class="mt-2 text-slate-500 text-sm">
+                    Obtain bank names and tokenized account numbers to connect a
+                    user’s bank account and verify that it’s open.
+                  </p>
+                </div>
+                <div class="bg-slate-50 border-l-2 border-blue-500">
+                  <div class="p-4 border-t lg:border-t-0">
+                    <p class="font-semibold text-purple-900">$1.50</p>
+                    <p class="mt-2 text-slate-500 text-sm">
+                      Per verified account
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-3 lg:col-start-3">
+              <div class="grid grid-cols-1 lg:grid-cols-3">
+                <div class="lg:col-span-2 p-4 border-t lg:border-l border-l-0">
+                  <p class="font-semibold text-purple-900">Balances</p>
+                  <p class="mt-2 text-slate-500 text-sm">
+                    Retrieve account balances for underwriting, financial
+                    management, or preventing payment failures due to insufficient
+                    funds.
+                  </p>
+                </div>
+                <div class="bg-slate-50 border-l-2 border-blue-500">
+                  <div class="p-4 border-t">
+                    <p class="font-semibold text-purple-900">10¢</p>
+                    <p class="mt-2 text-slate-500 text-sm">
+                      Per successful API call
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-3 lg:col-start-3">
+              <div class="grid grid-cols-1 lg:grid-cols-3">
+                <div class="lg:col-span-2 p-4 border-t lg:border-l border-l-0">
+                  <p class="font-semibold text-purple-900">Account owners</p>
+                  <p class="mt-2 text-slate-500 text-sm">
+                    Pull account owner information, such as first name, last name,
+                    and address.
+                  </p>
+                </div>
+                <div class="bg-slate-50 border-l-2 border-blue-500">
+                  <div class="p-4 border-t">
+                    <p class="font-semibold text-purple-900">$4.50</p>
+                    <p class="mt-2 text-slate-500 text-sm">
+                      Per successful API call
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-5 pt-6 border-t">
+            <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:col-span-2">
+              <div>
+                <span class="font-semibold text-purple-900 text-xl"
+                  >Custom pricing
+                </span>
+              </div>
+            </div>
+            <div class="lg:col-span-3">
+              <div class="lg:col-span-2">
+                <p class="mt-2 text-slate-500 text-sm">
+                  Custom pricing is available for companies with a high volume of
+                  API calls or unique business models.
+                </p>
+                <p>
+                  <a
+                    href="/submit"
+                    class="text-blue-600 font-semibold hover:text-purple-900 text-sm inline-flex items-center group">
+                    Contact sales
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight"
+            >Extended Pricing</span
+          >
+        </h2>
+        <h2
+          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          What's included in our pricing
+        </h2>
+        <div class="max-w-xl mt-6">
+          <p class="text-slate-500">
+            Build quicker and don't waste time building your website. Combine
+            layouts and customize them as you wish.
+          </p>
+        </div>
+      </div>
+      <div class="mx-auto text-left mt-12">
+        <div>
+          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+            <article>
+              <div>
+                <div>
+                  <p class="font-semibold text-purple-900 text-base">
+                    Tools to build optimized checkout flows
+                  </p>
+                </div>
+  
+                <div class="mt-6">
+                  <ul
+                    role="list"
+                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Embeddable checkout</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Custom UI toolkit</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Invoice support</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div>
+                <div>
+                  <p class="font-semibold text-purple-900 text-base">
+                    Global payments with a single integration
+                  </p>
+                </div>
+                <div class="mt-6">
+                  <ul
+                    role="list"
+                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Embeddable checkout</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Custom UI toolkit</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Invoice support</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div>
+                <div>
+                  <p class="font-semibold text-purple-900 text-base">
+                    Comprehensive security
+                  </p>
+                </div>
+                <div class="mt-6">
+                  <ul
+                    role="list"
+                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Embeddable checkout</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Custom UI toolkit</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Invoice support</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div>
+                <div>
+                  <p class="font-semibold text-purple-900 text-base">
+                    Financial reconciliation and reporting
+                  </p>
+                </div>
+                <div class="mt-6">
+                  <ul
+                    role="list"
+                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Embeddable checkout</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Custom UI toolkit</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Invoice support</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div>
+                <div>
+                  <p class="font-semibold text-purple-900 text-base">
+                    Fast, predictable payouts
+                  </p>
+                </div>
+                <div class="mt-6">
+                  <ul
+                    role="list"
+                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Embeddable checkout</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Custom UI toolkit</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Invoice support</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div>
+                <div>
+                  <p class="font-semibold text-purple-900 text-base">
+                    24×7 phone, chat, and email support
+                  </p>
+                </div>
+                <div class="mt-6">
+                  <ul
+                    role="list"
+                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Embeddable checkout</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Custom UI toolkit</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+  
+                      <span class="ml-4"> Invoice support</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">Testimonial</span>
+        </h2>
+        <h2
+          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          Our customers and their experiences
+        </h2>
+      </div>
+      <div
+        x-data="{
+          skip: 1,
+          atBeginning: false,
+          atEnd: false,
+          next() {
+              this.to((current, offset) => current + (offset * this.skip))
+          },
+          prev() {
+              this.to((current, offset) => current - (offset * this.skip))
+          },
+          to(strategy) {
+              let slider = this.$refs.slider
+              let current = slider.scrollLeft
+              let offset = slider.firstElementChild.getBoundingClientRect().width
+              slider.scrollTo({ left: strategy(current, offset), behavior: 'smooth' })
+          },
+          focusableWhenVisible: {
+              'x-intersect:enter'() {
+                  this.$el.removeAttribute('tabindex')
+              },
+              'x-intersect:leave'() {
+                  this.$el.setAttribute('tabindex', '-1')
+              },
+          },
+          disableNextAndPreviousButtons: {
+              'x-intersect:enter.threshold.05'() {
+                  let slideEls = this.$el.parentElement.children
+                  // If this is the first slide.
+                  if (slideEls[0] === this.$el) {
+                      this.atBeginning = true
+                  // If this is the last slide.
+                  } else if (slideEls[slideEls.length-1] === this.$el) {
+                      this.atEnd = true
+                  }
+              },
+              'x-intersect:leave.threshold.05'() {
+                  let slideEls = this.$el.parentElement.children
+                  // If this is the first slide.
+                  if (slideEls[0] === this.$el) {
+                      this.atBeginning = false
+                  // If this is the last slide.
+                  } else if (slideEls[slideEls.length-1] === this.$el) {
+                      this.atEnd = false
+                  }
+              },
+          },
+      }"
+        class="flex w-full flex-col">
+        <div
+          x-on:keydown.right="next"
+          x-on:keydown.left="prev"
+          tabindex="0"
+          role="region"
+          aria-labelledby="carousel-label"
+          class="flex flex-col mt-12 w-full">
+          <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+          <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+          <!-- Buttons -->
+          <div class="grid grid-cols-1 lg:grid-cols-4 mb-4">
+            <div
+              class="inline-flex items-center space-x-2 order-last mb-4 lg:col-start-4 lg:ml-auto lg:px-2">
+              <button
+                x-on:click="prev"
+                class="hover:bg-white focus:border-blue-500 border text-purple-900 rounded-xl inline-flex items-center text-center hover:text-slate-500 py-2 px-4"
+                :aria-disabled="atBeginning"
+                :tabindex="atEnd ? -1 : 0"
+                :class="{ 'opacity-50 cursor-not-allowed': atBeginning }">
+                <span aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-4 h-4">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+                  </svg>
+                </span>
+                <span class="sr-only">Skip to previous slide page</span>
+              </button>
+              <button
+                x-on:click="next"
+                class="hover:bg-white focus:border-blue-500 border text-purple-900 rounded-xl inline-flex items-center text-center hover:text-slate-500 py-2 px-4"
+                :aria-disabled="atEnd"
+                :tabindex="atEnd ? -1 : 0"
+                :class="{ 'opacity-50 cursor-not-allowed': atEnd }">
+                <span aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-4 h-4">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                  </svg>
+                </span>
+                <span class="sr-only">Skip to next slide page</span>
+              </button>
+            </div>
+          </div>
+          <ul
+            x-ref="slider"
+            tabindex="0"
+            role="listbox"
+            aria-labelledby="carousel-content-label"
+            class="flex w-full snap-x snap-mandatory overflow-x-scroll scrollbar-hide pb-24 gap-12">
+            <li
+              x-bind="disableNextAndPreviousButtons"
+              class="flex w-full shrink-0 snap-start flex-col items-center justify-center"
+              role="option">
+              <figure>
+                <div
+                  class="h-full group grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-3">
+                  <div class="bg-slate-50 p-4 rounded-2xl">
+                    <ul
+                      role="list"
+                      class="grid grid-cols-1 gap-4 list-none lg:pr-12">
+                      <li>
+                        <div>
+                          <p
+                            class="font-semibold text-purple-900 text-lg lg:text-xl">
+                            Weeks <span class="lg:block">to minutes</span>
+                          </p>
+                        </div>
+                        <div class="mt-2 text-slate-500 text-sm">
+                          Reduction in customer onboarding time
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p
+                            class="font-semibold text-purple-900 text-lg lg:text-xl">
+                            2-5x <span class="lg:block">faster</span>
+                          </p>
+                        </div>
+                        <div class="mt-2 text-slate-500 text-sm">
+                          Fast reconciliation with a single report
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="font-semibold text-purple-900 text-sm">
+                            Products used
+                          </p>
+                        </div>
+                        <div
+                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-4 h-4 mr-3">
+                            <path
+                              class="stroke-purple-500"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                            </path>
+                          </svg>
+                          Deployments
+                        </div>
+                        <div
+                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-4 h-4 mr-3">
+                            <path
+                              class="stroke-purple-500"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"
+                            ></path>
+                          </svg>
+                          Analytics
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="relative lg:col-span-3">
+                    <div
+                      class="relative overflow-hidden rounded-2xl bg-blue-600 p-8 z-50 shadow-xl lg:py-12 lg:grid lg:grid-cols-2 lg:gap-x-8">
+                      <div
+                        class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                        <img
+                          src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div class="relative lg:col-span-1">
+                        <span>
+                          <img src="/images/integrations/notion.svg" alt="" />
+                        </span>
+                        <blockquote class="mt-6 text-white lg:mt-24">
+                          <p class="font-medium">
+                            Spaziobianco Public rollover performance exchange
+                            traded funds junk bonds passively NASDAQ bills upswing
+                            retirement corporate market exposure.
+                          </p>
+                          <p class="mt-6">
+                            <a
+                              href=""
+                              class="text-white hover:text-blue-100 inline-flex items-center group">
+                              Read case study
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                  clip-rule="evenodd"></path>
+                              </svg>
+                            </a>
+                          </p>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+            </li>
+            <li
+              x-bind="disableNextAndPreviousButtons"
+              class="flex w-full shrink-0 snap-start flex-col items-center justify-center"
+              role="option">
+              <figure>
+                <div
+                  class="h-full group grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-3">
+                  <div class="bg-slate-50 p-4 rounded-2xl">
+                    <ul
+                      role="list"
+                      class="grid grid-cols-1 gap-4 list-none lg:pr-12">
+                      <li>
+                        <div>
+                          <p
+                            class="font-semibold text-blue-500-500 text-lg lg:text-xl">
+                            1
+                          </p>
+                        </div>
+                        <div class="mt-2 text-slate-500 text-sm">
+                          Processor for all credit card payments
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p
+                            class="font-semibold text-purple-900 text-lg lg:text-xl">
+                            $2 million
+                          </p>
+                        </div>
+                        <div class="mt-2 text-slate-500 text-sm">
+                          Additional revenue from Card Account Updater
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="font-semibold text-purple-900 text-sm">
+                            Products used
+                          </p>
+                        </div>
+                        <div
+                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-4 h-4 mr-3">
+                            <path
+                              class="stroke-purple-500"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                            </path>
+                          </svg>
+                          Deployments
+                        </div>
+                        <div
+                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-4 h-4 mr-3">
+                            <path
+                              class="stroke-purple-500"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"
+                            ></path>
+                          </svg>
+                          Analytics
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="relative lg:col-span-3">
+                    <div
+                      class="relative overflow-hidden rounded-2xl bg-blue-600 p-8 shadow-xl lg:py-12 lg:grid lg:grid-cols-2 lg:gap-x-8">
+                      <div
+                        class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                        <img
+                          src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div class="relative lg:col-span-1">
+                        <span>
+                          <img src="/images/integrations/zapier.svg" alt="" />
+                        </span>
+                        <blockquote class="mt-6 text-white lg:mt-24">
+                          <p class="font-medium">
+                            Spaziobianco has Economy growth upswing market index
+                            funds capitalization corporate bonds mutual.
+                          </p>
+                          <p class="mt-6">
+                            <a
+                              href=""
+                              class="text-white hover:text-blue-100 inline-flex items-center group">
+                              Read case study
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                  clip-rule="evenodd"></path>
+                              </svg>
+                            </a>
+                          </p>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+            </li>
+            <li
+              x-bind="disableNextAndPreviousButtons"
+              class="flex w-full shrink-0 snap-start flex-col items-center justify-center"
+              role="option">
+              <figure>
+                <div
+                  class="h-full group grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-3">
+                  <div class="bg-slate-50 p-4 rounded-2xl">
+                    <ul
+                      role="list"
+                      class="grid grid-cols-1 gap-4 list-none lg:pr-12">
+                      <li>
+                        <div>
+                          <p
+                            class="font-semibold text-blue-500-500 text-lg lg:text-xl">
+                            3,000x
+                          </p>
+                        </div>
+                        <div class="mt-2 text-slate-500 text-sm">
+                          growth in online payments volume in just 6 months
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p
+                            class="font-semibold text-purple-900 text-lg lg:text-xl">
+                            3 weeks
+                          </p>
+                        </div>
+                        <div class="mt-2 text-slate-500 text-sm">
+                          of development work to go live
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="font-semibold text-purple-900 text-sm">
+                            Products used
+                          </p>
+                        </div>
+                        <div
+                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-4 h-4 mr-3">
+                            <path
+                              class="stroke-purple-500"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                            </path>
+                          </svg>
+                          Deployments
+                        </div>
+                        <div
+                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-4 h-4 mr-3">
+                            <path
+                              class="stroke-purple-500"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"
+                            ></path>
+                          </svg>
+                          Analytics
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="relative lg:col-span-3">
+                    <div
+                      class="relative overflow-hidden rounded-2xl bg-blue-600 p-8 shadow-xl lg:py-12 lg:grid lg:grid-cols-2 lg:gap-x-8">
+                      <div
+                        class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                        <img
+                          src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div class="relative lg:col-span-1">
+                        <span>
+                          <img src="/images/integrations/spotify.svg" alt="" />
+                        </span>
+                        <blockquote class="mt-6 text-white lg:mt-24">
+                          <p class="font-medium">
+                            Spaziobianco has Economy growth upswing market index
+                            funds capitalization corporate bonds mutual.
+                          </p>
+                          <p class="mt-6">
+                            <a
+                              href=""
+                              class="text-white hover:text-blue-100 inline-flex items-center group">
+                              Read case study
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                  clip-rule="evenodd"></path>
+                              </svg>
+                            </a>
+                          </p>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+    <!-- FAQS -->
+
+
+    <section>
+      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+        <div>
+          <h2 class="inline-flex items-center text-blue-600">
+            <span class="text-base font-medium tracking-tight">{faqs.title}</span>
+          </h2>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+            {faqs.subtitle}
+          </h2>
+          <div class="mt-12 space-y-12 bg-slate-50 rounded-3xl p-4 lg:p-10 divide-y">
+            {faqs.questions.map((faq, index) => (
+              <div key={index} class={`grid grid-cols-1 gap-4 ${index !== 0 ? 'pt-4 lg:pt-12' : ''} lg:grid-cols-3`}>
+                <div class="flex flex-col flex-shrink-0 mb-5 lg:pr-12">
+                  <span class="font-semibold text-purple-900">{faq.question}</span>
+                </div>
+                <div class="lg:col-span-2">
+                  <p class="text-slate-500">{faq.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <CtaTwo />
+</BaseLayout>

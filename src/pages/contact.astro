@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "../components/layouts/Layout.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro";
+import Button from "../components/ui/button.astro";
+import Contactform from "../components/contactform.astro";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Contact Us</Fragment>
+      <Fragment slot="desc">Questions about subscriptions, applications, integrations, or partnerships with Empress?</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">We're Here to Support You</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Connect with us via chat, contact form, social media or email at <b>support@empress.eco</b>. 
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
+            <span><a
+              href="mailto:support@empress.eco">support@empress.eco</a></span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:twitter" /><a
+              href="https://twitter.com/empress_eco">Twitter(X)</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:discord" /><a
+              href="https://discord.com/invite/3xcm97vBYX">Discord</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:youtube" /><a
+              href="https://www.youtube.com/channel/UCCFb7RTb_4mgm7qNoB3mVzw">YouTube</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:linkedin" /><a
+              href="https://www.linkedin.com/company/19204219/admin/feed/posts/">LinkedIn</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="ri:instagram-fill" /><a
+              href="https://www.instagram.com/empress_eco/">Instagram</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="ic:baseline-reddit" /><a
+              href="https://www.reddit.com/r/empress_eco/">Reddit</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="ic:baseline-tiktok" /><a
+              href="https://www.tiktok.com/@empress_eco">TikTok</a>
+          </div>
+          
+        </div>
+      </div>
+      <div class="bg-slate-100 p-5 md:p-8 rounded-xl mb-5">
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>

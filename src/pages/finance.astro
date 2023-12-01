@@ -41,11 +41,11 @@ const navLinks = [
   },
   {
     name: "Applications",
-    href: "/apps/finances"
+    href: "/apps/finance"
   },
   {
     name: "Docs",
-    href: "/billing/docs"
+    href: "https://docs.empress.eco/"
   }
 ];
 
@@ -53,11 +53,13 @@ const navLinks = [
 // SectionOne
 
 const sectionOne = {
-  title: "Finance",
-  title: "Finance",
+  title: "Finances",
+  title: "Finances",
   description: "Transform your financial management with intuitive and robust solutions, Empress is dedicated to fostering business growth and personal financial success. Our diverse range of tools caters to every financial need with unmatched ease and efficiency.",
-  buttonText: "Discover More",
-  buttonTextTwo: "Get in Touch",
+  buttonText: "View Pricing",
+  buttonTextTwo: "Contact Sales",
+  buttonUrl: "pricing",
+  buttonTwoUrl: "contact",
   imageRows: [
     // Image URLs and alt texts can be updated here
     // Example structure:
@@ -485,7 +487,7 @@ const sectionNine = {
           </div>
         </div>
       </div>
-      <a href="/suite/apps" 
+      <a href={sectionOne.buttonUrl}
       class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4 mt-5"
       style="background-color: #5046e4; color: #fff; border: px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
       onmouseover="this.style.backgroundColor='#6767ff'; this.style.borderColor='#5046e4';"
@@ -495,7 +497,7 @@ const sectionNine = {
       {sectionOne.buttonText}
    </a>
    
-   <a href="/suite/apps" 
+   <a href={sectionOne.buttonTwoUrl}
    class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium"
    style="background-color: #fff; color: #333; border: none; border-radius: 30px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
    onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"

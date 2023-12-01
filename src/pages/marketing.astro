@@ -45,7 +45,7 @@ const navLinks = [
   },
   {
     name: "Docs",
-    href: "/billing/docs"
+    href: "https://docs.empress.eco/introduction"
   }
 ];
 
@@ -55,8 +55,10 @@ const navLinks = [
 const sectionOne = {
   title: "Marketing",
   description: "Empress redefines marketing management, providing innovative solutions to enhance campaign effectiveness and brand growth. Our suite of tools is crafted to empower marketers with precision and creativity in their campaign strategies.",
-  buttonText: "Explore Marketing Tools",
-  buttonTextTwo: "Connect with Us"
+  buttonText: "View Pricing",
+  buttonTextTwo: "Contact Sales",
+  buttonUrl: "pricing",
+  buttonTwoUrl: "contact",
 };
 
 // SectionTwo
@@ -470,7 +472,7 @@ const sectionNine = {
           </div>
         </div>
       </div>
-      <a href="/suite/apps" 
+      <a href={sectionOne.buttonUrl}
       class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4 mt-5"
       style="background-color: #5046e4; color: #fff; border: px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
       onmouseover="this.style.backgroundColor='#6767ff'; this.style.borderColor='#5046e4';"
@@ -480,7 +482,7 @@ const sectionNine = {
       {sectionOne.buttonText}
    </a>
    
-   <a href="/suite/apps" 
+   <a href={sectionOne.buttonTwoUrl}
    class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium"
    style="background-color: #fff; color: #333; border: none; border-radius: 30px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
    onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
