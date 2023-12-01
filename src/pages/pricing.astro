@@ -13,6 +13,87 @@ import { AstroSeo } from "@astrolib/seo";
 import PricingThree from "./pricing-three.astro";
 
 
+
+// Pricing
+
+const pricingPlans = [
+  {
+    name: "$19 per user/month",
+    price: "Starter",
+    description: "Ideal for small to medium businesses looking for an all-in-one solution.",
+    features: [
+      "Comprehensive Business Suite",
+      "Efficient Workflow Automation",
+      "Data-Driven Decision Making Tools",
+      "Team Collaboration Platform",
+      "50GB Secure Cloud Storage",
+      "Basic AI-Enabled Chat Support",
+      "Standard API Access"
+    ]
+  },
+  {
+    name: "$29 per user/month",
+    price: "Growth",
+    description: "Designed for businesses requiring advanced functionality and integrations.",
+    features: [
+      "Advanced Workflow Automation",
+      "Enhanced Analytics and Reporting",
+      "100GB Secure Cloud Storage",
+      "Advanced AI-Enabled Chat Support",
+      "Pro API Access with Extended Limits",
+      "AI Integrations Add-on Available"
+    ]
+  },
+  {
+    name: "$39 per user/month",
+    price: "Premium",
+    description: "Premium package for enterprises demanding predictive insights and scalability.",
+    features: [
+      "Predictive Analytics Suite (Add-on)",
+      "AI-Driven Market Insights",
+      "Unlimited Secure Cloud Storage",
+      "24/7 Premium Support",
+      "Full API Access",
+      "Custom Integration Options"
+    ]
+  }
+];
+
+
+
+// Details
+
+const pricingDetails = [
+  {
+    title: "Standard API Access",
+    service: {
+      name: "Integrated Business Operations",
+      description: "Access core ERP functionalities through API for system integration.",
+      price: "$0.05 per API call",
+      priceDetail: "Ideal for basic operational integrations"
+    }
+  },
+  {
+    title: "Pro API Access",
+    service: {
+      name: "Advanced Business Functions",
+      description: "Enhanced API features for comprehensive business management.",
+      price: "$0.10 per API call",
+      priceDetail: "Best for advanced integrations and functionalities"
+    }
+  },
+  {
+    title: "Elite API Access",
+    service: {
+      name: "Full Platform Capabilities",
+      description: "Complete access to Empress's platform features via API.",
+      price: "$0.20 per API call",
+      priceDetail: "Suited for enterprise-level integrations"
+    }
+  }
+];
+
+
 // FAQs
 
 const faqs = {
@@ -88,478 +169,76 @@ Use AstroSeo in all the pages you want different Seo than the index page
 
 
   <section>
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div class="lg:text-center">
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">Pricing</span>
-        </h2>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          Always know what you’ll pay,
-  
-          <span class="lg:block"> transparent pricing for everyone.</span>
-        </h2>
-      </div>
-      <div
-        class="mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:max-w-none lg:grid-cols-3 xl:gap-x-4">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+    <div class="lg:text-center">
+      <h2 class="inline-flex items-center text-blue-600">
+        <span class="text-base font-medium tracking-tight">Pricing</span>
+      </h2>
+      <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+        Always know what you’ll pay,
+        <span class="lg:block"> transparent pricing for everyone.</span>
+      </h2>
+    </div>
+    <div class="mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:max-w-none lg:grid-cols-3 xl:gap-x-4">
+      {pricingPlans.map(plan => (
         <section class="flex flex-col rounded-3xl px-6 sm:px-8 lg:py-8">
-          <h3 class="mt-5 text-lg text-purple-900">Wannabe</h3><p
-            class="mt-2 text-sm text-slate-400">
-            Good for those trying to get there.
-          </p>
-          <p
-            class="order-first text-5xl font-light tracking-tight text-purple-900">
-            $2
-          </p>
-          <ul
-            role="list"
-            class="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-500">
-            <li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Connect 1 websites</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Connect up to 2 bank accounts</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Track up to 15 credit cards</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Analytics support</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Export up to 3 months data</span>
-            </li>
+          <h3 class="mt-5 text-lg text-purple-900">{plan.name}</h3>
+          <p class="mt-2 text-sm text-slate-400">{plan.description}</p>
+          <p class="order-first text-5xl font-light tracking-tight text-purple-900">{plan.price}</p>
+          <ul role="list" class="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-500">
+            {plan.features.map(feature => (
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                  <path d="M9 12l2 2l4 -4"></path>
+                </svg>
+                <span class="ml-4">{feature}</span>
+              </li>
+            ))}
           </ul>
           <div class="mt-8">
-            <a
-              class="text-blue-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-100 hover:bg-blue-50 w-full"
-              aria-label="#"
-              href="/register">Get started</a
-            >
+            <a class="text-blue-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-100 hover:bg-blue-50 w-full" aria-label="#" href="/register">Get started</a>
           </div>
         </section>
-        <section
-          class="flex flex-col rounded-3xl px-6 sm:px-8 order-first py-8 lg:order-none">
-          <h3 class="mt-5 text-lg text-purple-900">Indie Hacker</h3><p
-            class="mt-2 text-sm text-slate-400">
-            Perfect for those leaving 9-5.
-          </p><p
-            class="order-first text-5xl font-light tracking-tight text-purple-900">
-            $29
-          </p>
-          <ul
-            role="list"
-            class="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-500">
-            <li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Connect 80 websites</span>
-            </li>
-            <li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Connect up to 5 bank accounts</span>
-            </li>
-            <li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Track up to 50 credit cards</span>
-            </li>
-            <li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Analytics support</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Export up to 12 months data</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Cloud service 24/7</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Track in multiple users</span>
-            </li>
-          </ul>
-          <div class="mt-8">
-            <a
-              class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-full"
-              aria-label="#"
-              href="/register">Get started</a
-            >
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+    <div>
+      <h2 class="inline-flex items-center text-blue-600">
+        <span class="text-base font-medium tracking-tight">Pricing</span>
+      </h2>
+
+      <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+        Flexible pricing that scales as you grow
+      </h2>
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-4">
+        {pricingDetails.map((plan, index) => (
+          <div key={index} class="border rounded-xl overflow-clip">
+            <div class="p-4 bg-slate-50 border-b">
+              <span class="font-semibold text-purple-900 text-xl">
+                {plan.title}
+              </span>
+            </div>
+            <div class="p-4">
+              <p class="font-semibold text-purple-900">{plan.service.name}</p>
+              <p class="mt-2 text-slate-500 text-sm">{plan.service.description}</p>
+            </div>
+            <div class="p-4 border-t">
+              <p class="font-semibold text-purple-900">{plan.service.price}</p>
+              <p class="mt-2 text-slate-500 text-sm">{plan.service.priceDetail}</p>
+            </div>
           </div>
-        </section>
-        <section class="flex flex-col rounded-3xl px-6 sm:px-8 lg:py-8">
-          <h3 class="mt-5 text-lg text-purple-900">Big fish</h3><p
-            class="mt-2 text-sm text-slate-400">
-            For even the biggest enterprise companies.
-          </p><p
-            class="order-first text-5xl font-light tracking-tight text-purple-900">
-            $99
-          </p>
-          <ul
-            role="list"
-            class="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-500">
-            <li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Connect unlimited websites</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Connect up to 15 bank accounts</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Track up to 200 credit cards</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Analytics support</span>
-            </li><li class="flex items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-circle-check"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                <path d="M9 12l2 2l4 -4"></path>
-              </svg><span class="ml-4">Export up to 24 months data</span>
-            </li>
-          </ul><div class="mt-8">
-            <a
-              class="text-blue-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-100 hover:bg-blue-50 w-full"
-              aria-label="#"
-              href="/register">Get started</a
-            >
-          </div>
-        </section>
+        ))}
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
 
-
-  <section class="bg-white">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div>
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">Pricing</span>
-        </h2>
-  
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          Flexible pricing that scales as you grow
-        </h2>
-        <div class="mt-12 space-y-4">
-          <div
-            class="grid grid-cols-1 lg:grid-cols-5 border rounded-xl overflow-clip">
-            <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:col-span-2">
-              <div class="p-4">
-                <span class="font-semibold text-purple-900 text-xl"
-                  >Pay-as-you-go
-                </span>
-              </div>
-            </div>
-            <div class="lg:col-span-3">
-              <div class="grid grid-cols-1 lg:grid-cols-3">
-                <div
-                  class="lg:col-span-2 p-4 border-t border-l-0 lg:border-l lg:border-t-0">
-                  <p class="font-semibold text-purple-900">
-                    Instant bank account verifications
-                  </p>
-                  <p class="mt-2 text-slate-500 text-sm">
-                    Obtain bank names and tokenized account numbers to connect a
-                    user’s bank account and verify that it’s open.
-                  </p>
-                </div>
-                <div class="bg-slate-50 border-l-2 border-blue-500">
-                  <div class="p-4 border-t lg:border-t-0">
-                    <p class="font-semibold text-purple-900">$1.50</p>
-                    <p class="mt-2 text-slate-500 text-sm">
-                      Per verified account
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="lg:col-span-3 lg:col-start-3">
-              <div class="grid grid-cols-1 lg:grid-cols-3">
-                <div class="lg:col-span-2 p-4 border-t lg:border-l border-l-0">
-                  <p class="font-semibold text-purple-900">Balances</p>
-                  <p class="mt-2 text-slate-500 text-sm">
-                    Retrieve account balances for underwriting, financial
-                    management, or preventing payment failures due to insufficient
-                    funds.
-                  </p>
-                </div>
-                <div class="bg-slate-50 border-l-2 border-blue-500">
-                  <div class="p-4 border-t">
-                    <p class="font-semibold text-purple-900">10¢</p>
-                    <p class="mt-2 text-slate-500 text-sm">
-                      Per successful API call
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="lg:col-span-3 lg:col-start-3">
-              <div class="grid grid-cols-1 lg:grid-cols-3">
-                <div class="lg:col-span-2 p-4 border-t lg:border-l border-l-0">
-                  <p class="font-semibold text-purple-900">Account owners</p>
-                  <p class="mt-2 text-slate-500 text-sm">
-                    Pull account owner information, such as first name, last name,
-                    and address.
-                  </p>
-                </div>
-                <div class="bg-slate-50 border-l-2 border-blue-500">
-                  <div class="p-4 border-t">
-                    <p class="font-semibold text-purple-900">$4.50</p>
-                    <p class="mt-2 text-slate-500 text-sm">
-                      Per successful API call
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 lg:grid-cols-5 pt-6 border-t">
-            <div class="flex flex-col flex-shrink-0 mb-6 md:mb-0 lg:col-span-2">
-              <div>
-                <span class="font-semibold text-purple-900 text-xl"
-                  >Custom pricing
-                </span>
-              </div>
-            </div>
-            <div class="lg:col-span-3">
-              <div class="lg:col-span-2">
-                <p class="mt-2 text-slate-500 text-sm">
-                  Custom pricing is available for companies with a high volume of
-                  API calls or unique business models.
-                </p>
-                <p>
-                  <a
-                    href="/submit"
-                    class="text-blue-600 font-semibold hover:text-purple-900 text-sm inline-flex items-center group">
-                    Contact sales
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   
   <section>
     <div
