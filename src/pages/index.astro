@@ -430,6 +430,30 @@ const sectionTen = {
 };
 
 
+// Developers
+
+const developer = {
+  sectionTitle: "Designed for Developers",
+  heading: "Ship more quickly with powerful and easy-to-use APIs",
+  description: "Save engineering time with unified payments functionality. We obsess over the maze of gateways, payments rails, and financial institutions that make up the global economic landscape so that your teams can build what you need on one platform.",
+  items: [
+    {
+      number: "1",
+      title: "Read the Docs",
+      detail: "Empower decision-making with actionable data insights from Empress Analytics.",
+      linkHref: "/finance",
+      linkTitle: "Read Documentation"
+    },
+    {
+      number: "2",
+      title: "Explore Apps",
+      detail: "Enhance efficiency with Empress Flows, streamlining your business operations.",
+      linkHref: "/finance",
+      linkTitle: "Find Examples"
+    }
+  ]
+};
+
 
 // Section Eleven
 
@@ -1833,46 +1857,42 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
           <div>
             <h2 class="inline-flex items-center text-white">
-              <span class="text-base font-medium tracking-tight">Feature</span>
+              <span class="text-base font-medium tracking-tight">{developer.sectionTitle}</span>
             </h2>
             <h2
               class="text-white font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-              Style code snippets with Shiki and CSS Variables
+              {developer.heading}
             </h2>
             <p class="text-slate-400 mt-5">
-              Receive dividends bull investment mutual funds rise federal funds
-              strategy substantially treasury municipal public index funds.
+              {developer.description}
             </p>
-            <p class="text-slate-400 mt-3">
-              Municipal management performance corporate investment grade bonds.
-              Fall volatile rates funds Standard & Poor's market index upswing
-              financial health growth bear. Treasury 401k potential.
-            </p>
-            <ul
-              role="list"
-              class="grid grid-cols-2 gap-4 list-none lg:gap-6 mt-12">
-              <li>
-                <div>
-                  <p class="font-semibold text-white text-base">
-                    Prebuilt integrations
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-400 text-sm">
-                  Municipal management performance corporate investment grade
-                  bonds.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <p class="font-semibold text-white text-base">
-                    Tools for every stack
-                  </p>
-                </div>
-                <div class="mt-2 text-slate-400 text-sm">
-                  Municipal management performance corporate investment grade
-                  bonds.
-                </div>
-              </li>
+            <ul role="list" class="grid grid-cols-2 lg:grid-cols-2 gap-4 list-none lg:gap-6 mt-4">
+              {developer.items.map((item, index) => (
+                <li key={index}>
+                  <div>
+                    <p class="mt-5 font-semibold text-white">
+                      {item.title}
+                    </p>
+                  </div>
+                  <div class="mt-6 text-slate-400 text-sm">
+                    {item.detail}
+                  </div>
+                  <a href={item.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group mt-5 text-sm">
+                          {item.linkTitle}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </a>
+                  
+                </li>
+              ))}
             </ul>
           </div>
           <div class="lg:mt-0 mt-12 h-full">
