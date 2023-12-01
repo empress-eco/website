@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Navigation from "../components/global/Navigation.astro";
 import Footer from "../components/global/Footer.astro";
+import MobileNavbar from "../components/global/mobile-navbar.astro";
 ---
 
 <html
@@ -12,8 +13,33 @@ import Footer from "../components/global/Footer.astro";
   </head>
 
   <body class="bg-white">
-    <Navigation />
+    <header class="sticky top-0 z-50 bg-white"> 
+      <div class="hidden md:block">
+        <Navigation />
+      </div>
+      <div class="block md:hidden">
+        <MobileNavbar />
+      </div>
+    </header>
     <slot />
-    <Footer />
+    <Footer />   
+        <!-- <script type="module">
+          import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+          Chatbot.init({
+              chatflowid: "1dd03657-db13-4108-861f-f386c49c46a5",
+              apiHost: "http://localhost:4000",
+          })
+      </script> -->
+      <script>
+        window.intercomSettings = {
+          api_base: "https://api-iam.intercom.io",
+          app_id: "r85kig20"
+        };
+      </script>
+      
+      <script>
+      // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/r85kig20'
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/r85kig20';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+      </script>
   </body>
 </html>
