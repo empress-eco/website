@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import JobsHome from "../components/jobs/JobsHome.astro";
 
 import { AstroSeo } from "@astrolib/seo";
+import { Icon } from "astro-icon";
 
 import Ecosystem from "../components/features/Ecosystem.astro";
 
@@ -109,50 +110,120 @@ const overview = {
   image: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
 };
 
+// Diplay Image
+
+const displayImage = {
+  "title": "Empress Insights",
+  "subtitle": "Explore Your Data,",
+  "subtitleCont": "Uncover Actionable Insights.",
+  imageSrc: "/images/chart.jpg"
+};
+
+
+// FeatureOne
+
+const featureOne = {
+  mainContent: {
+    title: "One Solutions",
+    img: "/images/dashboard.jpg",
+    subtitle: "One Platform, Infinite Possibilities",
+    paragraphs: [
+      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+    ],
+    linkText: "Explore Applications",
+    linkHref: "/suite/apps"
+  },
+  listItems: [
+    "Complete Toolkit for Every Business Need",
+    "Streamlined Management in One Unified Platform",
+    "Effortless Integration & Limitless Growth Potential",
+  ]
+};
+
+// FeatureTwo
+
+const featureTwo = {
+  mainContent: {
+    title: "Two Solutions",
+    img: "/images/dashboard.jpg",
+    subtitle: "One Platform, Infinite Possibilities",
+    paragraphs: [
+      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+    ],
+    linkText: "Explore Applications",
+    linkHref: "/suite/apps"
+  },
+  listItems: [
+    "Complete Toolkit for Every Business Need",
+    "Streamlined Management in One Unified Platform",
+    "Effortless Integration & Limitless Growth Potential",
+  ]
+};
+
+// FeatureThree
+
+const featureThree = {
+  mainContent: {
+    title: "Three Solutions",
+    img: "/images/dashboard.jpg",
+    subtitle: "One Platform, Infinite Possibilities",
+    paragraphs: [
+      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+    ],
+    linkText: "Explore Applications",
+    linkHref: "/suite/apps"
+  },
+  listItems: [
+    "Complete Toolkit for Every Business Need",
+    "Streamlined Management in One Unified Platform",
+    "Effortless Integration & Limitless Growth Potential",
+  ]
+};
+
 // Dark Background
 
 const darkBackground = {
   sections: [
     {
       type: "feature",
-      title: "Seamless Retail Integrations",
-      mainTitle: "Unified Systems for Retail Excellence",
-      descriptions: [
-        "Empress seamlessly unites various retail tools, creating an integrated ecosystem that enhances operational efficiency and data coherence.",
-        "From POS systems to inventory management, our integration capabilities ensure all your tools work in harmony."
-      ],
-      imagePaths: ["images of integrated retail systems"],
-      bgColor: "white",
-      textColor: "blue-600",
-      gridCols: "lg:grid-cols-2"
+      title: "200+ Integrations",
+      mainTitle: "Seamless Connectivity, Simplified",
+      secondaryTitle: "",
     },
     {
       type: "featureSkewed",
-      title: "Retail Workflow Optimization",
-      mainTitle: "Where Efficiency Meets Innovation",
-      description: "Empress not only connects retail systems but also streamlines workflows, reducing manual effort and enhancing customer experience.",
-      points: [
-        {
-          title: "Comprehensive Retail Compatibility",
-          description: "Our platform supports a wide range of retail tools, ensuring seamless operations across your business."
-        },
-        {
-          title: "Real-Time Retail Data Synchronization",
-          description: "Empress provides accurate, real-time insights, vital for making informed retail decisions."
-        },
-        {
-          title: "Tailored Retail Integration",
-          description: "Customize integrations to suit your specific retail needs, fostering growth and scalability."
-        }
-      ],
-      bgColor: "purple-900",
-      textColor: "white",
-      gridCols: "lg:grid-cols-3",
-      transform: "skew-y-6",
-      marginAdjustment: "-mt-72 lg:-mt-[26rem]"
+  title: "Global Operations",
+  mainTitle: "Seamless Operations on a Global Scale",
+  secondaryTitle: "",
+  description: "Empress orchestrates your business's global operations with unmatched efficiency. Our solutions bring together your processes, enhancing performance with precision and ease.",
+  points: [
+  {
+  title: "Universal Compatibility",
+  description: "Empress ensures a cohesive business environment, seamlessly connecting everything from inventory management to customer engagement."
+},
+{
+  title: "Real-Time Data Insights",
+  description: "Empress provides immediate data alignment, offering reliable and up-to-the-minute business intelligence for informed decision-making."
+},
+{
+  title: "Adaptive Integration",
+  description: "Customize Empress to match your evolving enterprise, effortlessly scaling to support your ambitions and changing needs."
+},
+{
+  title: "Effortless Automation",
+  description: "Empress streamlines operations by automating repetitive tasks, enhancing productivity, and freeing resources for strategic initiatives."
+}
+
+  ],
+  bgColor: "purple-900",
+  textColor: "white",
+  gridCols: "lg:grid-cols-3",
+  transform: "skew-y-6",
+  marginAdjustment: "-mt-72 lg:-mt-[26rem]"
     }
   ]
 };
+
 
 
 // Retail New
@@ -191,10 +262,83 @@ const sectionFour = {
   }
 };
 
+// Additional Features
 
-// Use Cases
+const featuresHeading = {
+  featureHeading: "Additional Features",
+  featureTitle: "Do More With Empress",
+};
 
 const features = [
+{
+    "title": "Inights",
+    "description": "Unlock Data Insights",
+    "icon": "ph:chart-bar-duotone",
+    "link": "/feature/insights",
+    "color": "indigo"
+  },
+  {
+    "title": "Flows",
+    "description": "Optimize Your Workflow",
+    "icon": "ph:flow-arrow-duotone",
+    "link": "/feature/flows",
+    "color": "indigo"
+  },
+  {
+    "title": "Zaps",
+    "description": "Automate Routine Tasks",
+    "icon": "ph:lightning-duotone",
+    "link": "/feature/zaps",
+    "color": "indigo"
+  },
+  {
+    "title": "Assistants",
+    "description": "Expert AI Chat Support",
+    "icon": "ph:robot-duotone",
+    "link": "/feature/assistants",
+    "color": "indigo"
+  },
+  {
+    "title": "Forecast",
+    "description": "Anticipate Future Trends",
+    "icon": "ph:cloud-sun-duotone",
+    "link": "/feature/forecast",
+    "color": "indigo"
+  },
+  {
+    "title": "Bridge",
+    "description": "Connect With Collaborators",
+    "icon": "ph:arrows-out-duotone",
+    "link": "/feature/bridge",
+    "color": "indigo"
+  },
+  {
+    "title": "Administration",
+    "description": "Control Access & Visibility",
+    "icon": "ph:address-book-duotone",
+    "link": "/feature/administration",
+    "color": "indigo"
+  },
+  {
+    "title": "Innovation",
+    "description": "Customize Your Experience",
+    "icon": "ph:circles-three-plus-duotone",
+    "link": "/feature/innovation",
+    "color": "indigo"
+  },
+  {
+    "title": "Integrations",
+    "description": "Seamless Tool Integration",
+    "icon": "ph:plugs-connected-duotone",
+    "link": "/feature/integrations",
+    "color": "indigo"
+  },
+];
+
+
+// Use Features
+
+const featureDetails = [
   {
     header: {
       mainTitle: "Empress Control",
@@ -700,39 +844,291 @@ Use AstroSeo in all the pages you want different Seo than the index page
   </section>
   
 
+  <!-- Header -->
 
-  <!-- Stats -->
-
-  <!-- <section class="bg-white">
+  <section>
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div>
-        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl text-3xl">
-          {statsContent.sectionTitle}
+      <div class="lg:text-center">
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{displayImage.title}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {displayImage.subtitle}
+          <span class="lg:block">{displayImage.subtitleCont}</span>
         </h2>
       </div>
-      <div>
-        <ul role="list" class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-12">
-          {statsContent.stats.map((stat) => (
-            <li>
-              <div>
-                <p class="font-semibold text-purple-900">{stat.figure}</p>
-              </div>
-              <div class="mt-2 text-slate-500 text-sm">
-                {stat.description}
-              </div>
-            </li>
-          ))}
-        </ul>
+      <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
+        <img src={displayImage.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
       </div>
     </div>
-  </section> -->
-
-
-
-
+  </section>
   
 
+
+  <!-- FeatureOne -->
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+        <div>
+          <div class="lg:pr-24 md:pr-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{featureOne.mainContent.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {featureOne.mainContent.subtitle}
+            </h2>
+            {featureOne.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
+            ))}
+                   <ul class="grid mt-6 text-left gap-y-4">
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureOne.listItems[0]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureOne.listItems[1]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureOne.listItems[2]}</span>
+                    </li>
+                  </ul>
+            <p class="mt-10">
+              <a href={featureOne.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {featureOne.mainContent.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FeatureTwo -->
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
+    <div class="lg:w-1/2 lg:order-first">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+        <div>
+          <div class="lg:pl-24 md:pl-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{featureTwo.mainContent.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {featureTwo.mainContent.subtitle}
+            </h2>
+            {featureTwo.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
+            ))}
+                   <ul class="grid mt-6 text-left gap-y-4">
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureTwo.listItems[0]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureTwo.listItems[1]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureTwo.listItems[2]}</span>
+                    </li>
+                  </ul>
+            <p class="mt-10">
+              <a href={featureTwo.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {featureTwo.mainContent.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FeatureThree -->
+
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+        <div>
+          <div class="lg:pr-24 md:pr-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{featureThree.mainContent.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {featureThree.mainContent.subtitle}
+            </h2>
+            {featureThree.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
+            ))}
+                   <ul class="grid mt-6 text-left gap-y-4">
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureThree.listItems[0]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureThree.listItems[1]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureThree.listItems[2]}</span>
+                    </li>
+                  </ul>
+            <p class="mt-10">
+              <a href={featureThree.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {featureThree.mainContent.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   
+
+  <!-- Dark Background -->
+
+
+  <!-- Dark Background -->
+
+<section class="bg-purple-900 transform skew-y-6 mt-20">
+  <div
+    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
+    <div>
+      <h2 class="inline-flex items-center text-white">
+        <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
+      </h2>
+      <h2
+        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
+        {darkBackground.sections[1].mainTitle}
+      </h2>
+    </div>
+    <div class="mx-auto text-left mt-12">
+      <div
+          class="text-sm gap-x-2 gap-y-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">
+                  
+                  {darkBackground.sections[1].points[0].title}
+                </p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[0].description}
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[1].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[1].description}
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[2].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[2].description}
+              </p>
+            </div>
+          </article>
+        </div>
+    </div>
+  </div>
+</section>
 
 
   <!-- Information -->
@@ -781,158 +1177,13 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
-  
-
-
-  <!-- Dark Background -->
-
-
-
-  <section >
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div>
-        <h2 class="inline-flex items-center rounded-full text-blue-600">
-          <span class="text-base font-medium tracking-tight">{darkBackground.sections[0].title}</span>
-        </h2>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {darkBackground.sections[0].mainTitle}
-          <span class="lg:block">{darkBackground.sections[0].secondaryTitle}</span>
-        </h2>
-        <div class="mx-auto text-left mt-12">
-          <div>
-            <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
-              <div>
-                <p class="text-slate-500">
-                  {darkBackground.sections[0].descriptions[0]}
-                </p>
-              </div>
-              <div>
-                <p class="text-slate-500">
-                  {darkBackground.sections[0].descriptions[1]}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="grid lg:grid-cols-4 grid-cols-2 mt-24 gap-3">
-          <div>
-            <img
-              src={darkBackground.sections[0].imagePaths[0]}
-              alt="thumbnail"
-              class="rounded-2xl drop-shadow-2xl"
-            />
-            <img
-            src={darkBackground.sections[0].imagePaths[1]}
-              alt="thumbnail"
-              class="drop-shadow-2xl mt-6"
-            />
-          </div>
-          <div class="lg:col-span-2">
-            <img
-            src={darkBackground.sections[0].imagePaths[2]}
-              alt="thumbnail"
-              class="drop-shadow-2xl"
-            />
-            <img
-            src={darkBackground.sections[0].imagePaths[3]}
-              alt="thumbnail"
-              class="drop-shadow-2xl mt-6"
-            />
-            <img
-            src={darkBackground.sections[0].imagePaths[4]}
-              alt="thumbnail"
-              class="drop-shadow-2xl mt-6 lg:hidden block"
-            />
-          </div>
-          <div class="hidden lg:block">
-            <img
-            src={darkBackground.sections[0].imagePaths[5]}
-              alt="thumbnail"
-              class="drop-shadow-2xl"
-            />
-            <img
-            src={darkBackground.sections[0].imagePaths[6]}
-              alt="thumbnail"
-              class="rounded-2xl drop-shadow-2xl mt-6"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-purple-900 transform skew-y-6 -mt-72 lg:-mt-[26rem]">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
-      <div>
-        <h2 class="inline-flex items-center text-white">
-          <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
-        </h2>
-        <h2
-          class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
-          {darkBackground.sections[1].mainTitle} <span class="lg:block"
-            >{darkBackground.sections[1].secondaryTitle}</span
-          >
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-white">
-            {darkBackground.sections[1].description}
-          </p>
-        </div>
-      </div>
-      <div class="mx-auto text-left mt-12">
-        <div>
-          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
-            <div>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">
-                    {darkBackground.sections[1].points[0].title}
-                  </p>
-                </div>
-                <p class="text-sm text-white">
-                  {darkBackground.sections[1].points[0].description}
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">
-                    {darkBackground.sections[1].points[1].title}
-                  </p>
-                </div>
-                <p class="text-sm text-white">
-                  {darkBackground.sections[1].points[1].description}
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">
-                    {darkBackground.sections[1].points[2].title}
-                  </p>
-                </div>
-                <p class="text-sm text-white">
-                  {darkBackground.sections[1].points[2].description}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- Use Cases -->
 
   <section class="bg-white">
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
-      {features.map((feature, featureIndex) => (
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-16 items-center">
+      {featureDetails.map((feature, featureIndex) => (
         <div key={featureIndex}>
           <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
             {feature.header.mainTitle}
@@ -977,6 +1228,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
       ))}
     </div>
   </section>
+  
 
 
 
@@ -984,58 +1236,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
 
   <Ecosystem/>
 
-  <!-- <section>
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
-      <div>
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">{sectionData.mainTitle}</span>
-        </h2>
-        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {sectionData.mainSubTitle}
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-slate-500">{sectionData.description}</p>
-        </div>
-      </div>
-      <div class="mx-auto text-left mt-12">
-        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-4">
-          {sectionData.articles.map((article) => (
-            <article>
-              <div>
-                <p class="font-semibold text-purple-900 text-base">{article.title}</p>
-                <div class="mt-6">
-                  <ul role="list" class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    {article.features.map((feature) => (
-                      <li class="flex items-start">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-                        <span class="ml-4">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section> -->
-  
+
   
 
   <!-- FAQS -->

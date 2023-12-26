@@ -1,0 +1,1153 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import AboutOne from "../components/about/AboutOne.astro";
+import FeatureEleven from "../components/features/FeatureEleven.astro";
+import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
+import FeatureTwelve from "../components/features/FeatureTwelve.astro";
+import FeatureFive from "../components/features/FeatureFive.astro";
+import FeatureSix from "../components/features/FeatureSix.astro";
+import StatsTwo from "../components/stats/StatsTwo.astro";
+import FeatureTen from "../components/features/FeatureTen.astro";
+import FeatureNine from "../components/features/FeatureNine.astro";
+import CtaThree from "../components/cta/CtaThree.astro";
+import FaqTwo from "../components/infopages/FaqTwo.astro";
+import CtaTwo from "../components/cta/CtaTwo.astro";
+import { Code } from "astro/components";
+import { Icon } from "astro-icon";
+
+import { AstroSeo } from "@astrolib/seo";
+
+// Example variable to set the active link (you might have a more dynamic way to set this)
+const currentPath = Astro.request.url.pathname;
+const isActive = (path) => currentPath === path;
+
+// Navigation Links
+
+const navLinks = [
+{
+    title: "Operations",
+    link: "/operations",
+    logo: "/images/logo.png"
+  },
+  {
+    name: "Overview",
+    href: "/operations"
+  },
+  {
+    name: "Features",
+    href: "/operations/features"
+  },
+  {
+    name: "Applications",
+    href: "/apps/operations"
+  },
+  {
+    name: "Docs",
+    href: "https://docs.empress.eco/"
+  }
+];
+
+
+// SectionOne
+
+const sectionOne = {
+  title: "Operations",
+  description: "Revolutionize your operational efficiency with Empress's suite of advanced management tools, tailored for seamless procurement, production, and distribution processes.",
+  buttonText: "View Pricing",
+  buttonTextTwo: "Contact Sales",
+  buttonUrl: "pricing",
+  buttonTwoUrl: "contact",
+  imageRows: [
+    [
+      {
+        url: "https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        alt: "Thumbnail 1",
+        class: "h-full w-44 osm:opacity-0 lg:opacity-100"
+      },
+      {
+        url: "https://plus.unsplash.com/premium_photo-1661775434014-9c0e8d71de03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        alt: "Thumbnail 2",
+        class: "h-full w-44"
+      }
+    ],
+    [
+      {
+        url: "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        alt: "Thumbnail 3",
+        class: "h-full w-44"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1600275669439-14e40452d20b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8b2ZmaWNlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+        alt: "Thumbnail 4",
+        class: "h-full w-44"
+      },
+      {
+        url: "https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        alt: "Thumbnail 5",
+        class: "h-full w-44"
+      }
+    ],
+    [
+      {
+        url: "https://plus.unsplash.com/premium_photo-1661771825670-1720428a80ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+        alt: "Thumbnail 6",
+        class: "h-full w-44"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+        alt: "Thumbnail 7",
+        class: "h-full w-44"
+      }
+    ]
+  ]
+};
+
+// SectionTwo
+
+const sectionTwo = {
+  mainSection: {
+    title: "Key Operations Features",
+    subtitle: "Enhancing Efficiency & Accuracy",
+    subtitleTwo: "Streamlined Process Management"
+  },
+  businessSection: {
+    title: "Purchase Order Excellence",
+    description: "Empower your procurement process with Empress's optimized purchase order management system, ensuring accurate order tracking and effective supplier coordination.",
+    listItems: [
+      { title: "Order Tracking", description: "Reliable tracking with unique Purchase Order IDs." },
+      { title: "Supplier Integration", description: "Efficient supplier data integration for improved relations." }
+    ],
+    additionalInfo: "Empress enhances your supply chain reliability and procurement efficiency."
+  },
+  tabImages: [
+    "/images/ModalOne.png",
+    "/images/ModalTwo.png"
+  ],
+  firstTab: "Order Management",
+  secondTab: "Supplier Relations",
+  layoutsSection: {
+    title: "Production Order Management",
+    description: "Streamline your manufacturing with Empress's advanced production order management, ensuring timely and cost-effective production.",
+    howItWorks: {
+      title: "Manufacturing Efficiency",
+      description: "Efficient production scheduling and quantitative planning."
+    },
+    seeLibrariesLink: "link/to/detailed-info",
+    seeLibrariesText: "Discover More",
+    imageRightSrc: "/images/payments.png",
+    imageRightAlt: "Production Order Optimization"
+  }
+};
+
+
+// Section Three
+
+
+const sectionThree = {
+  featureTitle: "Advanced Shipment & Distribution",
+  mainTitle: "Optimize Your Shipping & Distribution",
+  mainSubtitle: "Efficient Logistics and Coordination",
+  description: "Empress revolutionizes your shipping and distribution operations with real-time tracking, cost management, and logistical oversight.",
+  tabs: [
+    {
+      title: "Shipment Efficiency",
+      image: "/images/ModalOne.png",
+      codeSnippet: `import { defineConfig } from 'astro/config';
+import tailwind from "@astrojs/tailwind";
+import image from "@astrojs/image";
+import compress from "astro-compress";
+import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
+export default defineConfig({
+  markdown: {
+    drafts: true,
+    shikiConfig: { theme: "css-variables" }
+  },
+  shikiConfig: {
+    wrap: true,
+    skipInline: false,
+    drafts: true,
+  },
+  site: 'https://lexingtonthemes.com',
+  integrations: [tailwind(), image(), compress(), sitemap(), mdx()]
+});`,
+    },
+    {
+      title: "Distribution Management",
+      image: "/images/ModalTwo.png",
+      codeSnippet: `// Similar code for 'Create cards' tab`
+    }
+  ]
+};
+
+// Section Four
+
+const sectionFour = {
+  header: {
+    title: "Operations Success Stories",
+    subtitle: "Empress Transforming Businesses",
+  },
+  description: "Explore impactful stories of how Empress has revolutionized operations for diverse companies, improving supply chain management and production efficiency.",
+  challenges: [
+    {
+      title: "Optimized Supply Chain",
+      description: "See how Empress streamlined a retailer's supply chain, enhancing order accuracy and supplier relations."
+    },
+    {
+      title: "Production Process Overhaul",
+      description: "Discover how a manufacturer achieved operational excellence with Empress's production order management."
+    }
+  ],
+  productsUsed: [
+    "Purchase Order Management",
+    "Production Order Management",
+    "Shipment Tracking System",
+    "Distribution Management"
+  ],
+  testimonial: {
+    text: "Empress has elevated our operational capabilities, ensuring smooth and efficient processes across the board.",
+    caseStudyLink: "link/to/case-study",
+    caseStudyText: "Read Success Stories"
+  },
+  images: {
+    background: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    modalOne: "/images/ModalOne.png",
+    modalTwo: "/images/ModalTwo.png"
+  }
+};
+
+// Section Five
+
+const sectionFive = {
+  mainSection: {
+    title: "Operational Feature Highlights",
+    subtitle: "Empowering Your Business Operations",
+    description1: "Delve into Empress's diverse range of operational tools, designed to elevate efficiency and streamline your business processes.",
+    description2: "From procurement to production, Empress covers all aspects of operational management.",
+    viewApplicationsLink: "/explore-operations",
+    viewApplicationsText: "Explore Operational Tools"
+  },
+  contentSections: [
+  {
+    title: "Manage Orders Effectively",
+    description: "Optimize your order management with our Purchase Orders system. Designed for efficiency, it streamlines the entire process of handling orders, from creation to fulfillment, ensuring accuracy and timeliness in every transaction.",
+    linkHref: "/suite/purchase-orders",
+    linkText: "View Purchase Orders",
+  },
+  {
+    title: "Enhance Manufacturing Process",
+    description: "Revolutionize your production workflow with our state-of-the-art manufacturing tools. Tailored to enhance efficiency, these tools provide seamless integration of processes, ensuring higher productivity and superior product quality.",
+    linkHref: "/suite/production",
+    linkText: "View Production",
+  },
+  {
+    title: "Streamline Distribution Flow",
+    description: "Our Logistics system is engineered to optimize your distribution channels. It simplifies complex logistics operations, ensuring smooth and efficient movement of products from warehouse to customer.",
+    linkHref: "/suite/logistics",
+    linkText: "View Logistics",
+  },
+  {
+    title: "Efficiently Distribute Products",
+    description: "Elevate your distribution strategy with our comprehensive system. Designed for operational excellence, it ensures that your products are distributed efficiently, reaching markets faster and more reliably.",
+    linkHref: "/suite/distribution",
+    linkText: "View Distribution",
+  },
+  {
+    title: "Manage Facility Operations",
+    description: "Our Facilities management system brings efficiency to your operations. It provides you with the tools to effectively manage and maintain your facilities, ensuring optimal functionality and operational continuity.",
+    linkHref: "/suite/facilities",
+    linkText: "View Facilities",
+  },
+  {
+    title: "Streamline Approval Process",
+    description: "Simplify and accelerate your approval workflows with our Approvals system. It's designed to streamline decision-making processes, reducing delays and increasing efficiency across your organization.",
+    linkHref: "/suite/approvals",
+    linkText: "View Approvals",
+  }
+  ]
+};
+
+// Section Six
+
+const sectionSix = {
+  title: "Seamless Operations Integration",
+  subtitle: "Unify Your Operational Ecosystem",
+  description: "Empress seamlessly integrates with your existing operational systems, enhancing data synchronization and system compatibility for a unified operations management experience.",
+  items: [
+    {
+      title: "Data Synchronization",
+      description: "Effortlessly synchronize operational data across systems."
+    },
+    {
+      title: "System Compatibility",
+      description: "Connect Empress with your existing operational tools seamlessly."
+    },
+    {
+      title: "Real-Time Data Access",
+      description: "Stay updated with instant access to operational data."
+    }
+  ]
+};
+
+// Section Seven
+
+const sectionSeven = {
+  sectionTitle: "Core Features",
+  heading: "Enhance Business Operations with Empress",
+  description: "Empress's suite of tools is designed to revolutionize and streamline your business processes for maximum operational efficiency.",
+  items: [
+    {
+      number: "1",
+      title: "Data-Driven Business Decisions",
+      detail: "Utilize Empress Analytics to glean actionable insights, driving smarter, data-informed business strategies."
+    },
+    {
+      number: "2",
+      title: "Streamlined Operational Workflow",
+      detail: "Leverage Empress Workflow to refine and enhance your business processes for greater operational efficiency."
+    },
+    {
+      number: "3",
+      title: "Task Automation for Productivity",
+      detail: "Implement Empress Zaps to automate routine tasks, freeing up valuable time and resources for strategic initiatives."
+    },
+    {
+      number: "4",
+      title: "Enhanced Customer Service",
+      detail: "Employ Empress's AI-driven chat support to elevate customer interactions and improve service responsiveness."
+    },
+    {
+      number: "5",
+      title: "Forward-Looking Business Insights",
+      detail: "Stay ahead of market trends and customer needs with predictive analytics from Empress Forecast."
+    },
+    {
+      number: "6",
+      title: "Collaboration and Connectivity",
+      detail: "Foster effective teamwork and inter-departmental collaboration with Empress Bridge, bridging communication gaps."
+    },
+    {
+      number: "7",
+      title: "Robust Access and Security Controls",
+      detail: "Maintain high security and controlled access to sensitive operations with Empress Administration."
+    },
+    {
+      number: "8",
+      title: "Effortless System Integration",
+      detail: "Empress ensures seamless integration with your existing tools, simplifying system compatibility and user adaptation."
+    }
+  ]
+};
+
+
+// Section Eight
+
+const sectionEight = {
+  sectionTitle: "Operational Mastery",
+  subTitle: "Empower Your Business",
+  categories: [
+    {
+      categoryName: "Purchase Order Management",
+      items: [
+        { label: "Streamlined Order Tracking" },
+        { label: "Efficient Supplier Integration" },
+        { label: "Proactive Delivery Monitoring" },
+        { label: "Detailed Item Insights" },
+        { label: "Real-Time Status Updates" },
+        { label: "Secure Record Keeping" },
+        { label: "In-Depth Order Analysis" },
+        { label: "Customizable Notes Section" }
+      ]
+    },
+    {
+      categoryName: "Production Order Management",
+      items: [
+        { label: "Efficient Manufacturing Tracking" },
+        { label: "Integrated Product Planning" },
+        { label: "Timely Production Scheduling" },
+        { label: "Quantitative Resource Allocation" },
+        { label: "Cost Management Focus" },
+        { label: "Supervisor Assignment Oversight" },
+        { label: "Status Update Monitoring" },
+        { label: "Quality Control Assurance" }
+      ]
+    },
+    {
+      categoryName: "Shipment & Distribution",
+      items: [
+        { label: "Advanced Shipment Tracking" },
+        { label: "Order Fulfillment Linking" },
+        { label: "Efficient Transit Scheduling" },
+        { label: "Detailed Logistical Recording" },
+        { label: "Freight Cost Management" },
+        { label: "Real-Time Status Updates" },
+        { label: "Accurate Delivery Tracking" },
+        { label: "Distribution Efficiency Focus" }
+      ]
+    },
+    {
+      categoryName: "Facility Management",
+      items: [
+        { label: "Facility Operational Tracking" },
+        { label: "Detailed Manager Assignment" },
+        { label: "Maintenance Schedule Oversight" },
+        { label: "Cost and Usage Monitoring" },
+        { label: "Strategic Facility Planning" },
+        { label: "Efficient Resource Management" },
+        { label: "Comprehensive Facility Records" },
+        { label: "Enhanced Coordination Capability" }
+      ]
+    }
+  ]
+};
+
+
+// Section Nine
+
+const sectionNine = {
+  title: "FAQ",
+  subtitle: "Frequent questions and answers",
+  questions: [
+    {
+      question: "Spazio identified charges on my account as unauthorized. What should I do?",
+      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
+    },
+    {
+      question: "Spazio identified charges on my account as unauthorized. What should I do?",
+      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
+    },
+    {
+      question: "Spazio identified charges on my account as unauthorized. What should I do?",
+      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
+    },
+    {
+      question: "Spazio identified charges on my account as unauthorized. What should I do?",
+      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
+    },
+    {
+      question: "Spazio identified charges on my account as unauthorized. What should I do?",
+      answer: "If we got in touch with you about unauthorized charges and you think we have made a mistake, we will gladly look into this for you. We will have sent you a form that we need you to fill out in order for Spazio to revisit your account. Please fill out the verification form that was sent to you. Once you have completed the verification, we will revisit your account and follow up with you."
+    },
+  ]
+};
+
+---
+
+<AstroSeo
+  title="About 01"
+  description="Your site description goes here"
+  canonical="https://www.lexingtonthemes.com"
+  openGraph={{
+    url: "https://www.lexingtonthemes.com",
+    title: "Open Graph Title",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
+/>
+<BaseLayout>
+
+  <!-- NAVIGATION BAR -->
+
+  <nav style="background-color: #fff; box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <img src={navLinks[0].logo} alt="Logo" style="height: 32px; width: auto;" />
+        <a href={navLinks[0].link} 
+          class="inline-flex items-center justify-center font-medium"
+          style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+          onmouseover="this.style.color='#333';"
+          onmouseout="this.style.color='#5046e4';">
+          {navLinks[0].title}
+        </a>
+      </div>
+      <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+        {navLinks.slice(1).map(link => (
+          <li key={link.href}>
+            <a href={link.href} 
+              class="inline-flex items-center justify-center font-medium"
+              style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+              onmouseover="this.style.color='#333';"
+              onmouseout="this.style.color='#5046e4';">
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+  
+
+
+  <section>
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 mt-24 z-50 items-center">
+      <div class="items-start gap-12 grid grid-cols-1 md:grid-cols-2">
+        <div>
+          <div class="lg:pr-24 md:pr-12 pb-12 lg:pb-0">
+            <h2
+              class="text-purple-900 font-semibold mt-6 text-4xl lg:text-7xl tracking-tighter">
+              {sectionOne.title}
+            </h2>
+            <p class="text-slate-500 mt-5">
+              {sectionOne.description}
+            </p>
+          </div>
+        </div>
+      </div>
+      <a href={sectionOne.buttonUrl}
+      class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4 mt-5"
+      style="background-color: #5046e4; color: #fff; border: px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
+      onmouseover="this.style.backgroundColor='#6767ff'; this.style.borderColor='#5046e4';"
+      onmouseout="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';"
+      onmousedown="this.style.backgroundColor='#3838b1'; this.style.borderColor='#6767ff';"
+      onmouseup="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';">
+      {sectionOne.buttonText}
+   </a>
+   
+   <a href={sectionOne.buttonTwoUrl}
+   class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium"
+   style="background-color: #fff; color: #333; border: none; border-radius: 30px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
+   onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+   onmouseout="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+   onmousedown="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
+   onmouseup="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';">
+   {sectionOne.buttonTextTwo}
+</a>
+    </div>
+  
+    <section>
+      <div
+        class="h-64 justify-center lg:px-0 max-h-full md:px-12 overflow-hidden relativ -skew-y-[16deg] transform mb-24">
+        <div class="bg-white block lg:flex-1 lg:relative sm:contents">
+          <div class="bg-white absolute h-full inset-0 object-cover w-full">
+            <video
+              autoplay=""
+              class="bg-white absolute max-w-none min-h-full min-w-full w-auto z-10"
+              loop=""
+              muted=""
+              ><source src="/images/gradientA.mp4" type="video/mp4" />Your browser
+              does not support the video tag.</video
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+  <!-- SectionTwo -->
+  
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
+        <div>
+            <h2 class="inline-flex items-center text-blue-600">
+                <span class="text-base font-medium tracking-tight">{sectionTwo.mainSection.title}</span>
+            </h2>
+
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+                {sectionTwo.mainSection.subtitle}
+                <span class="lg:block">{sectionTwo.mainSection.subtitleTwo}</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-24">
+            <div class="lg:pr-24 md:pr-12">
+                <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+                    {sectionTwo.businessSection.title}
+                </h2>
+                <p class="text-slate-500 mt-5">
+                    {sectionTwo.businessSection.description}
+                </p>
+
+                <ul role="list" class="grid grid-cols-2 gap-4 list-none lg:gap-6 mt-12">
+                    {sectionTwo.businessSection.listItems.map(item => (
+                        <li key={item.title}>
+                            <div>
+                                <p class="font-semibold text-purple-900 text-base">
+                                    {item.title}
+                                </p>
+                            </div>
+                            <div class="mt-2 text-slate-500 text-sm">
+                                {item.description}
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+
+                <p class="text-slate-500 mt-12">
+                    {sectionTwo.businessSection.additionalInfo}
+                </p>
+            </div>
+
+              <div class="lg:mt-0 mt-12 md:pl-12 md:border-l lg:pl-24 border-slate-200 h-full">
+                <div x-data="{ tabSelected: 1 }" class="lg:mt-0 mt-12 h-full">
+                    <div class="inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-slate-100 rounded-full select-none">
+                        <button
+                            @click="tabSelected = 1"
+                            type="button"
+                            class="inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer"
+                            :class="{ 'bg-white shadow-sm': tabSelected === 1 }"
+                        >
+                        {sectionTwo.firstTab}
+                        </button>
+                        <button
+                            @click="tabSelected = 2"
+                            type="button"
+                            class="inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer"
+                            :class="{ 'bg-white shadow-sm': tabSelected === 2 }"
+                        >
+                        {sectionTwo.secondTab}
+                        </button>
+                    </div>
+                    <div class="w-full mt-2">
+                        <div x-show="tabSelected === 1" class="mt-4 rounded-2xl drop-shadow-xl">
+                            <img src="/images/ModalOne.png" alt="thumbnail" class="ring-1 ring-slate-300 rounded-2xl" />
+                        </div>
+                        <div x-show="tabSelected === 2" class="mt-4 rounded-2xl drop-shadow-xl">
+                            <img src="/images/ModalTwo.png" alt="thumbnail" class="ring-1 ring-slate-300 rounded-2xl" />
+                        </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-12 lg:mt-24">
+            <div class="lg:pl-24 md:pl-12">
+                <h2 class="text-purple-900 font-semibold mt-6 text-3xl">
+                    {sectionTwo.layoutsSection.title}
+                </h2>
+                <p class="text-slate-500 mt-5">
+                    {sectionTwo.layoutsSection.description}
+                </p>
+
+                <ul role="list" class="grid grid-cols-2 gap-4 lg:gap-y-12 list-none lg:gap-6 mt-12">
+                    <li class="col-span-2 mb-6 lg:mb-0">
+                        <div>
+                            <p class="font-semibold text-purple-900">{sectionTwo.layoutsSection.howItWorks.title}</p>
+                        </div>
+                        <div class="mt-2 text-slate-500 text-sm">
+                            {sectionTwo.layoutsSection.howItWorks.description}
+                        </div>
+                    </li>
+                </ul>
+
+                <ul role="list" class="grid grid-cols-2 gap-4 list-none lg:gap-6 mt-12">
+                  {sectionTwo.businessSection.listItems.map(item => (
+                    <li key={item.title}>
+                      <div>
+                        <p class="font-semibold text-purple-900 text-base">
+                          {item.title}
+                        </p>
+                      </div>
+                      <div class="mt-2 text-slate-500 text-sm">
+                        {item.description}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+
+                <p class="text-slate-500 mt-12">
+                    {sectionTwo.layoutsSection.additionalInfo}
+                </p>
+
+                <p class="mt-5">
+                    <a href={sectionTwo.layoutsSection.seeLibrariesLink} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                        {sectionTwo.layoutsSection.seeLibrariesText}
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </a>
+                </p>
+            </div>
+
+            <div class="lg:mt-0 mt-12 md:pr-12 md:border-r lg:pr-24 border-slate-200 h-full lg:order-first">
+                <img src={sectionTwo.layoutsSection.imageRightSrc} alt={sectionTwo.layoutsSection.imageRightAlt} class="drop-shadow-2xl" />
+            </div>
+        </div>
+    </div>
+</section>
+  
+
+
+  <!-- SectionThree -->
+
+  
+
+  <section class="bg-purple-900 transform skew-y-6 -mt-72">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:pt-42 pb-52 items-center transform -skew-y-6">
+      <div>
+        <h2 class="inline-flex items-center rounded-full text-white">
+          <h2 class="inline-flex items-center rounded-full text-white">
+            <span class="text-base font-medium tracking-tight">{sectionThree.featureTitle}</span>
+        </h2>
+        <h2 class="text-white font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionThree.mainTitle} <span class="lg:block">{sectionThree.mainSubtitle}</span>
+        </h2>
+        <div class="max-w-xl mt-6">
+          <p class="text-white">{sectionThree.description}</p>
+        </div>
+      </div>
+    <div class="mx-auto text-left mt-12">
+      <div
+        x-data="{
+        tabSelected: 1,
+        tabId: $id('tabs'),
+        tabButtonClicked(tabButton){
+            this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
+            this.tabRepositionMarker(tabButton);
+        },
+        tabRepositionMarker(tabButton){
+            this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
+            this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
+            this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
+        },
+        tabContentActive(tabContent){
+            return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
+        }
+    }"
+        x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
+        class="relative lg:rounded-3xl lg:p-10 text-white">
+        <div
+          x-ref="tabButtons"
+          class="relative inline-grid items-center justify-center h-10 grid-cols-2 p-1 bg-purple-900 rounded-full select-none">
+          <button
+            :id="$id(tabId)"
+            @click="tabButtonClicked($el);"
+            type="button"
+            class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
+            >{sectionThree.tabs[0].title}</button
+          >
+          <button
+            :id="$id(tabId)"
+            @click="tabButtonClicked($el);"
+            type="button"
+            class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
+            >{sectionThree.tabs[1].title}</button
+          >
+          <div
+            x-ref="tabMarker"
+            class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
+            x-cloak>
+            <div class="w-full h-full bg-white/10 rounded-full shadow-sm"></div>
+          </div>
+        </div>
+        <div class="relative w-full mt-2 content">
+          <div
+            :id="$id(tabId + '-content')"
+            x-show="tabContentActive($el)"
+            class="relative">
+            <section
+              class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24 lg:bg-[#14162c] lg:p-10 rounded-3xl">
+              <div
+                class="text-xs font-mono mt-4 rounded-2xl overflowhidden p-4 bg-[#14162c] 00">
+                <Code
+                  code={sectionThree.tabs[0].codeSnippet}
+                  lang="js"
+                  theme="css-variables"
+                />
+              </div>
+              <div class="h-full lg:ml-auto lg:-m-24">
+                <img
+                  src={sectionThree.tabs[0].image}
+                  alt="thumbnail"
+                  class="rounded-3xl"
+                />
+              </div>
+            </section>
+          </div>
+
+          <div
+            :id="$id(tabId + '-content')"
+            x-show="tabContentActive($el)"
+            class="relative"
+            x-cloak>
+            <section
+              class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24 lg:bg-[#14162c] lg:p-10 rounded-3xl">
+              <div
+                class="text-xs font-mono mt-4 rounded-2xl overflowhidden p-4 bg-[#14162c] 00">
+                <Code
+                  code={sectionThree.tabs[0].codeSnippet}
+                  lang="js"
+                  theme="css-variables"
+                />
+              </div>
+              <div class="h-full lg:ml-auto lg:-m-24">
+                <img
+                src={sectionThree.tabs[1].image}
+                  alt="thumbnail"
+                  class="rounded-3xl"
+                />
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section Four -->
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
+    <section>
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-start gap-24">
+          <div>
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{sectionFour.header.title}</span>
+            </h2>
+
+            <h2 class="text-purple-900 font-semibold tracking-tighter mt-6 text-3xl">
+              {sectionFour.header.subtitle}
+            </h2>
+          </div>
+          <div>
+            <p class="text-slate-500 text-base mt-5 lg:mt-0">
+              {sectionFour.description}
+            </p>
+          </div>
+        </div>
+
+        <div class="h-full group grid grid-cols-1 gap-3 lg:grid-cols-2 mt-12">
+          <div>
+            <ul role="list" class="grid grid-cols-1 gap-4 list-none lg:pr-12">
+              {sectionFour.challenges.map(challenge => (
+                <li key={challenge.title}>
+                  <div class="mx-auto text-left">
+                    <div>
+                      <div class="gap-x-2 space-y-6">
+                        <article>
+                          <div class="space-y-3">
+                            <p class="font-semibold text-purple-900">{challenge.title}</p>
+                            <p class="text-slate-500 text-sm">
+                              {challenge.description}
+                            </p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <div>
+              <p class="font-semibold text-purple-900 mt-6">Products used</p>
+              <div class="grid grid-cols-1 lg:grid-cols-2 justify-between">
+                {sectionFour.productsUsed.map(product => (
+                  <div key={product} class="mt-2 text-blue-600 text-sm inline-flex items-center font-medium">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4 mr-3">
+                        <path
+                          class="stroke-purple-500"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                        </path>
+                      </svg>
+                    {product}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="relative overflow-hidden rounded-xl bg-purple-400 p-8 z-50 shadow-xl lg:py-12 lg:grid lg:grid-cols-2 lg:gap-x-8">
+              <div class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                <img src={sectionFour.images.background} alt="" class="h-full w-full object-cover" />
+              </div>
+              <div class="relative lg:col-span-1">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4 mr-3">
+                        <path
+                          class="stroke-purple-500"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                        </path>
+                      </svg>
+                <blockquote class="mt-6 text-white text-sm lg:mt-24">
+                  <p class="font-medium">
+                    {sectionFour.testimonial.text}
+                  </p>
+                  <p class="mt-6">
+                    <a href={sectionFour.testimonial.caseStudyLink} class="text-blue-500 hover:text-white inline-flex items-center group">
+                      {sectionFour.testimonial.caseStudyText}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4 mr-3">
+                        <path
+                          class="stroke-purple-500"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                        </path>
+                      </svg>
+                    </a>
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+
+  <!-- Section Five -->
+  
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-24">
+      <div class="lg:w-1/2 lg:pr-12">
+        <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+          <div class="lg:pl-24 md:pl-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{sectionFive.mainSection.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {sectionFive.mainSection.subtitle}
+            </h2>
+            <p class="text-slate-500 mt-5">
+              {sectionFive.mainSection.description1}
+            </p>
+            <p class="text-slate-500 mt-5">
+              {sectionFive.mainSection.description2}
+            </p>
+            <a href={sectionFive.mainSection.viewApplicationsLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4 mt-8" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+              {sectionFive.mainSection.viewApplicationsText}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2 lg:order-first">
+        <div class="flex-shrink-0">
+          <ul role="list" class="grid grid-cols-1 gap-12 lg:gap-24 list-none mt-24">
+            {sectionFive.contentSections.map(section => (
+              <li key={section.title}>
+                <div>
+                  <p class="text-purple-900 font-semibold tracking-tighter text-3xl">
+                    {section.title}
+                  </p>
+                </div>
+                <div class="mt-2 text-slate-500">
+                  {section.description}
+                </div>
+                <p class="mt-5"></p>
+                <a href={section.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {section.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+              </li>
+            </p>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+
+
+  <!-- Section Six -->
+  
+
+  <section class="bg-purple-900 transform skew-y-6 mt-10">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
+      <div>
+        <h2 class="inline-flex items-center text-white">
+          <span class="text-base font-medium tracking-tight">{sectionSix.title}</span>
+        </h2>
+        <h2 class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
+          {sectionSix.subtitle.split(' ').slice(0, 4).join(' ')} <span class="lg:block">
+            {sectionSix.subtitle.split(' ').slice(4).join(' ')}
+          </span>
+        </h2>
+        <div class="max-w-xl mt-6">
+          <p class="text-white">{sectionSix.description}</p>
+        </div>
+      </div>
+      <div class="mx-auto text-left mt-12">
+        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+          {sectionSix.items.map(item => (
+            <div key={item.title}>
+              <div class="space-y-3">
+                <div>
+                  <p class="mt-5 font-semibold text-white text-base">{item.title}</p>
+                </div>
+                <p class="text-sm text-white">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Section Seven -->
+
+  <!-- Section Ten -->
+
+<section class="bg-white">
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 mt-10 mb-24 items-center">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{sectionSeven.sectionTitle}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionSeven.heading}
+        </h2>
+        <p class="text-slate-500 mt-5">
+          {sectionSeven.description}
+        </p>
+      </div>
+      <ul role="list" class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-24">
+        {sectionSeven.items.map((item, index) => (
+          <li key={index}>
+            <div>
+              <div class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
+                {item.number}
+              </div>
+              <p class="mt-5 font-semibold text-purple-900">
+                {item.title}
+              </p>
+            </div>
+            <div class="mt-6 text-slate-500 text-sm border-l-4 pl-4">
+              {item.detail}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</section>
+
+  <!-- Section Eight -->
+
+  <section aria-labelledby="pricing-three-extended" id="pricing-three-extended" class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{sectionEight.sectionTitle}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionEight.subTitle}
+        </h2>
+      </div>
+      <div class="mx-auto text-left mt-12">
+        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-4">
+          {sectionEight.categories.map((category, index) => (
+            <div key={index}>
+              <div>
+                <p class="font-semibold text-purple-500 mb-5">{category.categoryName}</p>
+                <ul role="list" class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
+                  {category.items.map((item, itemIndex) => (
+                    <li key={itemIndex} class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+                      <span class="ml-4">{item.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Section Nine -->
+
+<section>
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+    <div>
+      <h2 class="inline-flex items-center text-blue-600">
+        <span class="text-base font-medium tracking-tight">{sectionNine.title}</span>
+      </h2>
+      <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+        {sectionNine.subtitle}
+      </h2>
+      <div class="mt-12 space-y-12 bg-slate-50 rounded-3xl p-4 lg:p-10 divide-y">
+        {sectionNine.questions.map((faq, index) => (
+          <div key={index} class={`grid grid-cols-1 gap-4 ${index !== 0 ? 'pt-4 lg:pt-12' : ''} lg:grid-cols-3`}>
+            <div class="flex flex-col flex-shrink-0 mb-5 lg:pr-12">
+              <span class="font-semibold text-purple-900">{faq.question}</span>
+            </div>
+            <div class="lg:col-span-2">
+              <p class="text-slate-500">{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<CtaTwo />
+
+</BaseLayout>

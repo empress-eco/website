@@ -263,22 +263,6 @@ const darkBackground = {
       title: "200+ Integrations",
       mainTitle: "Seamless Connectivity, Simplified",
       secondaryTitle: "",
-      descriptions: [
-        "Empress integrates diverse business tools, providing a centralized platform for streamlined management. Our system effortlessly connects with popular applications, enhancing efficiency and decision making.",
-        "From CRM to ERP, and from e-commerce to analytics – Empress's integration capabilities ensure all your tools work in harmony, enabling a more unified and productive business environment."
-      ],
-      imagePaths: [
-        "/images/creditcardTwo.png",
-        "/images/balance.png",
-        "/images/notification.png",
-        "/images/miniNotification.png",
-        "/images/payments.png",
-        "/images/payments.png",
-        "/images/creditcardTwo.png"
-      ],
-      bgColor: "white",
-      textColor: "blue-600",
-      gridCols: "lg:grid-cols-2"
     },
     {
       type: "featureSkewed",
@@ -314,9 +298,6 @@ const darkBackground = {
   ]
 };
 
-
-
-;
 
 // Section Six
 
@@ -368,70 +349,71 @@ const featuresHeading = {
 };
 
 const features = [
-{
-    "title": "Inights",
-    "description": "Unlock Data Insights",
+  {
+    "title": "Analysis",
+    "description": "Advanced Data Insights",
     "icon": "ph:chart-bar-duotone",
     "link": "/feature/insights",
     "color": "indigo"
   },
   {
-    "title": "Flows",
-    "description": "Optimize Your Workflow",
+    "title": "Workflows",
+    "description": "Custom Workflow Development",
     "icon": "ph:flow-arrow-duotone",
     "link": "/feature/flows",
     "color": "indigo"
   },
   {
-    "title": "Zaps",
-    "description": "Automate Routine Tasks",
+    "title": "Automations",
+    "description": "Intelligent Task Automations",
     "icon": "ph:lightning-duotone",
     "link": "/feature/zaps",
     "color": "indigo"
   },
   {
-    "title": "Assistants",
-    "description": "Expert AI Chat Support",
-    "icon": "ph:robot-duotone",
+    "title": "Views",
+    "description": "Flexible Workspace Viewing",
+    "icon": "ph:eye",
     "link": "/feature/assistants",
     "color": "indigo"
   },
   {
-    "title": "Forecast",
-    "description": "Anticipate Future Trends",
-    "icon": "ph:cloud-sun-duotone",
-    "link": "/feature/forecast",
-    "color": "indigo"
-  },
-  {
-    "title": "Bridge",
-    "description": "Connect With Collaborators",
-    "icon": "ph:arrows-out-duotone",
-    "link": "/feature/bridge",
-    "color": "indigo"
-  },
-  {
     "title": "Administration",
-    "description": "Control Access & Visibility",
+    "description": "Roles and Permissions",
     "icon": "ph:address-book-duotone",
     "link": "/feature/administration",
     "color": "indigo"
   },
   {
-    "title": "Innovation",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/feature/innovation",
-    "color": "indigo"
-  },
-  {
-    "title": "Integrations",
-    "description": "Seamless Tool Integration",
+    "title": "Customization",
+    "description": "Extensive Customization Options",
     "icon": "ph:plugs-connected-duotone",
     "link": "/feature/integrations",
     "color": "indigo"
   },
+  {
+    "title": "Security",
+    "description": "Robust Data Security",
+    "icon": "ph:shield-check-duotone",
+    "link": "/feature/security",
+    "color": "indigo"
+  },
+  {
+    "title": "APIs & Webhooks",
+    "description": "Functional APIs, Webhooks",
+    "icon": "ph:circles-three-plus-duotone",
+    "link": "/feature/api-webhooks",
+    "color": "indigo"
+  },
+  {
+    "title": "Scalability",
+    "description": "Scalable Architecture",
+    "icon": "ph:arrows-out-line-vertical-duotone",
+    "link": "/feature/scalability",
+    "color": "indigo"
+  }
 ];
+
 
 
 // Section Nine
@@ -1002,7 +984,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
 
   <section class="bg-white">
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div>
+      <div class="text-center">
         <h2 class="inline-flex items-center text-blue-600">
           <span class="text-base font-medium tracking-tight">{featuresHeading.featureHeading}</span>
         </h2>

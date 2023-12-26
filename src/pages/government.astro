@@ -4,17 +4,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import JobsHome from "../components/jobs/JobsHome.astro";
 
 import { AstroSeo } from "@astrolib/seo";
-
+import { Icon } from "astro-icon";
 
 import Ecosystem from "../components/features/Ecosystem.astro";
+
 
 // Hero
 
 export const hero = {
   heroSection: {
     header: 'Empress for Government',
-    title: 'Innovation for the People',
-    description: 'Empress brings cutting-edge technology solutions to government agencies, enhancing efficiency and citizen engagement.',
+    title: 'Next Generation Retail Success',
+    description: 'Empress transforms retail operations by integrating innovative technology to enhance customer engagement and streamline sales processes.',
     caseStudyText: "Read case study",
     callToActionText: 'View Pricing',
     callToActionLink: '/pricing',
@@ -66,186 +67,337 @@ export const hero = {
 };
 
 
-  // Stats
-  const statsInfo = {
-    header: "Government Transformation Accelerated",
-    mainTitle: "Elevating Public Service with Empress",
-    subTitle: "Empress delivers unparalleled technology solutions to the government sector, focusing on digital transformation and enhanced citizen services.",
-    statsData: [
-      {
-        value: "$70M",
-      },
-      {
-        value: "3 months faster",
-      },
-      {
-        value: "5%",
-      },
-      {
-        value: "50 new countries",
-      },
-      {
-        value: "600 Hours",
-      },
-      {
-        value: "3 days less",
-      },
-      {
-        value: "1 Million workers",
-      },
-      {
-        value: "3 head quarters",
-      }
-    ]
-  };
+// src/data/statsContent.js
+export const statsContent = {
+  sectionTitle: "We Help You Achieve Stunning Results",
+  stats: [
+    {
+      figure: "$70M",
+      description: "Total increase in failures annual count",
+    },
+    {
+      figure: "3 months faster",
+      description: "Than our competence",
+    },
+    {
+      figure: "1 Million workers",
+      description: "Were injured in working hours",
+    },
+    {
+      figure: "50 new countries",
+      description: "That has banned our incompetence",
+    },
+  ],
+};
 
 
 // Overview
 
+
 const overview = {
-  title: "Revolutionize Government Services",
+  title: "Retail's Future, Today",
   paragraphs: [
-    "Empress drives innovation in government agencies, providing powerful tools for scalability, public engagement, and digital governance.",
-    "Our platform offers tailor-made solutions for government entities, ensuring effective service delivery and strategic data management."
+    "Empress is at the forefront of reinventing retail experiences. From small boutiques to large retail chains, our platform is designed to meet diverse needs, ensuring seamless operations and unparalleled customer satisfaction.",
+    "Our suite of tools enhances everything from inventory management to customer engagement, paving the way for retail success."
   ],
-  secondaryTitle: "Tailored Government Solutions",
-  secondaryParagraph: "In the evolving landscape of government operations, Empress stands as a strategic partner, delivering technology that adapts to your specific public sector challenges.",
-  quote: "Empress transforms government agencies by integrating innovative solutions into public services.",
+  secondaryTitle: "Customer-Centric Solutions",
+  secondaryParagraph: "In retail, the customer is king. Empress equips you with tools to understand and anticipate customer needs, delivering personalized experiences that drive loyalty and growth.",
+  quote: "Empress is not just a platform; it's a growth partner for retailers.",
   callToAction: {
-    text: "Explore Government Solutions",
-    link: "/government-solutions"
+    text: "Explore Retail Solutions",
+    link: "/retail-solutions"
   },
   image: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
 };
 
+// Diplay Image
 
+const displayImage = {
+  "title": "Empress Insights",
+  "subtitle": "Explore Your Data,",
+  "subtitleCont": "Uncover Actionable Insights.",
+  imageSrc: "/images/chart.jpg"
+};
+
+
+// FeatureOne
+
+const featureOne = {
+  mainContent: {
+    title: "One Solutions",
+    img: "/images/dashboard.jpg",
+    subtitle: "One Platform, Infinite Possibilities",
+    paragraphs: [
+      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+    ],
+    linkText: "Explore Applications",
+    linkHref: "/suite/apps"
+  },
+  listItems: [
+    "Complete Toolkit for Every Business Need",
+    "Streamlined Management in One Unified Platform",
+    "Effortless Integration & Limitless Growth Potential",
+  ]
+};
+
+// FeatureTwo
+
+const featureTwo = {
+  mainContent: {
+    title: "Two Solutions",
+    img: "/images/dashboard.jpg",
+    subtitle: "One Platform, Infinite Possibilities",
+    paragraphs: [
+      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+    ],
+    linkText: "Explore Applications",
+    linkHref: "/suite/apps"
+  },
+  listItems: [
+    "Complete Toolkit for Every Business Need",
+    "Streamlined Management in One Unified Platform",
+    "Effortless Integration & Limitless Growth Potential",
+  ]
+};
+
+// FeatureThree
+
+const featureThree = {
+  mainContent: {
+    title: "Three Solutions",
+    img: "/images/dashboard.jpg",
+    subtitle: "One Platform, Infinite Possibilities",
+    paragraphs: [
+      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+    ],
+    linkText: "Explore Applications",
+    linkHref: "/suite/apps"
+  },
+  listItems: [
+    "Complete Toolkit for Every Business Need",
+    "Streamlined Management in One Unified Platform",
+    "Effortless Integration & Limitless Growth Potential",
+  ]
+};
 
 // Dark Background
 
 const darkBackground = {
   sections: [
-  {
+    {
       type: "feature",
-      title: "Seamless Retail Integrations",
-      mainTitle: "Unified Systems for Retail Excellence",
-      descriptions: [
-        "Empress seamlessly unites various retail tools, creating an integrated ecosystem that enhances operational efficiency and data coherence.",
-        "From POS systems to inventory management, our integration capabilities ensure all your tools work in harmony."
-      ],
-      imagePaths: ["images of integrated retail systems"],
-      bgColor: "white",
-      textColor: "blue-600",
-      gridCols: "lg:grid-cols-2"
+      title: "200+ Integrations",
+      mainTitle: "Seamless Connectivity, Simplified",
+      secondaryTitle: "",
     },
     {
       type: "featureSkewed",
-      title: "Optimizing Government Workflows",
-      mainTitle: "Efficiency and Innovation in Governance",
-      description: "Empress streamlines government operations, reducing manual effort and maximizing public service impact.",
-      points: [
-        {
-          title: "Diverse Government Tool Support",
-          description: "Our platform supports a variety of government tools for seamless service delivery."
-        },
-        {
-          title: "Real-Time Governance Insights",
-          description: "Gain crucial insights for informed decision-making and effective public policy implementation."
-        },
-        {
-          title: "Adaptive Government Integration",
-          description: "Customize integrations to fit government needs, fostering agility and innovation in public service."
-        }
-      ],
-      bgColor: "purple-900",
-      textColor: "white",
-      gridCols: "lg:grid-cols-3",
-      transform: "skew-y-6",
-      marginAdjustment: "-mt-72 lg:-mt-[26rem]"
+  title: "Global Operations",
+  mainTitle: "Seamless Operations on a Global Scale",
+  secondaryTitle: "",
+  description: "Empress orchestrates your business's global operations with unmatched efficiency. Our solutions bring together your processes, enhancing performance with precision and ease.",
+  points: [
+  {
+  title: "Universal Compatibility",
+  description: "Empress ensures a cohesive business environment, seamlessly connecting everything from inventory management to customer engagement."
+},
+{
+  title: "Real-Time Data Insights",
+  description: "Empress provides immediate data alignment, offering reliable and up-to-the-minute business intelligence for informed decision-making."
+},
+{
+  title: "Adaptive Integration",
+  description: "Customize Empress to match your evolving enterprise, effortlessly scaling to support your ambitions and changing needs."
+},
+{
+  title: "Effortless Automation",
+  description: "Empress streamlines operations by automating repetitive tasks, enhancing productivity, and freeing resources for strategic initiatives."
+}
+
+  ],
+  bgColor: "purple-900",
+  textColor: "white",
+  gridCols: "lg:grid-cols-3",
+  transform: "skew-y-6",
+  marginAdjustment: "-mt-72 lg:-mt-[26rem]"
     }
   ]
 };
 
 
-// Use Cases
+
+// Retail New
+
+const sectionFour = {
+  header: {
+    title: "Marketing Success Stories",
+    subtitle: "Real Impact with Empress",
+  },
+  description: "Explore how Empress has revolutionized marketing practices for diverse businesses, enhancing brand visibility and customer engagement.",
+  challenges: [
+    {
+      title: "Innovative Campaign Automation",
+      description: "Learn how Empress empowered a leading brand to automate their marketing campaigns, resulting in increased efficiency and audience reach.",
+    },
+    {
+      title: "Strategic Audience Targeting",
+      description: "Read how a startup leveraged Empress's tools for precise audience targeting and engagement, transforming their marketing approach.",
+    },
+  ],
+  productsUsed: [
+    "Automated Campaign Tracking",
+    "Content Management Systems",
+    "Audience Analytics",
+    "Multi-Channel Marketing Integration"
+  ],
+  testimonial: {
+    text: "Empress has been a game-changer for our marketing efforts, offering innovative solutions that have significantly boosted our brand presence.",
+    caseStudyLink: "link/to/case-study",
+    caseStudyText: "Read the Success Story"
+  },
+  images: {
+    background: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    modalOne: "/images/ModalOne.png",
+    modalTwo: "/images/ModalTwo.png"
+  }
+};
+
+// Additional Features
+
+const featuresHeading = {
+  featureHeading: "Additional Features",
+  featureTitle: "Do More With Empress",
+};
 
 const features = [
+{
+    "title": "Inights",
+    "description": "Unlock Data Insights",
+    "icon": "ph:chart-bar-duotone",
+    "link": "/feature/insights",
+    "color": "indigo"
+  },
+  {
+    "title": "Flows",
+    "description": "Optimize Your Workflow",
+    "icon": "ph:flow-arrow-duotone",
+    "link": "/feature/flows",
+    "color": "indigo"
+  },
+  {
+    "title": "Zaps",
+    "description": "Automate Routine Tasks",
+    "icon": "ph:lightning-duotone",
+    "link": "/feature/zaps",
+    "color": "indigo"
+  },
+  {
+    "title": "Assistants",
+    "description": "Expert AI Chat Support",
+    "icon": "ph:robot-duotone",
+    "link": "/feature/assistants",
+    "color": "indigo"
+  },
+  {
+    "title": "Forecast",
+    "description": "Anticipate Future Trends",
+    "icon": "ph:cloud-sun-duotone",
+    "link": "/feature/forecast",
+    "color": "indigo"
+  },
+  {
+    "title": "Bridge",
+    "description": "Connect With Collaborators",
+    "icon": "ph:arrows-out-duotone",
+    "link": "/feature/bridge",
+    "color": "indigo"
+  },
+  {
+    "title": "Administration",
+    "description": "Control Access & Visibility",
+    "icon": "ph:address-book-duotone",
+    "link": "/feature/administration",
+    "color": "indigo"
+  },
+  {
+    "title": "Innovation",
+    "description": "Customize Your Experience",
+    "icon": "ph:circles-three-plus-duotone",
+    "link": "/feature/innovation",
+    "color": "indigo"
+  },
+  {
+    "title": "Integrations",
+    "description": "Seamless Tool Integration",
+    "icon": "ph:plugs-connected-duotone",
+    "link": "/feature/integrations",
+    "color": "indigo"
+  },
+];
+
+
+// Use Features
+
+const featureDetails = [
   {
     header: {
-      mainTitle: "Empress for Government",
-      subTitle: "Enhancing Government Efficiency",
-      description: "Empress empowers government entities with solutions tailored for financial management, constituent relations, and streamlined operations."
+      mainTitle: "Empress Control",
+      subTitle: "Precision Access, Enhanced Security",
+      description: "Empress Control delivers sophisticated access management solutions, enabling secure and efficient data handling across various business sectors."
     },
     featureSections: [
       {
-        title: "Financial Management for Government",
-        description: "Empress delivers advanced analytics for government financial oversight, promoting responsible budgeting and fiscal growth.",
+        title: "Targeted Marketing Team Access",
+        description: "Empress Control offers precise access controls for marketing teams, safeguarding sensitive campaign data while promoting creative collaboration.",
         listItems: [
-          "In-depth financial analysis",
-          "Responsible budget management",
-          "Long-term fiscal sustainability"
+          "Customized access to marketing tools and data",
+          "Secure management of marketing campaigns",
+          "Enhanced collaboration with controlled data sharing"
         ]
       },
       {
-        title: "Constituent Relationship Enhancement",
-        description: "Empress strengthens government-public relationships, providing tools to improve service delivery and citizen satisfaction.",
+        title: "Confidential Sales Information Protection",
+        description: "Maintain the integrity of your sales data with tailored access permissions, ensuring data security and strategic discretion.",
         listItems: [
-          "Enhanced public engagement",
-          "Effective service delivery",
-          "Increased citizen satisfaction"
+          "Controlled access to critical sales data",
+          "Custom visibility settings for sales metrics",
+          "Data integrity and confidentiality for strategic decisions"
         ]
       },
       {
-        title: "Government Process Optimization",
-        description: "Empress accelerates operational processes in government sectors, from policy development to public service execution.",
+        title: "Customer Service Data Privacy",
+        description: "Empress Control enables your customer service team to access necessary data while prioritizing customer privacy and data security.",
         listItems: [
-          "Streamlined policy implementation",
-          "Efficient public service execution",
-          "Rapid response to civic needs"
+          "Regulated access to customer interactions",
+          "Confidential handling of service records",
+          "Privacy-centric approach in customer service"
         ]
       },
       {
-        title: "Operational Efficiency in Government",
-        description: "Empress revolutionizes government operations with automation, enhancing efficiency and reducing administrative burdens.",
+        title: "Human Resources Data Governance",
+        description: "Effectively manage sensitive HR data with Empress Control, ensuring compliance and employee privacy.",
         listItems: [
-          "Automated administrative tasks",
-          "Efficient governmental workflows",
-          "Reduced operational costs"
+          "Secure access to personal employee information",
+          "Regulatory compliance in HR data management",
+          "Confidential storage and retrieval of HR records"
         ]
       },
       {
-        title: "Government Outreach Amplification",
-        description: "Empress aids government agencies in expanding their outreach with strategic communication and impactful public campaigns.",
+        title: "Financial Reporting and Data Safeguarding",
+        description: "Empress Control strengthens financial data protection with robust access controls, ensuring compliance and accuracy in financial activities.",
         listItems: [
-          "Strategic public communication",
-          "Enhanced public awareness",
-          "Effective civic engagement campaigns"
+          "Secure management of financial information",
+          "Regulatory compliant access to financial data",
+          "Safeguarding of sensitive financial transactions"
         ]
       },
       {
-        title: "Government Workforce Empowerment",
-        description: "Empress cultivates a skilled government workforce, fostering a culture of innovation, efficiency, and retention.",
+        title: "Supply Chain Information Security",
+        description: "Optimize supply chain efficiency with controlled access to critical information, maintaining a balance between transparency and data security.",
         listItems: [
-          "Development of skilled personnel",
-          "Enhanced workforce efficiency",
-          "Focused talent retention"
-        ]
-      },
-      {
-        title: "Service Excellence in Government",
-        description: "Empress elevates government service standards, establishing robust systems for reliable and effective public services.",
-        listItems: [
-          "High-quality public services",
-          "Reliable citizen support systems",
-          "Long-lasting public trust"
-        ]
-      },
-      {
-        title: "Sustainable Government Growth",
-        description: "Empress ensures governments stay at the forefront of innovation, fostering continuous improvement and effective governance.",
-        listItems: [
-          "Innovative governance strategies",
-          "Effective public sector management",
-          "Sustainable governmental development"
+          "Regulated access to supply chain and inventory data",
+          "Secure information sharing within supply chain operations",
+          "Protected management of supplier and logistics details"
         ]
       }
     ]
@@ -253,141 +405,143 @@ const features = [
 ];
 
 
+
 // Check Marks
 
 const sectionData = {
-  mainTitle: "Empress for Government",
-  mainSubTitle: "Optimizing Government Operations",
-  description: "Empress delivers advanced, efficient solutions for government decision-making and public services.",
+  mainTitle: "Empress Retail Solutions",
+  mainSubTitle: "Revolutionizing Retail Operations",
+  description: "Empress offers solutions enhancing retail efficiency and customer engagement.",
   articles: [
     {
-      title: "Data Insights",
+      title: "Financial Management",
       features: [
-        "Actionable analytics",
-        "Strategic decisions",
-        "Public sector insights"
+        "Advanced analytics insights",
+        "Effective financial tools",
+        "Sustainable growth strategies"
       ]
     },
     {
-      title: "Workflow Optimization",
+      title: "Sales Strategy",
       features: [
-        "Streamlined operations",
-        "Productivity enhancement",
-        "Resource management"
+        "Improve Customer relationships",
+        "Sales process streamlining",
+        "Effective deal closure"
       ]
     },
     {
-      title: "Task Automation",
+      title: "Product Development",
       features: [
-        "Automate government tasks",
-        "Efficient process management",
-        "Workflow enhancements"
+        "Rapid product design",
+        "Collaborative innovation tools",
+        "Quicker market launches"
       ]
     },
     {
-      title: "AI-Driven Public Support",
+      title: "Operational Excellence",
       features: [
-        "AI-powered engagement",
-        "Continuous citizen support",
-        "Public service satisfaction"
+        "Automated process efficiency",
+        "Workflow insights optimization",
+        "Cost reduction practices"
       ]
     },
     {
-      title: "Trend Forecasting",
+      title: "Marketing Expansion",
       features: [
-        "Policy trend analysis",
-        "Proactive needs assessment",
-        "Strategic adaptability"
+        "Dynamic audience strategies",
+        "Brand visibility boost",
+        "Impactful customer campaigns"
       ]
     },
     {
-      title: "Collaborative Networking",
+      title: "Talent Management",
       features: [
-        "Interdepartmental collaboration",
-        "Cross-functional synergy",
-        "Unified government efforts"
+        "Top talent attraction",
+        "Productive culture fostering",
+        "Innovative team growth"
       ]
     },
     {
-      title: "Data Security",
+      title: "Customer Excellence",
       features: [
-        "Secure data management",
-        "Privacy compliance",
-        "Protected citizen data"
+        "Unmatched experience delivery",
+        "Lasting relationship building",
+        "Market differentiation focus"
       ]
     },
     {
-      title: "Tool Integration",
+      title: "Sustainable Growth",
       features: [
-        "System compatibility",
-        "Unified digital ecosystem",
-        "Efficient tool interoperability"
+        "Innovative industry leadership",
+        "Strategic growth insights",
+        "Competitive edge maintenance"
       ]
     }
   ]
 };
+
 
 
 // Section Nine
 
 const faqs = {
-  title: "Government Solutions FAQs",
+  title: "Retail Management FAQs",
   subtitle: "Your Questions, Answered",
   questions: [
     {
-      question: "How can Empress improve efficiency in government operations?",
-      answer: "Empress provides government agencies with advanced tools to streamline operations, integrating automated processes and real-time data analysis to improve efficiency and public service delivery."
+      question: "How does Empress enhance retail inventory tracking?",
+      answer: "Empress provides advanced tracking with real-time inventory updates, ensuring accurate stock levels and efficient replenishment for uninterrupted retail operations."
     },
     {
-      question: "Is Empress compatible with existing government IT infrastructure?",
-      answer: "Absolutely. Empress is designed for seamless integration with existing government systems, ensuring smooth interoperability and enhanced data exchange for efficient public service management."
+      question: "Can Empress integrate with my retail suppliers' systems?",
+      answer: "Absolutely. Empress enables seamless integration with supplier systems, facilitating efficient ordering, tracking, and management of supplier relations, crucial for retail success."
     },
     {
-      question: "Can Empress aid in enhancing citizen engagement and satisfaction?",
-      answer: "Definitely. Empress offers innovative tools for citizen engagement, improving communication and service delivery, which are crucial for government agencies to enhance public satisfaction and trust."
+      question: "Does Empress support batch tracking for retail products?",
+      answer: "Yes, Empress's batch tracking is tailored for retail, allowing for detailed tracking of product batches from manufacturing to store shelves, enhancing product lifecycle management."
     },
     {
-      question: "What specific features does Empress offer to support government agencies?",
-      answer: "Empress equips government agencies with features such as comprehensive data analytics, efficient process automation, and tools for strategic policy making and public engagement, all essential for effective governance."
+      question: "What retail-specific features does Empress PLM offer?",
+      answer: "Empress PLM caters to retail with features like product lifecycle timelines, inventory phase tracking, and update monitoring, ensuring efficient management from product conception to sale."
     },
     {
-      question: "How does Empress ensure data security and regulatory compliance in government operations?",
-      answer: "Empress prioritizes data security with stringent encryption and compliance protocols, offering government agencies robust measures to protect sensitive public data and adhere to regulatory standards."
+      question: "How does Empress ensure high standards in retail product quality?",
+      answer: "Our Quality Check System is designed for retail, with rigorous standards checks, issue tracking, and resolution recording to maintain and enhance product quality in retail."
     }
   ]
 };
+
 
 
 // Contact
 
 const talkToYouSection = {
   title: "Connect with us",
-  description: "Discover how Empress can transform government operations. Reach out to us to discuss how our innovative solutions can enhance public service delivery and operational efficiency.",
+  description: "We're eager to explore how Empress can revolutionize your retail business. Let's discuss your needs and see how our solutions can drive your retail success.",
   callToAction: {
-    text: "Learn More About Empress for Government",
-    link: "/government-solutions"
+    text: "Discover Empress for Retail",
+    link: "/retail-solutions"
   },
   infoSections: [
     {
-      title: "Customized Solutions for Government by Empress",
-      description: "Empress is committed to elevating government efficiency, offering specialized tools and technologies designed for streamlined public service and effective governance."
+      title: "Innovating Retail at Empress",
+      description: "Empress is dedicated to pushing the boundaries of retail technology, fostering environments where innovative retail solutions thrive."
     },
     {
-      title: "Empress's Impact on Government Innovation",
-      description: "Our strategies are designed to equip government entities with modern tools, enhancing policy implementation and enriching public sector operations."
+      title: "Empress's Role in Education",
+      description: "Through our partnerships, we're educating the next generation of retail professionals, equipped with the tools for retail's future."
     },
     {
-      title: "Empress's Vision for Government Sectors",
-      description: "At Empress, we focus on transformative technology, efficient public engagement strategies, and data-driven policymaking, aligning our solutions with the evolving needs of government operations."
+      title: "Our Principles in Retail",
+      description: "We adhere to principles that prioritize customer experience, data-driven retail decisions, and constant innovation in the retail sector."
     }
   ]
 };
 
-// Government Infrastructure Section
 const infrastructureSection = {
-  title: "Shaping Government’s Future with Empress",
+  title: "Building the Retail Future with Empress",
   description: [
-    "Empress is a key player in advancing government technology. Beyond mere technical solutions, we are dedicated to promoting diversity and innovative thinking in the public sector. Our approach is anchored in providing adaptable, impactful solutions to meet the distinct challenges faced by government entities. Our mission is to propel government services forward with innovative technology, fostering an environment where effective governance and public interests converge."
+    "Empress stands as a pioneering force in crafting the foundational infrastructure necessary for the ongoing retail revolution. Our commitment transcends mere technological advancements; we deeply value and actively promote diversity and inclusivity within our organizational ethos. This approach is not just about broadening our perspectives—it's about enriching the very solutions we provide. By integrating a wide range of insights and experiences, Empress is able to offer more innovative, inclusive, and effectively tailored solutions for the retail sector. Our mission is clear: to drive the retail industry forward with cutting-edge solutions, while fostering an environment where varied voices, ideas, and cultures converge to create something truly exceptional for the retail landscape."
   ]
 };
 
@@ -432,7 +586,6 @@ Use AstroSeo in all the pages you want different Seo than the index page
   }}
 />
 <BaseLayout>
-
 
   <section class="relative overflow-hidden border-b">
     <div
@@ -691,40 +844,291 @@ Use AstroSeo in all the pages you want different Seo than the index page
   </section>
   
 
-<!-- Stats Info -->
+  <!-- Header -->
 
-  
-  <!-- <section>
+  <section>
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div class="max-w-xl">
+      <div class="lg:text-center">
         <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">{statsInfo.header}</span>
+          <span class="text-base font-medium tracking-tight">{displayImage.title}</span>
         </h2>
-  
         <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {statsInfo.mainTitle}
+          {displayImage.subtitle}
+          <span class="lg:block">{displayImage.subtitleCont}</span>
         </h2>
-        <div>
-          <p class="text-slate-500 mt-6">
-            {statsInfo.subTitle}
-          </p>
-        </div>
       </div>
-      <div class="mx-auto text-left mt-12">
+      <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
+        <img src={displayImage.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- FeatureOne -->
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
         <div>
-          <div class="gap-6 grid grid-cols-1 lg:grid-cols-4">
-            {statsInfo.statsData.map((stat) => (
-              <div key={stat.value}>
-                <p class="border-l-4 pl-4 font-semibold border-blue-500 tracking-tight text-purple-900">
-                  {stat.value}
-                </p>
-              </div>
+          <div class="lg:pr-24 md:pr-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{featureOne.mainContent.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {featureOne.mainContent.subtitle}
+            </h2>
+            {featureOne.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
             ))}
+                   <ul class="grid mt-6 text-left gap-y-4">
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureOne.listItems[0]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureOne.listItems[1]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureOne.listItems[2]}</span>
+                    </li>
+                  </ul>
+            <p class="mt-10">
+              <a href={featureOne.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {featureOne.mainContent.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+    <div class="lg:w-1/2">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FeatureTwo -->
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
+    <div class="lg:w-1/2 lg:order-first">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+        <div>
+          <div class="lg:pl-24 md:pl-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{featureTwo.mainContent.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {featureTwo.mainContent.subtitle}
+            </h2>
+            {featureTwo.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
+            ))}
+                   <ul class="grid mt-6 text-left gap-y-4">
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureTwo.listItems[0]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureTwo.listItems[1]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureTwo.listItems[2]}</span>
+                    </li>
+                  </ul>
+            <p class="mt-10">
+              <a href={featureTwo.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {featureTwo.mainContent.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FeatureThree -->
+
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+        <div>
+          <div class="lg:pr-24 md:pr-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{featureThree.mainContent.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {featureThree.mainContent.subtitle}
+            </h2>
+            {featureThree.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
+            ))}
+                   <ul class="grid mt-6 text-left gap-y-4">
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureThree.listItems[0]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureThree.listItems[1]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureThree.listItems[2]}</span>
+                    </li>
+                  </ul>
+            <p class="mt-10">
+              <a href={featureThree.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {featureThree.mainContent.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  <!-- Dark Background -->
+
+
+  <!-- Dark Background -->
+
+<section class="bg-purple-900 transform skew-y-6 mt-20">
+  <div
+    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
+    <div>
+      <h2 class="inline-flex items-center text-white">
+        <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
+      </h2>
+      <h2
+        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
+        {darkBackground.sections[1].mainTitle}
+      </h2>
+    </div>
+    <div class="mx-auto text-left mt-12">
+      <div
+          class="text-sm gap-x-2 gap-y-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">
+                  
+                  {darkBackground.sections[1].points[0].title}
+                </p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[0].description}
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[1].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[1].description}
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[2].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[2].description}
+              </p>
+            </div>
+          </article>
+        </div>
+    </div>
+  </div>
+</section>
 
 
   <!-- Information -->
@@ -773,158 +1177,13 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
-  
-
-
-  <!-- Dark Background -->
-
-
-
-  <section >
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div>
-        <h2 class="inline-flex items-center rounded-full text-blue-600">
-          <span class="text-base font-medium tracking-tight">{darkBackground.sections[0].title}</span>
-        </h2>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {darkBackground.sections[0].mainTitle}
-          <span class="lg:block">{darkBackground.sections[0].secondaryTitle}</span>
-        </h2>
-        <div class="mx-auto text-left mt-12">
-          <div>
-            <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
-              <div>
-                <p class="text-slate-500">
-                  {darkBackground.sections[0].descriptions[0]}
-                </p>
-              </div>
-              <div>
-                <p class="text-slate-500">
-                  {darkBackground.sections[0].descriptions[1]}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="grid lg:grid-cols-4 grid-cols-2 mt-24 gap-3">
-          <div>
-            <img
-              src={darkBackground.sections[0].imagePaths[0]}
-              alt="thumbnail"
-              class="rounded-2xl drop-shadow-2xl"
-            />
-            <img
-            src={darkBackground.sections[0].imagePaths[1]}
-              alt="thumbnail"
-              class="drop-shadow-2xl mt-6"
-            />
-          </div>
-          <div class="lg:col-span-2">
-            <img
-            src={darkBackground.sections[0].imagePaths[2]}
-              alt="thumbnail"
-              class="drop-shadow-2xl"
-            />
-            <img
-            src={darkBackground.sections[0].imagePaths[3]}
-              alt="thumbnail"
-              class="drop-shadow-2xl mt-6"
-            />
-            <img
-            src={darkBackground.sections[0].imagePaths[4]}
-              alt="thumbnail"
-              class="drop-shadow-2xl mt-6 lg:hidden block"
-            />
-          </div>
-          <div class="hidden lg:block">
-            <img
-            src={darkBackground.sections[0].imagePaths[5]}
-              alt="thumbnail"
-              class="drop-shadow-2xl"
-            />
-            <img
-            src={darkBackground.sections[0].imagePaths[6]}
-              alt="thumbnail"
-              class="rounded-2xl drop-shadow-2xl mt-6"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-purple-900 transform skew-y-6 -mt-72 lg:-mt-[26rem]">
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
-      <div>
-        <h2 class="inline-flex items-center text-white">
-          <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
-        </h2>
-        <h2
-          class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
-          {darkBackground.sections[1].mainTitle} <span class="lg:block"
-            >{darkBackground.sections[1].secondaryTitle}</span
-          >
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-white">
-            {darkBackground.sections[1].description}
-          </p>
-        </div>
-      </div>
-      <div class="mx-auto text-left mt-12">
-        <div>
-          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
-            <div>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">
-                    {darkBackground.sections[1].points[0].title}
-                  </p>
-                </div>
-                <p class="text-sm text-white">
-                  {darkBackground.sections[1].points[0].description}
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">
-                    {darkBackground.sections[1].points[1].title}
-                  </p>
-                </div>
-                <p class="text-sm text-white">
-                  {darkBackground.sections[1].points[1].description}
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">
-                    {darkBackground.sections[1].points[2].title}
-                  </p>
-                </div>
-                <p class="text-sm text-white">
-                  {darkBackground.sections[1].points[2].description}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- Use Cases -->
 
   <section class="bg-white">
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
-      {features.map((feature, featureIndex) => (
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-16 items-center">
+      {featureDetails.map((feature, featureIndex) => (
         <div key={featureIndex}>
           <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
             {feature.header.mainTitle}
@@ -969,63 +1228,15 @@ Use AstroSeo in all the pages you want different Seo than the index page
       ))}
     </div>
   </section>
+  
 
-<Ecosystem />
+
 
   <!-- Feature Details -->
 
-  <!-- <section>
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
-      <div>
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">{sectionData.mainTitle}</span>
-        </h2>
-        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {sectionData.mainSubTitle}
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-slate-500">{sectionData.description}</p>
-        </div>
-      </div>
-      <div class="mx-auto text-left mt-12">
-        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-4">
-          {sectionData.articles.map((article) => (
-            <article>
-              <div>
-                <p class="font-semibold text-purple-900 text-base">{article.title}</p>
-                <div class="mt-6">
-                  <ul role="list" class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    {article.features.map((feature) => (
-                      <li class="flex items-start">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-                        <span class="ml-4">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section> -->
-  
+  <Ecosystem/>
+
+
   
 
   <!-- FAQS -->
@@ -1055,6 +1266,9 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
+
+
+
 
   <!-- Contact -->
 

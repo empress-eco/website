@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
@@ -27,21 +26,21 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Marketing",
-    link: "/marketing",
+    title: "Finance",
+    link: "/finance",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/marketing"
+    href: "/finance"
   },
   {
     name: "Features",
-    href: "/marketing/features"
+    href: "/finance/features"
   },
   {
     name: "Applications",
-    href: "/apps/marketing"
+    href: "/apps/finance"
   },
   {
     name: "Docs",
@@ -50,341 +49,374 @@ const navLinks = [
 ];
 
 
-// SectionOne
+// Heading
 
-const sectionOne = {
+const heading = {
   title: "Marketing",
-  description: "Empress redefines marketing management, providing innovative solutions to enhance campaign effectiveness and brand growth. Our suite of tools is crafted to empower marketers with precision and creativity in their campaign strategies.",
+  title: "Marketing",
+  description: "Transform your financial management with intuitive and robust solutions, Empress is dedicated to fostering business growth and personal financial success. Our diverse range of tools caters to every financial need with unmatched ease and efficiency.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
-};
-
-// SectionTwo
-
-const sectionTwo = {
-  mainSection: {
-    title: "Marketing Core Features",
-    subtitle: "Unleashing Creativity & Efficiency",
-    subtitleTwo: "Transforming Marketing Dynamics"
-  },
-  businessSection: {
-    title: "Streamlined Campaign Tracking",
-    description: "Enhance your marketing strategy with our intuitive campaign tracking system, ideal for dynamic market analysis and creative planning.",
-    listItems: [
-      { title: "Comprehensive Marketing Dashboard", description: "A complete overview of your marketing campaigns at a glance." },
-      { title: "Multi-Channel Campaign Management", description: "Seamlessly manage campaigns across various marketing channels." }
+  imageRows: [
+    // Image URLs and alt texts can be updated here
+    // Example structure:
+    [
+      { url: "path/to/image1.jpg", alt: "Image Description 1", class: "image-class" },
+      { url: "path/to/image2.jpg", alt: "Image Description 2", class: "image-class" }
     ],
-    additionalInfo: "Empress is dedicated to elevating your marketing game, offering advanced tools for strategic and creative campaign management."
-  },
-  tabImages: [
-    "/images/ModalOne.png",
-    "/images/ModalTwo.png"
-  ],
-  firstTab: "Campaign Insights",
-  secondTab: "Channel Management",
-  layoutsSection: {
-    title: "Customized Marketing Management",
-    description: "Tailor your marketing approach with customizable strategies, ensuring a unique and impactful brand presence.",
-    howItWorks: {
-      title: "Personalized Marketing Navigation",
-      description: "Empress enables marketers to craft and manage unique strategies with ease, offering personalized options for an effective marketing experience."
-    },
-    seeLibrariesLink: "link/to/detailed-info",
-    seeLibrariesText: "Discover More",
-    imageRightSrc: "/images/payments.png",
-    imageRightAlt: "Customized Marketing Management"
-  }
+    // Additional rows of images can be added here
+  ]
 };
 
-// Section Three
+// Diplay Image
 
-const sectionThree = {
-  featureTitle: "Innovative Content Marketing",
-  mainTitle: "Enhance Your Content Strategy",
-  mainSubtitle: "Creative Excellence in Every Campaign",
-  description: "Take your content marketing to the next level with Empress's cutting-edge tools, designed for impactful storytelling and audience engagement.",
-  tabs: [
+const displayImage = {
+  "title": "Empress Insights",
+  "subtitle": "Explore Your Data,",
+  "subtitleCont": "Uncover Actionable Insights.",
+  imageSrc: "/images/chart.jpg"
+};
+
+// FeatureOne
+
+const featureOne = {
+  mainContent: {
+    title: "One Solutions",
+    img: "/images/dashboard.jpg",
+    subtitle: "One Platform, Infinite Possibilities",
+    paragraphs: [
+      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+    ],
+    linkText: "Explore Applications",
+    linkHref: "/suite/apps"
+  },
+  listItems: [
+    "Complete Toolkit for Every Business Need",
+    "Streamlined Management in One Unified Platform",
+    "Effortless Integration & Limitless Growth Potential",
+  ]
+};
+
+// FeatureTwo
+
+const featureTwo = {
+  mainContent: {
+    title: "Two Solutions",
+    img: "/images/dashboard.jpg",
+    subtitle: "One Platform, Infinite Possibilities",
+    paragraphs: [
+      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+    ],
+    linkText: "Explore Applications",
+    linkHref: "/suite/apps"
+  },
+  listItems: [
+    "Complete Toolkit for Every Business Need",
+    "Streamlined Management in One Unified Platform",
+    "Effortless Integration & Limitless Growth Potential",
+  ]
+};
+
+// FeatureThree
+
+const featureThree = {
+  mainContent: {
+    title: "Three Solutions",
+    img: "/images/dashboard.jpg",
+    subtitle: "One Platform, Infinite Possibilities",
+    paragraphs: [
+      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+    ],
+    linkText: "Explore Applications",
+    linkHref: "/suite/apps"
+  },
+  listItems: [
+    "Complete Toolkit for Every Business Need",
+    "Streamlined Management in One Unified Platform",
+    "Effortless Integration & Limitless Growth Potential",
+  ]
+};
+
+// Dark Background
+
+const darkBackground = {
+  sections: [
     {
-      title: "Content Tracking",
-      image: "/images/ModalOne.png",
-      codeSnippet: `import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import image from "@astrojs/image";
-import compress from "astro-compress";
-import sitemap from "@astrojs/sitemap";
-import mdx from "@astrojs/mdx";
-export default defineConfig({
-  markdown: {
-    drafts: true,
-    shikiConfig: { theme: "css-variables" }
-  },
-  shikiConfig: {
-    wrap: true,
-    skipInline: false,
-    drafts: true,
-  },
-  site: 'https://lexingtonthemes.com',
-  integrations: [tailwind(), image(), compress(), sitemap(), mdx()]
-});`,
+      type: "feature",
+      title: "200+ Integrations",
+      mainTitle: "Seamless Connectivity, Simplified",
+      secondaryTitle: "",
+      descriptions: [
+        "Empress integrates diverse business tools, providing a centralized platform for streamlined management. Our system effortlessly connects with popular applications, enhancing efficiency and decision making.",
+        "From CRM to ERP, and from e-commerce to analytics – Empress's integration capabilities ensure all your tools work in harmony, enabling a more unified and productive business environment."
+      ],
+      imagePaths: [
+        "/images/creditcardTwo.png",
+        "/images/balance.png",
+        "/images/notification.png",
+        "/images/miniNotification.png",
+        "/images/payments.png",
+        "/images/payments.png",
+        "/images/creditcardTwo.png"
+      ],
+      bgColor: "white",
+      textColor: "blue-600",
+      gridCols: "lg:grid-cols-2"
     },
     {
-      title: "Integrated Marketing",
-      image: "/images/ModalTwo.png",
-      codeSnippet: `// Similar code for 'Create cards' tab`
+      type: "featureSkewed",
+  title: "Global Operations",
+  mainTitle: "Seamless Operations on a Global Scale",
+  secondaryTitle: "",
+  description: "Empress orchestrates your business's global operations with unmatched efficiency. Our solutions bring together your processes, enhancing performance with precision and ease.",
+  points: [
+  {
+  title: "Universal Compatibility",
+  description: "Empress ensures a cohesive business environment, seamlessly connecting everything from inventory management to customer engagement."
+},
+{
+  title: "Real-Time Data Insights",
+  description: "Empress provides immediate data alignment, offering reliable and up-to-the-minute business intelligence for informed decision-making."
+},
+{
+  title: "Adaptive Integration",
+  description: "Customize Empress to match your evolving enterprise, effortlessly scaling to support your ambitions and changing needs."
+},
+{
+  title: "Effortless Automation",
+  description: "Empress streamlines operations by automating repetitive tasks, enhancing productivity, and freeing resources for strategic initiatives."
+}
+
+  ],
+  bgColor: "purple-900",
+  textColor: "white",
+  gridCols: "lg:grid-cols-3",
+  transform: "skew-y-6",
+  marginAdjustment: "-mt-72 lg:-mt-[26rem]"
     }
   ]
 };
 
-// Section Four
+// Application Showcase
 
-const sectionFour = {
-  header: {
-    title: "Marketing Success Stories",
-    subtitle: "Real Impact with Empress",
-  },
-  description: "Explore how Empress has revolutionized marketing practices for diverse businesses, enhancing brand visibility and customer engagement.",
-  challenges: [
-    {
-      title: "Innovative Campaign Automation",
-      description: "Learn how Empress empowered a leading brand to automate their marketing campaigns, resulting in increased efficiency and audience reach.",
-    },
-    {
-      title: "Strategic Audience Targeting",
-      description: "Read how a startup leveraged Empress's tools for precise audience targeting and engagement, transforming their marketing approach.",
-    },
-  ],
-  productsUsed: [
-    "Automated Campaign Tracking",
-    "Content Management Systems",
-    "Audience Analytics",
-    "Multi-Channel Marketing Integration"
-  ],
-  testimonial: {
-    text: "Empress has been a game-changer for our marketing efforts, offering innovative solutions that have significantly boosted our brand presence.",
-    caseStudyLink: "link/to/case-study",
-    caseStudyText: "Read the Success Story"
-  },
-  images: {
-    background: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    modalOne: "/images/ModalOne.png",
-    modalTwo: "/images/ModalTwo.png"
-  }
-};
-
-// Section Five
-
-const sectionFive = {
+const applicationShowcase = {
   mainSection: {
-    title: "Marketing Feature Highlights",
-    subtitle: "Driving Marketing Innovation",
-    description1: "Explore Empress's extensive marketing features, designed to revolutionize your approach to digital and traditional marketing.",
-    description2: "Blending creativity with analytics, Empress is your partner in crafting impactful marketing strategies.",
-    viewApplicationsLink: "/suite/apps",
-    viewApplicationsText: "View Applications"
+    title: "Feature Spotlight",
+    subtitle: "Empowering Your Financial Ecosystem",
+    description1: "Dive into the extensive range of Empress features designed to redefine your approach to financial management.",
+    description2: "Empress seamlessly blends user-friendliness with powerful functionality, addressing all your financial needs.",
+    viewApplicationsLink: "/explore-features",
+    viewApplicationsText: "Explore Features"
   },
   contentSections: [
   {
-    title: "Optimize Campaign Execution",
-    description: "Elevate the effectiveness of your marketing campaigns with our sophisticated campaign management tools. Designed to streamline execution, our platform enhances campaign efficiency, ensuring impactful and successful marketing outcomes.",
-    linkHref: "/suite/campaign",
-    linkText: "View Campaign Management",
-  },
-  {
-    title: "Manage Content Effectively",
-    description: "Revolutionize your content strategy with our comprehensive content management system. Tailored for creative excellence, it simplifies content curation and distribution, enhancing your brand's narrative and audience engagement.",
-    linkHref: "/suite/content",
-    linkText: "View Content Management",
-  },
-  {
-    title: "Enhance Social Presence",
-    description: "Boost your brand's social media impact with our advanced social media tools. Our platform is designed to amplify your social presence, increasing engagement and reach across various social platforms for a stronger digital footprint.",
-    linkHref: "/suite/social",
-    linkText: "View Social Media Tools",
-  },
-  {
-    title: "Organize Events Efficiently",
-    description: "Streamline your event planning and execution with our integrated event management system. It simplifies logistics and coordination, ensuring your events are memorable, well-organized, and effectively engage your target audience.",
-    linkHref: "/suite/events",
-    linkText: "View Event Management",
-  },
-  {
-    title: "Streamline Email Campaigns",
-    description: "Maximize the efficiency of your email marketing with our intuitive email campaign system. It enhances the creation, delivery, and analysis of email campaigns, ensuring higher open rates and engagement for your marketing communications.",
-    linkHref: "/suite/email",
-    linkText: "View Email Campaigns",
-  },
-  {
-    title: "Collect Customer Feedback",
-    description: "Gather valuable insights directly from your customers with our advanced survey tools. Designed for easy deployment and high response rates, our system provides crucial feedback to inform and refine your marketing strategies.",
-    linkHref: "/suite/surveys",
-    linkText: "View Surveys",
-  }
-  ]
-};
+    title: "Control Your Accounts",
+    description: "Experience unparalleled control over your financial flow with Empress. Our intuitive tools empower you to effortlessly navigate your accounts, bringing a new level of clarity and efficiency to your financial management.",
+    linkHref: "/suite/account",
+    linkText: "See Application",
 
-// Section Six
-
-const sectionSix = {
-  title: "Seamless Marketing Integration",
-  subtitle: "Empower Your Marketing Ecosystem",
-  description: "Effortlessly integrate Empress with your existing marketing tools, enhancing your strategies with cohesive and advanced capabilities.",
-  items: [
-    {
-      title: "Marketing Data Synchronization",
-      description: "Seamlessly sync your marketing data across platforms, ensuring consistency and strategic alignment."
-    },
-    {
-      title: "Holistic Marketing System Compatibility",
-      description: "Empress complements your marketing toolkit, providing seamless connectivity and enhanced campaign efficiency."
-    },
-    {
-      title: "Instant Marketing Insights",
-      description: "Access real-time marketing data and insights, empowering you to make informed, data-driven decisions."
-    }
-  ]
-};
-
-// Section Seven
-
-const sectionSeven = {
-  sectionTitle: "Explore Marketing Tools",
-  heading: "Empress's Marketing Edge",
-  description: "Discover Empress's suite of marketing tools designed for impactful strategies and enhanced audience connection.",
-  items: [
-    {
-      number: "1",
-      title: "Audience Insights",
-      detail: "Gain deep audience insights to drive strategic marketing decisions."
-    },
-    {
-      number: "2",
-      title: "Process Optimization",
-      detail: "Streamline marketing operations for maximum efficiency."
-    },
-    {
-      number: "3",
-      title: "Marketing Automation",
-      detail: "Automate tasks for focused creative and strategic efforts."
-    },
-    {
-      number: "4",
-      title: "AI Customer Interaction",
-      detail: "Deploy AI for personalized and responsive customer engagement."
-    },
-    {
-      number: "5",
-      title: "Market Forecasting",
-      detail: "Utilize predictive analysis for proactive marketing planning."
-    },
-    {
-      number: "6",
-      title: "Team Collaboration",
-      detail: "Enhance teamwork for more effective campaign development."
-    },
-    {
-      number: "7",
-      title: "Marketing Control",
-      detail: "Ensure brand consistency and alignment in campaigns."
-    },
-    {
-      number: "8",
-      title: "Tool Integration",
-      detail: "Easily integrate with existing marketing tools for unified management."
-    }
-    // Additional features can be listed here
+  },
+  {
+    title: "Redefine Invoice Management",
+    description: "Empress transforms how you handle invoices. Our advanced system streamlines your billing process, introducing simplicity and precision to your financial transactions, all designed with your efficiency in mind.",
+    linkHref: "/suite/invoice",
+    linkText: "See Application",
+  },
+  {
+    title: "Elevate Expense Tracking",
+    description: "Track your company spending with unmatched accuracy using Empress. Our sophisticated expense tracking tools offer insightful analysis, guiding you to smarter spending decisions and enhanced budget control.",
+    linkHref: "/suite/expense",
+    linkText: "See Application",
+    
+  },
+  {
+    title: "Simplify Tax Compliance",
+    description: "With Empress, navigating tax compliance becomes a stress-free experience. Our automated solutions adapt to evolving tax laws, ensuring accuracy and peace of mind in every financial calculation.",
+    linkHref: "/suite/tax",
+    linkText: "See Application",
+  },
+  {
+    title: "Optimize Your Budgeting",
+    description: "Empower your financial planning with Empress's budget optimization tools. Our solutions help you craft effective budgets and forecast future scenarios, enabling informed decisions that enhance your financial wellbeing.",
+    linkHref: "/suite/budget",
+    linkText: "See Application",
+  },
+  {
+    title: "Streamline Contract Management",
+    description: "Empress revolutionizes contract processing, offering efficiency and ease. Our platform simplifies the complexities of contract management, ensuring seamless business operations and compliance, tailored to your needs.",
+    linkHref: "/suite/contracts",
+    linkText: "See Application",
+  },
+    // Add more items as per your content
   ]
 };
 
 
 
-// Section Eight
+// Checklist Items
 
-const sectionEight = {
-  sectionTitle: "Marketing Excellence",
-  subTitle: "Core Marketing Categories",
+const checklistItems = {
+  sectionTitle: "Features Overview",
+  subTitle: "Diverse Range of Financial Tools",
   categories: [
     {
-      categoryName: "Campaign Execution",
+      categoryName: "Core Features",
       items: [
-        { label: "Campaign Planning" },
-        { label: "Tracking & Analytics" },
-        { label: "Target Audience Focus" },
-        { label: "Budget ROI Optimization" },
-        { label: "Multichannel Integration" },
-        { label: "Performance Monitoring" },
-        { label: "Strategic Execution" }
+        { label: "Balance Tracking" },
+        { label: "Dashboard View" },
+        { label: "Transaction Logs" },
+        { label: "Invoice Processing" },
+        { label: "Expense Management" },
+        { label: "Data Syncing" }
       ]
     },
     {
-      categoryName: "Content & Social",
+      categoryName: "Advanced Tools",
       items: [
-        { label: "Content Management" },
-        { label: "Social Engagement" },
-        { label: "Analytical Insights" },
-        { label: "Collaborative Strategy" },
-        { label: "Platform Customization" },
-        { label: "Audience Targeting" },
-        { label: "Content Performance" }
+        { label: "Custom Reports" },
+        { label: "Budget Forecasting" },
+        { label: "Multi-Currency Support" },
+        { label: "Project Billing" },
+        { label: "Tax Calculations" },
+        { label: "Account Linking" },
+        { label: "Payment Tracking" }
       ]
     },
     {
-      categoryName: "Customer & Events",
+      categoryName: "Efficiency Enhancers",
       items: [
-        { label: "Email Marketing" },
-        { label: "Event Coordination" },
-        { label: "Feedback Collection" },
-        { label: "Audience Engagement" },
-        { label: "Campaign Tracking" },
-        { label: "Event Management" },
-        { label: "Interactive Communication" }
+        { label: "Automated Alerts" },
+        { label: "Integration Options" },
+        { label: "Reimbursement Tracking" },
+        { label: "Approval Workflow" },
+        { label: "Document Management" },
+        { label: "Real-Time Updates" },
+        { label: "Security Protocols" }
       ]
     },
     {
-      categoryName: "Analytics & Insights",
+      categoryName: "Collaboration & Support",
       items: [
-        { label: "Market Trend Analysis" },
-        { label: "Survey Management" },
-        { label: "Data-Driven Decisions" },
-        { label: "Performance Review" },
-        { label: "Sales Alignment" },
-        { label: "Strategic Planning" },
-        { label: "Optimization Strategies" }
+        { label: "Team Access Control" },
+        { label: "Client Collaboration" },
+        { label: "Support Chatbot" },
+        { label: "User Community" },
+        { label: "Training Resources" },
+        { label: "Customizable Access" },
+        { label: "Dedicated Assistance" }
       ]
     }
   ]
 };
 
 
-// Section Nine
+// Additional Features
 
-const sectionNine = {
-  title: "Marketing Solutions FAQ",
-  subtitle: "Answers to Your Queries",
+const featuresHeading = {
+  featureHeading: "Additional Features",
+  featureTitle: "Do More With Empress",
+};
+
+const features = [
+{
+    "title": "Inights",
+    "description": "Unlock Data Insights",
+    "icon": "ph:chart-bar-duotone",
+    "link": "/feature/insights",
+    "color": "indigo"
+  },
+  {
+    "title": "Flows",
+    "description": "Optimize Your Workflow",
+    "icon": "ph:flow-arrow-duotone",
+    "link": "/feature/flows",
+    "color": "indigo"
+  },
+  {
+    "title": "Zaps",
+    "description": "Automate Routine Tasks",
+    "icon": "ph:lightning-duotone",
+    "link": "/feature/zaps",
+    "color": "indigo"
+  },
+  {
+    "title": "Assistants",
+    "description": "Expert AI Chat Support",
+    "icon": "ph:robot-duotone",
+    "link": "/feature/assistants",
+    "color": "indigo"
+  },
+  {
+    "title": "Forecast",
+    "description": "Anticipate Future Trends",
+    "icon": "ph:cloud-sun-duotone",
+    "link": "/feature/forecast",
+    "color": "indigo"
+  },
+  {
+    "title": "Bridge",
+    "description": "Connect With Collaborators",
+    "icon": "ph:arrows-out-duotone",
+    "link": "/feature/bridge",
+    "color": "indigo"
+  },
+  {
+    "title": "Administration",
+    "description": "Control Access & Visibility",
+    "icon": "ph:address-book-duotone",
+    "link": "/feature/administration",
+    "color": "indigo"
+  },
+  {
+    "title": "Innovation",
+    "description": "Customize Your Experience",
+    "icon": "ph:circles-three-plus-duotone",
+    "link": "/feature/innovation",
+    "color": "indigo"
+  },
+  {
+    "title": "Integrations",
+    "description": "Seamless Tool Integration",
+    "icon": "ph:plugs-connected-duotone",
+    "link": "/feature/integrations",
+    "color": "indigo"
+  },
+];
+
+
+
+// FAQs
+
+const faqs = {
+  title: "Answers at Your Fingertips",
+  subtitle: "Empress FAQs",
   questions: [
     {
-      question: "How Does Empress Enhance Campaign Execution?",
-      answer: "Empress's campaign management tools streamline your marketing strategy with comprehensive tracking systems, enabling dynamic market analysis and creative planning. Our platform offers a holistic view of campaigns, supports multi-channel management, and ensures every campaign is targeted and effective."
+      question: "How does Empress enhance financial reporting?",
+      answer: "Empress transforms financial reporting by offering advanced analytics and customizable report templates. These tools enable users to generate insightful financial reports, track key performance indicators, and gain a deeper understanding of their financial health, aiding in strategic decision-making."
     },
     {
-      question: "What Features Does Empress Offer for Content Management?",
-      answer: "Empress's content management system revolutionizes content strategy, offering tools for easy management, customization, and distribution. It supports diverse content types, systematic categorization, and ensures that your content reaches the right audience on the most effective platforms."
+      question: "How can Empress integrate with my current financial tools?",
+      answer: "Empress features a robust integration framework that supports various accounting software and financial systems. Its API-driven architecture allows for smooth and secure data synchronization, enabling users to integrate their existing financial tools, ensuring a unified and streamlined financial management experience."
     },
     {
-      question: "Can Empress Boost My Brand's Social Media Impact?",
-      answer: "Absolutely. Empress provides advanced social media tools to amplify your online presence. Our platform helps increase engagement and broaden reach across various social networks, ensuring a stronger digital footprint and more effective audience interaction."
+      question: "Is Empress suitable for varying business sizes?",
+      answer: "Absolutely! Empress is designed to cater to a diverse range of business sizes. Its scalable architecture allows small startups to manage their finances efficiently and can be scaled up to meet the complex financial management needs of large enterprises, making it a versatile tool for all business stages."
     },
     {
-      question: "How Can Empress Assist in Event Management?",
-      answer: "Empress simplifies event planning with an integrated event management system. From coordinating logistics to engaging attendees, our tool ensures your events are well-organized and memorable, making every event a success."
+      question: "How does Empress support expense management?",
+      answer: "Empress simplifies expense management through features like automated expense tracking, categorization, and reimbursement processing. It offers an intuitive interface for recording expenses, generating expense reports, and provides insights into spending patterns to help businesses manage their expenditures more effectively."
     },
     {
-      question: "What Makes Empress Ideal for Email Marketing?",
-      answer: "Empress enhances your email marketing with an intuitive system that improves creation, delivery, and analysis. It ensures higher engagement rates through effective communication strategies, helping you achieve better outcomes in your email campaigns."
+      question: "Does Empress offer project-based financial tracking?",
+      answer: "Yes, Empress provides project-based financial tracking that allows businesses to allocate budgets, track expenses, and monitor financial performance on a per-project basis. This feature is invaluable for companies that manage multiple projects simultaneously, ensuring accurate financial oversight for each project."
     }
   ]
 };
+
+
 
 ---
 
@@ -464,32 +496,32 @@ const sectionNine = {
           <div class="lg:pr-24 md:pr-12 pb-12 lg:pb-0">
             <h2
               class="text-purple-900 font-semibold mt-6 text-4xl lg:text-7xl tracking-tighter">
-              {sectionOne.title}
+              {heading.title}
             </h2>
             <p class="text-slate-500 mt-5">
-              {sectionOne.description}
+              {heading.description}
             </p>
           </div>
         </div>
       </div>
-      <a href={sectionOne.buttonUrl}
+      <a href={heading.buttonUrl}
       class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4 mt-5"
       style="background-color: #5046e4; color: #fff; border: px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
       onmouseover="this.style.backgroundColor='#6767ff'; this.style.borderColor='#5046e4';"
       onmouseout="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';"
       onmousedown="this.style.backgroundColor='#3838b1'; this.style.borderColor='#6767ff';"
       onmouseup="this.style.backgroundColor='#5046e4'; this.style.borderColor='#6767ff';">
-      {sectionOne.buttonText}
+      {heading.buttonText}
    </a>
    
-   <a href={sectionOne.buttonTwoUrl}
+   <a href={heading.buttonTwoUrl}
    class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium"
    style="background-color: #fff; color: #333; border: none; border-radius: 30px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;"
    onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
    onmouseout="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';"
    onmousedown="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
    onmouseup="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';">
-   {sectionOne.buttonTextTwo}
+   {heading.buttonTextTwo}
 </a>
     </div>
   
@@ -512,390 +544,285 @@ const sectionNine = {
     </section>
   </section>
 
+  <!-- Header -->
 
-  <!-- SectionTwo -->
-  
-  <section class="bg-white">
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
-        <div>
-            <h2 class="inline-flex items-center text-blue-600">
-                <span class="text-base font-medium tracking-tight">{sectionTwo.mainSection.title}</span>
-            </h2>
-
-            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-                {sectionTwo.mainSection.subtitle}
-                <span class="lg:block">{sectionTwo.mainSection.subtitleTwo}</span>
-            </h2>
-        </div>
-
-        <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-24">
-            <div class="lg:pr-24 md:pr-12">
-                <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-                    {sectionTwo.businessSection.title}
-                </h2>
-                <p class="text-slate-500 mt-5">
-                    {sectionTwo.businessSection.description}
-                </p>
-
-                <ul role="list" class="grid grid-cols-2 gap-4 list-none lg:gap-6 mt-12">
-                    {sectionTwo.businessSection.listItems.map(item => (
-                        <li key={item.title}>
-                            <div>
-                                <p class="font-semibold text-purple-900 text-base">
-                                    {item.title}
-                                </p>
-                            </div>
-                            <div class="mt-2 text-slate-500 text-sm">
-                                {item.description}
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-
-                <p class="text-slate-500 mt-12">
-                    {sectionTwo.businessSection.additionalInfo}
-                </p>
-            </div>
-
-              <div class="lg:mt-0 mt-12 md:pl-12 md:border-l lg:pl-24 border-slate-200 h-full">
-                <div x-data="{ tabSelected: 1 }" class="lg:mt-0 mt-12 h-full">
-                    <div class="inline-grid items-center justify-center w-full h-10 grid-cols-2 p-1 bg-slate-100 rounded-full select-none">
-                        <button
-                            @click="tabSelected = 1"
-                            type="button"
-                            class="inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer"
-                            :class="{ 'bg-white shadow-sm': tabSelected === 1 }"
-                        >
-                        {sectionTwo.firstTab}
-                        </button>
-                        <button
-                            @click="tabSelected = 2"
-                            type="button"
-                            class="inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer"
-                            :class="{ 'bg-white shadow-sm': tabSelected === 2 }"
-                        >
-                        {sectionTwo.secondTab}
-                        </button>
-                    </div>
-                    <div class="w-full mt-2">
-                        <div x-show="tabSelected === 1" class="mt-4 rounded-2xl drop-shadow-xl">
-                            <img src="/images/ModalOne.png" alt="thumbnail" class="ring-1 ring-slate-300 rounded-2xl" />
-                        </div>
-                        <div x-show="tabSelected === 2" class="mt-4 rounded-2xl drop-shadow-xl">
-                            <img src="/images/ModalTwo.png" alt="thumbnail" class="ring-1 ring-slate-300 rounded-2xl" />
-                        </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 items-start md:grid-cols-2 mt-12 lg:mt-24">
-            <div class="lg:pl-24 md:pl-12">
-                <h2 class="text-purple-900 font-semibold mt-6 text-3xl">
-                    {sectionTwo.layoutsSection.title}
-                </h2>
-                <p class="text-slate-500 mt-5">
-                    {sectionTwo.layoutsSection.description}
-                </p>
-
-                <ul role="list" class="grid grid-cols-2 gap-4 lg:gap-y-12 list-none lg:gap-6 mt-12">
-                    <li class="col-span-2 mb-6 lg:mb-0">
-                        <div>
-                            <p class="font-semibold text-purple-900">{sectionTwo.layoutsSection.howItWorks.title}</p>
-                        </div>
-                        <div class="mt-2 text-slate-500 text-sm">
-                            {sectionTwo.layoutsSection.howItWorks.description}
-                        </div>
-                    </li>
-                </ul>
-
-                <ul role="list" class="grid grid-cols-2 gap-4 list-none lg:gap-6 mt-12">
-                  {sectionTwo.businessSection.listItems.map(item => (
-                    <li key={item.title}>
-                      <div>
-                        <p class="font-semibold text-purple-900 text-base">
-                          {item.title}
-                        </p>
-                      </div>
-                      <div class="mt-2 text-slate-500 text-sm">
-                        {item.description}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-
-                <p class="text-slate-500 mt-12">
-                    {sectionTwo.layoutsSection.additionalInfo}
-                </p>
-
-                <p class="mt-5">
-                    <a href={sectionTwo.layoutsSection.seeLibrariesLink} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
-                        {sectionTwo.layoutsSection.seeLibrariesText}
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                        <path
-                          fill-rule="evenodd"
-                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                    </a>
-                </p>
-            </div>
-
-            <div class="lg:mt-0 mt-12 md:pr-12 md:border-r lg:pr-24 border-slate-200 h-full lg:order-first">
-                <img src={sectionTwo.layoutsSection.imageRightSrc} alt={sectionTwo.layoutsSection.imageRightAlt} class="drop-shadow-2xl" />
-            </div>
-        </div>
-    </div>
-</section>
-  
-
-
-  <!-- SectionThree -->
-
-  
-
-  <section class="bg-purple-900 transform skew-y-6 -mt-72">
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:pt-42 pb-52 items-center transform -skew-y-6">
-      <div>
-        <h2 class="inline-flex items-center rounded-full text-white">
-          <h2 class="inline-flex items-center rounded-full text-white">
-            <span class="text-base font-medium tracking-tight">{sectionThree.featureTitle}</span>
+  <section>
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div class="lg:text-center">
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{displayImage.title}</span>
         </h2>
-        <h2 class="text-white font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {sectionThree.mainTitle} <span class="lg:block">{sectionThree.mainSubtitle}</span>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {displayImage.subtitle}
+          <span class="lg:block">{displayImage.subtitleCont}</span>
         </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-white">{sectionThree.description}</p>
-        </div>
       </div>
-    <div class="mx-auto text-left mt-12">
-      <div
-        x-data="{
-        tabSelected: 1,
-        tabId: $id('tabs'),
-        tabButtonClicked(tabButton){
-            this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-            this.tabRepositionMarker(tabButton);
-        },
-        tabRepositionMarker(tabButton){
-            this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-            this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-            this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-        },
-        tabContentActive(tabContent){
-            return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-        }
-    }"
-        x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-        class="relative lg:rounded-3xl lg:p-10 text-white">
-        <div
-          x-ref="tabButtons"
-          class="relative inline-grid items-center justify-center h-10 grid-cols-2 p-1 bg-purple-900 rounded-full select-none">
-          <button
-            :id="$id(tabId)"
-            @click="tabButtonClicked($el);"
-            type="button"
-            class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-full cursor-pointer whitespace-nowrap"
-            >{sectionThree.tabs[0].title}</button
-          >
-          <button
-            :id="$id(tabId)"
-            @click="tabButtonClicked($el);"
-            type="button"
-            class="relative z-20 inline-flex items-center justify-center w-full h-8 px-3 text-sm font-medium transition-all rounded-md cursor-pointer whitespace-nowrap"
-            >{sectionThree.tabs[1].title}</button
-          >
-          <div
-            x-ref="tabMarker"
-            class="absolute left-0 z-10 w-1/2 h-full duration-300 ease-out"
-            x-cloak>
-            <div class="w-full h-full bg-white/10 rounded-full shadow-sm"></div>
-          </div>
-        </div>
-        <div class="relative w-full mt-2 content">
-          <div
-            :id="$id(tabId + '-content')"
-            x-show="tabContentActive($el)"
-            class="relative">
-            <section
-              class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24 lg:bg-[#14162c] lg:p-10 rounded-3xl">
-              <div
-                class="text-xs font-mono mt-4 rounded-2xl overflowhidden p-4 bg-[#14162c] 00">
-                <Code
-                  code={sectionThree.tabs[0].codeSnippet}
-                  lang="js"
-                  theme="css-variables"
-                />
-              </div>
-              <div class="h-full lg:ml-auto lg:-m-24">
-                <img
-                  src={sectionThree.tabs[0].image}
-                  alt="thumbnail"
-                  class="rounded-3xl"
-                />
-              </div>
-            </section>
-          </div>
-
-          <div
-            :id="$id(tabId + '-content')"
-            x-show="tabContentActive($el)"
-            class="relative"
-            x-cloak>
-            <section
-              class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24 lg:bg-[#14162c] lg:p-10 rounded-3xl">
-              <div
-                class="text-xs font-mono mt-4 rounded-2xl overflowhidden p-4 bg-[#14162c] 00">
-                <Code
-                  code={sectionThree.tabs[0].codeSnippet}
-                  lang="js"
-                  theme="css-variables"
-                />
-              </div>
-              <div class="h-full lg:ml-auto lg:-m-24">
-                <img
-                src={sectionThree.tabs[1].image}
-                  alt="thumbnail"
-                  class="rounded-3xl"
-                />
-              </div>
-            </section>
-          </div>
-        </div>
+      <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
+        <img src={displayImage.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Section Four -->
+<!-- FeatureOne -->
 
 <section class="bg-white">
-  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
-    <section>
-      <div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 items-start gap-24">
-          <div>
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+        <div>
+          <div class="lg:pr-24 md:pr-12">
             <h2 class="inline-flex items-center text-blue-600">
-              <span class="text-base font-medium tracking-tight">{sectionFour.header.title}</span>
+              <span class="text-base font-medium tracking-tight">{featureOne.mainContent.title}</span>
             </h2>
-
-            <h2 class="text-purple-900 font-semibold tracking-tighter mt-6 text-3xl">
-              {sectionFour.header.subtitle}
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {featureOne.mainContent.subtitle}
             </h2>
-          </div>
-          <div>
-            <p class="text-slate-500 text-base mt-5 lg:mt-0">
-              {sectionFour.description}
+            {featureOne.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
+            ))}
+                   <ul class="grid mt-6 text-left gap-y-4">
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureOne.listItems[0]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureOne.listItems[1]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureOne.listItems[2]}</span>
+                    </li>
+                  </ul>
+            <p class="mt-10">
+              <a href={featureOne.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {featureOne.mainContent.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
             </p>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="h-full group grid grid-cols-1 gap-3 lg:grid-cols-2 mt-12">
-          <div>
-            <ul role="list" class="grid grid-cols-1 gap-4 list-none lg:pr-12">
-              {sectionFour.challenges.map(challenge => (
-                <li key={challenge.title}>
-                  <div class="mx-auto text-left">
-                    <div>
-                      <div class="gap-x-2 space-y-6">
-                        <article>
-                          <div class="space-y-3">
-                            <p class="font-semibold text-purple-900">{challenge.title}</p>
-                            <p class="text-slate-500 text-sm">
-                              {challenge.description}
-                            </p>
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+<!-- FeatureTwo -->
 
-            <div>
-              <p class="font-semibold text-purple-900 mt-6">Products used</p>
-              <div class="grid grid-cols-1 lg:grid-cols-2 justify-between">
-                {sectionFour.productsUsed.map(product => (
-                  <div key={product} class="mt-2 text-blue-600 text-sm inline-flex items-center font-medium">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-4 h-4 mr-3">
-                        <path
-                          class="stroke-purple-500"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
-                        </path>
-                      </svg>
-                    {product}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="relative overflow-hidden rounded-xl bg-purple-400 p-8 z-50 shadow-xl lg:py-12 lg:grid lg:grid-cols-2 lg:gap-x-8">
-              <div class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
-                <img src={sectionFour.images.background} alt="" class="h-full w-full object-cover" />
-              </div>
-              <div class="relative lg:col-span-1">
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
+    <div class="lg:w-1/2 lg:order-first">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+        <div>
+          <div class="lg:pl-24 md:pl-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{featureTwo.mainContent.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {featureTwo.mainContent.subtitle}
+            </h2>
+            {featureTwo.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
+            ))}
+                   <ul class="grid mt-6 text-left gap-y-4">
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureTwo.listItems[0]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureTwo.listItems[1]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureTwo.listItems[2]}</span>
+                    </li>
+                  </ul>
+            <p class="mt-10">
+              <a href={featureTwo.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {featureTwo.mainContent.linkText}
                 <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-4 h-4 mr-3">
-                        <path
-                          class="stroke-purple-500"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
-                        </path>
-                      </svg>
-                <blockquote class="mt-6 text-white text-sm lg:mt-24">
-                  <p class="font-medium">
-                    {sectionFour.testimonial.text}
-                  </p>
-                  <p class="mt-6">
-                    <a href={sectionFour.testimonial.caseStudyLink} class="text-blue-500 hover:text-white inline-flex items-center group">
-                      {sectionFour.testimonial.caseStudyText}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-4 h-4 mr-3">
-                        <path
-                          class="stroke-purple-500"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
-                        </path>
-                      </svg>
-                    </a>
-                  </p>
-                </blockquote>
-              </div>
-            </div>
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </section>
+
+
+<!-- FeatureThree -->
+
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+        <div>
+          <div class="lg:pr-24 md:pr-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{featureThree.mainContent.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {featureThree.mainContent.subtitle}
+            </h2>
+            {featureThree.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
+            ))}
+                   <ul class="grid mt-6 text-left gap-y-4">
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureThree.listItems[0]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureThree.listItems[1]}</span>
+                    </li>
+              
+                    <li class="flex items-center gap-3 text-slate-500">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-blue-600" />
+              
+                      <span class="text-sm">{featureThree.listItems[2]}</span>
+                    </li>
+                  </ul>
+            <p class="mt-10">
+              <a href={featureThree.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {featureThree.mainContent.linkText}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-purple-900 transform skew-y-6 mt-20">
+  <div
+    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
+    <div>
+      <h2 class="inline-flex items-center text-white">
+        <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
+      </h2>
+      <h2
+        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
+        {darkBackground.sections[1].mainTitle}
+      </h2>
+    </div>
+    <div class="mx-auto text-left mt-12">
+      <div
+          class="text-sm gap-x-2 gap-y-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">
+                  
+                  {darkBackground.sections[1].points[0].title}
+                </p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[0].description}
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[1].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[1].description}
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[2].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[2].description}
+              </p>
+            </div>
+          </article>
+        </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -908,19 +835,19 @@ const sectionNine = {
         <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
           <div class="lg:pl-24 md:pl-12">
             <h2 class="inline-flex items-center text-blue-600">
-              <span class="text-base font-medium tracking-tight">{sectionFive.mainSection.title}</span>
+              <span class="text-base font-medium tracking-tight">{applicationShowcase.mainSection.title}</span>
             </h2>
             <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-              {sectionFive.mainSection.subtitle}
+              {applicationShowcase.mainSection.subtitle}
             </h2>
             <p class="text-slate-500 mt-5">
-              {sectionFive.mainSection.description1}
+              {applicationShowcase.mainSection.description1}
             </p>
             <p class="text-slate-500 mt-5">
-              {sectionFive.mainSection.description2}
+              {applicationShowcase.mainSection.description2}
             </p>
-            <a href={sectionFive.mainSection.viewApplicationsLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4 mt-8" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
-              {sectionFive.mainSection.viewApplicationsText}
+            <a href={applicationShowcase.mainSection.viewApplicationsLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4 mt-8" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+              {applicationShowcase.mainSection.viewApplicationsText}
             </a>
           </div>
         </div>
@@ -928,7 +855,7 @@ const sectionNine = {
       <div class="lg:w-1/2 lg:order-first">
         <div class="flex-shrink-0">
           <ul role="list" class="grid grid-cols-1 gap-12 lg:gap-24 list-none mt-24">
-            {sectionFive.contentSections.map(section => (
+            {applicationShowcase.contentSections.map(section => (
               <li key={section.title}>
                 <div>
                   <p class="text-purple-900 font-semibold tracking-tighter text-3xl">
@@ -956,85 +883,12 @@ const sectionNine = {
             </p>
             ))}
           </ul>
+          
         </div>
       </div>
     </div>
-  
 
 
-  <!-- Section Six -->
-  
-
-  <section class="bg-purple-900 transform skew-y-6 mt-10">
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
-      <div>
-        <h2 class="inline-flex items-center text-white">
-          <span class="text-base font-medium tracking-tight">{sectionSix.title}</span>
-        </h2>
-        <h2 class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
-          {sectionSix.subtitle.split(' ').slice(0, 4).join(' ')} <span class="lg:block">
-            {sectionSix.subtitle.split(' ').slice(4).join(' ')}
-          </span>
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-white">{sectionSix.description}</p>
-        </div>
-      </div>
-      <div class="mx-auto text-left mt-12">
-        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
-          {sectionSix.items.map(item => (
-            <div key={item.title}>
-              <div class="space-y-3">
-                <div>
-                  <p class="mt-5 font-semibold text-white text-base">{item.title}</p>
-                </div>
-                <p class="text-sm text-white">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Section Seven -->
-
-  <!-- Section Ten -->
-
-<section class="bg-white">
-  <section class="relative overflow-hidden">
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 mt-10 mb-24 items-center">
-      <div>
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">{sectionSeven.sectionTitle}</span>
-        </h2>
-        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {sectionSeven.heading}
-        </h2>
-        <p class="text-slate-500 mt-5">
-          {sectionSeven.description}
-        </p>
-      </div>
-      <ul role="list" class="grid grid-cols-2 lg:grid-cols-4 gap-4 list-none lg:gap-6 mt-24">
-        {sectionSeven.items.map((item, index) => (
-          <li key={index}>
-            <div>
-              <div class="flex items-center justify-center w-8 h-8 text-blue-500 rounded-full bg-slate-100">
-                {item.number}
-              </div>
-              <p class="mt-5 font-semibold text-purple-900">
-                {item.title}
-              </p>
-            </div>
-            <div class="mt-6 text-slate-500 text-sm border-l-4 pl-4">
-              {item.detail}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-</section>
 
   <!-- Section Eight -->
 
@@ -1042,15 +896,15 @@ const sectionNine = {
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
       <div>
         <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">{sectionEight.sectionTitle}</span>
+          <span class="text-base font-medium tracking-tight">{checklistItems.sectionTitle}</span>
         </h2>
         <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          {sectionEight.subTitle}
+          {checklistItems.subTitle}
         </h2>
       </div>
       <div class="mx-auto text-left mt-12">
         <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-4">
-          {sectionEight.categories.map((category, index) => (
+          {checklistItems.categories.map((category, index) => (
             <div key={index}>
               <div>
                 <p class="font-semibold text-purple-500 mb-5">{category.categoryName}</p>
@@ -1074,19 +928,57 @@ const sectionNine = {
     </div>
   </section>
 
+    <!-- Features -->
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+        <div class="text-center">
+          <h2 class="inline-flex items-center text-blue-600">
+            <span class="text-base font-medium tracking-tight">{featuresHeading.featureHeading}</span>
+          </h2>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+            {featuresHeading.featureTitle}
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
+          {
+            features.map((item) => (
+              <a href={item.link} 
+                 class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+                <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                  <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                    {/* Use the original icon coloring method */}
+                    <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+                  </div>
+                  <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                    <h3 class="font-semibold text-md">{item.title}</h3>
+                    <p class="text-slate-500">{item.description}</p>
+                  </div>
+                </div>
+              </a>
+            ))
+          }
+        </div> 
+      </div>
+    </section>
+  
+
+
+  
+
 <!-- Section Nine -->
 
 <section>
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
     <div>
       <h2 class="inline-flex items-center text-blue-600">
-        <span class="text-base font-medium tracking-tight">{sectionNine.title}</span>
+        <span class="text-base font-medium tracking-tight">{faqs.title}</span>
       </h2>
       <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-        {sectionNine.subtitle}
+        {faqs.subtitle}
       </h2>
       <div class="mt-12 space-y-12 bg-slate-50 rounded-3xl p-4 lg:p-10 divide-y">
-        {sectionNine.questions.map((faq, index) => (
+        {faqs.questions.map((faq, index) => (
           <div key={index} class={`grid grid-cols-1 gap-4 ${index !== 0 ? 'pt-4 lg:pt-12' : ''} lg:grid-cols-3`}>
             <div class="flex flex-col flex-shrink-0 mb-5 lg:pr-12">
               <span class="font-semibold text-purple-900">{faq.question}</span>

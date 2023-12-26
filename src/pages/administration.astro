@@ -1,0 +1,782 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import AboutOne from "../components/about/AboutOne.astro";
+import FeatureEleven from "../components/features/FeatureEleven.astro";
+import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
+import FeatureTwelve from "../components/features/FeatureTwelve.astro";
+import FeatureFive from "../components/features/FeatureFive.astro";
+import StatsTwo from "../components/stats/StatsTwo.astro";
+import CtaOne from "../components/cta/CtaOne.astro";
+import { Code } from "astro/components";
+import { AstroSeo } from "@astrolib/seo";
+
+
+// Header
+
+const header = {
+  "title": "Empress Administration",
+  "subtitle": "Explore Your Data,",
+  "subtitleCont": "Uncover Actionable Insights.",
+  imageSrc: "/images/chart.jpg"
+};
+
+const statsContent = {
+  sectionTitle: "Introducing Business-as-a-Service",
+  mainHeading: "A Fully Integrated Suite of Business Solutions",
+  statsData: [
+    {
+      value: "Simple",
+      description: "all-in-one business suite"
+    },
+    {
+      value: "Efficient",
+      description: "optimized for business growth"
+    },
+    {
+      value: "Scalable",
+      description: "available on-demand at scale"
+    },
+    {
+      value: "Secure",
+      description: "transparent and simple pricing"
+    }
+  ]
+};
+
+const darkBackground = {
+  sections: [
+    {
+      type: "feature",
+      title: "200+ Integrations",
+      mainTitle: "Seamless Connectivity, Simplified",
+      secondaryTitle: "",
+    },
+    {
+      type: "featureSkewed",
+  title: "Global Operations",
+  mainTitle: "Seamless Operations on a Global Scale",
+  secondaryTitle: "",
+  description: "Empress orchestrates your business's global operations with unmatched efficiency. Our solutions bring together your processes, enhancing performance with precision and ease.",
+  points: [
+  {
+  title: "Universal Compatibility",
+  description: "Empress ensures a cohesive business environment, seamlessly connecting everything from inventory management to customer engagement."
+},
+{
+  title: "Real-Time Data Insights",
+  description: "Empress provides immediate data alignment, offering reliable and up-to-the-minute business intelligence for informed decision-making."
+},
+{
+  title: "Adaptive Integration",
+  description: "Customize Empress to match your evolving enterprise, effortlessly scaling to support your ambitions and changing needs."
+},
+{
+  title: "Effortless Automation",
+  description: "Empress streamlines operations by automating repetitive tasks, enhancing productivity, and freeing resources for strategic initiatives."
+}
+
+  ],
+  bgColor: "purple-900",
+  textColor: "white",
+  gridCols: "lg:grid-cols-3",
+  transform: "skew-y-6",
+  marginAdjustment: "-mt-72 lg:-mt-[26rem]"
+    }
+  ]
+};
+
+// Feature Two
+
+const featureTwo = {
+  header: {
+    title: "Insights Dashboard",
+    mainTitle: "Interactive Data Exploration",
+    subTitle: "Empress Insights transforms complex data into engaging, interactive visualizations for easy understanding and analysis."
+  },
+  columns: [
+    {
+      title: "Dynamic Data Visualization",
+      listItems: [
+        "Interactive graphs and charts for easy data comprehension",
+        "Real-time updates for continuous monitoring",
+        "User-centric design for intuitive navigation"
+      ]
+    },
+    {
+      title: "Customizable Data Views",
+      listItems: [
+        "Tailor your data view to match your business needs",
+        "Drill down into specifics or zoom out for an overview",
+        "Seamlessly integrate various data points for a complete picture"
+      ]
+    }
+  ],
+  imageSrc: "/images/chart.jpg"
+};
+
+// Feature List
+
+const features = [
+  {
+    header: {
+      mainTitle: "Data-Driven Strategies",
+      subTitle: "Leverage Insights for Growth",
+      description: "Empress Insights provides the tools to understand your data, driving actionable strategies and informed decision-making."
+    },
+    featureSections: [
+      {
+        title: "Customer Behavior Analysis",
+        description: "Dive deep into customer interactions and preferences, tailoring your services to meet their needs and enhance satisfaction.",
+        listItems: [
+          "Detailed Customer Profiles",
+          "Preference and Behavior Tracking",
+          "Enhanced Customer Experience Strategies"
+        ]
+      },
+      {
+        title: "Sales and Market Trends",
+        description: "Stay ahead in your market with insights into sales patterns and market trends, allowing for proactive business moves.",
+        listItems: [
+          "Market Trend Predictions",
+          "Sales Performance Analysis",
+          "Strategic Market Positioning"
+        ]
+      },
+      {
+        title: "Operational Efficiency",
+        description: "Optimize your operations with insights into workflow efficiency, resource allocation, and process automation.",
+        listItems: [
+          "Workflow Optimization Strategies",
+          "Resource Allocation Insights",
+          "Process Automation Opportunities"
+        ]
+      },
+      {
+        title: "Financial Analytics",
+        description: "Gain financial clarity with detailed analytics on revenue, expenses, and overall financial health for strategic planning.",
+        listItems: [
+          "Revenue and Expense Breakdown",
+          "Profit Margin Analysis",
+          "Financial Health Indicators"
+        ]
+      },
+      {
+        title: "Product Performance",
+        description: "Evaluate product success with data-driven insights on usage, customer feedback, and market positioning.",
+        listItems: [
+          "Usage Statistics Analysis",
+          "Customer Feedback Assessment",
+          "Competitive Product Positioning"
+        ]
+      },
+      {
+        title: "Risk Management",
+        description: "Identify and mitigate risks with predictive analytics, ensuring a proactive approach to potential challenges.",
+        listItems: [
+          "Predictive Risk Identification",
+          "Mitigation Strategy Formulation",
+          "Continuous Risk Monitoring"
+        ]
+      }
+    ]
+  }
+];
+
+
+// Overview
+
+const overview = {
+  title: "Retail's Future, Today",
+  paragraphs: [
+    "Empress is at the forefront of reinventing retail experiences. From small boutiques to large retail chains, our platform is designed to meet diverse needs, ensuring seamless operations and unparalleled customer satisfaction.",
+    "Our suite of tools enhances everything from inventory management to customer engagement, paving the way for retail success."
+  ],
+  secondaryTitle: "Customer-Centric Solutions",
+  secondaryParagraph: "In retail, the customer is king. Empress equips you with tools to understand and anticipate customer needs, delivering personalized experiences that drive loyalty and growth.",
+  quote: "Empress is not just a platform; it's a growth partner for retailers.",
+  callToAction: {
+    text: "Explore Retail Solutions",
+    link: "/retail-solutions"
+  },
+  image: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+};
+
+
+// Check Marks
+
+const sectionData = {
+  mainTitle: "Insights Features",
+  mainSubTitle: "Invest in Data, Gain Insights",
+  articles: [
+    {
+      title: "Data Analysis Tools",
+      features: [
+        "Advanced Reporting Capabilities",
+        "User Behavior Analytics",
+        "Custom Dashboard Creation"
+      ]
+    },
+    {
+      title: "Comprehensive Data Integration",
+      features: [
+        "Seamless Integration with Multiple Sources",
+        "Real-Time Data Syncing",
+        "Enhanced Data Security Features"
+      ]
+    },
+    {
+      title: "Predictive Analytics",
+      features: [
+        "Market Trend Forecasting",
+        "Customer Purchase Predictions",
+        "Risk Assessment and Management"
+      ]
+    },
+    {
+      title: "Interactive Data Visualization",
+      features: [
+        "Dynamic Graphs and Charts",
+        "Customizable Data Display",
+        "Insightful Visual Reporting"
+      ]
+    },
+    {
+      title: "Collaborative Data Environment",
+      features: [
+        "Team Sharing Capabilities",
+        "Commenting and Annotation Tools",
+        "Integrated Collaboration Platforms"
+      ]
+    },
+    {
+      title: "Automated Data Processes",
+      features: [
+        "Scheduled Reporting",
+        "Alerts and Notifications",
+        "Workflow Automation"
+      ]
+    }
+  ]
+};
+
+
+
+
+// FAQs
+
+const faq = {
+  title: "FAQ",
+  subtitle: "Your Questions, Answered",
+  questions: [
+    {
+      question: "How comprehensive are Empress Insights?",
+      answer: "Empress Insights offer a wide range of data analysis tools, covering every aspect of your business, from sales to customer engagement."
+    },
+    {
+      question: "Is Empress Insights easy to use for those without a data background?",
+      answer: "Absolutely! Empress Insights is designed with user-friendliness in mind, making complex data analysis accessible to everyone."
+    },
+    {
+      question: "Does Empress offer support for setting up Insights?",
+      answer: "Yes, we provide extensive support, including setup guides and customer service assistance, to help you maximize the potential of Empress Insights."
+    },
+    {
+      question: "Can I integrate my existing data tools with Empress Insights?",
+      answer: "Yes, Empress Insights can be integrated with a variety of data tools and platforms, ensuring a seamless data analysis experience."
+    },
+    {
+      question: "How secure is my data with Empress Insights?",
+      answer: "Data security is a top priority for us. Empress Insights employs advanced security measures to protect your data at all times."
+    }
+  ]
+};
+
+
+---
+
+
+
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="About 01"
+  description="Your site description goes here"
+  canonical="https://www.lexingtonthemes.com"
+  openGraph={{
+    url: "https://www.lexingtonthemes.com",
+    title: "Open Graph Title",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
+/>
+<BaseLayout>
+
+
+<!-- Header -->
+
+  <section>
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div class="lg:text-center">
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{header.title}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {header.subtitle}
+          <span class="lg:block">{header.subtitleCont}</span>
+        </h2>
+      </div>
+      <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
+        <img src={header.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+      </div>
+    </div>
+  </section>
+
+    <!-- Section 2 -->
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+        <div>
+          <h2 class="inline-flex items-center text-blue-600">
+            <span class="text-base font-medium tracking-tight">{statsContent.sectionTitle}</span>
+          </h2>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+            {statsContent.mainHeading}
+          </h2>
+        </div>
+        <div class="mx-auto text-left mt-12">
+          <div class="gap-6 grid grid-cols-1 lg:grid-cols-4">
+            {statsContent.statsData.map((stat) => (
+              <div key={stat.value}>
+                <p class="text-4xl font-light tracking-tight lg:text-5xl text-blue-500">
+                  {stat.value}
+                </p>
+                <p class="text-slate-500 mt-6 border-blue-500">
+                  {stat.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Sections -->
+
+  <section class="bg-white">
+    <div
+      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div class="max-w-xl">
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">Feature</span>
+        </h2>
+  
+        <h2
+          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          Build clean clean landing pages with Spazio Bianco
+        </h2>
+        <div class="max-w-xl mt-6">
+          <p class="text-slate-500">
+            Secure access to users’ financial data enables you to streamline
+            common processes, such as onboarding and creditcard, and build new
+            products to help users manage their finances.
+          </p>
+        </div>
+      </div>
+      <div>
+        <ul
+          role="list"
+          class="grid grid-cols-2 lg:grid-cols-2 gap-4 list-none lg:gap-24 mt-6 lg:mt-24">
+          <li>
+            <div>
+              <p class="font-semibold text-purple-900 text-2xl">Clever layouts</p>
+            </div>
+            <div class="mt-2 text-slate-500">
+              Debt bills lucrative capitalization municipal bonds government 401k
+              bear bull credit corporate bonds called NYSE finance. Managed prices
+              bondholders federal risk NASDAQ hedge fund expenses municipal bonds
+              management.
+            </div>
+            <img
+              src="/images/creditcard.png"
+              alt="thumbnail"
+              class="shadow-xl rounded-4xl mt-12"
+            />
+          </li>
+          <li>
+            <div>
+              <p class="font-semibold text-purple-900 text-2xl">
+                100% responsive
+              </p>
+            </div>
+            <div class="mt-2 text-slate-500">
+              Debt bills lucrative capitalization municipal bonds government 401k
+              bear bull credit corporate bonds called NYSE finance. Managed prices
+              bondholders federal risk NASDAQ hedge fund expenses municipal bonds
+              management.
+            </div>
+            <img
+              src="/images/creditcardTwo.png"
+              alt="thumbnail"
+              class="shadow-xl rounded-4xl mt-12"
+            />
+          </li>
+          <li>
+            <div>
+              <p class="font-semibold text-purple-900 text-2xl">
+                100% responsive
+              </p>
+            </div>
+            <div class="mt-2 text-slate-500">
+              Debt bills lucrative capitalization municipal bonds government 401k
+              bear bull credit corporate bonds called NYSE finance. Managed prices
+              bondholders federal risk NASDAQ hedge fund expenses municipal bonds
+              management.
+            </div>
+            <img
+              src="/images/creditcardThree.png"
+              alt="thumbnail"
+              class="shadow-xl rounded-4xl mt-12"
+            />
+          </li>
+          <li>
+            <div>
+              <p class="font-semibold text-purple-900 text-2xl">
+                100% responsive
+              </p>
+            </div>
+            <div class="mt-2 text-slate-500">
+              Debt bills lucrative capitalization municipal bonds government 401k
+              bear bull credit corporate bonds called NYSE finance. Managed prices
+              bondholders federal risk NASDAQ hedge fund expenses municipal bonds
+              management.
+            </div>
+            <img
+              src="/images/creditcardFour.png"
+              alt="thumbnail"
+              class="shadow-xl rounded-4xl mt-12"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  
+
+<!-- Dark Background -->
+
+<section class="bg-purple-900 transform skew-y-6 mt-20">
+  <div
+    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
+    <div>
+      <h2 class="inline-flex items-center text-white">
+        <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
+      </h2>
+      <h2
+        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
+        {darkBackground.sections[1].mainTitle}
+      </h2>
+    </div>
+    <div class="mx-auto text-left mt-12">
+      <div
+          class="text-sm gap-x-2 gap-y-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">
+                  
+                  {darkBackground.sections[1].points[0].title}
+                </p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[0].description}
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[1].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[1].description}
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[2].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {darkBackground.sections[1].points[2].description}
+              </p>
+            </div>
+          </article>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Feature Two -->
+
+  <section class="overflow-hidden border-b">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 pt-24 items-center">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{featureTwo.header.title}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {featureTwo.header.mainTitle}
+        </h2>
+        <div class="max-w-xl mt-6">
+          <p class="text-slate-500">{featureTwo.header.subTitle}</p>
+        </div>
+      </div>
+      <div class="mx-auto text-left mt-12">
+        <div>
+          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
+            {featureTwo.columns.map(column => (
+              <div>
+                <div>
+                  <p class="font-semibold text-purple-900">{column.title}</p>
+                  <div class="mt-6">
+                    <ul role="list" class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
+                      {column.listItems.map(item => (
+                        <li class="flex items-start">
+                          — <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
+            <img src={featureTwo.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Feature List -->
+
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
+            {feature.header.mainTitle}
+           </h2>
+           <p class="mt-4 text-slate-600 text-lg">
+            {feature.header.description}
+        </p>
+          <div class="mt-16">
+            {feature.featureSections.map((section, index) => (
+              <div key={index} class="lg:col-span-3 lg:col-start-3">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                  <div class="bg-slate-50 border-l-2 border-blue-500">
+                    <div class="p-6 border-t">
+                      <p class="font-semibold text-purple-900">{section.title}</p>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l border-l-0">
+                    <p class="text-slate-500 text-sm">{section.description}</p>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l">
+                    <ul role="list" class="order-last flex flex-col gap-y-3 text-sm text-slate-500">
+                      {section.listItems.map((item, itemIndex) => (
+                        <li key={itemIndex} class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M9 12l2 2l4 -4"></path>
+                          </svg>
+                          <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {featureIndex < features.length - 1 && (
+            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+
+  <!-- Information -->
+
+  <section aria-labelledby="feature-four" id="feature-four">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-14 items-center">
+      <div>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl text-3xl w-1/2">
+          {overview.title}
+        </h2>
+        <div class="mx-auto text-left mt-12">
+          <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
+            {overview.paragraphs.map((paragraph, index) => (
+              <div key={index}>
+                <p class="text-slate-500">{paragraph}</p>
+              </div>
+            ))}
+          </div>
+          <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2 mt-24">
+            <div>
+              <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+                {overview.secondaryTitle}
+              </h2>
+              <p class="text-slate-500 mt-4">
+                {overview.secondaryParagraph}
+              </p>
+              <blockquote class="text-slate-500 mt-4">
+                <p class="font-medium">
+                  {overview.quote}
+                </p>
+              </blockquote>
+              <p class="mt-12">
+                <a href={overview.callToAction.link}
+                  class="text-blue-600 font-semibold hover:text-purple-900 text-sm inline-flex items-center group">
+                  {overview.callToAction.text} &nbsp; &rarr;
+                </a>
+              </p>
+            </div>
+            <div class="relative overflow-hidden rounded-2xl p-8 shadow-xl lg:py-12 h-full">
+              <div class="absolute inset-0">
+                <img src={overview.image} alt="" class="h-full w-full object-cover"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  
+
+  <!-- Feature List -->
+
+  <section>
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center mt-20">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{sectionData.mainTitle}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {sectionData.mainSubTitle}
+        </h2>
+      </div>
+      <div class="mx-auto text-left mt-12">
+        <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
+          {sectionData.articles.map((article) => (
+            <article>
+              <div>
+                <p class="font-semibold text-purple-900 text-base">{article.title}</p>
+                <div class="mt-6">
+                  <ul role="list" class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
+                    {article.features.map((feature) => (
+                      <li class="flex items-start">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-check"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                      </svg>
+                        <span class="ml-4">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Faqs -->
+
+  <section>
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+      <div>
+        <h2 class="inline-flex items-center text-blue-600">
+          <span class="text-base font-medium tracking-tight">{faq.title}</span>
+        </h2>
+        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+          {faq.subtitle}
+        </h2>
+        <div class="mt-12 space-y-12 bg-slate-50 rounded-3xl p-4 lg:p-10 divide-y">
+          {faq.questions.map((faq, index) => (
+            <div key={index} class={`grid grid-cols-1 gap-4 ${index !== 0 ? 'pt-4 lg:pt-12' : ''} lg:grid-cols-3`}>
+              <div class="flex flex-col flex-shrink-0 mb-5 lg:pr-12">
+                <span class="font-semibold text-purple-900">{faq.question}</span>
+              </div>
+              <div class="lg:col-span-2">
+                <p class="text-slate-500">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <CtaOne />
+</BaseLayout>
