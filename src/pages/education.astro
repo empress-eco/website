@@ -1,21 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-import JobsHome from "../components/jobs/JobsHome.astro";
-
 import { AstroSeo } from "@astrolib/seo";
 import { Icon } from "astro-icon";
-
 import Ecosystem from "../components/features/Ecosystem.astro";
-
 
 // Hero
 
 export const hero = {
   heroSection: {
     header: 'Empress for Education',
-    title: 'Next Generation Retail Success',
-    description: 'Empress transforms retail operations by integrating innovative technology to enhance customer engagement and streamline sales processes.',
+    title: 'Reshaping Modern Education',
+    description: 'Empress revolutionizes education systems by integrating advanced technology to optimize learning experiences and streamline administrative processes.',
     caseStudyText: "Read case study",
     callToActionText: 'View Pricing',
     callToActionLink: '/pricing',
@@ -66,33 +61,7 @@ export const hero = {
   ],
 };
 
-
-// src/data/statsContent.js
-export const statsContent = {
-  sectionTitle: "We Help You Achieve Stunning Results",
-  stats: [
-    {
-      figure: "$70M",
-      description: "Total increase in failures annual count",
-    },
-    {
-      figure: "3 months faster",
-      description: "Than our competence",
-    },
-    {
-      figure: "1 Million workers",
-      description: "Were injured in working hours",
-    },
-    {
-      figure: "50 new countries",
-      description: "That has banned our incompetence",
-    },
-  ],
-};
-
-
 // Overview
-
 
 const overview = {
   title: "Retail's Future, Today",
@@ -224,118 +193,6 @@ const darkBackground = {
   ]
 };
 
-
-
-// Retail New
-
-const sectionFour = {
-  header: {
-    title: "Marketing Success Stories",
-    subtitle: "Real Impact with Empress",
-  },
-  description: "Explore how Empress has revolutionized marketing practices for diverse businesses, enhancing brand visibility and customer engagement.",
-  challenges: [
-    {
-      title: "Innovative Campaign Automation",
-      description: "Learn how Empress empowered a leading brand to automate their marketing campaigns, resulting in increased efficiency and audience reach.",
-    },
-    {
-      title: "Strategic Audience Targeting",
-      description: "Read how a startup leveraged Empress's tools for precise audience targeting and engagement, transforming their marketing approach.",
-    },
-  ],
-  productsUsed: [
-    "Automated Campaign Tracking",
-    "Content Management Systems",
-    "Audience Analytics",
-    "Multi-Channel Marketing Integration"
-  ],
-  testimonial: {
-    text: "Empress has been a game-changer for our marketing efforts, offering innovative solutions that have significantly boosted our brand presence.",
-    caseStudyLink: "link/to/case-study",
-    caseStudyText: "Read the Success Story"
-  },
-  images: {
-    background: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    modalOne: "/images/ModalOne.png",
-    modalTwo: "/images/ModalTwo.png"
-  }
-};
-
-// Additional Features
-
-const featuresHeading = {
-  featureHeading: "Additional Features",
-  featureTitle: "Do More With Empress",
-};
-
-const features = [
-{
-    "title": "Inights",
-    "description": "Unlock Data Insights",
-    "icon": "ph:chart-bar-duotone",
-    "link": "/feature/insights",
-    "color": "indigo"
-  },
-  {
-    "title": "Flows",
-    "description": "Optimize Your Workflow",
-    "icon": "ph:flow-arrow-duotone",
-    "link": "/feature/flows",
-    "color": "indigo"
-  },
-  {
-    "title": "Zaps",
-    "description": "Automate Routine Tasks",
-    "icon": "ph:lightning-duotone",
-    "link": "/feature/zaps",
-    "color": "indigo"
-  },
-  {
-    "title": "Assistants",
-    "description": "Expert AI Chat Support",
-    "icon": "ph:robot-duotone",
-    "link": "/feature/assistants",
-    "color": "indigo"
-  },
-  {
-    "title": "Forecast",
-    "description": "Anticipate Future Trends",
-    "icon": "ph:cloud-sun-duotone",
-    "link": "/feature/forecast",
-    "color": "indigo"
-  },
-  {
-    "title": "Bridge",
-    "description": "Connect With Collaborators",
-    "icon": "ph:arrows-out-duotone",
-    "link": "/feature/bridge",
-    "color": "indigo"
-  },
-  {
-    "title": "Administration",
-    "description": "Control Access & Visibility",
-    "icon": "ph:address-book-duotone",
-    "link": "/feature/administration",
-    "color": "indigo"
-  },
-  {
-    "title": "Innovation",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/feature/innovation",
-    "color": "indigo"
-  },
-  {
-    "title": "Integrations",
-    "description": "Seamless Tool Integration",
-    "icon": "ph:plugs-connected-duotone",
-    "link": "/feature/integrations",
-    "color": "indigo"
-  },
-];
-
-
 // Use Features
 
 const featureDetails = [
@@ -405,87 +262,10 @@ const featureDetails = [
 ];
 
 
-
-// Check Marks
-
-const sectionData = {
-  mainTitle: "Empress Retail Solutions",
-  mainSubTitle: "Revolutionizing Retail Operations",
-  description: "Empress offers solutions enhancing retail efficiency and customer engagement.",
-  articles: [
-    {
-      title: "Financial Management",
-      features: [
-        "Advanced analytics insights",
-        "Effective financial tools",
-        "Sustainable growth strategies"
-      ]
-    },
-    {
-      title: "Sales Strategy",
-      features: [
-        "Improve Customer relationships",
-        "Sales process streamlining",
-        "Effective deal closure"
-      ]
-    },
-    {
-      title: "Product Development",
-      features: [
-        "Rapid product design",
-        "Collaborative innovation tools",
-        "Quicker market launches"
-      ]
-    },
-    {
-      title: "Operational Excellence",
-      features: [
-        "Automated process efficiency",
-        "Workflow insights optimization",
-        "Cost reduction practices"
-      ]
-    },
-    {
-      title: "Marketing Expansion",
-      features: [
-        "Dynamic audience strategies",
-        "Brand visibility boost",
-        "Impactful customer campaigns"
-      ]
-    },
-    {
-      title: "Talent Management",
-      features: [
-        "Top talent attraction",
-        "Productive culture fostering",
-        "Innovative team growth"
-      ]
-    },
-    {
-      title: "Customer Excellence",
-      features: [
-        "Unmatched experience delivery",
-        "Lasting relationship building",
-        "Market differentiation focus"
-      ]
-    },
-    {
-      title: "Sustainable Growth",
-      features: [
-        "Innovative industry leadership",
-        "Strategic growth insights",
-        "Competitive edge maintenance"
-      ]
-    }
-  ]
-};
-
-
-
 // Section Nine
 
 const faqs = {
-  title: "Retail Management FAQs",
+  title: "FAQs",
   subtitle: "Your Questions, Answered",
   questions: [
     {
@@ -512,36 +292,35 @@ const faqs = {
 };
 
 
-
 // Contact
 
 const talkToYouSection = {
-  title: "Connect with us",
-  description: "We're eager to explore how Empress can revolutionize your retail business. Let's discuss your needs and see how our solutions can drive your retail success.",
+  title: "Connect With Us",
+  description: "We are eager to explore how Empress can revolutionize your educational institution. Let's discuss your specific needs and how our innovative solutions can elevate your educational success.",
   callToAction: {
-    text: "Discover Empress for Retail",
-    link: "/retail-solutions"
+    text: "Discover Empress for Education",
+    link: "/education-solutions"
   },
   infoSections: [
     {
-      title: "Innovating Retail at Empress",
-      description: "Empress is dedicated to pushing the boundaries of retail technology, fostering environments where innovative retail solutions thrive."
+      title: "Education with Empress",
+      description: "Empress is dedicated to advancing educational technology, fostering environments that nurture cutting-edge learning and teaching solutions."
     },
     {
-      title: "Empress's Role in Education",
-      description: "Through our partnerships, we're educating the next generation of retail professionals, equipped with the tools for retail's future."
+      title: "Empress's Impact in Education",
+      description: "Our initiatives are focused on providing educators and institutions with the tools and insights needed for an empowered educational future."
     },
     {
-      title: "Our Principles in Retail",
-      description: "We adhere to principles that prioritize customer experience, data-driven retail decisions, and constant innovation in the retail sector."
+      title: "Our Ethos in Education",
+      description: "At Empress, we prioritize student-centric learning, data-driven educational strategies, and continual innovation in the education sector."
     }
   ]
 };
 
 const infrastructureSection = {
-  title: "Building the Retail Future with Empress",
+  title: "Shaping the Future of Education with Empress",
   description: [
-    "Empress stands as a pioneering force in crafting the foundational infrastructure necessary for the ongoing retail revolution. Our commitment transcends mere technological advancements; we deeply value and actively promote diversity and inclusivity within our organizational ethos. This approach is not just about broadening our perspectives—it's about enriching the very solutions we provide. By integrating a wide range of insights and experiences, Empress is able to offer more innovative, inclusive, and effectively tailored solutions for the retail sector. Our mission is clear: to drive the retail industry forward with cutting-edge solutions, while fostering an environment where varied voices, ideas, and cultures converge to create something truly exceptional for the retail landscape."
+    "Empress stands at the forefront of constructing the essential infrastructure for the evolving educational landscape. Our commitment extends beyond mere technological advancement; we emphasize and advocate for diversity and inclusivity in education. This philosophy enables us to provide more comprehensive, inclusive, and effective solutions for educational entities. Our mission is to drive the education sector forward with advanced technology, cultivating an environment where diverse ideas and perspectives merge to forge exceptional educational solutions."
   ]
 };
 
@@ -1221,23 +1000,14 @@ Use AstroSeo in all the pages you want different Seo than the index page
               </div>
             ))}
           </div>
-          {featureIndex < features.length - 1 && (
-            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
-          )}
         </div>
       ))}
     </div>
   </section>
   
 
-
-
-  <!-- Feature Details -->
-
   <Ecosystem/>
 
-
-  
 
   <!-- FAQS -->
 
@@ -1266,9 +1036,6 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
-
-
-
 
   <!-- Contact -->
 

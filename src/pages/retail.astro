@@ -1,13 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-import JobsHome from "../components/jobs/JobsHome.astro";
-
 import { AstroSeo } from "@astrolib/seo";
 import { Icon } from "astro-icon";
-
 import Ecosystem from "../components/features/Ecosystem.astro";
-
 
 // Hero
 
@@ -66,33 +61,7 @@ export const hero = {
   ],
 };
 
-
-// src/data/statsContent.js
-export const statsContent = {
-  sectionTitle: "We Help You Achieve Stunning Results",
-  stats: [
-    {
-      figure: "$70M",
-      description: "Total increase in failures annual count",
-    },
-    {
-      figure: "3 months faster",
-      description: "Than our competence",
-    },
-    {
-      figure: "1 Million workers",
-      description: "Were injured in working hours",
-    },
-    {
-      figure: "50 new countries",
-      description: "That has banned our incompetence",
-    },
-  ],
-};
-
-
 // Overview
-
 
 const overview = {
   title: "Retail's Future, Today",
@@ -110,73 +79,70 @@ const overview = {
   image: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
 };
 
-// Diplay Image
-
+// Display Image
 const displayImage = {
-  "title": "Empress Insights",
-  "subtitle": "Explore Your Data,",
-  "subtitleCont": "Uncover Actionable Insights.",
-  imageSrc: "/images/chart.jpg"
+  title: "Empress Retail Insights",
+  subtitle: "Enhance Your Strategy,",
+  subtitleCont: "Elevate Your Business.",
+  imageSrc: "/images/dashboard.jpg"
 };
 
 
 // FeatureOne
-
 const featureOne = {
   mainContent: {
-    title: "One Solutions",
+    title: "Retail Operations Optimized",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Efficiency Across All Channels",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress delivers a seamless retail experience, from back-office operations to the sales floor. Experience unparalleled efficiency with our integrated retail solutions."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Optimize Operations",
+    linkHref: "/retail/operations"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Streamlined Inventory Management",
+    "Enhanced Sales Engagement",
+    "Unified Retail Operations"
   ]
 };
 
-// FeatureTwo
 
+// FeatureTwo
 const featureTwo = {
   mainContent: {
-    title: "Two Solutions",
+    title: "Customer Engagement Redefined",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Connect, Engage, Satisfy",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress redefines customer engagement in retail, offering personalized shopping experiences that build loyalty and drive sales."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Engage Customers",
+    linkHref: "/retail/customer-engagement"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Personalized Customer Interactions",
+    "Effective Loyalty Programs",
+    "Targeted Marketing Initiatives"
   ]
 };
 
 // FeatureThree
-
 const featureThree = {
   mainContent: {
-    title: "Three Solutions",
+    title: "Retail Analytics & Insights",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Data-Driven Retail Success",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress brings your retail data to life. Gain actionable insights for informed decisions and successful retail strategies."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Unlock Insights",
+    linkHref: "/retail/analytics"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Comprehensive Sales Analysis",
+    "Customer Behavior Insights",
+    "Market Trend Predictions"
   ]
 };
 
@@ -224,180 +190,67 @@ const darkBackground = {
   ]
 };
 
-
-
-// Retail New
-
-const sectionFour = {
-  header: {
-    title: "Marketing Success Stories",
-    subtitle: "Real Impact with Empress",
-  },
-  description: "Explore how Empress has revolutionized marketing practices for diverse businesses, enhancing brand visibility and customer engagement.",
-  challenges: [
-    {
-      title: "Innovative Campaign Automation",
-      description: "Learn how Empress empowered a leading brand to automate their marketing campaigns, resulting in increased efficiency and audience reach.",
-    },
-    {
-      title: "Strategic Audience Targeting",
-      description: "Read how a startup leveraged Empress's tools for precise audience targeting and engagement, transforming their marketing approach.",
-    },
-  ],
-  productsUsed: [
-    "Automated Campaign Tracking",
-    "Content Management Systems",
-    "Audience Analytics",
-    "Multi-Channel Marketing Integration"
-  ],
-  testimonial: {
-    text: "Empress has been a game-changer for our marketing efforts, offering innovative solutions that have significantly boosted our brand presence.",
-    caseStudyLink: "link/to/case-study",
-    caseStudyText: "Read the Success Story"
-  },
-  images: {
-    background: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    modalOne: "/images/ModalOne.png",
-    modalTwo: "/images/ModalTwo.png"
-  }
-};
-
-// Additional Features
-
-const featuresHeading = {
-  featureHeading: "Additional Features",
-  featureTitle: "Do More With Empress",
-};
-
-const features = [
-{
-    "title": "Inights",
-    "description": "Unlock Data Insights",
-    "icon": "ph:chart-bar-duotone",
-    "link": "/feature/insights",
-    "color": "indigo"
-  },
-  {
-    "title": "Flows",
-    "description": "Optimize Your Workflow",
-    "icon": "ph:flow-arrow-duotone",
-    "link": "/feature/flows",
-    "color": "indigo"
-  },
-  {
-    "title": "Zaps",
-    "description": "Automate Routine Tasks",
-    "icon": "ph:lightning-duotone",
-    "link": "/feature/zaps",
-    "color": "indigo"
-  },
-  {
-    "title": "Assistants",
-    "description": "Expert AI Chat Support",
-    "icon": "ph:robot-duotone",
-    "link": "/feature/assistants",
-    "color": "indigo"
-  },
-  {
-    "title": "Forecast",
-    "description": "Anticipate Future Trends",
-    "icon": "ph:cloud-sun-duotone",
-    "link": "/feature/forecast",
-    "color": "indigo"
-  },
-  {
-    "title": "Bridge",
-    "description": "Connect With Collaborators",
-    "icon": "ph:arrows-out-duotone",
-    "link": "/feature/bridge",
-    "color": "indigo"
-  },
-  {
-    "title": "Administration",
-    "description": "Control Access & Visibility",
-    "icon": "ph:address-book-duotone",
-    "link": "/feature/administration",
-    "color": "indigo"
-  },
-  {
-    "title": "Innovation",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/feature/innovation",
-    "color": "indigo"
-  },
-  {
-    "title": "Integrations",
-    "description": "Seamless Tool Integration",
-    "icon": "ph:plugs-connected-duotone",
-    "link": "/feature/integrations",
-    "color": "indigo"
-  },
-];
-
-
 // Use Features
-
 const featureDetails = [
   {
     header: {
-      mainTitle: "Empress Control",
-      subTitle: "Precision Access, Enhanced Security",
-      description: "Empress Control delivers sophisticated access management solutions, enabling secure and efficient data handling across various business sectors."
+      mainTitle: "Empress Retail Advantages",
+      subTitle: "Revolutionizing Retail Management",
+      description: "Empress reshapes retail operations with cutting-edge features, offering unmatched efficiency and customer engagement."
     },
     featureSections: [
       {
-        title: "Targeted Marketing Team Access",
-        description: "Empress Control offers precise access controls for marketing teams, safeguarding sensitive campaign data while promoting creative collaboration.",
+        title: "Advanced Inventory Management",
+        description: "Empress revolutionizes inventory tracking with real-time updates and predictive analytics, ensuring optimal stock levels and efficient replenishment.",
         listItems: [
-          "Customized access to marketing tools and data",
-          "Secure management of marketing campaigns",
-          "Enhanced collaboration with controlled data sharing"
+          "Real-time inventory tracking",
+          "Predictive restocking algorithms",
+          "Inventory turnover insights"
         ]
       },
       {
-        title: "Confidential Sales Information Protection",
-        description: "Maintain the integrity of your sales data with tailored access permissions, ensuring data security and strategic discretion.",
+        title: "Seamless Point-of-Sale Integration",
+        description: "Enhance the checkout experience with Empress's integrated POS system, ensuring quick, accurate, and seamless transactions.",
         listItems: [
-          "Controlled access to critical sales data",
-          "Custom visibility settings for sales metrics",
-          "Data integrity and confidentiality for strategic decisions"
+          "Efficient transaction processing",
+          "Integrated payment solutions",
+          "Enhanced customer checkout experience"
         ]
       },
       {
-        title: "Customer Service Data Privacy",
-        description: "Empress Control enables your customer service team to access necessary data while prioritizing customer privacy and data security.",
+        title: "Personalized Customer Engagement",
+        description: "Leverage Empress's data-driven tools to create personalized shopping experiences, fostering customer loyalty and increased sales.",
         listItems: [
-          "Regulated access to customer interactions",
-          "Confidential handling of service records",
-          "Privacy-centric approach in customer service"
+          "Targeted marketing campaigns",
+          "Loyalty program management",
+          "Personalized customer interactions"
         ]
       },
       {
-        title: "Human Resources Data Governance",
-        description: "Effectively manage sensitive HR data with Empress Control, ensuring compliance and employee privacy.",
+        title: "Omnichannel Sales Management",
+        description: "Empress provides a unified platform for managing sales across multiple channels, ensuring consistency and maximized revenue.",
         listItems: [
-          "Secure access to personal employee information",
-          "Regulatory compliance in HR data management",
-          "Confidential storage and retrieval of HR records"
+          "Unified online and offline sales channels",
+          "Centralized order management",
+          "Cross-channel customer insights"
         ]
       },
       {
-        title: "Financial Reporting and Data Safeguarding",
-        description: "Empress Control strengthens financial data protection with robust access controls, ensuring compliance and accuracy in financial activities.",
+        title: "Dynamic Marketing Analytics",
+        description: "Gain insights into market trends and consumer behavior with Empress's advanced analytics, driving strategic marketing decisions.",
         listItems: [
-          "Secure management of financial information",
-          "Regulatory compliant access to financial data",
-          "Safeguarding of sensitive financial transactions"
+          "Consumer behavior analysis",
+          "Sales trend insights",
+          "ROI-driven marketing strategies"
         ]
       },
       {
-        title: "Supply Chain Information Security",
-        description: "Optimize supply chain efficiency with controlled access to critical information, maintaining a balance between transparency and data security.",
+        title: "Efficient Workforce Management",
+        description: "Empress streamlines staffing and scheduling, optimizing workforce allocation to meet retail demands efficiently.",
         listItems: [
-          "Regulated access to supply chain and inventory data",
-          "Secure information sharing within supply chain operations",
-          "Protected management of supplier and logistics details"
+          "Automated staff scheduling",
+          "Performance tracking tools",
+          "Effective labor cost management"
         ]
       }
     ]
@@ -406,112 +259,33 @@ const featureDetails = [
 
 
 
-// Check Marks
-
-const sectionData = {
-  mainTitle: "Empress Retail Solutions",
-  mainSubTitle: "Revolutionizing Retail Operations",
-  description: "Empress offers solutions enhancing retail efficiency and customer engagement.",
-  articles: [
-    {
-      title: "Financial Management",
-      features: [
-        "Advanced analytics insights",
-        "Effective financial tools",
-        "Sustainable growth strategies"
-      ]
-    },
-    {
-      title: "Sales Strategy",
-      features: [
-        "Improve Customer relationships",
-        "Sales process streamlining",
-        "Effective deal closure"
-      ]
-    },
-    {
-      title: "Product Development",
-      features: [
-        "Rapid product design",
-        "Collaborative innovation tools",
-        "Quicker market launches"
-      ]
-    },
-    {
-      title: "Operational Excellence",
-      features: [
-        "Automated process efficiency",
-        "Workflow insights optimization",
-        "Cost reduction practices"
-      ]
-    },
-    {
-      title: "Marketing Expansion",
-      features: [
-        "Dynamic audience strategies",
-        "Brand visibility boost",
-        "Impactful customer campaigns"
-      ]
-    },
-    {
-      title: "Talent Management",
-      features: [
-        "Top talent attraction",
-        "Productive culture fostering",
-        "Innovative team growth"
-      ]
-    },
-    {
-      title: "Customer Excellence",
-      features: [
-        "Unmatched experience delivery",
-        "Lasting relationship building",
-        "Market differentiation focus"
-      ]
-    },
-    {
-      title: "Sustainable Growth",
-      features: [
-        "Innovative industry leadership",
-        "Strategic growth insights",
-        "Competitive edge maintenance"
-      ]
-    }
-  ]
-};
-
-
-
-// Section Nine
-
+// FAQs
 const faqs = {
-  title: "Retail Management FAQs",
+  title: "FAQs",
   subtitle: "Your Questions, Answered",
   questions: [
     {
-      question: "How does Empress enhance retail inventory tracking?",
-      answer: "Empress provides advanced tracking with real-time inventory updates, ensuring accurate stock levels and efficient replenishment for uninterrupted retail operations."
+      question: "How does Empress transform retail inventory management?",
+      answer: "Empress offers advanced inventory solutions with real-time tracking and predictive analytics for efficient stock management and replenishment."
     },
     {
-      question: "Can Empress integrate with my retail suppliers' systems?",
-      answer: "Absolutely. Empress enables seamless integration with supplier systems, facilitating efficient ordering, tracking, and management of supplier relations, crucial for retail success."
+      question: "Can Empress integrate with existing retail POS systems?",
+      answer: "Yes, Empress can seamlessly integrate with existing POS systems to enhance sales operations and customer checkout experiences."
     },
     {
-      question: "Does Empress support batch tracking for retail products?",
-      answer: "Yes, Empress's batch tracking is tailored for retail, allowing for detailed tracking of product batches from manufacturing to store shelves, enhancing product lifecycle management."
+      question: "Does Empress support omnichannel retail strategies?",
+      answer: "Empress is designed for omnichannel retail, ensuring a consistent and unified customer experience across all sales channels."
     },
     {
-      question: "What retail-specific features does Empress PLM offer?",
-      answer: "Empress PLM caters to retail with features like product lifecycle timelines, inventory phase tracking, and update monitoring, ensuring efficient management from product conception to sale."
+      question: "How does Empress aid in retail customer engagement?",
+      answer: "Empress offers tools for personalized customer interactions, loyalty program management, and targeted marketing to enhance customer engagement."
     },
     {
-      question: "How does Empress ensure high standards in retail product quality?",
-      answer: "Our Quality Check System is designed for retail, with rigorous standards checks, issue tracking, and resolution recording to maintain and enhance product quality in retail."
+      question: "Can Empress scale with my retail business growth?",
+      answer: "Absolutely. Empress's scalable solutions grow with your business, accommodating increasing customer demands and operational expansion."
     }
   ]
 };
-
-
 
 // Contact
 
@@ -1221,23 +995,14 @@ Use AstroSeo in all the pages you want different Seo than the index page
               </div>
             ))}
           </div>
-          {featureIndex < features.length - 1 && (
-            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
-          )}
         </div>
       ))}
     </div>
   </section>
   
 
-
-
-  <!-- Feature Details -->
-
   <Ecosystem/>
 
-
-  
 
   <!-- FAQS -->
 
@@ -1266,9 +1031,6 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
-
-
-
 
   <!-- Contact -->
 
