@@ -405,9 +405,33 @@ Use AstroSeo in all the pages you want different Seo than the index page
 
   
 
-<!-- Dark Background -->
+    <!-- Section 2 -->
 
-<GetStarted/>
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+        <div>
+          <h2 class="inline-flex items-center text-blue-600">
+            <span class="text-base font-medium tracking-tight">{statsContent.sectionTitle}</span>
+          </h2>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+            {statsContent.mainHeading}
+          </h2>
+        </div>
+        <div class="mx-auto text-left mt-12">
+          <div class="gap-6 grid grid-cols-1 lg:grid-cols-4">
+            {statsContent.statsData.map((stat) => (
+              <div key={stat.value}>
+                <p class="text-4xl font-light tracking-tight lg:text-5xl text-blue-500">
+                  {stat.value}
+                </p>
+                <p class="text-slate-500 mt-6 border-blue-500">
+                  {stat.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
 
 
