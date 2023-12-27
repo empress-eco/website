@@ -1,0 +1,155 @@
+---
+
+import { Icon } from "astro-icon";
+// import { RocketLaunch } from 'phosphor-astro';
+
+const { nomargin } = Astro.props;
+
+// Section Five
+const getStarted = {
+  sections: [
+    {
+      type: "feature",
+      title: "Effortless Onboarding",
+      mainTitle: "Your Journey Begins Here",
+      secondaryTitle: "",
+    },
+    {
+      type: "featureSkewed",
+      title: "Get Started in Minutes",
+      mainTitle: "Your Business. Your Way.",
+      secondaryTitle: "",
+      description: "Start your Empress journey with ease. Our streamlined process ensures a quick and secure setup, so you can focus on what matters most in your business.",
+      points: [
+        {
+          title: "Create an Account",
+          description: "Sign up and join the Empress community. It's quick, easy, and the first step to transforming your business.",
+          linkTitle: "Create Account",
+          linkHref: "https://my.empress.eco/#signup",
+        },
+        {
+          title: "Install Applications",
+          description: "Easily download and install Empress applications. Our user-friendly interface guides you through the setup.",
+          linkTitle: "Explore Applications",
+          linkHref: "/suite/apps",
+        },
+        {
+          title: "Find Support",
+          description: "Need assistance? Our support team is ready to help you at each step. Access resources and get expert help.",
+          linkTitle: "Contact Empress",
+          linkHref: "/contact",
+        }
+      ],
+      bgColor: "purple-900",
+      textColor: "white",
+      gridCols: "lg:grid-cols-3",
+      transform: "skew-y-6",
+      marginAdjustment: "-mt-72 lg:-mt-[26rem]"
+    }
+  ]
+};
+
+---
+
+<!-- Dark Background -->
+
+<section class="bg-purple-900 transform skew-y-6 mt-20">
+  <div
+    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
+    <div>
+      <h2 class="inline-flex items-center text-white">
+        <span class="text-base font-medium tracking-tight">{getStarted.sections[1].title}</span>
+      </h2>
+      <h2
+        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
+        {getStarted.sections[1].mainTitle}
+      </h2>
+    </div>
+    <div class="mx-auto text-left mt-12">
+      <div
+          class="text-sm gap-x-2 gap-y-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">
+                  
+                  {getStarted.sections[1].points[0].title}
+                </p>
+              </div>
+              <p class="text-base text-slate-400">
+                {getStarted.sections[1].points[0].description}
+              </p>
+              <a href={getStarted.sections[1].points[0].linkHref} class="text-base text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {getStarted.sections[1].points[0].linkTitle}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{getStarted.sections[1].points[1].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {getStarted.sections[1].points[1].description}
+              </p>
+              <a href={getStarted.sections[1].points[1].linkHref} class="text-base text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {getStarted.sections[1].points[1].linkTitle}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </div>
+          </article>
+          <article>
+            <div class="space-y-3">
+              <div class="lg:inline-flex lg:items-center">
+                <div
+                  class="flex items-center justify-center text-blue-400 rounded-full">
+                </div>
+                <p class="text-xl font-semibold text-white">{getStarted.sections[1].points[2].title}</p>
+              </div>
+              <p class="text-base text-slate-400">
+                {getStarted.sections[1].points[2].description}
+              </p>
+              <a href={getStarted.sections[1].points[2].linkHref} class="text-base text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                {getStarted.sections[1].points[2].linkTitle}
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+    </div>
+  </div>
+</section>

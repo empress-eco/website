@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+import GetStarted from "../components/features/GetStarted.astro";
 import AboutOne from "../components/about/AboutOne.astro";
 import FeatureEleven from "../components/features/FeatureEleven.astro";
 import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
@@ -128,61 +128,6 @@ const featureThree = {
     "Advanced Analytical Tools",
     "Strategic Financial Insights",
     "Informed Decision Making",
-  ]
-};
-
-// Dark Background
-
-const darkBackground = {
-  sections: [
-    {
-      type: "feature",
-      title: "Extensive Financial Integrations",
-      mainTitle: "Synchronize Your Financial Tools",
-      secondaryTitle: "",
-      descriptions: [
-        "Integrate a wide array of financial applications with Empress for a comprehensive and efficient financial ecosystem.",
-        "Empress's extensive integration capacity ensures cohesive functioning across accounting, billing, and more for streamlined financial operations."
-      ],
-      imagePaths: [
-        "/images/financial-integration-1.jpg",
-        "/images/financial-integration-2.jpg",
-        "/images/financial-integration-3.jpg",
-        "/images/financial-integration-4.jpg",
-        "/images/financial-integration-5.jpg",
-        "/images/financial-integration-6.jpg",
-        "/images/financial-integration-7.jpg"
-      ],
-      bgColor: "white",
-      textColor: "blue-600",
-      gridCols: "lg:grid-cols-2"
-    },
-    {
-      type: "featureSkewed",
-      title: "Start Your Empress Journey",
-      mainTitle: "Getting Started Is Simple",
-      secondaryTitle: "",
-      description: "Embark on your Empress journey with a streamlined, three-step process designed for ease and efficiency.",
-      points: [
-        {
-          title: "Step 1: Discover Empress",
-          description: "Explore the wide range of solutions Empress offers. Our platform guides you through powerful features tailored to your business needs."
-        },
-        {
-          title: "Step 2: Customize Your Suite",
-          description: "Select and personalize the Empress applications and tools that best align with your business objectives for a perfect operational fit."
-        },
-        {
-          title: "Step 3: Launch and Thrive",
-          description: "With your custom Empress suite ready, launch into a new era of business efficiency. Experience seamless integration and witness your business flourish."
-        }
-      ],
-      bgColor: "purple-900",
-      textColor: "white",
-      gridCols: "lg:grid-cols-3",
-      transform: "skew-y-6",
-      marginAdjustment: "-mt-72 lg:-mt-[26rem]"
-    }
   ]
 };
 
@@ -672,67 +617,8 @@ const faqs = {
   </div>
 </section>
 
-<section class="bg-purple-900 transform skew-y-6 mt-20">
-  <div
-    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
-    <div>
-      <h2 class="inline-flex items-center text-white">
-        <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
-      </h2>
-      <h2
-        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
-        {darkBackground.sections[1].mainTitle}
-      </h2>
-    </div>
-    <div class="mx-auto text-left mt-12">
-      <div
-          class="text-sm gap-x-2 gap-y-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">
-                  
-                  {darkBackground.sections[1].points[0].title}
-                </p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[0].description}
-              </p>
-            </div>
-          </article>
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                  class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[1].title}</p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[1].description}
-              </p>
-            </div>
-          </article>
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                  class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[2].title}</p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[2].description}
-              </p>
-            </div>
-          </article>
-        </div>
-    </div>
-  </div>
-</section>
+
+<GetStarted/>
 
 
 

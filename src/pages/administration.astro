@@ -10,6 +10,7 @@ import StatsTwo from "../components/stats/StatsTwo.astro";
 import CtaOne from "../components/cta/CtaOne.astro";
 import { Code } from "astro/components";
 import { AstroSeo } from "@astrolib/seo";
+import GetStarted from "../components/features/GetStarted.astro";
 
 
 // Header
@@ -76,48 +77,6 @@ const fourFeatures = {
 };
 
 
-
-const darkBackground = {
-  sections: [
-    {
-      type: "feature",
-      title: "200+ Integrations",
-      mainTitle: "Seamless Connectivity, Simplified",
-      secondaryTitle: "",
-    },
-    {
-      type: "featureSkewed",
-  title: "Global Operations",
-  mainTitle: "Seamless Operations on a Global Scale",
-  secondaryTitle: "",
-  description: "Empress orchestrates your business's global operations with unmatched efficiency. Our solutions bring together your processes, enhancing performance with precision and ease.",
-  points: [
-  {
-  title: "Universal Compatibility",
-  description: "Empress ensures a cohesive business environment, seamlessly connecting everything from inventory management to customer engagement."
-},
-{
-  title: "Real-Time Data Insights",
-  description: "Empress provides immediate data alignment, offering reliable and up-to-the-minute business intelligence for informed decision-making."
-},
-{
-  title: "Adaptive Integration",
-  description: "Customize Empress to match your evolving enterprise, effortlessly scaling to support your ambitions and changing needs."
-},
-{
-  title: "Effortless Automation",
-  description: "Empress streamlines operations by automating repetitive tasks, enhancing productivity, and freeing resources for strategic initiatives."
-}
-
-  ],
-  bgColor: "purple-900",
-  textColor: "white",
-  gridCols: "lg:grid-cols-3",
-  transform: "skew-y-6",
-  marginAdjustment: "-mt-72 lg:-mt-[26rem]"
-    }
-  ]
-};
 
 const featureTwo = {
   header: {
@@ -452,69 +411,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
 
   
 
-<!-- Dark Background -->
-
-<section class="bg-purple-900 transform skew-y-6 mt-20">
-  <div
-    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
-    <div>
-      <h2 class="inline-flex items-center text-white">
-        <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
-      </h2>
-      <h2
-        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
-        {darkBackground.sections[1].mainTitle}
-      </h2>
-    </div>
-    <div class="mx-auto text-left mt-12">
-      <div
-          class="text-sm gap-x-2 gap-y-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">
-                  
-                  {darkBackground.sections[1].points[0].title}
-                </p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[0].description}
-              </p>
-            </div>
-          </article>
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                  class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[1].title}</p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[1].description}
-              </p>
-            </div>
-          </article>
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                  class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[2].title}</p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[2].description}
-              </p>
-            </div>
-          </article>
-        </div>
-    </div>
-  </div>
-</section>
+  <GetStarted/>
 
 
 

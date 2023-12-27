@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { AstroSeo } from "@astrolib/seo";
 import { Icon } from "astro-icon";
 import Ecosystem from "../components/features/Ecosystem.astro";
+import GetStarted from "../components/features/GetStarted.astro";
 
 // Hero
 
@@ -18,47 +19,43 @@ export const hero = {
     callToActionTwoLink: '/contact',
   },
   imageGrid: [
-    {
-      imageUrl: "https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-      // logoUrl: "/images/integrations/logo.svg",
-      description: "Spaziobianco has Economy growth upswing market index funds capitalization corporate bonds mutual.",
-      caseStudyLink: "/blog",
-      caseStudyText: "Read case study",
-      bgColor: "bg-pink-600",
-    },
-    {
-      imageUrl: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      // logoUrl: "/images/integrations/logo.svg",
-      description: "Spaziobianco Public rollover performance exchange traded funds junk bonds passively NASDAQ bills upswing retirement corporate market exposure.",
-      caseStudyLink: "/blog",
-      caseStudyText: "Read case study",
-      bgColor: "bg-blue-600",
-    },
-    {
-      imageUrl: "https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      // logoUrl: "/images/integrations/logo.svg",
-      description: "Spaziobianco features advanced tools for market analysis and investment strategies.",
-      caseStudyLink: "/blog",
-      caseStudyText: "Read case study",
-      bgColor: "bg-slate-600",
-    },
-    {
-      imageUrl: "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      // logoUrl: "/images/integrations/logo.svg",
-      description: "Spaziobianco features advanced tools for market analysis and investment strategies.",
-      caseStudyLink: "/blog",
-      caseStudyText: "Read case study",
-      bgColor: "bg-slate-600",
-    },
-    {
-      imageUrl: "https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      // logoUrl: "/images/integrations/logo.svg",
-      description: "Spaziobianco features advanced tools for market analysis and investment strategies.",
-      caseStudyLink: "/blog",
-      caseStudyText: "Read case study",
-      bgColor: "bg-pink-600",
-    }
-  ],
+  {
+    imageUrl: "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    description: "Empress revolutionizes public service management, ensuring efficiency and transparency in government operations.",
+    caseStudyLink: "https://blog.empress.eco",
+    caseStudyText: "Learn More",
+    bgColor: "bg-slate-600",
+  },
+  {
+    imageUrl: "https://images.unsplash.com/photo-1657819466043-2a4ae992f03f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+    description: "Discover how Empress empowers government sectors with secure, scalable, and efficient technology solutions.",
+    caseStudyLink: "https://blog.empress.eco",
+    caseStudyText: "Learn More",
+    bgColor: "bg-pink-600",
+  },
+  {
+    imageUrl: "https://plus.unsplash.com/premium_photo-1661774976505-b0cf6ef31016?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    description: "Empress: Enhancing government service delivery through advanced analytics and smart technology.",
+    caseStudyLink: "https://blog.empress.eco",
+    caseStudyText: "Learn More",
+    bgColor: "bg-slate-600",
+  },
+  {
+    imageUrl: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    description: "Explore Empress's role in streamlining governmental processes for enhanced civic engagement and operational excellence.",
+    caseStudyLink: "https://blog.empress.eco",
+    caseStudyText: "Learn More",
+    bgColor: "bg-blue-600",
+  },
+  {
+    imageUrl: "https://plus.unsplash.com/premium_photo-1661284806850-b709cb1262b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    description: "Empress: Facilitating digital transformation in government, optimizing public resources and services.",
+    caseStudyLink: "https://blog.empress.eco",
+    caseStudyText: "Learn More",
+    bgColor: "bg-pink-600",
+  }
+],
+
 };
 
 // Overview
@@ -80,7 +77,7 @@ const overview = {
 
 // Display Image
 const displayImage = {
-  title: "Empress Insights for Government",
+  title: "Manage Public Services",
   subtitle: "Data-Driven,",
   subtitleCont: "Public Sector Excellence.",
   imageSrc: "/images/dashboard.jpg"
@@ -143,49 +140,6 @@ const featureThree = {
   ]
 };
 
-// Dark Background
-
-const darkBackground = {
-  sections: [
-    {
-      type: "feature",
-      title: "200+ Integrations",
-      mainTitle: "Seamless Connectivity, Simplified",
-      secondaryTitle: "",
-    },
-    {
-      type: "featureSkewed",
-  title: "Global Operations",
-  mainTitle: "Seamless Operations on a Global Scale",
-  secondaryTitle: "",
-  description: "Empress orchestrates your business's global operations with unmatched efficiency. Our solutions bring together your processes, enhancing performance with precision and ease.",
-  points: [
-  {
-  title: "Universal Compatibility",
-  description: "Empress ensures a cohesive business environment, seamlessly connecting everything from inventory management to customer engagement."
-},
-{
-  title: "Real-Time Data Insights",
-  description: "Empress provides immediate data alignment, offering reliable and up-to-the-minute business intelligence for informed decision-making."
-},
-{
-  title: "Adaptive Integration",
-  description: "Customize Empress to match your evolving enterprise, effortlessly scaling to support your ambitions and changing needs."
-},
-{
-  title: "Effortless Automation",
-  description: "Empress streamlines operations by automating repetitive tasks, enhancing productivity, and freeing resources for strategic initiatives."
-}
-
-  ],
-  bgColor: "purple-900",
-  textColor: "white",
-  gridCols: "lg:grid-cols-3",
-  transform: "skew-y-6",
-  marginAdjustment: "-mt-72 lg:-mt-[26rem]"
-    }
-  ]
-};
 
 // Use Features
 
@@ -428,7 +382,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
                         </p>
                         <p class="mt-6">
                           <a
-                            href="/case-study"
+                            href={hero.imageGrid[0].caseStudyLink}
                             class="text-white hover:text-blue-100 inline-flex items-center group">
                             {hero.imageGrid[0].caseStudyText}
                             <svg
@@ -468,7 +422,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
                         </p>
                         <p class="mt-6">
                           <a
-                            href="/case-study"
+                            href={hero.imageGrid[1].caseStudyLink}
                             class="text-white hover:text-blue-100 inline-flex items-center group">
                             {hero.imageGrid[1].caseStudyText}
                             <svg
@@ -510,7 +464,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
                         </p>
                         <p class="mt-6">
                           <a
-                            href="/case-study"
+                            href={hero.imageGrid[2].caseStudyLink}
                             class="text-white hover:text-blue-100 inline-flex items-center group">
                             {hero.imageGrid[2].caseStudyText}
                             <svg
@@ -550,7 +504,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
                         </p>
                         <p class="mt-6">
                           <a
-                            href="/case-study"
+                            href={hero.imageGrid[3].caseStudyLink}
                             class="text-white hover:text-blue-100 inline-flex items-center group">
                             {hero.imageGrid[3].caseStudyText}
                             <svg
@@ -590,7 +544,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
                         </p>
                         <p class="mt-6">
                           <a
-                            href="/case-study"
+                            href={hero.imageGrid[4].caseStudyLink}
                             class="text-white hover:text-blue-100 inline-flex items-center group">
                             {hero.imageGrid[4].caseStudyText}
                             <svg
@@ -837,72 +791,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
 </section>
   
 
-  <!-- Dark Background -->
-
-
-  <!-- Dark Background -->
-
-<section class="bg-purple-900 transform skew-y-6 mt-20">
-  <div
-    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
-    <div>
-      <h2 class="inline-flex items-center text-white">
-        <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
-      </h2>
-      <h2
-        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
-        {darkBackground.sections[1].mainTitle}
-      </h2>
-    </div>
-    <div class="mx-auto text-left mt-12">
-      <div
-          class="text-sm gap-x-2 gap-y-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">
-                  
-                  {darkBackground.sections[1].points[0].title}
-                </p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[0].description}
-              </p>
-            </div>
-          </article>
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                  class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[1].title}</p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[1].description}
-              </p>
-            </div>
-          </article>
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                  class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[2].title}</p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[2].description}
-              </p>
-            </div>
-          </article>
-        </div>
-    </div>
-  </div>
-</section>
+<GetStarted/>
 
 
   <!-- Information -->

@@ -10,6 +10,7 @@ import FeatureEight from "../components/features/FeatureEight.astro";
 import FeatureNine from "../components/features/FeatureNine.astro";
 import FeatureTen from "../components/features/FeatureTen.astro";
 
+import GetStarted from "../components/features/GetStarted.astro";
 import TestimonialThree from "../components/testimonials/TestimonialThree.astro";
 import PricingThree from "../components/pricing/PricingThree.astro";
 import PricingThreeExtended from "../components/pricing/PricingThreeExtended.astro";
@@ -82,7 +83,7 @@ const featureTwo = {
   mainContent: {
     title: "Grow Fast, Scale Intelligently",
     img: "/images/dashboard.jpg",
-    subtitle: "Your Partner in Progressive Growth",
+    subtitle: "Your Partner in Continuous Growth",
     paragraphs: [
       "Empress is more than a solution; it's your growth partner. Embrace scalable excellence as your business expands, with tools that adapt and evolve with you."
     ],
@@ -116,45 +117,6 @@ const featureThree = {
   ]
 };
 
-
-// Section Five
-
-const darkBackground = {
-  sections: [
-    {
-      type: "feature",
-      title: "Effortless Onboarding",
-      mainTitle: "Your Journey Begins Here",
-      secondaryTitle: "",
-    },
-    {
-      type: "featureSkewed",
-      title: "Simple. Fast. Secure.",
-      mainTitle: "Seamless Setup, Unmatched Simplicity",
-      secondaryTitle: "",
-      description: "Embark on your Empress journey with just three straightforward steps. We've streamlined the process to ensure a smooth and hassle-free start.",
-      points: [
-        {
-          title: "Step 1: Discover Empress",
-          description: "Begin by exploring the vast array of features Empress offers. Our intuitive platform guides you through every service and solution available."
-        },
-        {
-          title: "Step 2: Customize Your Solution",
-          description: "Tailor Empress to your business needs. Select and configure the applications you need, ensuring a perfect fit for your operational requirements."
-        },
-        {
-          title: "Step 3: Launch and Thrive",
-          description: "With your personalized Empress suite ready, launch into a new era of business efficiency. Enjoy seamless integration, and watch your business flourish."
-        }
-      ],
-  bgColor: "purple-900",
-  textColor: "white",
-  gridCols: "lg:grid-cols-3",
-  transform: "skew-y-6",
-  marginAdjustment: "-mt-72 lg:-mt-[26rem]"
-    }
-  ]
-};
 
 // Section Two
 
@@ -701,69 +663,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
 </section>
 
 
-<!-- Dark Background -->
-
-<section class="bg-purple-900 transform skew-y-6 mt-20">
-  <div
-    class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 lg:py-52 items-center transform -skew-y-6">
-    <div>
-      <h2 class="inline-flex items-center text-white">
-        <span class="text-base font-medium tracking-tight">{darkBackground.sections[1].title}</span>
-      </h2>
-      <h2
-        class="tracking-tighter lg:text-5xl text-white font-semibold mt-6 text-3xl lg:mx-auto">
-        {darkBackground.sections[1].mainTitle}
-      </h2>
-    </div>
-    <div class="mx-auto text-left mt-12">
-      <div
-          class="text-sm gap-x-2 gap-y-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">
-                  
-                  {darkBackground.sections[1].points[0].title}
-                </p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[0].description}
-              </p>
-            </div>
-          </article>
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                  class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[1].title}</p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[1].description}
-              </p>
-            </div>
-          </article>
-          <article>
-            <div class="space-y-3">
-              <div class="lg:inline-flex lg:items-center">
-                <div
-                  class="flex items-center justify-center text-blue-400 rounded-full">
-                </div>
-                <p class="text-xl font-semibold text-white">{darkBackground.sections[1].points[2].title}</p>
-              </div>
-              <p class="text-base text-slate-400">
-                {darkBackground.sections[1].points[2].description}
-              </p>
-            </div>
-          </article>
-        </div>
-    </div>
-  </div>
-</section>
+<GetStarted/>  
 
 <!-- Section Two -->
 
@@ -1063,7 +963,6 @@ Use AstroSeo in all the pages you want different Seo than the index page
     </div>
   </div>
 </section>
-
 
 <Ecosystem/>  
 
