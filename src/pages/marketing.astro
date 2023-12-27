@@ -12,6 +12,7 @@ import FeatureTen from "../components/features/FeatureTen.astro";
 import FeatureNine from "../components/features/FeatureNine.astro";
 import CtaThree from "../components/cta/CtaThree.astro";
 import FaqTwo from "../components/infopages/FaqTwo.astro";
+import Ecosystem from "../components/features/Ecosystem.astro";
 import CtaTwo from "../components/cta/CtaTwo.astro";
 import { Code } from "astro/components";
 import { Icon } from "astro-icon";
@@ -26,21 +27,21 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Finance",
-    link: "/finance",
+    title: "Marketing",
+    link: "/marketing",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/finance"
+    href: "/marketing"
   },
   {
     name: "Features",
-    href: "/finance/features"
+    href: "/marketing/features"
   },
   {
     name: "Applications",
-    href: "/apps/finance"
+    href: "/apps/marketing"
   },
   {
     name: "Docs",
@@ -53,49 +54,40 @@ const navLinks = [
 
 const heading = {
   title: "Marketing",
-  title: "Marketing",
-  description: "Transform your financial management with intuitive and robust solutions, Empress is dedicated to fostering business growth and personal financial success. Our diverse range of tools caters to every financial need with unmatched ease and efficiency.",
+  description: "Empress redefines marketing management, providing innovative solutions to enhance campaign effectiveness and brand growth. Our suite of tools is crafted to empower marketers with precision and creativity in their campaign strategies.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
-  imageRows: [
-    // Image URLs and alt texts can be updated here
-    // Example structure:
-    [
-      { url: "path/to/image1.jpg", alt: "Image Description 1", class: "image-class" },
-      { url: "path/to/image2.jpg", alt: "Image Description 2", class: "image-class" }
-    ],
-    // Additional rows of images can be added here
-  ]
 };
 
 // Diplay Image
 
 const displayImage = {
-  "title": "Empress Insights",
-  "subtitle": "Explore Your Data,",
-  "subtitleCont": "Uncover Actionable Insights.",
+  "title": "Empress for Marketing",
+  "subtitle": "Elevate Your Campaigns,",
+  "subtitleCont": "Transform Your Reach.",
   imageSrc: "/images/chart.jpg"
 };
+
 
 // FeatureOne
 
 const featureOne = {
   mainContent: {
-    title: "One Solutions",
+    title: "Campaign Execution Excellence",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Maximize Impact, Minimize Effort",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress revolutionizes campaign management, merging creativity with analytics for impactful marketing strategies. Experience a new level of campaign efficiency and effectiveness."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Streamline Campaigns",
+    linkHref: "/marketing/campaign-management"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Targeted, Effective Campaigns",
+    "Comprehensive Tracking & Analysis",
+    "Enhanced Campaign ROI"
   ]
 };
 
@@ -103,19 +95,19 @@ const featureOne = {
 
 const featureTwo = {
   mainContent: {
-    title: "Two Solutions",
+    title: "Content & Social Synergy",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Crafting Compelling Narratives",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress seamlessly blends content management with social media prowess, offering tools to create, distribute, and amplify content. Enhance your brand's narrative and social presence effectively."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Elevate Your Content",
+    linkHref: "/marketing/content-social"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Creative Content Management",
+    "Amplified Social Media Presence",
+    "Engaging Audience Interaction"
   ]
 };
 
@@ -123,19 +115,19 @@ const featureTwo = {
 
 const featureThree = {
   mainContent: {
-    title: "Three Solutions",
+    title: "Event & Email Marketing Dynamics",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Enhancing Outreach & Engagement",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress redefines event and email marketing strategies with tools that ensure memorable events and effective email campaigns. Elevate your outreach for maximum audience engagement."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Optimize Marketing Outreach",
+    linkHref: "/marketing/event-email"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Memorable, Efficient Event Planning",
+    "Effective Email Campaign Strategies",
+    "Higher Engagement & Open Rates"
   ]
 };
 
@@ -203,53 +195,50 @@ const darkBackground = {
 
 const applicationShowcase = {
   mainSection: {
-    title: "Feature Spotlight",
-    subtitle: "Empowering Your Financial Ecosystem",
-    description1: "Dive into the extensive range of Empress features designed to redefine your approach to financial management.",
-    description2: "Empress seamlessly blends user-friendliness with powerful functionality, addressing all your financial needs.",
-    viewApplicationsLink: "/explore-features",
-    viewApplicationsText: "Explore Features"
+    title: "Marketing Feature Highlights",
+    subtitle: "Driving Marketing Innovation",
+    description1: "Explore Empress's extensive marketing features, designed to revolutionize your approach to digital and traditional marketing.",
+    description2: "Blending creativity with analytics, Empress is your partner in crafting impactful marketing strategies.",
+    viewApplicationsLink: "/suite/apps",
+    viewApplicationsText: "View Applications"
   },
   contentSections: [
   {
-    title: "Control Your Accounts",
-    description: "Experience unparalleled control over your financial flow with Empress. Our intuitive tools empower you to effortlessly navigate your accounts, bringing a new level of clarity and efficiency to your financial management.",
-    linkHref: "/suite/account",
-    linkText: "See Application",
-
+    title: "Optimize Campaign Execution",
+    description: "Elevate the effectiveness of your marketing campaigns with our sophisticated campaign management tools. Designed to streamline execution, our platform enhances campaign efficiency, ensuring impactful and successful marketing outcomes.",
+    linkHref: "/suite/campaign",
+    linkText: "View Campaign Management",
   },
   {
-    title: "Redefine Invoice Management",
-    description: "Empress transforms how you handle invoices. Our advanced system streamlines your billing process, introducing simplicity and precision to your financial transactions, all designed with your efficiency in mind.",
-    linkHref: "/suite/invoice",
-    linkText: "See Application",
+    title: "Manage Content Effectively",
+    description: "Revolutionize your content strategy with our comprehensive content management system. Tailored for creative excellence, it simplifies content curation and distribution, enhancing your brand's narrative and audience engagement.",
+    linkHref: "/suite/content",
+    linkText: "View Content Management",
   },
   {
-    title: "Elevate Expense Tracking",
-    description: "Track your company spending with unmatched accuracy using Empress. Our sophisticated expense tracking tools offer insightful analysis, guiding you to smarter spending decisions and enhanced budget control.",
-    linkHref: "/suite/expense",
-    linkText: "See Application",
-    
+    title: "Enhance Social Presence",
+    description: "Boost your brand's social media impact with our advanced social media tools. Our platform is designed to amplify your social presence, increasing engagement and reach across various social platforms for a stronger digital footprint.",
+    linkHref: "/suite/social",
+    linkText: "View Social Media Tools",
   },
   {
-    title: "Simplify Tax Compliance",
-    description: "With Empress, navigating tax compliance becomes a stress-free experience. Our automated solutions adapt to evolving tax laws, ensuring accuracy and peace of mind in every financial calculation.",
-    linkHref: "/suite/tax",
-    linkText: "See Application",
+    title: "Organize Events Efficiently",
+    description: "Streamline your event planning and execution with our integrated event management system. It simplifies logistics and coordination, ensuring your events are memorable, well-organized, and effectively engage your target audience.",
+    linkHref: "/suite/events",
+    linkText: "View Event Management",
   },
   {
-    title: "Optimize Your Budgeting",
-    description: "Empower your financial planning with Empress's budget optimization tools. Our solutions help you craft effective budgets and forecast future scenarios, enabling informed decisions that enhance your financial wellbeing.",
-    linkHref: "/suite/budget",
-    linkText: "See Application",
+    title: "Streamline Email Campaigns",
+    description: "Maximize the efficiency of your email marketing with our intuitive email campaign system. It enhances the creation, delivery, and analysis of email campaigns, ensuring higher open rates and engagement for your marketing communications.",
+    linkHref: "/suite/email",
+    linkText: "View Email Campaigns",
   },
   {
-    title: "Streamline Contract Management",
-    description: "Empress revolutionizes contract processing, offering efficiency and ease. Our platform simplifies the complexities of contract management, ensuring seamless business operations and compliance, tailored to your needs.",
-    linkHref: "/suite/contracts",
-    linkText: "See Application",
-  },
-    // Add more items as per your content
+    title: "Collect Customer Feedback",
+    description: "Gather valuable insights directly from your customers with our advanced survey tools. Designed for easy deployment and high response rates, our system provides crucial feedback to inform and refine your marketing strategies.",
+    linkHref: "/suite/surveys",
+    linkText: "View Surveys",
+  }
   ]
 };
 
@@ -258,160 +247,85 @@ const applicationShowcase = {
 // Checklist Items
 
 const checklistItems = {
-  sectionTitle: "Features Overview",
-  subTitle: "Diverse Range of Financial Tools",
+  sectionTitle: "Marketing Excellence",
+  subTitle: "Core Marketing Categories",
   categories: [
     {
-      categoryName: "Core Features",
+      categoryName: "Campaign Execution",
       items: [
-        { label: "Balance Tracking" },
-        { label: "Dashboard View" },
-        { label: "Transaction Logs" },
-        { label: "Invoice Processing" },
-        { label: "Expense Management" },
-        { label: "Data Syncing" }
+        { label: "Campaign Planning" },
+        { label: "Tracking & Analytics" },
+        { label: "Target Audience Focus" },
+        { label: "Budget ROI Optimization" },
+        { label: "Multichannel Integration" },
+        { label: "Performance Monitoring" },
+        { label: "Strategic Execution" }
       ]
     },
     {
-      categoryName: "Advanced Tools",
+      categoryName: "Content & Social",
       items: [
-        { label: "Custom Reports" },
-        { label: "Budget Forecasting" },
-        { label: "Multi-Currency Support" },
-        { label: "Project Billing" },
-        { label: "Tax Calculations" },
-        { label: "Account Linking" },
-        { label: "Payment Tracking" }
+        { label: "Content Management" },
+        { label: "Social Engagement" },
+        { label: "Analytical Insights" },
+        { label: "Collaborative Strategy" },
+        { label: "Platform Customization" },
+        { label: "Audience Targeting" },
+        { label: "Content Performance" }
       ]
     },
     {
-      categoryName: "Efficiency Enhancers",
+      categoryName: "Customer & Events",
       items: [
-        { label: "Automated Alerts" },
-        { label: "Integration Options" },
-        { label: "Reimbursement Tracking" },
-        { label: "Approval Workflow" },
-        { label: "Document Management" },
-        { label: "Real-Time Updates" },
-        { label: "Security Protocols" }
+        { label: "Email Marketing" },
+        { label: "Event Coordination" },
+        { label: "Feedback Collection" },
+        { label: "Audience Engagement" },
+        { label: "Campaign Tracking" },
+        { label: "Event Management" },
+        { label: "Interactive Communication" }
       ]
     },
     {
-      categoryName: "Collaboration & Support",
+      categoryName: "Analytics & Insights",
       items: [
-        { label: "Team Access Control" },
-        { label: "Client Collaboration" },
-        { label: "Support Chatbot" },
-        { label: "User Community" },
-        { label: "Training Resources" },
-        { label: "Customizable Access" },
-        { label: "Dedicated Assistance" }
+        { label: "Market Trend Analysis" },
+        { label: "Survey Management" },
+        { label: "Data-Driven Decisions" },
+        { label: "Performance Review" },
+        { label: "Sales Alignment" },
+        { label: "Strategic Planning" },
+        { label: "Optimization Strategies" }
       ]
     }
   ]
 };
 
-
-// Additional Features
-
-const featuresHeading = {
-  featureHeading: "Additional Features",
-  featureTitle: "Do More With Empress",
-};
-
-const features = [
-{
-    "title": "Inights",
-    "description": "Unlock Data Insights",
-    "icon": "ph:chart-bar-duotone",
-    "link": "/feature/insights",
-    "color": "indigo"
-  },
-  {
-    "title": "Flows",
-    "description": "Optimize Your Workflow",
-    "icon": "ph:flow-arrow-duotone",
-    "link": "/feature/flows",
-    "color": "indigo"
-  },
-  {
-    "title": "Zaps",
-    "description": "Automate Routine Tasks",
-    "icon": "ph:lightning-duotone",
-    "link": "/feature/zaps",
-    "color": "indigo"
-  },
-  {
-    "title": "Assistants",
-    "description": "Expert AI Chat Support",
-    "icon": "ph:robot-duotone",
-    "link": "/feature/assistants",
-    "color": "indigo"
-  },
-  {
-    "title": "Forecast",
-    "description": "Anticipate Future Trends",
-    "icon": "ph:cloud-sun-duotone",
-    "link": "/feature/forecast",
-    "color": "indigo"
-  },
-  {
-    "title": "Bridge",
-    "description": "Connect With Collaborators",
-    "icon": "ph:arrows-out-duotone",
-    "link": "/feature/bridge",
-    "color": "indigo"
-  },
-  {
-    "title": "Administration",
-    "description": "Control Access & Visibility",
-    "icon": "ph:address-book-duotone",
-    "link": "/feature/administration",
-    "color": "indigo"
-  },
-  {
-    "title": "Innovation",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/feature/innovation",
-    "color": "indigo"
-  },
-  {
-    "title": "Integrations",
-    "description": "Seamless Tool Integration",
-    "icon": "ph:plugs-connected-duotone",
-    "link": "/feature/integrations",
-    "color": "indigo"
-  },
-];
-
-
-
 // FAQs
 
 const faqs = {
-  title: "Answers at Your Fingertips",
-  subtitle: "Empress FAQs",
+  title: "FAQs",
+  subtitle: "Your Questions, Answered",
   questions: [
     {
-      question: "How does Empress enhance financial reporting?",
-      answer: "Empress transforms financial reporting by offering advanced analytics and customizable report templates. These tools enable users to generate insightful financial reports, track key performance indicators, and gain a deeper understanding of their financial health, aiding in strategic decision-making."
+      question: "How Does Empress Enhance Campaign Execution?",
+      answer: "Empress's campaign management tools streamline your marketing strategy with comprehensive tracking systems, enabling dynamic market analysis and creative planning. Our platform offers a holistic view of campaigns, supports multi-channel management, and ensures every campaign is targeted and effective."
     },
     {
-      question: "How can Empress integrate with my current financial tools?",
-      answer: "Empress features a robust integration framework that supports various accounting software and financial systems. Its API-driven architecture allows for smooth and secure data synchronization, enabling users to integrate their existing financial tools, ensuring a unified and streamlined financial management experience."
+      question: "What Features Does Empress Offer for Content Management?",
+      answer: "Empress's content management system revolutionizes content strategy, offering tools for easy management, customization, and distribution. It supports diverse content types, systematic categorization, and ensures that your content reaches the right audience on the most effective platforms."
     },
     {
-      question: "Is Empress suitable for varying business sizes?",
-      answer: "Absolutely! Empress is designed to cater to a diverse range of business sizes. Its scalable architecture allows small startups to manage their finances efficiently and can be scaled up to meet the complex financial management needs of large enterprises, making it a versatile tool for all business stages."
+      question: "Can Empress Boost My Brand's Social Media Impact?",
+      answer: "Absolutely. Empress provides advanced social media tools to amplify your online presence. Our platform helps increase engagement and broaden reach across various social networks, ensuring a stronger digital footprint and more effective audience interaction."
     },
     {
-      question: "How does Empress support expense management?",
-      answer: "Empress simplifies expense management through features like automated expense tracking, categorization, and reimbursement processing. It offers an intuitive interface for recording expenses, generating expense reports, and provides insights into spending patterns to help businesses manage their expenditures more effectively."
+      question: "How Can Empress Assist in Event Management?",
+      answer: "Empress simplifies event planning with an integrated event management system. From coordinating logistics to engaging attendees, our tool ensures your events are well-organized and memorable, making every event a success."
     },
     {
-      question: "Does Empress offer project-based financial tracking?",
-      answer: "Yes, Empress provides project-based financial tracking that allows businesses to allocate budgets, track expenses, and monitor financial performance on a per-project basis. This feature is invaluable for companies that manage multiple projects simultaneously, ensuring accurate financial oversight for each project."
+      question: "What Makes Empress Ideal for Email Marketing?",
+      answer: "Empress enhances your email marketing with an intuitive system that improves creation, delivery, and analysis. It ensures higher engagement rates through effective communication strategies, helping you achieve better outcomes in your email campaigns."
     }
   ]
 };
@@ -928,43 +842,8 @@ const faqs = {
     </div>
   </section>
 
-    <!-- Features -->
 
-    <section class="bg-white">
-      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-        <div class="text-center">
-          <h2 class="inline-flex items-center text-blue-600">
-            <span class="text-base font-medium tracking-tight">{featuresHeading.featureHeading}</span>
-          </h2>
-          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-            {featuresHeading.featureTitle}
-          </h2>
-        </div>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
-          {
-            features.map((item) => (
-              <a href={item.link} 
-                 class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
-                <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
-                  <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
-                    {/* Use the original icon coloring method */}
-                    <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
-                  </div>
-                  <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
-                    <h3 class="font-semibold text-md">{item.title}</h3>
-                    <p class="text-slate-500">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div> 
-      </div>
-    </section>
-  
-
-
-  
+  <Ecosystem/>  
 
 <!-- Section Nine -->
 

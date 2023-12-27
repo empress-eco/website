@@ -6,7 +6,7 @@ description: "Municipal management performance corporate investment grade bonds.
 image:
   url: "/images/integrations/chrome.svg"
   alt: "The Astro logo with the word One."
-tags: ["sustainability"]
+tags: ["collaboration"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

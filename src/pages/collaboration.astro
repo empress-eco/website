@@ -13,6 +13,7 @@ import FeatureNine from "../components/features/FeatureNine.astro";
 import CtaThree from "../components/cta/CtaThree.astro";
 import FaqTwo from "../components/infopages/FaqTwo.astro";
 import CtaTwo from "../components/cta/CtaTwo.astro";
+import Ecosystem from "../components/features/Ecosystem.astro";
 import { Code } from "astro/components";
 import { Icon } from "astro-icon";
 
@@ -26,21 +27,21 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Finance",
-    link: "/finance",
+    title: "Collaboration",
+    link: "/collaboration",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/finance"
+    href: "/collaboration"
   },
   {
     name: "Features",
-    href: "/finance/features"
+    href: "/collaboration/features"
   },
   {
     name: "Applications",
-    href: "/apps/finance"
+    href: "/apps/collaboration"
   },
   {
     name: "Docs",
@@ -48,94 +49,78 @@ const navLinks = [
   }
 ];
 
-
 // Heading
-
 const heading = {
-  title: "Sustainability",
-  title: "Sustainability",
-  description: "Transform your financial management with intuitive and robust solutions, Empress is dedicated to fostering business growth and personal financial success. Our diverse range of tools caters to every financial need with unmatched ease and efficiency.",
+  title: "Collaboration",
+  description: "Empress redefines teamwork with cutting-edge collaboration tools. Connect, create, and communicate seamlessly across your organization with our integrated suite. Unleash the full potential of your team with Empress.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
-  imageRows: [
-    // Image URLs and alt texts can be updated here
-    // Example structure:
-    [
-      { url: "path/to/image1.jpg", alt: "Image Description 1", class: "image-class" },
-      { url: "path/to/image2.jpg", alt: "Image Description 2", class: "image-class" }
-    ],
-    // Additional rows of images can be added here
-  ]
 };
 
-// Diplay Image
-
+// Display Image
 const displayImage = {
-  "title": "Empress Insights",
-  "subtitle": "Explore Your Data,",
-  "subtitleCont": "Uncover Actionable Insights.",
+  title: "Collaborate with Confidence",
+  subtitle: "Enhance Teamwork,",
+  subtitleCont: "Elevate Productivity.",
   imageSrc: "/images/chart.jpg"
 };
 
 // FeatureOne
-
 const featureOne = {
   mainContent: {
-    title: "One Solutions",
+    title: "Unified Communication",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Seamless Interactions, Anytime, Anywhere",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress brings your team together, no matter where they are. With tools like instant messaging, video conferencing, and collaborative editing, we bridge the gap in remote teamwork."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Connect Your Team",
+    linkHref: "/collaboration/communication"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Instant Messaging & Video Calls",
+    "Real-Time Document Collaboration",
+    "Streamlined Remote Communication"
   ]
 };
 
 // FeatureTwo
-
 const featureTwo = {
   mainContent: {
-    title: "Two Solutions",
+    title: "Project Management",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Organize, Track, and Achieve",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Transform how your team handles projects. Empress's project management tools provide clarity, drive focus, and enhance productivity for every task."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Manage Projects Effectively",
+    linkHref: "/collaboration/project-management"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Task Assignment & Tracking",
+    "Deadline Management & Alerts",
+    "Collaborative Workspace for Teams"
   ]
 };
 
 // FeatureThree
-
 const featureThree = {
   mainContent: {
-    title: "Three Solutions",
+    title: "Integrated Workflows",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Automate for Efficiency",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress streamlines your processes with customizable workflows. Automate routine tasks, focus on strategic work, and drive business efficiency."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Automate Your Workflow",
+    linkHref: "/collaboration/workflow"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Custom Workflow Automation",
+    "Seamless Process Integration",
+    "Efficient Task Management"
   ]
 };
 
@@ -203,53 +188,50 @@ const darkBackground = {
 
 const applicationShowcase = {
   mainSection: {
-    title: "Feature Spotlight",
-    subtitle: "Empowering Your Financial Ecosystem",
-    description1: "Dive into the extensive range of Empress features designed to redefine your approach to financial management.",
-    description2: "Empress seamlessly blends user-friendliness with powerful functionality, addressing all your financial needs.",
-    viewApplicationsLink: "/explore-features",
-    viewApplicationsText: "Explore Features"
+    title: "Empress Collaboration Suite",
+    subtitle: "Unite Your Team, Elevate Your Workflow",
+    description1: "Empress's suite of collaborative applications is designed to bring teams together, enhance communication, and streamline project management, irrespective of geographical barriers.",
+    description2: "From real-time communication tools to integrated project management systems, our solutions are crafted to boost productivity and foster a cohesive team environment.",
+    viewApplicationsLink: "/collaboration/applications",
+    viewApplicationsText: "Explore Collaboration Tools"
   },
   contentSections: [
-  {
-    title: "Control Your Accounts",
-    description: "Experience unparalleled control over your financial flow with Empress. Our intuitive tools empower you to effortlessly navigate your accounts, bringing a new level of clarity and efficiency to your financial management.",
-    linkHref: "/suite/account",
-    linkText: "See Application",
-
-  },
-  {
-    title: "Redefine Invoice Management",
-    description: "Empress transforms how you handle invoices. Our advanced system streamlines your billing process, introducing simplicity and precision to your financial transactions, all designed with your efficiency in mind.",
-    linkHref: "/suite/invoice",
-    linkText: "See Application",
-  },
-  {
-    title: "Elevate Expense Tracking",
-    description: "Track your company spending with unmatched accuracy using Empress. Our sophisticated expense tracking tools offer insightful analysis, guiding you to smarter spending decisions and enhanced budget control.",
-    linkHref: "/suite/expense",
-    linkText: "See Application",
-    
-  },
-  {
-    title: "Simplify Tax Compliance",
-    description: "With Empress, navigating tax compliance becomes a stress-free experience. Our automated solutions adapt to evolving tax laws, ensuring accuracy and peace of mind in every financial calculation.",
-    linkHref: "/suite/tax",
-    linkText: "See Application",
-  },
-  {
-    title: "Optimize Your Budgeting",
-    description: "Empower your financial planning with Empress's budget optimization tools. Our solutions help you craft effective budgets and forecast future scenarios, enabling informed decisions that enhance your financial wellbeing.",
-    linkHref: "/suite/budget",
-    linkText: "See Application",
-  },
-  {
-    title: "Streamline Contract Management",
-    description: "Empress revolutionizes contract processing, offering efficiency and ease. Our platform simplifies the complexities of contract management, ensuring seamless business operations and compliance, tailored to your needs.",
-    linkHref: "/suite/contracts",
-    linkText: "See Application",
-  },
-    // Add more items as per your content
+    {
+      title: "Real-Time Communication Tools",
+      description: "Empress provides advanced communication platforms that facilitate instant messaging, video conferencing, and collaborative decision-making, ensuring seamless interaction among team members.",
+      linkHref: "/collaboration/communication-tools",
+      linkText: "Explore Communication Tools",
+    },
+    {
+      title: "Project Management Solutions",
+      description: "Our project management tools offer comprehensive features for task tracking, deadline management, and team collaboration, enabling you to handle complex projects with ease and efficiency.",
+      linkHref: "/collaboration/project-management",
+      linkText: "View Project Management",
+    },
+    {
+      title: "Document Collaboration System",
+      description: "Empress's document collaboration system allows teams to work together on documents in real-time, enhancing the co-creation process and ensuring consistency across all project materials.",
+      linkHref: "/collaboration/document-collaboration",
+      linkText: "View Document Collaboration",
+    },
+    {
+      title: "Workflow Automation Platform",
+      description: "Automate repetitive tasks and streamline your workflow with Empress's customizable automation tools. Enhance productivity and free up your team to focus on strategic initiatives.",
+      linkHref: "/collaboration/workflow-automation",
+      linkText: "View Workflow Automation",
+    },
+    {
+      title: "Integrated Calendar and Scheduling",
+      description: "Manage team schedules effectively with Empress's integrated calendar. Plan meetings, set reminders, and synchronize schedules across departments for better time management and planning.",
+      linkHref: "/collaboration/calendar-scheduling",
+      linkText: "View Calendar & Scheduling",
+    },
+    {
+      title: "Team Feedback and Analytics",
+      description: "Gather valuable insights into team performance and dynamics with Empress's feedback and analytics tools. Utilize data-driven strategies to optimize teamwork and enhance productivity.",
+      linkHref: "/collaboration/team-analytics",
+      linkText: "View Feedback & Analytics",
+    }
   ]
 };
 
@@ -258,163 +240,114 @@ const applicationShowcase = {
 // Checklist Items
 
 const checklistItems = {
-  sectionTitle: "Features Overview",
-  subTitle: "Diverse Range of Financial Tools",
-  categories: [
+  "sectionTitle": "Empress Collaboration Suite",
+  "subTitle": "Streamlining Team Productivity",
+  "categories": [
     {
-      categoryName: "Core Features",
-      items: [
-        { label: "Balance Tracking" },
-        { label: "Dashboard View" },
-        { label: "Transaction Logs" },
-        { label: "Invoice Processing" },
-        { label: "Expense Management" },
-        { label: "Data Syncing" }
+      "categoryName": "Communication Tools",
+      "items": [
+        {
+          "label": "Instant Messaging"
+        },
+        {
+          "label": "Video Meetings"
+        },
+        {
+          "label": "Discussion Boards"
+        },
+        {
+          "label": "Feedback Systems"
+        }
       ]
     },
     {
-      categoryName: "Advanced Tools",
-      items: [
-        { label: "Custom Reports" },
-        { label: "Budget Forecasting" },
-        { label: "Multi-Currency Support" },
-        { label: "Project Billing" },
-        { label: "Tax Calculations" },
-        { label: "Account Linking" },
-        { label: "Payment Tracking" }
+      "categoryName": "Project Management",
+      "items": [
+        {
+          "label": "Task Assignment"
+        },
+        {
+          "label": "Deadline Tracking"
+        },
+        {
+          "label": "Resource Management"
+        },
+        {
+          "label": "Project Analytics"
+        }
       ]
     },
     {
-      categoryName: "Efficiency Enhancers",
-      items: [
-        { label: "Automated Alerts" },
-        { label: "Integration Options" },
-        { label: "Reimbursement Tracking" },
-        { label: "Approval Workflow" },
-        { label: "Document Management" },
-        { label: "Real-Time Updates" },
-        { label: "Security Protocols" }
+      "categoryName": "Document Collaboration",
+      "items": [
+        {
+          "label": "Co-Editing"
+        },
+        {
+          "label": "File Sharing"
+        },
+        {
+          "label": "Version Control"
+        },
+        {
+          "label": "Access Management"
+        }
       ]
     },
     {
-      categoryName: "Collaboration & Support",
-      items: [
-        { label: "Team Access Control" },
-        { label: "Client Collaboration" },
-        { label: "Support Chatbot" },
-        { label: "User Community" },
-        { label: "Training Resources" },
-        { label: "Customizable Access" },
-        { label: "Dedicated Assistance" }
+      "categoryName": "Workflow Automation",
+      "items": [
+        {
+          "label": "Process Automation"
+        },
+        {
+          "label": "Rule Customization"
+        },
+        {
+          "label": "Task Scheduling"
+        },
+        {
+          "label": "Operational Efficiency"
+        }
       ]
     }
   ]
 };
-
-
-// Additional Features
-
-const featuresHeading = {
-  featureHeading: "Additional Features",
-  featureTitle: "Do More With Empress",
-};
-
-const features = [
-{
-    "title": "Inights",
-    "description": "Unlock Data Insights",
-    "icon": "ph:chart-bar-duotone",
-    "link": "/feature/insights",
-    "color": "indigo"
-  },
-  {
-    "title": "Flows",
-    "description": "Optimize Your Workflow",
-    "icon": "ph:flow-arrow-duotone",
-    "link": "/feature/flows",
-    "color": "indigo"
-  },
-  {
-    "title": "Zaps",
-    "description": "Automate Routine Tasks",
-    "icon": "ph:lightning-duotone",
-    "link": "/feature/zaps",
-    "color": "indigo"
-  },
-  {
-    "title": "Assistants",
-    "description": "Expert AI Chat Support",
-    "icon": "ph:robot-duotone",
-    "link": "/feature/assistants",
-    "color": "indigo"
-  },
-  {
-    "title": "Forecast",
-    "description": "Anticipate Future Trends",
-    "icon": "ph:cloud-sun-duotone",
-    "link": "/feature/forecast",
-    "color": "indigo"
-  },
-  {
-    "title": "Bridge",
-    "description": "Connect With Collaborators",
-    "icon": "ph:arrows-out-duotone",
-    "link": "/feature/bridge",
-    "color": "indigo"
-  },
-  {
-    "title": "Administration",
-    "description": "Control Access & Visibility",
-    "icon": "ph:address-book-duotone",
-    "link": "/feature/administration",
-    "color": "indigo"
-  },
-  {
-    "title": "Innovation",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/feature/innovation",
-    "color": "indigo"
-  },
-  {
-    "title": "Integrations",
-    "description": "Seamless Tool Integration",
-    "icon": "ph:plugs-connected-duotone",
-    "link": "/feature/integrations",
-    "color": "indigo"
-  },
-];
-
 
 
 // FAQs
 
 const faqs = {
-  title: "Answers at Your Fingertips",
-  subtitle: "Empress FAQs",
+  title: "FAQs",
+  subtitle: "Your Questions, Answered",
   questions: [
     {
-      question: "How does Empress enhance financial reporting?",
-      answer: "Empress transforms financial reporting by offering advanced analytics and customizable report templates. These tools enable users to generate insightful financial reports, track key performance indicators, and gain a deeper understanding of their financial health, aiding in strategic decision-making."
+      question: "How does team messaging work?",
+      answer: "Empress's team messaging system facilitates instant communication across your organization. It supports real-time chats, file sharing, and collaborative discussions, ensuring seamless internal communication."
     },
     {
-      question: "How can Empress integrate with my current financial tools?",
-      answer: "Empress features a robust integration framework that supports various accounting software and financial systems. Its API-driven architecture allows for smooth and secure data synchronization, enabling users to integrate their existing financial tools, ensuring a unified and streamlined financial management experience."
+      question: "Can I track project progress?",
+      answer: "Yes, our project management tools offer comprehensive tracking of tasks, deadlines, and resources. They provide a clear overview of project progress and help in timely completion."
     },
     {
-      question: "Is Empress suitable for varying business sizes?",
-      answer: "Absolutely! Empress is designed to cater to a diverse range of business sizes. Its scalable architecture allows small startups to manage their finances efficiently and can be scaled up to meet the complex financial management needs of large enterprises, making it a versatile tool for all business stages."
+      question: "How do we collaborate on documents?",
+      answer: "Our document collaboration system enables simultaneous editing, version control, and secure sharing. Teams can work together on documents in real-time, enhancing productivity and collaboration."
     },
     {
-      question: "How does Empress support expense management?",
-      answer: "Empress simplifies expense management through features like automated expense tracking, categorization, and reimbursement processing. It offers an intuitive interface for recording expenses, generating expense reports, and provides insights into spending patterns to help businesses manage their expenditures more effectively."
+      question: "Can workflows be automated?",
+      answer: "Empress allows for the automation of repetitive tasks and workflows. Customizable rules and scheduling options streamline processes, freeing up time for strategic work."
     },
     {
-      question: "Does Empress offer project-based financial tracking?",
-      answer: "Yes, Empress provides project-based financial tracking that allows businesses to allocate budgets, track expenses, and monitor financial performance on a per-project basis. This feature is invaluable for companies that manage multiple projects simultaneously, ensuring accurate financial oversight for each project."
+      question: "Are video meetings supported?",
+      answer: "Our platform includes video meeting capabilities, allowing for virtual face-to-face interactions. This enhances team collaboration, especially in remote or hybrid work environments."
+    },
+    {
+      question: "How secure is data sharing?",
+      answer: "Data security is paramount in our collaboration tools. We use advanced encryption and access controls to ensure that shared information is protected and only accessible to authorized personnel."
     }
   ]
 };
+
 
 
 
@@ -928,42 +861,9 @@ const faqs = {
     </div>
   </section>
 
-    <!-- Features -->
-
-    <section class="bg-white">
-      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-        <div class="text-center">
-          <h2 class="inline-flex items-center text-blue-600">
-            <span class="text-base font-medium tracking-tight">{featuresHeading.featureHeading}</span>
-          </h2>
-          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-            {featuresHeading.featureTitle}
-          </h2>
-        </div>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
-          {
-            features.map((item) => (
-              <a href={item.link} 
-                 class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
-                <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
-                  <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
-                    {/* Use the original icon coloring method */}
-                    <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
-                  </div>
-                  <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
-                    <h3 class="font-semibold text-md">{item.title}</h3>
-                    <p class="text-slate-500">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div> 
-      </div>
-    </section>
   
 
-
+    <Ecosystem/>  
   
 
 <!-- Section Nine -->

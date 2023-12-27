@@ -13,6 +13,7 @@ import FeatureNine from "../components/features/FeatureNine.astro";
 import CtaThree from "../components/cta/CtaThree.astro";
 import FaqTwo from "../components/infopages/FaqTwo.astro";
 import CtaTwo from "../components/cta/CtaTwo.astro";
+import Ecosystem from "../components/features/Ecosystem.astro";
 import { Code } from "astro/components";
 import { Icon } from "astro-icon";
 
@@ -26,21 +27,21 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Finance",
-    link: "/finance",
+    title: "Experience",
+    link: "/experience",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/finance"
+    href: "/experience"
   },
   {
     name: "Features",
-    href: "/finance/features"
+    href: "/experience/features"
   },
   {
     name: "Applications",
-    href: "/apps/finance"
+    href: "/apps/experience"
   },
   {
     name: "Docs",
@@ -53,29 +54,19 @@ const navLinks = [
 
 const heading = {
   title: "Experience",
-  title: "Experience",
-  description: "Transform your financial management with intuitive and robust solutions, Empress is dedicated to fostering business growth and personal financial success. Our diverse range of tools caters to every financial need with unmatched ease and efficiency.",
+  description: "Empress is revolutionizing the way businesses interact with their customers by introducing a suite of innovative support tools designed to transform customer service experiences into memorable encounters. ",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
-  imageRows: [
-    // Image URLs and alt texts can be updated here
-    // Example structure:
-    [
-      { url: "path/to/image1.jpg", alt: "Image Description 1", class: "image-class" },
-      { url: "path/to/image2.jpg", alt: "Image Description 2", class: "image-class" }
-    ],
-    // Additional rows of images can be added here
-  ]
 };
 
 // Diplay Image
 
 const displayImage = {
-  "title": "Empress Insights",
-  "subtitle": "Explore Your Data,",
-  "subtitleCont": "Uncover Actionable Insights.",
+  "title": "Elevate Customer Experience",
+  "subtitle": "Empower Interactions,",
+  "subtitleCont": "Enrich Relationships.",
   imageSrc: "/images/chart.jpg"
 };
 
@@ -83,39 +74,40 @@ const displayImage = {
 
 const featureOne = {
   mainContent: {
-    title: "One Solutions",
+    title: "Enhanced Helpdesk Efficiency",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Transform Customer Support",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress redefines customer support with our advanced helpdesk solutions. Seamlessly manage support queries to provide quick, accurate responses, thereby elevating customer satisfaction to new heights."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Elevate Support with Empress",
+    linkHref: "/experience/helpdesk"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Effortless Query Management",
+    "Swift, Accurate Responses",
+    "Elevated Customer Satisfaction"
   ]
 };
+
 
 // FeatureTwo
 
 const featureTwo = {
   mainContent: {
-    title: "Two Solutions",
+    title: "Real-Time Customer Engagement",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Instant Connection, Lasting Impression",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress's Live Chat tool fosters instant connections, providing swift solutions for an exceptional customer experience. Engage in real-time and create memorable encounters with every interaction."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Engage Instantly with Empress",
+    linkHref: "/experience/livechat"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Instant Customer Connections",
+    "Swift Issue Resolution",
+    "Memorable Customer Experiences"
   ]
 };
 
@@ -123,21 +115,22 @@ const featureTwo = {
 
 const featureThree = {
   mainContent: {
-    title: "Three Solutions",
+    title: "Community Engagement & Loyalty",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Nurture Relationships, Build Community",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "With Empress, create vibrant community spaces and impactful loyalty programs. Our tools foster engagement, cultivate a sense of belonging, and nurture lasting customer relationships."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Build Community with Empress",
+    linkHref: "/experience/community"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Vibrant Community Forums",
+    "Impactful Loyalty Programs",
+    "Lasting Customer Relationships"
   ]
 };
+
 
 // Dark Background
 
@@ -203,52 +196,50 @@ const darkBackground = {
 
 const applicationShowcase = {
   mainSection: {
-    title: "Feature Spotlight",
-    subtitle: "Empowering Your Financial Ecosystem",
-    description1: "Dive into the extensive range of Empress features designed to redefine your approach to financial management.",
-    description2: "Empress seamlessly blends user-friendliness with powerful functionality, addressing all your financial needs.",
-    viewApplicationsLink: "/explore-features",
-    viewApplicationsText: "Explore Features"
+    title: "Empowering Customer Relations",
+    subtitle: "Advancing Engagement Strategies",
+    description1: "Empress is dedicated to reinventing how businesses interact with their customers. Our suite of tools is crafted to enhance customer support and engagement.",
+    description2: "From efficient helpdesk management to dynamic community forums, our solutions are designed to ensure every customer touchpoint is impactful.",
+    viewApplicationsLink: "/suite/crm",
+    viewApplicationsText: "Explore Customer Tools"
   },
   contentSections: [
-  {
-    title: "Control Your Accounts",
-    description: "Experience unparalleled control over your financial flow with Empress. Our intuitive tools empower you to effortlessly navigate your accounts, bringing a new level of clarity and efficiency to your financial management.",
-    linkHref: "/suite/account",
-    linkText: "See Application",
-
-  },
-  {
-    title: "Redefine Invoice Management",
-    description: "Empress transforms how you handle invoices. Our advanced system streamlines your billing process, introducing simplicity and precision to your financial transactions, all designed with your efficiency in mind.",
-    linkHref: "/suite/invoice",
-    linkText: "See Application",
-  },
-  {
-    title: "Elevate Expense Tracking",
-    description: "Track your company spending with unmatched accuracy using Empress. Our sophisticated expense tracking tools offer insightful analysis, guiding you to smarter spending decisions and enhanced budget control.",
-    linkHref: "/suite/expense",
-    linkText: "See Application",
-    
-  },
-  {
-    title: "Simplify Tax Compliance",
-    description: "With Empress, navigating tax compliance becomes a stress-free experience. Our automated solutions adapt to evolving tax laws, ensuring accuracy and peace of mind in every financial calculation.",
-    linkHref: "/suite/tax",
-    linkText: "See Application",
-  },
-  {
-    title: "Optimize Your Budgeting",
-    description: "Empower your financial planning with Empress's budget optimization tools. Our solutions help you craft effective budgets and forecast future scenarios, enabling informed decisions that enhance your financial wellbeing.",
-    linkHref: "/suite/budget",
-    linkText: "See Application",
-  },
-  {
-    title: "Streamline Contract Management",
-    description: "Empress revolutionizes contract processing, offering efficiency and ease. Our platform simplifies the complexities of contract management, ensuring seamless business operations and compliance, tailored to your needs.",
-    linkHref: "/suite/contracts",
-    linkText: "See Application",
-  },
+    {
+      title: "Optimized Helpdesk Solutions",
+      description: "Empower your customer support with Empress's streamlined helpdesk. Effortlessly manage support queries, ensuring quick and accurate responses, and elevating customer satisfaction.",
+      linkHref: "/suite/helpdesk",
+    linkText: "View Application",
+    },
+    {
+      title: "Instant Customer Engagement",
+      description: "Engage with your customers in real-time using Empress's Live Chat. Foster instant connections, provide swift solutions, and create memorable experiences with every interaction.",
+      linkHref: "/suite/live-chat",
+      linkText: "View Application",
+    },
+    {
+      title: "Insightful Feedback Collection",
+      description: "Harness the power of customer insights with Empress's Feedback tools. Collect, analyze, and act on valuable feedback, driving continuous improvement and deeper customer understanding.",
+      linkHref: "/suite/feedback",
+      linkText: "View Application",
+    },
+    {
+      title: "Dynamic Community Forums",
+      description: "Build vibrant community spaces with Empress's Forum tools. Encourage knowledge sharing, foster engagement, and cultivate a sense of belonging among your customers.",
+      linkHref: "/suite/forum",
+      linkText: "View Application",
+    },
+    {
+      title: "Loyalty Program Enhancement",
+      description: "Empress's Loyalty Management empowers businesses to nurture lasting customer relationships. Create loyalty programs that reward, engage, and retain your valued customers.",
+      linkHref: "/suite/loyalty",
+      linkText: "View Application",
+    },
+    {
+      title: "Efficient Appointment Scheduling",
+      description: "Streamline your booking processes with Empress's Appointment System. Manage customer appointments efficiently, ensuring seamless scheduling and enhanced service experiences.",
+      linkHref: "/suite/appointments",
+      linkText: "View Application",
+    }
     // Add more items as per your content
   ]
 };
@@ -258,164 +249,105 @@ const applicationShowcase = {
 // Checklist Items
 
 const checklistItems = {
-  sectionTitle: "Features Overview",
-  subTitle: "Diverse Range of Financial Tools",
+  sectionTitle: "Empress Experience Solutions",
+  subTitle: "Key Service Features",
   categories: [
     {
-      categoryName: "Core Features",
+      categoryName: "Customer Interaction",
       items: [
-        { label: "Balance Tracking" },
-        { label: "Dashboard View" },
-        { label: "Transaction Logs" },
-        { label: "Invoice Processing" },
-        { label: "Expense Management" },
-        { label: "Data Syncing" }
+        { label: "Ticket Tracking" },
+        { label: "Live Chat Management" },
+        { label: "Issue Resolution Feedback" },
+        { label: "Interaction Records" },
+        { label: "Appointment Scheduling" },
+        { label: "Booking History" },
+        { label: "Appointment Tracking" },
+        { label: "Resource Allocation" }
       ]
     },
     {
-      categoryName: "Advanced Tools",
+      categoryName: "Relationship Enhancement",
       items: [
-        { label: "Custom Reports" },
-        { label: "Budget Forecasting" },
-        { label: "Multi-Currency Support" },
-        { label: "Project Billing" },
-        { label: "Tax Calculations" },
-        { label: "Account Linking" },
-        { label: "Payment Tracking" }
+        { label: "Feedback Analysis" },
+        { label: "Rating Insights" },
+        { label: "Feedback Follow-up" },
+        { label: "Loyalty Program Management" },
+        { label: "Points Monitoring" },
+        { label: "Tier Level Management" },
+        { label: "Relationship Strengthening" },
+        { label: "Loyalty Analysis" }
       ]
     },
     {
-      categoryName: "Efficiency Enhancers",
+      categoryName: "Community Engagement",
       items: [
-        { label: "Automated Alerts" },
-        { label: "Integration Options" },
-        { label: "Reimbursement Tracking" },
-        { label: "Approval Workflow" },
-        { label: "Document Management" },
-        { label: "Real-Time Updates" },
-        { label: "Security Protocols" }
+        { label: "Forum Management" },
+        { label: "Content Monitoring" },
+        { label: "Topic Tracking" },
+        { label: "Feedback Analysis" },
+        { label: "Moderation Management" },
+        { label: "Community Analytics" },
+        { label: "Engagement Monitoring" },
+        { label: "Community Review" }
       ]
     },
     {
-      categoryName: "Collaboration & Support",
+      categoryName: "Operational Efficiency",
       items: [
-        { label: "Team Access Control" },
-        { label: "Client Collaboration" },
-        { label: "Support Chatbot" },
-        { label: "User Community" },
-        { label: "Training Resources" },
-        { label: "Customizable Access" },
-        { label: "Dedicated Assistance" }
+        { label: "System Integration" },
+        { label: "Data Synchronization" },
+        { label: "Compatibility Support" },
+        { label: "Service Management" },
+        { label: "CRM Integration" },
+        { label: "Automated Processes" },
+        { label: "Data Security" },
+        { label: "Resource Management" }
       ]
     }
   ]
 };
-
-
-// Additional Features
-
-const featuresHeading = {
-  featureHeading: "Additional Features",
-  featureTitle: "Do More With Empress",
-};
-
-const features = [
-{
-    "title": "Inights",
-    "description": "Unlock Data Insights",
-    "icon": "ph:chart-bar-duotone",
-    "link": "/feature/insights",
-    "color": "indigo"
-  },
-  {
-    "title": "Flows",
-    "description": "Optimize Your Workflow",
-    "icon": "ph:flow-arrow-duotone",
-    "link": "/feature/flows",
-    "color": "indigo"
-  },
-  {
-    "title": "Zaps",
-    "description": "Automate Routine Tasks",
-    "icon": "ph:lightning-duotone",
-    "link": "/feature/zaps",
-    "color": "indigo"
-  },
-  {
-    "title": "Assistants",
-    "description": "Expert AI Chat Support",
-    "icon": "ph:robot-duotone",
-    "link": "/feature/assistants",
-    "color": "indigo"
-  },
-  {
-    "title": "Forecast",
-    "description": "Anticipate Future Trends",
-    "icon": "ph:cloud-sun-duotone",
-    "link": "/feature/forecast",
-    "color": "indigo"
-  },
-  {
-    "title": "Bridge",
-    "description": "Connect With Collaborators",
-    "icon": "ph:arrows-out-duotone",
-    "link": "/feature/bridge",
-    "color": "indigo"
-  },
-  {
-    "title": "Administration",
-    "description": "Control Access & Visibility",
-    "icon": "ph:address-book-duotone",
-    "link": "/feature/administration",
-    "color": "indigo"
-  },
-  {
-    "title": "Innovation",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/feature/innovation",
-    "color": "indigo"
-  },
-  {
-    "title": "Integrations",
-    "description": "Seamless Tool Integration",
-    "icon": "ph:plugs-connected-duotone",
-    "link": "/feature/integrations",
-    "color": "indigo"
-  },
-];
-
 
 
 // FAQs
 
 const faqs = {
-  title: "Answers at Your Fingertips",
-  subtitle: "Empress FAQs",
+  title: "FAQs",
+  subtitle: "Your Questions, Answered",
   questions: [
     {
-      question: "How does Empress enhance financial reporting?",
-      answer: "Empress transforms financial reporting by offering advanced analytics and customizable report templates. These tools enable users to generate insightful financial reports, track key performance indicators, and gain a deeper understanding of their financial health, aiding in strategic decision-making."
+      question: "How does the Empress Helpdesk improve customer support?",
+      answer: "Empress Helpdesk streamlines support by providing efficient ticket tracking and resolution, ensuring high-quality service and swift responses to customer issues, leading to increased customer satisfaction."
     },
     {
-      question: "How can Empress integrate with my current financial tools?",
-      answer: "Empress features a robust integration framework that supports various accounting software and financial systems. Its API-driven architecture allows for smooth and secure data synchronization, enabling users to integrate their existing financial tools, ensuring a unified and streamlined financial management experience."
+      question: "Can Empress's Live Chat feature enhance real-time customer engagement?",
+      answer: "Absolutely! Empress's Live Chat offers instant customer communication, fostering quick connections and providing immediate solutions to enhance customer experiences and satisfaction."
     },
     {
-      question: "Is Empress suitable for varying business sizes?",
-      answer: "Absolutely! Empress is designed to cater to a diverse range of business sizes. Its scalable architecture allows small startups to manage their finances efficiently and can be scaled up to meet the complex financial management needs of large enterprises, making it a versatile tool for all business stages."
+      question: "How does Empress facilitate customer feedback collection?",
+      answer: "Empress's feedback tools allow you to capture and analyze customer feedback effectively. This helps in understanding customer needs and perceptions, enabling you to tailor services and improve customer relations."
     },
     {
-      question: "How does Empress support expense management?",
-      answer: "Empress simplifies expense management through features like automated expense tracking, categorization, and reimbursement processing. It offers an intuitive interface for recording expenses, generating expense reports, and provides insights into spending patterns to help businesses manage their expenditures more effectively."
+      question: "What role does Empress play in managing loyalty programs?",
+      answer: "Empress's Loyalty Management system helps you track customer engagement and rewards. It enhances customer loyalty by providing incentives for continued patronage and building long-term customer relationships."
     },
     {
-      question: "Does Empress offer project-based financial tracking?",
-      answer: "Yes, Empress provides project-based financial tracking that allows businesses to allocate budgets, track expenses, and monitor financial performance on a per-project basis. This feature is invaluable for companies that manage multiple projects simultaneously, ensuring accurate financial oversight for each project."
+      question: "Can Empress help in scheduling and managing customer appointments?",
+      answer: "Yes, Empress's Appointment System streamlines the booking process, managing customer appointments efficiently. It ensures accurate scheduling and improves the overall service experience."
+    },
+    {
+      question: "How does Empress contribute to improving customer service strategies?",
+      answer: "Empress offers advanced analytics for deep insights into customer interactions, helping businesses understand and enhance the customer journey. This leads to more effective, targeted strategies and personalized experiences."
+    },
+    {
+      question: "Does Empress offer solutions for community engagement and forums?",
+      answer: "Definitely. Empress provides tools to manage community forums, encouraging knowledge sharing and engagement. This helps in building a vibrant community and fostering a sense of belonging among customers."
+    },
+    {
+      question: "Is Empress capable of integrating with existing business systems?",
+      answer: "Yes, Empress is designed to seamlessly integrate with your current business systems, ensuring data accuracy and a unified operational experience across various departments."
     }
   ]
 };
-
 
 
 ---
@@ -928,41 +860,8 @@ const faqs = {
     </div>
   </section>
 
-    <!-- Features -->
-
-    <section class="bg-white">
-      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-        <div class="text-center">
-          <h2 class="inline-flex items-center text-blue-600">
-            <span class="text-base font-medium tracking-tight">{featuresHeading.featureHeading}</span>
-          </h2>
-          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-            {featuresHeading.featureTitle}
-          </h2>
-        </div>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
-          {
-            features.map((item) => (
-              <a href={item.link} 
-                 class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
-                <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
-                  <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
-                    {/* Use the original icon coloring method */}
-                    <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
-                  </div>
-                  <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
-                    <h3 class="font-semibold text-md">{item.title}</h3>
-                    <p class="text-slate-500">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div> 
-      </div>
-    </section>
   
-
+    <Ecosystem/>  
 
   
 

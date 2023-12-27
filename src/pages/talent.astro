@@ -13,6 +13,7 @@ import FeatureNine from "../components/features/FeatureNine.astro";
 import CtaThree from "../components/cta/CtaThree.astro";
 import FaqTwo from "../components/infopages/FaqTwo.astro";
 import CtaTwo from "../components/cta/CtaTwo.astro";
+import Ecosystem from "../components/features/Ecosystem.astro";
 import { Code } from "astro/components";
 import { Icon } from "astro-icon";
 
@@ -26,21 +27,21 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Finance",
-    link: "/finance",
+    title: "Talent",
+    link: "/talent",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/finance"
+    href: "/talent"
   },
   {
     name: "Features",
-    href: "/finance/features"
+    href: "/talent/features"
   },
   {
     name: "Applications",
-    href: "/apps/finance"
+    href: "/apps/talent"
   },
   {
     name: "Docs",
@@ -53,29 +54,19 @@ const navLinks = [
 
 const heading = {
   title: "Talent",
-  title: "Talent",
-  description: "Transform your financial management with intuitive and robust solutions, Empress is dedicated to fostering business growth and personal financial success. Our diverse range of tools caters to every financial need with unmatched ease and efficiency.",
+  description: "Empress streamlines your hiring and workforce development with advanced management tools, from application tracking to promotions. We focus on enhancing talent acquisition efficiency for your organization.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
-  imageRows: [
-    // Image URLs and alt texts can be updated here
-    // Example structure:
-    [
-      { url: "path/to/image1.jpg", alt: "Image Description 1", class: "image-class" },
-      { url: "path/to/image2.jpg", alt: "Image Description 2", class: "image-class" }
-    ],
-    // Additional rows of images can be added here
-  ]
 };
 
 // Diplay Image
 
 const displayImage = {
-  "title": "Empress Insights",
-  "subtitle": "Explore Your Data,",
-  "subtitleCont": "Uncover Actionable Insights.",
+  "title": "Empress for Talent",
+  "subtitle": "Empower Your Team,",
+  "subtitleCont": "Scale Your Talent.",
   imageSrc: "/images/chart.jpg"
 };
 
@@ -83,39 +74,40 @@ const displayImage = {
 
 const featureOne = {
   mainContent: {
-    title: "One Solutions",
+    title: "Revolutionizing Recruitment",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Efficiency in Talent Acquisition",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress streamlines the hiring landscape, introducing a transformative approach to talent acquisition. By harnessing our sophisticated recruitment tools, companies can effortlessly identify and onboard top talent, enhancing their workforce quality and efficiency."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Revitalize Your Recruitment",
+    linkHref: "/talent/recruitment"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Streamlined Hiring Process",
+    "Efficient Onboarding Experience",
+    "Quality Talent Acquisition"
   ]
 };
+
 
 // FeatureTwo
 
 const featureTwo = {
   mainContent: {
-    title: "Two Solutions",
+    title: "Empowering Payroll & Performance",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Precision in Employee Management",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "At Empress, we bring precision and compliance to payroll management while elevating employee performance. Our system ensures accurate salary processing and benefits allocation, coupled with comprehensive tools for employee evaluation and development."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Enhance Payroll & Performance",
+    linkHref: "/talent/performance-payroll"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Accurate Payroll Processing",
+    "Compliance & Efficiency",
+    "Strategic Performance Management"
   ]
 };
 
@@ -123,19 +115,19 @@ const featureTwo = {
 
 const featureThree = {
   mainContent: {
-    title: "Three Solutions",
+    title: "Optimizing Training & Assets",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Strategic Workforce Development",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress redefines workforce development with an integrated approach to training and asset management. Our systems not only streamline employee development but also ensure efficient tracking and maintenance of company assets, fostering a well-equipped and skilled workforce."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Explore Training & Asset Management",
+    linkHref: "/talent/training-assets"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Structured Employee Training",
+    "Efficient Asset Management",
+    "Operational Excellence"
   ]
 };
 
@@ -203,218 +195,154 @@ const darkBackground = {
 
 const applicationShowcase = {
   mainSection: {
-    title: "Feature Spotlight",
-    subtitle: "Empowering Your Financial Ecosystem",
-    description1: "Dive into the extensive range of Empress features designed to redefine your approach to financial management.",
-    description2: "Empress seamlessly blends user-friendliness with powerful functionality, addressing all your financial needs.",
-    viewApplicationsLink: "/explore-features",
-    viewApplicationsText: "Explore Features"
+    title: "Empowering HR Solutions",
+    subtitle: "Innovating for Tomorrow's Workforce",
+    description1: "At Empress, we're committed to transforming the HR landscape. Our comprehensive suite of tools is designed to support startups and businesses in optimizing their human resource management.",
+    description2: "From talent acquisition and payroll management to performance evaluation and asset tracking, our solutions streamline HR processes. ",
+    viewApplicationsLink: "/suite/apps",
+    viewApplicationsText: "Explore HR Tools"
   },
   contentSections: [
   {
-    title: "Control Your Accounts",
-    description: "Experience unparalleled control over your financial flow with Empress. Our intuitive tools empower you to effortlessly navigate your accounts, bringing a new level of clarity and efficiency to your financial management.",
-    linkHref: "/suite/account",
-    linkText: "See Application",
-
+    title: "Optimize Talent Acquisition",
+    description: "Revolutionize your recruitment strategy with Empress. Our sophisticated talent acquisition tools streamline the hiring process, ensuring you find and onboard the right talent efficiently.",
+    linkHref: "/suite/recruit",
+    linkText: "View Recruitment Tools",
   },
   {
-    title: "Redefine Invoice Management",
-    description: "Empress transforms how you handle invoices. Our advanced system streamlines your billing process, introducing simplicity and precision to your financial transactions, all designed with your efficiency in mind.",
-    linkHref: "/suite/invoice",
-    linkText: "See Application",
+    title: "Efficient Payroll Management",
+    description: "Empress simplifies payroll administration, ensuring accuracy and compliance in salary processing. Our system facilitates timely disbursement, tax calculations, and benefit allocations with ease.",
+    linkHref: "/suite/payroll",
+    linkText: "Explore Payroll System",
   },
   {
-    title: "Elevate Expense Tracking",
-    description: "Track your company spending with unmatched accuracy using Empress. Our sophisticated expense tracking tools offer insightful analysis, guiding you to smarter spending decisions and enhanced budget control.",
-    linkHref: "/suite/expense",
-    linkText: "See Application",
-    
+    title: "Enhance Employee Performance",
+    description: "Elevate your workforce's potential with Empress. Our performance management system offers comprehensive tools for tracking, reviewing, and improving employee performance efficiently.",
+    linkHref: "/suite/performance",
+    linkText: "See Performance Tools",
   },
   {
-    title: "Simplify Tax Compliance",
-    description: "With Empress, navigating tax compliance becomes a stress-free experience. Our automated solutions adapt to evolving tax laws, ensuring accuracy and peace of mind in every financial calculation.",
-    linkHref: "/suite/tax",
-    linkText: "See Application",
+    title: "Streamline Staff Training",
+    description: "Empress's training management system organizes and executes employee development sessions effectively. Enhance skills and knowledge transfer with our structured and engaging training programs.",
+    linkHref: "/suite/training",
+    linkText: "View Training Solutions",
   },
   {
-    title: "Optimize Your Budgeting",
-    description: "Empower your financial planning with Empress's budget optimization tools. Our solutions help you craft effective budgets and forecast future scenarios, enabling informed decisions that enhance your financial wellbeing.",
-    linkHref: "/suite/budget",
-    linkText: "See Application",
+    title: "Manage Employee Directory",
+    description: "Efficiently organize and access key employee information with Empress. Our employee directory management system enhances internal communication and operational oversight.",
+    linkHref: "/suite/directory",
+    linkText: "Access Employee Directory",
   },
   {
-    title: "Streamline Contract Management",
-    description: "Empress revolutionizes contract processing, offering efficiency and ease. Our platform simplifies the complexities of contract management, ensuring seamless business operations and compliance, tailored to your needs.",
-    linkHref: "/suite/contracts",
-    linkText: "See Application",
+    title: "Optimize Asset Management",
+    description: "Empress streamlines company asset tracking and allocation, ensuring optimal utilization and maintenance. Our asset management tools provide systematic organization and lifecycle tracking for all company resources.",
+    linkHref: "/suite/assets",
+    linkText: "View Asset Management",
   },
-    // Add more items as per your content
-  ]
-};
+]
+}
 
 
 
 // Checklist Items
 
 const checklistItems = {
-  sectionTitle: "Features Overview",
-  subTitle: "Diverse Range of Financial Tools",
+  sectionTitle: "Talent Management Suite",
+  subTitle: "Comprehensive HR Solutions",
   categories: [
-    {
-      categoryName: "Core Features",
-      items: [
-        { label: "Balance Tracking" },
-        { label: "Dashboard View" },
-        { label: "Transaction Logs" },
-        { label: "Invoice Processing" },
-        { label: "Expense Management" },
-        { label: "Data Syncing" }
-      ]
-    },
-    {
-      categoryName: "Advanced Tools",
-      items: [
-        { label: "Custom Reports" },
-        { label: "Budget Forecasting" },
-        { label: "Multi-Currency Support" },
-        { label: "Project Billing" },
-        { label: "Tax Calculations" },
-        { label: "Account Linking" },
-        { label: "Payment Tracking" }
-      ]
-    },
-    {
-      categoryName: "Efficiency Enhancers",
-      items: [
-        { label: "Automated Alerts" },
-        { label: "Integration Options" },
-        { label: "Reimbursement Tracking" },
-        { label: "Approval Workflow" },
-        { label: "Document Management" },
-        { label: "Real-Time Updates" },
-        { label: "Security Protocols" }
-      ]
-    },
-    {
-      categoryName: "Collaboration & Support",
-      items: [
-        { label: "Team Access Control" },
-        { label: "Client Collaboration" },
-        { label: "Support Chatbot" },
-        { label: "User Community" },
-        { label: "Training Resources" },
-        { label: "Customizable Access" },
-        { label: "Dedicated Assistance" }
-      ]
-    }
+  {
+  categoryName: "Recruitment & Onboarding",
+  items: [
+  { label: "Applicant Tracking" },
+  { label: "Interview Coordination" },
+  { label: "Application Management" },
+  { label: "Recruitment Analytics" },
+  { label: "Onboarding Processes" },
+  { label: "Candidate Engagement" },
+  { label: "Talent Pool Development" }
   ]
-};
-
-
-// Additional Features
-
-const featuresHeading = {
-  featureHeading: "Additional Features",
-  featureTitle: "Do More With Empress",
-};
-
-const features = [
-{
-    "title": "Inights",
-    "description": "Unlock Data Insights",
-    "icon": "ph:chart-bar-duotone",
-    "link": "/feature/insights",
-    "color": "indigo"
   },
   {
-    "title": "Flows",
-    "description": "Optimize Your Workflow",
-    "icon": "ph:flow-arrow-duotone",
-    "link": "/feature/flows",
-    "color": "indigo"
+  categoryName: "Payroll & Compliance",
+  items: [
+  { label: "Payroll Processing" },
+  { label: "Tax Calculations" },
+  { label: "Benefit Management" },
+  { label: "Compliance Assurance" },
+  { label: "Salary Disbursement" },
+  { label: "Payroll Reporting" },
+  { label: "Employee Financial Records" }
+  ]
   },
   {
-    "title": "Zaps",
-    "description": "Automate Routine Tasks",
-    "icon": "ph:lightning-duotone",
-    "link": "/feature/zaps",
-    "color": "indigo"
+  categoryName: "Performance & Development",
+  items: [
+  { label: "Performance Reviews" },
+  { label: "Employee Feedback" },
+  { label: "Development Planning" },
+  { label: "Achievement Tracking" },
+  { label: "Skill Assessment" },
+  { label: "Performance Analytics" },
+  { label: "Growth Opportunities" }
+  ]
   },
   {
-    "title": "Assistants",
-    "description": "Expert AI Chat Support",
-    "icon": "ph:robot-duotone",
-    "link": "/feature/assistants",
-    "color": "indigo"
-  },
-  {
-    "title": "Forecast",
-    "description": "Anticipate Future Trends",
-    "icon": "ph:cloud-sun-duotone",
-    "link": "/feature/forecast",
-    "color": "indigo"
-  },
-  {
-    "title": "Bridge",
-    "description": "Connect With Collaborators",
-    "icon": "ph:arrows-out-duotone",
-    "link": "/feature/bridge",
-    "color": "indigo"
-  },
-  {
-    "title": "Administration",
-    "description": "Control Access & Visibility",
-    "icon": "ph:address-book-duotone",
-    "link": "/feature/administration",
-    "color": "indigo"
-  },
-  {
-    "title": "Innovation",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/feature/innovation",
-    "color": "indigo"
-  },
-  {
-    "title": "Integrations",
-    "description": "Seamless Tool Integration",
-    "icon": "ph:plugs-connected-duotone",
-    "link": "/feature/integrations",
-    "color": "indigo"
-  },
-];
-
+  categoryName: "Employee Management",
+  items: [
+  { label: "Employee Directory" },
+  { label: "Asset Tracking" },
+  { label: "Role Management" },
+  { label: "Internal Communication" },
+  { label: "Employment Lifecycle" },
+  { label: "Asset Maintenance" },
+  { label: "Workforce Analysis" }
+  ]
+  }
+  ]
+  };
 
 
 // FAQs
 
+
 const faqs = {
-  title: "Answers at Your Fingertips",
-  subtitle: "Empress FAQs",
+  title: "FAQs",
+  subtitle: "Your Questions, Answered",
   questions: [
-    {
-      question: "How does Empress enhance financial reporting?",
-      answer: "Empress transforms financial reporting by offering advanced analytics and customizable report templates. These tools enable users to generate insightful financial reports, track key performance indicators, and gain a deeper understanding of their financial health, aiding in strategic decision-making."
-    },
-    {
-      question: "How can Empress integrate with my current financial tools?",
-      answer: "Empress features a robust integration framework that supports various accounting software and financial systems. Its API-driven architecture allows for smooth and secure data synchronization, enabling users to integrate their existing financial tools, ensuring a unified and streamlined financial management experience."
-    },
-    {
-      question: "Is Empress suitable for varying business sizes?",
-      answer: "Absolutely! Empress is designed to cater to a diverse range of business sizes. Its scalable architecture allows small startups to manage their finances efficiently and can be scaled up to meet the complex financial management needs of large enterprises, making it a versatile tool for all business stages."
-    },
-    {
-      question: "How does Empress support expense management?",
-      answer: "Empress simplifies expense management through features like automated expense tracking, categorization, and reimbursement processing. It offers an intuitive interface for recording expenses, generating expense reports, and provides insights into spending patterns to help businesses manage their expenditures more effectively."
-    },
-    {
-      question: "Does Empress offer project-based financial tracking?",
-      answer: "Yes, Empress provides project-based financial tracking that allows businesses to allocate budgets, track expenses, and monitor financial performance on a per-project basis. This feature is invaluable for companies that manage multiple projects simultaneously, ensuring accurate financial oversight for each project."
-    }
+  {
+  question: "How does Empress enhance the recruitment process?",
+  answer: "Empress revolutionizes recruitment by providing advanced tools for applicant tracking, interview coordination, and efficient management of applications. With unique IDs for each candidate and streamlined processes, Empress ensures a smooth hiring journey from start to finish."
+  },
+  {
+  question: "Can Empress handle complex payroll processes?",
+  answer: "Absolutely! Empress's payroll system is designed for efficiency and compliance. It automates salary calculations, tax deductions, and benefit allocations, ensuring timely and accurate payroll disbursement."
+  },
+  {
+  question: "Does Empress offer performance evaluation tools?",
+  answer: "Yes, Empress offers a comprehensive performance management system. It facilitates detailed employee reviews, feedback collection, and development planning, ensuring a structured approach to performance evaluation."
+  },
+  {
+  question: "How does Empress support employee training and development?",
+  answer: "Empress's training management system efficiently organizes and executes employee development programs. It offers structured and engaging training modules, enhancing skill development and knowledge transfer."
+  },
+  {
+  question: "What features does Empress provide for employee information management?",
+  answer: "Empress's employee directory management system allows for organized access to key employee information. It enhances internal communication and provides insights into the organizational structure and employee roles."
+  },
+  {
+  question: "How does Empress assist in asset management?",
+  answer: "Empress's asset management tools enable systematic tracking and allocation of company resources. This ensures optimal asset utilization and maintenance, aiding in effective lifecycle management."
+  },
+  {
+  question: "Can Empress integrate with other business systems?",
+  answer: "Yes, Empress integrates seamlessly with existing business systems. It ensures data accuracy and real-time updates, offering a cohesive operational experience across various departments."
+  },
+  {
+  question: "What makes Empress's HR solutions stand out?",
+  answer: "Empress stands out for its comprehensive suite of HR tools designed to optimize various HR processes. From streamlined recruitment to effective training programs, Empress enhances employee engagement and operational efficiency."
+  }
   ]
-};
+  };
 
 
 
@@ -928,41 +856,9 @@ const faqs = {
     </div>
   </section>
 
-    <!-- Features -->
 
-    <section class="bg-white">
-      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-        <div class="text-center">
-          <h2 class="inline-flex items-center text-blue-600">
-            <span class="text-base font-medium tracking-tight">{featuresHeading.featureHeading}</span>
-          </h2>
-          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-            {featuresHeading.featureTitle}
-          </h2>
-        </div>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
-          {
-            features.map((item) => (
-              <a href={item.link} 
-                 class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
-                <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
-                  <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
-                    {/* Use the original icon coloring method */}
-                    <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
-                  </div>
-                  <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
-                    <h3 class="font-semibold text-md">{item.title}</h3>
-                    <p class="text-slate-500">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div> 
-      </div>
-    </section>
   
-
+    <Ecosystem/>  
 
   
 

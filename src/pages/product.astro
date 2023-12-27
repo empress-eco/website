@@ -11,6 +11,7 @@ import StatsTwo from "../components/stats/StatsTwo.astro";
 import FeatureTen from "../components/features/FeatureTen.astro";
 import FeatureNine from "../components/features/FeatureNine.astro";
 import CtaThree from "../components/cta/CtaThree.astro";
+import Ecosystem from "../components/features/Ecosystem.astro";
 import FaqTwo from "../components/infopages/FaqTwo.astro";
 import CtaTwo from "../components/cta/CtaTwo.astro";
 import { Code } from "astro/components";
@@ -26,21 +27,21 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Finance",
-    link: "/finance",
+    title: "Product",
+    link: "/product",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/finance"
+    href: "/product"
   },
   {
     name: "Features",
-    href: "/finance/features"
+    href: "/product/features"
   },
   {
     name: "Applications",
-    href: "/apps/finance"
+    href: "/apps/product"
   },
   {
     name: "Docs",
@@ -53,29 +54,25 @@ const navLinks = [
 
 const heading = {
   title: "Product",
-  title: "Product",
-  description: "Transform your financial management with intuitive and robust solutions, Empress is dedicated to fostering business growth and personal financial success. Our diverse range of tools caters to every financial need with unmatched ease and efficiency.",
+  description: "Empower your products with advanced and intuitive solutions. Empress is dedicated to optimizing inventory levels, enhancing supplier relationships, and ensuring product lifecycle success.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
   imageRows: [
-    // Image URLs and alt texts can be updated here
-    // Example structure:
     [
-      { url: "path/to/image1.jpg", alt: "Image Description 1", class: "image-class" },
-      { url: "path/to/image2.jpg", alt: "Image Description 2", class: "image-class" }
-    ],
-    // Additional rows of images can be added here
+      { url: "path/to/image1.jpg", alt: "Efficient Inventory Management", class: "image-class" },
+      { url: "path/to/image2.jpg", alt: "Streamlined Procurement Processes", class: "image-class" }
+    ]
   ]
 };
 
 // Diplay Image
 
 const displayImage = {
-  "title": "Empress Insights",
-  "subtitle": "Explore Your Data,",
-  "subtitleCont": "Uncover Actionable Insights.",
+  "title": "Improve Your Production",
+  "subtitle": "Streamline Your Inventory,",
+  "subtitleCont": "Optimize Your Product Journey.",
   imageSrc: "/images/chart.jpg"
 };
 
@@ -83,39 +80,40 @@ const displayImage = {
 
 const featureOne = {
   mainContent: {
-    title: "One Solutions",
+    title: "Precision Inventory Management",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Real-Time, Accurate Control",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress revolutionizes inventory management with unparalleled precision. Our advanced system delivers real-time inventory insights, enabling smarter stock decisions and optimized management."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Explore Inventory Solutions",
+    linkHref: "/products/inventory"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Real-Time Stock Monitoring",
+    "Smarter Inventory Decisions",
+    "Optimized Stock Management"
   ]
 };
+
 
 // FeatureTwo
 
 const featureTwo = {
   mainContent: {
-    title: "Two Solutions",
+    title: "Revolutionize Procurement",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "Efficient, Streamlined Purchasing",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress transforms your procurement strategy with efficiency and intelligence. Simplify the procurement process and enhance supplier relationships with our comprehensive system."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Optimize Procurement Process",
+    linkHref: "/products/procurement"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Simplified Procurement Process",
+    "Enhanced Supplier Relations",
+    "Timely Acquisitions"
   ]
 };
 
@@ -123,19 +121,19 @@ const featureTwo = {
 
 const featureThree = {
   mainContent: {
-    title: "Three Solutions",
+    title: "Manage Product Lifecycles",
     img: "/images/dashboard.jpg",
-    subtitle: "One Platform, Infinite Possibilities",
+    subtitle: "From Concept to Market",
     paragraphs: [
-      "At Empress, we go beyond just creating technology; we're revolutionizing how businesses like yours scale and succeed.",
+      "Empress provides comprehensive tools for every stage of your product lifecycle. Manage development, production, and retirement with insights and efficiency."
     ],
-    linkText: "Explore Applications",
-    linkHref: "/suite/apps"
+    linkText: "Control Your Product Journey",
+    linkHref: "/products/lifecycle"
   },
   listItems: [
-    "Complete Toolkit for Every Business Need",
-    "Streamlined Management in One Unified Platform",
-    "Effortless Integration & Limitless Growth Potential",
+    "Insights for Every Stage",
+    "Sustainable Product Journey",
+    "Profitable Lifecycle Management"
   ]
 };
 
@@ -203,53 +201,51 @@ const darkBackground = {
 
 const applicationShowcase = {
   mainSection: {
-    title: "Feature Spotlight",
-    subtitle: "Empowering Your Financial Ecosystem",
-    description1: "Dive into the extensive range of Empress features designed to redefine your approach to financial management.",
-    description2: "Empress seamlessly blends user-friendliness with powerful functionality, addressing all your financial needs.",
-    viewApplicationsLink: "/explore-features",
-    viewApplicationsText: "Explore Features"
+    title: "Product Management Highlights",
+    subtitle: "Streamlining Product Lifecycle",
+    description1: "Empress's suite of product management tools is designed to revolutionize how businesses handle their products, from initial concept to market delivery.",
+    description2: "Our comprehensive solutions focus on enhancing efficiency, ensuring quality, and optimizing the entire lifecycle of your products.",
+    viewApplicationsLink: "/explore-product-management",
+    viewApplicationsText: "Discover Product Solutions"
   },
-  contentSections: [
-  {
-    title: "Control Your Accounts",
-    description: "Experience unparalleled control over your financial flow with Empress. Our intuitive tools empower you to effortlessly navigate your accounts, bringing a new level of clarity and efficiency to your financial management.",
-    linkHref: "/suite/account",
-    linkText: "See Application",
+  contentSections: [   
+    {
+      title: "Track Inventory Accurately",
+      description: "Master your inventory with precision using our advanced tracking system. Tailored for product accuracy, it ensures a real-time overview of stock levels, enabling smarter inventory decisions and optimized stock management.",
+      linkHref: "/suite/inventory",
+      linkText: "View Inventory",
 
-  },
-  {
-    title: "Redefine Invoice Management",
-    description: "Empress transforms how you handle invoices. Our advanced system streamlines your billing process, introducing simplicity and precision to your financial transactions, all designed with your efficiency in mind.",
-    linkHref: "/suite/invoice",
-    linkText: "See Application",
-  },
-  {
-    title: "Elevate Expense Tracking",
-    description: "Track your company spending with unmatched accuracy using Empress. Our sophisticated expense tracking tools offer insightful analysis, guiding you to smarter spending decisions and enhanced budget control.",
-    linkHref: "/suite/expense",
-    linkText: "See Application",
-    
-  },
-  {
-    title: "Simplify Tax Compliance",
-    description: "With Empress, navigating tax compliance becomes a stress-free experience. Our automated solutions adapt to evolving tax laws, ensuring accuracy and peace of mind in every financial calculation.",
-    linkHref: "/suite/tax",
-    linkText: "See Application",
-  },
-  {
-    title: "Optimize Your Budgeting",
-    description: "Empower your financial planning with Empress's budget optimization tools. Our solutions help you craft effective budgets and forecast future scenarios, enabling informed decisions that enhance your financial wellbeing.",
-    linkHref: "/suite/budget",
-    linkText: "See Application",
-  },
-  {
-    title: "Streamline Contract Management",
-    description: "Empress revolutionizes contract processing, offering efficiency and ease. Our platform simplifies the complexities of contract management, ensuring seamless business operations and compliance, tailored to your needs.",
-    linkHref: "/suite/contracts",
-    linkText: "See Application",
-  },
-    // Add more items as per your content
+    },
+    {
+      title: "Streamline Purchasing Process",
+      description: "Revolutionize your procurement strategy with our streamlined purchasing system. Designed for operational efficiency, it simplifies the procurement process, enhancing supplier relations and ensuring timely acquisitions.",
+      linkHref: "/suite/procurement",
+      linkText: "View Procurement",
+    },
+    {
+      title: "Efficient Production Management",
+      description: "Elevate your manufacturing processes with our efficient production management tools. Our solutions optimize production workflows, enhance operational efficiency, and reduce downtime, ensuring a seamless manufacturing cycle.",
+      linkHref: "/suite/manufacturing",
+      linkText: "View Manufacturing",
+    },
+    {
+      title: "Manage Product Lifecycle",
+      description: "Take control of your product lifecycle with our comprehensive management system. From development to retirement, our platform offers insights and tools for every stage, ensuring a sustainable and profitable product journey.",
+      linkHref: "/suite/lifecycle",
+      linkText: "View Lifecycle",
+    },
+    {
+      title: "Ensure Quality Standards",
+      description: "Uphold the highest quality standards with our quality management system. It provides rigorous monitoring and assessment tools, guaranteeing that every product meets your stringent quality criteria.",
+      linkHref: "/suite/quality",
+      linkText: "View Quality",
+    },
+    {
+      title: "Optimize Asset Upkeep",
+      description: "Optimize your asset maintenance with our streamlined upkeep system. Designed for longevity and efficiency, it simplifies the maintenance process, ensuring your assets remain in peak condition for optimal operational performance.",
+      linkHref: "/suite/maintenance",
+      linkText: "View Maintenance",
+    }
   ]
 };
 
@@ -258,160 +254,81 @@ const applicationShowcase = {
 // Checklist Items
 
 const checklistItems = {
-  sectionTitle: "Features Overview",
-  subTitle: "Diverse Range of Financial Tools",
+  sectionTitle: "Product Solutions Overview",
+  subTitle: "Key Product Features",
   categories: [
     {
-      categoryName: "Core Features",
+      categoryName: "Inventory Management",
       items: [
-        { label: "Balance Tracking" },
-        { label: "Dashboard View" },
-        { label: "Transaction Logs" },
-        { label: "Invoice Processing" },
-        { label: "Expense Management" },
-        { label: "Data Syncing" }
+        { label: "Precise Item Tracking" },
+        { label: "Custom Product Categories" },
+        { label: "Real-Time Stock Monitoring" },
+        { label: "Supplier Relationship Tools" },
+        { label: "Restocking Data Insights" },
+        { label: "Item Notes & Annotations" }
       ]
     },
     {
-      categoryName: "Advanced Tools",
+      categoryName: "Procurement Optimization",
       items: [
-        { label: "Custom Reports" },
-        { label: "Budget Forecasting" },
-        { label: "Multi-Currency Support" },
-        { label: "Project Billing" },
-        { label: "Tax Calculations" },
-        { label: "Account Linking" },
-        { label: "Payment Tracking" }
+        { label: "Order Tracking System" },
+        { label: "Supplier Integration" },
+        { label: "Order Detailing" },
+        { label: "Quantitative Tracking" },
+        { label: "Order Status Notes" }
       ]
     },
     {
-      categoryName: "Efficiency Enhancers",
+      categoryName: "Production & Lifecycle",
       items: [
-        { label: "Automated Alerts" },
-        { label: "Integration Options" },
-        { label: "Reimbursement Tracking" },
-        { label: "Approval Workflow" },
-        { label: "Document Management" },
-        { label: "Real-Time Updates" },
-        { label: "Security Protocols" }
+        { label: "Batch Tracking" },
+        { label: "Product Linking" },
+        { label: "Timeline Management" },
+        { label: "Cost Efficiency Analysis" },
+        { label: "Lifecycle Timeline" },
+        { label: "Phase Monitoring" }
       ]
     },
     {
-      categoryName: "Collaboration & Support",
+      categoryName: "Quality & Maintenance",
       items: [
-        { label: "Team Access Control" },
-        { label: "Client Collaboration" },
-        { label: "Support Chatbot" },
-        { label: "User Community" },
-        { label: "Training Resources" },
-        { label: "Customizable Access" },
-        { label: "Dedicated Assistance" }
+        { label: "Quality Check IDs" },
+        { label: "Standard Verification" },
+        { label: "Issue Resolution" },
+        { label: "Maintenance Scheduling" },
+        { label: "Cost Tracking" },
+        { label: "Technician Management" }
       ]
     }
   ]
 };
 
 
-// Additional Features
-
-const featuresHeading = {
-  featureHeading: "Additional Features",
-  featureTitle: "Do More With Empress",
-};
-
-const features = [
-{
-    "title": "Inights",
-    "description": "Unlock Data Insights",
-    "icon": "ph:chart-bar-duotone",
-    "link": "/feature/insights",
-    "color": "indigo"
-  },
-  {
-    "title": "Flows",
-    "description": "Optimize Your Workflow",
-    "icon": "ph:flow-arrow-duotone",
-    "link": "/feature/flows",
-    "color": "indigo"
-  },
-  {
-    "title": "Zaps",
-    "description": "Automate Routine Tasks",
-    "icon": "ph:lightning-duotone",
-    "link": "/feature/zaps",
-    "color": "indigo"
-  },
-  {
-    "title": "Assistants",
-    "description": "Expert AI Chat Support",
-    "icon": "ph:robot-duotone",
-    "link": "/feature/assistants",
-    "color": "indigo"
-  },
-  {
-    "title": "Forecast",
-    "description": "Anticipate Future Trends",
-    "icon": "ph:cloud-sun-duotone",
-    "link": "/feature/forecast",
-    "color": "indigo"
-  },
-  {
-    "title": "Bridge",
-    "description": "Connect With Collaborators",
-    "icon": "ph:arrows-out-duotone",
-    "link": "/feature/bridge",
-    "color": "indigo"
-  },
-  {
-    "title": "Administration",
-    "description": "Control Access & Visibility",
-    "icon": "ph:address-book-duotone",
-    "link": "/feature/administration",
-    "color": "indigo"
-  },
-  {
-    "title": "Innovation",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/feature/innovation",
-    "color": "indigo"
-  },
-  {
-    "title": "Integrations",
-    "description": "Seamless Tool Integration",
-    "icon": "ph:plugs-connected-duotone",
-    "link": "/feature/integrations",
-    "color": "indigo"
-  },
-];
-
-
-
 // FAQs
 
 const faqs = {
-  title: "Answers at Your Fingertips",
-  subtitle: "Empress FAQs",
+  title: "FAQs",
+  subtitle: "Your Questions, Answered",
   questions: [
     {
-      question: "How does Empress enhance financial reporting?",
-      answer: "Empress transforms financial reporting by offering advanced analytics and customizable report templates. These tools enable users to generate insightful financial reports, track key performance indicators, and gain a deeper understanding of their financial health, aiding in strategic decision-making."
+      question: "How does the Inventory Management System enhance tracking?",
+      answer: "Our Inventory Management System uses unique Item IDs for precise tracking, ensuring accurate stock records and efficient item retrieval, streamlining the overall inventory process."
     },
     {
-      question: "How can Empress integrate with my current financial tools?",
-      answer: "Empress features a robust integration framework that supports various accounting software and financial systems. Its API-driven architecture allows for smooth and secure data synchronization, enabling users to integrate their existing financial tools, ensuring a unified and streamlined financial management experience."
+      question: "Can I integrate supplier data into the Procurement Management System?",
+      answer: "Yes, our Procurement Management System allows seamless integration of supplier data, enabling efficient management of supplier relationships and orders, thus enhancing the procurement process."
     },
     {
-      question: "Is Empress suitable for varying business sizes?",
-      answer: "Absolutely! Empress is designed to cater to a diverse range of business sizes. Its scalable architecture allows small startups to manage their finances efficiently and can be scaled up to meet the complex financial management needs of large enterprises, making it a versatile tool for all business stages."
+      question: "Does your system offer production batch tracking for manufacturing?",
+      answer: "Absolutely. Our Production Batch Tracking System offers unique IDs for each batch, linked directly to inventory products, aiding in efficient scheduling, cost analysis, and supervisor oversight."
     },
     {
-      question: "How does Empress support expense management?",
-      answer: "Empress simplifies expense management through features like automated expense tracking, categorization, and reimbursement processing. It offers an intuitive interface for recording expenses, generating expense reports, and provides insights into spending patterns to help businesses manage their expenditures more effectively."
+      question: "What features are included in the Product Lifecycle Management (PLM) System?",
+      answer: "The PLM System includes integrated product tracking, lifecycle timeline management, phase monitoring, and continuous update tracking to strategically manage each product's lifecycle stages."
     },
     {
-      question: "Does Empress offer project-based financial tracking?",
-      answer: "Yes, Empress provides project-based financial tracking that allows businesses to allocate budgets, track expenses, and monitor financial performance on a per-project basis. This feature is invaluable for companies that manage multiple projects simultaneously, ensuring accurate financial oversight for each project."
+      question: "How does the Quality Check Management System ensure product standards?",
+      answer: "Our Quality Check Management System assigns unique IDs to each check, links to products for cohesive control, schedules quality checks, and records issues and resolutions to uphold high product standards."
     }
   ]
 };
@@ -928,39 +845,7 @@ const faqs = {
     </div>
   </section>
 
-    <!-- Features -->
-
-    <section class="bg-white">
-      <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-        <div class="text-center">
-          <h2 class="inline-flex items-center text-blue-600">
-            <span class="text-base font-medium tracking-tight">{featuresHeading.featureHeading}</span>
-          </h2>
-          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-            {featuresHeading.featureTitle}
-          </h2>
-        </div>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
-          {
-            features.map((item) => (
-              <a href={item.link} 
-                 class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
-                <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
-                  <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
-                    {/* Use the original icon coloring method */}
-                    <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
-                  </div>
-                  <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
-                    <h3 class="font-semibold text-md">{item.title}</h3>
-                    <p class="text-slate-500">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div> 
-      </div>
-    </section>
+  <Ecosystem/>  
   
 
 
