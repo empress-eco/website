@@ -57,35 +57,13 @@ const statsContent = {
 
 // FeatureOne
 
-// FeatureOne
-
 const featureOne = {
   mainContent: {
-    title: "Seamless Integration, Limitless Potential",
-    img: "https://images.unsplash.com/photo-1507831228884-93d43e81a99d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGJ1c2luZXNzJTIwb3BlcmF0aW9uc3xlbnwwfHwwfHx8MA%3D%3D",
-    subtitle: "Revolutionize Your Business Operations",
+    title: "Optimize Your Growth",
+    img: "/images/mail-marketing.svg",
+    subtitle: "Manage Everything In One Place",
     paragraphs: [
-      "Experience the power of unified solutions with Empress. Streamline your business operations with our integrated platform, tailored to harmonize every department and function."
-    ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
-  },
-  listItems: [
-    "Harmonize All Business Functions Effortlessly",
-    "Experience Unmatched Operational Efficiency",
-    "Unlock New Possibilities in Business Management"
-  ]
-};
-
-// FeatureTwo
-
-const featureTwo = {
-  mainContent: {
-    title: "Grow Fast, Scale Intelligently",
-    img: "https://images.unsplash.com/photo-1507831228884-93d43e81a99d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGJ1c2luZXNzJTIwb3BlcmF0aW9uc3xlbnwwfHwwfHx8MA%3D%3D",
-    subtitle: "Your Partner in Continuous Growth",
-    paragraphs: [
-      "Empress is more than a solution; it's your growth partner. Embrace scalable excellence as your business expands, with tools that adapt and evolve with you."
+      "Elevate your company's performance with our business apps and all-in-one tool suite, ensuring operational excellence streamlined business growth."
     ],
     linkText: "View Plans",
     linkHref: "/pricing"
@@ -97,22 +75,45 @@ const featureTwo = {
   ]
 };
 
-// FeatureThree
 
-const featureThree = {
+// FeatureTwo
+
+const featureTwo = {
   mainContent: {
-    title: "Insights at Your Fingertips",
-    img: "https://images.unsplash.com/photo-1507831228884-93d43e81a99d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGJ1c2luZXNzJTIwb3BlcmF0aW9uc3xlbnwwfHwwfHx8MA%3D%3D",
-    subtitle: "Transform Data into Decisions",
+    title: "Scale Your Business",
+    img: "/images/city-architecture.svg",
+    subtitle: "Revolutionize Your Business Operations",
     paragraphs: [
-      "Unlock the full potential of your data with Empress. Dive into advanced analytics for strategic insights, empowering you to make decisions with confidence."
+      "Unify your business solutions with Empress. Streamline your operations with our platform, tailored to harmonize every department and function."
     ],
     linkText: "View Plans",
     linkHref: "/pricing"
   },
   listItems: [
-    "Innovative Analytics for Strategic Insights",
-    "Data-Driven Decision-Making Redefined",
+    "Harmonize All Business Functions Effortlessly",
+    "Experience Unmatched Operational Efficiency",
+    "Unlock New Possibilities in Business Management"
+  ]
+};
+
+
+
+// FeatureThree
+
+const featureThree = {
+  mainContent: {
+    title: "Get More Insights",
+    img: "/images/data-management-automation.svg",
+    subtitle: "Drive Performance with Smarter Data",
+    paragraphs: [
+      "Simplify your complex data into clear, actionable intelligence, empowering you to tackle business challenges with strategy and confidence."
+    ],
+    linkText: "View Plans",
+    linkHref: "/pricing"
+  },
+  listItems: [
+    "Innovative Analytics for Valuable Insights",
+    "Refine Your Data-Driven Decision-Making",
     "Turn Insights into Actionable Strategies"
   ]
 };
@@ -523,7 +524,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
     <div class="lg:w-1/2">
       <div class="flex-shrink-0 mt-10">
         <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: 500px; object-fit: cover; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+          <img src={featureOne.mainContent.img} alt="Dashboard" />
         </div>
       </div>
     </div>
@@ -537,7 +538,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
     <div class="lg:w-1/2 lg:order-first">
       <div class="flex-shrink-0 mt-10">
         <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: 500px; object-fit: cover; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+          <img src={featureTwo.mainContent.img} alt="Dashboard" />
         </div>
       </div>
     </div>
@@ -655,7 +656,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
     <div class="lg:w-1/2">
       <div class="flex-shrink-0 mt-10">
         <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: 500px; object-fit: cover; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+          <img src={featureThree.mainContent.img} alt="Dashboard" />
         </div>
       </div>
     </div>
