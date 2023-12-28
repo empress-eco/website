@@ -62,22 +62,24 @@ const heading = {
 // Display Image
 const displayImage = {
   title: "Collaborate with Confidence",
-  subtitle: "Enhance Teamwork,",
-  subtitleCont: "Elevate Productivity.",
+  subtitle: "Empower Teamwork,",
+  subtitleCont: "Anytime, Anywhere.",
   imageSrc: "/images/chart.jpg"
 };
 
 // FeatureOne
 const featureOne = {
   mainContent: {
-    title: "Unified Communication",
+    title: "Collaboration, Redefined",
     img: "/images/dashboard.jpg",
-    subtitle: "Seamless Interactions, Anytime, Anywhere",
+    subtitle: "Instant Messaging, Immediate Impact",
     paragraphs: [
       "Empress brings your team together, no matter where they are. With tools like instant messaging, video conferencing, and collaborative editing, we bridge the gap in remote teamwork."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Instant Messaging & Video Calls",
@@ -89,14 +91,16 @@ const featureOne = {
 // FeatureTwo
 const featureTwo = {
   mainContent: {
-    title: "Project Management",
+    title: "Real-Time Updates",
     img: "/images/dashboard.jpg",
-    subtitle: "Organize, Track, and Achieve",
+    subtitle: "Collaborative, Collective Brilliance",
     paragraphs: [
       "Transform how your team handles projects. Empress's project management tools provide clarity, drive focus, and enhance productivity for every task."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Task Assignment & Tracking",
@@ -108,14 +112,16 @@ const featureTwo = {
 // FeatureThree
 const featureThree = {
   mainContent: {
-    title: "Integrated Workflows",
+    title: "Customizable Workflows, Streamlined Success",
     img: "/images/dashboard.jpg",
-    subtitle: "Automate for Efficiency",
+    subtitle: "Efficiency at Your Fingertips",
     paragraphs: [
       "Empress streamlines your processes with customizable workflows. Automate routine tasks, focus on strategic work, and drive business efficiency."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Custom Workflow Automation",
@@ -129,8 +135,8 @@ const featureThree = {
 
 const applicationShowcase = {
   mainSection: {
-    title: "Empress Collaboration Suite",
-    subtitle: "Unite Your Team, Elevate Your Workflow",
+    title: "Collaboration Applications",
+    subtitle: "Elevate Your Workflow",
     description1: "Empress's suite of collaborative applications is designed to bring teams together, enhance communication, and streamline project management, irrespective of geographical barriers.",
     description2: "From real-time communication tools to integrated project management systems, our solutions are crafted to boost productivity and foster a cohesive team environment.",
     viewApplicationsLink: "/collaboration/applications",
@@ -181,8 +187,8 @@ const applicationShowcase = {
 // Checklist Items
 
 const checklistItems = {
-  "sectionTitle": "Empress Collaboration Suite",
-  "subTitle": "Streamlining Team Productivity",
+  "sectionTitle": "Additional Features",
+  "subTitle": "Do More with Empress",
   "categories": [
     {
       "categoryName": "Communication Tools",
@@ -475,6 +481,9 @@ const faqs = {
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureOne.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureOne.mainContent.buttonText}
+              </a>
               <a href={featureOne.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureOne.mainContent.linkText}
                 <svg
@@ -547,6 +556,9 @@ const faqs = {
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureTwo.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureTwo.mainContent.buttonText}
+              </a>
               <a href={featureTwo.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureTwo.mainContent.linkText}
                 <svg
@@ -607,6 +619,9 @@ const faqs = {
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureThree.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureThree.mainContent.buttonText}
+              </a>
               <a href={featureThree.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureThree.mainContent.linkText}
                 <svg
