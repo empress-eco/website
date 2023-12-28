@@ -97,8 +97,10 @@ const featureOne = {
     paragraphs: [
       "Empress accelerates product innovation in tech, offering tools for rapid development and market launch."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Agile Product Lifecycle Management",
@@ -118,8 +120,10 @@ const featureTwo = {
     paragraphs: [
       "Empress revolutionizes tech operations with automated solutions, enhancing efficiency and productivity."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Workflow Automation for Peak Efficiency",
@@ -139,8 +143,10 @@ const featureThree = {
     paragraphs: [
       "Empress ensures the highest security standards for tech businesses, safeguarding data and innovations."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Advanced Data Encryption and Security Protocols",
@@ -641,6 +647,9 @@ Use AstroSeo in all the pages you want different Seo than the index page
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureOne.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureOne.mainContent.buttonText}
+              </a>
               <a href={featureOne.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureOne.mainContent.linkText}
                 <svg
@@ -713,6 +722,9 @@ Use AstroSeo in all the pages you want different Seo than the index page
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureTwo.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureTwo.mainContent.buttonText}
+              </a>
               <a href={featureTwo.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureTwo.mainContent.linkText}
                 <svg
@@ -773,6 +785,9 @@ Use AstroSeo in all the pages you want different Seo than the index page
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureThree.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureThree.mainContent.buttonText}
+              </a>
               <a href={featureThree.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureThree.mainContent.linkText}
                 <svg

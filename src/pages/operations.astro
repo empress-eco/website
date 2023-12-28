@@ -89,8 +89,10 @@ const featureOne = {
     paragraphs: [
       "Empress redefines order management with our advanced Purchase Orders system. Experience a transformation in handling orders, marked by efficiency and precision, ensuring seamless transaction flows."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Efficiency in Order Handling",
@@ -109,8 +111,10 @@ const featureTwo = {
     paragraphs: [
       "Revolutionize your production with Empress's manufacturing tools. Our solutions are engineered to enhance workflow efficiency, fostering superior product quality and a seamless manufacturing cycle."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Enhanced Workflow Efficiency",
@@ -129,8 +133,10 @@ const featureThree = {
     paragraphs: [
       "Empress's Logistics system is the cornerstone of efficient distribution. Streamline your distribution channels for smooth product movement, ensuring timely deliveries and operational reliability."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Smooth Product Movement",
@@ -468,6 +474,9 @@ const faqs = {
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureOne.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureOne.mainContent.buttonText}
+              </a>
               <a href={featureOne.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureOne.mainContent.linkText}
                 <svg
@@ -540,6 +549,9 @@ const faqs = {
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureTwo.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureTwo.mainContent.buttonText}
+              </a>
               <a href={featureTwo.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureTwo.mainContent.linkText}
                 <svg
@@ -600,6 +612,9 @@ const faqs = {
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureThree.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureThree.mainContent.buttonText}
+              </a>
               <a href={featureThree.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureThree.mainContent.linkText}
                 <svg

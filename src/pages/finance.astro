@@ -81,8 +81,10 @@ const featureOne = {
     paragraphs: [
       "Empress redefines financial management, offering a comprehensive suite of tools to optimize your financial operations and decision-making."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Holistic Financial Management System",
@@ -101,8 +103,10 @@ const featureTwo = {
     paragraphs: [
       "Scale your business effortlessly with Empress's adaptable financial tools designed for businesses of all sizes and stages."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Adaptable to Business Growth",
@@ -121,8 +125,10 @@ const featureThree = {
     paragraphs: [
       "Harness the power of Empress's financial analytics to gain valuable insights, drive strategy, and enhance fiscal performance."
     ],
-    linkText: "View Plans",
-    linkHref: "/pricing"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
     "Advanced Analytical Tools",
@@ -457,6 +463,9 @@ const faqs = {
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureOne.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureOne.mainContent.buttonText}
+              </a>
               <a href={featureOne.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureOne.mainContent.linkText}
                 <svg
@@ -529,6 +538,9 @@ const faqs = {
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureTwo.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureTwo.mainContent.buttonText}
+              </a>
               <a href={featureTwo.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureTwo.mainContent.linkText}
                 <svg
@@ -589,6 +601,9 @@ const faqs = {
                     </li>
                   </ul>
             <p class="mt-10">
+              <a href={featureThree.mainContent.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {featureThree.mainContent.buttonText}
+              </a>
               <a href={featureThree.mainContent.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
                 {featureThree.mainContent.linkText}
                 <svg
