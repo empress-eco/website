@@ -10,6 +10,7 @@ import StatsTwo from "../components/stats/StatsTwo.astro";
 import CtaTwo from "../components/cta/CtaTwo.astro";
 import { Code } from "astro/components";
 import { AstroSeo } from "@astrolib/seo";
+import Ecosystem from "../components/features/Ecosystem.astro";
 import PricingThree from "./pricing-three.astro";
 
 
@@ -20,44 +21,129 @@ const pricingPlans = [
   {
     name: "$19 per user/month",
     price: "Starter",
-    description: "Ideal for small to medium businesses looking for an all-in-one solution.",
+    description: "Ideal for small businesses seeking a comprehensive, integrated solution.",
     features: [
-      "Comprehensive Business Suite",
-      "Efficient Workflow Automation",
-      "Data-Driven Decision Making Tools",
+      "All-Inclusive Business Suite",
+      "Automated Efficient Workflows",
+      "Insightful Data Analytics",
       "Team Collaboration Platform",
-      "50GB Secure Cloud Storage",
-      "Basic AI-Enabled Chat Support",
+      "Unlimited Sites & Applications",
       "Standard API Access"
     ]
   },
   {
-    name: "$29 per user/month",
-    price: "Growth",
-    description: "Designed for businesses requiring advanced functionality and integrations.",
+    name: "$45 per user/month",
+    price: "Professional",
+    description: "Perfect for mid-sized businesses focusing on advanced efficiency and management.",
     features: [
-      "Advanced Workflow Automation",
-      "Enhanced Analytics and Reporting",
-      "100GB Secure Cloud Storage",
-      "Advanced AI-Enabled Chat Support",
-      "Pro API Access with Extended Limits",
-      "AI Integrations Add-on Available"
+      "Advanced Project Management",
+      "Custom Workflow Automation",
+      "Dynamic Data Reporting",
+      "Enhanced Security Protocols",
+      "Extended Integration API",
+      "Priority Customer Support"
     ]
   },
   {
-    name: "$39 per user/month",
-    price: "Premium",
-    description: "Premium package for enterprises demanding predictive insights and scalability.",
+    name: "$65 per user/month",
+    price: "Enterprise",
+    description: "For enterprises demanding customization, predictive insights, and scalability.",
     features: [
-      "Predictive Analytics Suite (Add-on)",
-      "AI-Driven Market Insights",
-      "Unlimited Secure Cloud Storage",
-      "24/7 Premium Support",
-      "Full API Access",
-      "Custom Integration Options"
+      "Strategic Management Suite",
+      "Advanced Predictive Analytics",
+      "Unlimited Sites & Integration",
+      "Premium Security Standards",
+      "Full Access API",
+      "24/7 Expert Solutions"
     ]
   }
 ];
+
+
+// Checklist Items
+
+const checklistItems = {
+  sectionTitle: "Empress Platform Capabilities",
+  subTitle: "The Launchpad for Business Growth",
+  categories: [
+    {
+      categoryName: "Finance",
+      items: [
+        { label: "Analyze Financial Trends" },
+        { label: "Simplify Budget Tracking" },
+        { label: "Enhance Revenue Management" },
+        { label: "Streamline Expense Processes" }
+      ]
+    },
+    {
+      categoryName: "Sales",
+      items: [
+        { label: "Boost Client Relationships" },
+        { label: "Streamline Sales Processes" },
+        { label: "Enhance Deal Efficiency" },
+        { label: "Optimize Sales Strategies" }
+      ]
+    },
+    {
+      categoryName: "Product",
+      items: [
+        { label: "Accelerate Product Innovation" },
+        { label: "Simplify Development Cycles" },
+        { label: "Rapid Market Entry" },
+        { label: "Foster Product Creativity" }
+      ]
+    },
+    {
+      categoryName: "Operations",
+      items: [
+        { label: "Automate Business Workflows" },
+        { label: "Gain Operational Insights" },
+        { label: "Cut Operational Costs" },
+        { label: "Drive Operational Excellence" }
+      ]
+    },
+    {
+      categoryName: "Marketing",
+      items: [
+        { label: "Expand Marketing Reach" },
+        { label: "Engage Target Audience" },
+        { label: "Maximize Campaign Impact" },
+        { label: "Drive Conversion Growth" }
+      ]
+    },
+    {
+      categoryName: "Talent",
+      items: [
+        { label: "Nurture Employee Growth" },
+        { label: "Retain Top Talent" },
+        { label: "Enhance Team Productivity" },
+        { label: "Empower Staff Development" }
+      ]
+    },
+    {
+      categoryName: "Experience",
+      items: [
+        { label: "Elevate Service Standards" },
+        { label: "Build Customer Loyalty" },
+        { label: "Enhance Customer Satisfaction" },
+        { label: "Streamline Service Delivery" }
+      ]
+    },
+    {
+      categoryName: "Collaboration",
+      items: [
+        { label: "Facilitate Team Communication" },
+        { label: "Optimize Project Management" },
+        { label: "Strengthen Team Collaboration" },
+        { label: "Drive Collaborative Success" }
+      ]
+    }
+  ]
+};
+
+
+
+
 
 
 
@@ -97,31 +183,44 @@ const pricingDetails = [
 // FAQs
 
 const faqs = {
-  title: "Agency Solutions FAQs",
-  subtitle: "Your Questions, Answered",
+  title: "FAQs",
+  subtitle: "Understanding Your Investment",
   questions: [
     {
-      question: "How does Empress enhance agency workflow and productivity?",
-      answer: "Empress equips agencies with advanced tools for workflow optimization and productivity, including automated processes and real-time project tracking, tailored to the dynamic needs of creative environments."
+      question: "What does the $19 per user/month plan include?",
+      answer: "Our Starter Plan, ideal for small businesses, includes an all-inclusive business suite, efficient workflow automation, insightful data analytics, a team collaboration platform, and unlimited sites & applications, all accessible with standard API access."
     },
     {
-      question: "Can Empress seamlessly integrate with specialized agency tools?",
-      answer: "Yes, Empress is designed for seamless integration, ensuring compatibility with a variety of agency-specific tools and systems for efficient creative and operational management."
+      question: "Who should choose the $45 per user/month plan?",
+      answer: "The Professional Plan is perfect for mid-sized businesses focusing on heightened efficiency. It offers advanced project management, custom workflow automation, dynamic data reporting, enhanced security protocols, extended integration API, and priority customer support."
     },
     {
-      question: "Does Empress improve client engagement for agencies?",
-      answer: "Absolutely. Empress provides innovative tools for enhanced client communication and relationship management, crucial for agencies aiming to expand their client base and deepen relationships."
+      question: "What are the benefits of the $65 per user/month plan?",
+      answer: "Our Enterprise Plan is tailored for large businesses needing customization and scalability. It includes a strategic management suite, advanced predictive analytics, unlimited sites & integrations, premium security standards, full API access, and 24/7 expert solutions."
     },
     {
-      question: "What unique features does Empress offer for creative agencies?",
-      answer: "Empress empowers agencies with features like sophisticated client data insights, campaign management automation, and marketing strategy tools, all vital for creative excellence and client satisfaction."
+      question: "Can Empress adapt to my business's growing needs?",
+      answer: "Absolutely. Empress's scalable solutions cater to businesses of all sizes, offering plans that grow with you, ensuring you always have the right tools and resources for your evolving business requirements."
     },
     {
-      question: "How does Empress ensure data security and compliance for agencies?",
-      answer: "Empress prioritizes data security with robust encryption and compliance protocols, offering agencies advanced measures to protect sensitive client information and creative assets."
+      question: "How does Empress support various operational aspects?",
+      answer: "Empress offers capabilities across finance, sales, product development, operations, marketing, talent management, customer experience, and collaboration. Each function is equipped with tools designed to optimize, innovate, and enhance your business processes."
+    },
+    {
+      question: "Is there a trial period or demo available for Empress?",
+      answer: "We encourage potential clients to explore Empress's capabilities firsthand. Please contact our sales team for information on trial periods or to schedule a demo tailored to your business needs."
+    },
+    {
+      question: "How secure is my data with Empress?",
+      answer: "Security is a paramount concern at Empress. We employ advanced encryption, compliance protocols, and robust security measures to protect your sensitive business data, regardless of the chosen plan."
+    },
+    {
+      question: "Does Empress offer customer support for all plans?",
+      answer: "Yes, Empress provides customer support for all plans, with enhanced priority support available for the Professional and Enterprise plans, ensuring timely and efficient assistance whenever you need it."
     }
   ]
 };
+
 
 
 ---
@@ -198,7 +297,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
             ))}
           </ul>
           <div class="mt-8">
-            <a class="text-blue-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-100 hover:bg-blue-50 w-full" aria-label="#" href="/register">Get started</a>
+            <a class="text-blue-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-100 hover:bg-blue-50 w-full" aria-label="#" href="https://my.empress.eco/dashboard/sites">Get Started Free</a>
           </div>
         </section>
       ))}
@@ -206,7 +305,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
   </div>
 </section>
 
-<section class="bg-white">
+<!-- <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
     <div>
       <h2 class="inline-flex items-center text-blue-600">
@@ -237,987 +336,239 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </div>
+</section> -->
+
+<!-- Section Seven   -->
+
+
+<section>
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+    <div>
+      <h2 class="inline-flex items-center text-blue-600">
+        <span class="text-base font-medium tracking-tight">Use Cases</span>
+      </h2>
+      <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl mb-10"> <!-- Added margin-bottom (mb-8) -->
+        Find Solutions for Your Industry
+      </h2>
+    </div>
+              <div
+                class="h-full group grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-3">
+                <div class="bg-slate-50 p-4 rounded-2xl">
+                  <ul
+                    role="list"
+                    class="grid grid-cols-1 gap-4 list-none lg:pr-12">
+                    <li>
+                      <div>
+                        <p
+                          class="font-semibold text-purple-900 text-lg lg:text-xl">
+                          Rapid Deployment,<span class="lg:block"> Immediate Results</span>
+                        </p>
+                      </div>
+                      <div class="mt-2 text-slate-500 text-sm">
+                        Improve operations and business processes.
+                      </div>
+                    </li>
+                    <!-- <li>
+                      <div>
+                        <p
+                          class="font-semibold text-purple-900 text-lg lg:text-xl">
+                          Enhanced <span class="lg:block">Efficiency</span>
+                        </p>
+                      </div>
+                      <div class="mt-2 text-slate-500 text-sm">
+                        Maximize productivity with advanced integrations.
+                      </div>
+                    </li>
+                    <li> -->
+                      <div>
+                        <!-- <p class="font-semibold text-purple-900 text-sm">
+                          Popular Use Cases
+                        </p> -->
+                      </div>
+                      <div
+                      class="text-slate-500 text-sm inline-flex items-center mt-1">
+                      <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-4 h-4 mr-3">
+                      <path
+                        class="#5046e4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                      </path>
+                    </svg>
+                    <a href="/enterprise" style="color: #5046e4;">Enterprise</a>
+                    </div>
+                      <div
+                      class="text-slate-500 text-sm inline-flex items-center">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4 mr-3">
+                        <path
+                          class="#5046e4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                        </path>
+                      </svg>
+                      <a href="/startups" style="color: #5046e4;">Startups</a>
+                      </div>
+                      <div
+                        class=" text-slate-500 text-sm inline-flex items-center">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4 mr-3">
+                        <path
+                          class="#5046e4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                        </path>
+                      </svg>
+                      <a href="/agencies" style="color: #5046e4;">Agencies</a>
+                      </div>
+                      <div
+                        class=" text-slate-500 text-sm inline-flex items-center">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4 mr-3">
+                        <path
+                          class="#5046e4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                        </path>
+                      </svg>
+                      <a href="/government" style="color: #5046e4;">Government</a>
+                      </div>
+                      <div
+                      class=" text-slate-500 text-sm inline-flex items-center">
+                      <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-4 h-4 mr-3">
+                      <path
+                        class="#5046e4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                      </path>
+                    </svg>
+                    <a href="/non-profits" style="color: #5046e4;">Non-Profits</a>
+                    </div>
+                      
+                </div>
+                <div class="relative lg:col-span-3">
+                  <div
+                    class="relative overflow-hidden rounded-2xl bg-blue-600 p-8 z-50 shadow-xl lg:py-12 lg:grid lg:grid-cols-2 lg:gap-x-8">
+                    <div
+                      class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                      <img
+                        src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div class="relative lg:col-span-1">
+                      <!-- <span>
+                        <img src="/images/integrations/notion.svg" alt="" />
+                      </span> -->
+                      <blockquote class="mt-6 text-white lg:mt-24">
+                        <p class="font-medium">
+                          Explore Empress's real-world applications across diverse sectors on our blog, showcasing how our next-generation applications are redefining business efficiency.
+                        </p>
+                        <p class="mt-6">
+                          <a
+                            href="https://blog.empress.eco/"
+                            class="text-white hover:text-blue-100 inline-flex items-center group">
+                            Read Our Blog
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd"></path>
+                            </svg>
+                          </a>
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-  
-  <section>
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 items-center">
-      <div>
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight"
-            >Extended Pricing</span
-          >
-        </h2>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          What's included in our pricing
-        </h2>
-        <div class="max-w-xl mt-6">
-          <p class="text-slate-500">
-            Build quicker and don't waste time building your website. Combine
-            layouts and customize them as you wish.
-          </p>
-        </div>
-      </div>
-      <div class="mx-auto text-left mt-12">
-        <div>
-          <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-3">
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Tools to build optimized checkout flows
-                  </p>
-                </div>
-  
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Global payments with a single integration
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Comprehensive security
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Financial reconciliation and reporting
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    Fast, predictable payouts
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div>
-                <div>
-                  <p class="font-semibold text-purple-900 text-base">
-                    24×7 phone, chat, and email support
-                  </p>
-                </div>
-                <div class="mt-6">
-                  <ul
-                    role="list"
-                    class="order-last flex flex-col gap-y-2 text-slate-500 text-sm">
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Embeddable checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Custom UI toolkit</span>
-                    </li>
-                    <li class="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-circle-check"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
-                        ></path>
-                        <path d="M9 12l2 2l4 -4"></path>
-                      </svg>
-  
-                      <span class="ml-4"> Invoice support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Section Eight -->
 
-  <section>
-    <div
-      class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div>
-        <h2 class="inline-flex items-center text-blue-600">
-          <span class="text-base font-medium tracking-tight">Testimonial</span>
-        </h2>
-        <h2
-          class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-          Our customers and their experiences
-        </h2>
-      </div>
-      <div
-        x-data="{
-          skip: 1,
-          atBeginning: false,
-          atEnd: false,
-          next() {
-              this.to((current, offset) => current + (offset * this.skip))
-          },
-          prev() {
-              this.to((current, offset) => current - (offset * this.skip))
-          },
-          to(strategy) {
-              let slider = this.$refs.slider
-              let current = slider.scrollLeft
-              let offset = slider.firstElementChild.getBoundingClientRect().width
-              slider.scrollTo({ left: strategy(current, offset), behavior: 'smooth' })
-          },
-          focusableWhenVisible: {
-              'x-intersect:enter'() {
-                  this.$el.removeAttribute('tabindex')
-              },
-              'x-intersect:leave'() {
-                  this.$el.setAttribute('tabindex', '-1')
-              },
-          },
-          disableNextAndPreviousButtons: {
-              'x-intersect:enter.threshold.05'() {
-                  let slideEls = this.$el.parentElement.children
-                  // If this is the first slide.
-                  if (slideEls[0] === this.$el) {
-                      this.atBeginning = true
-                  // If this is the last slide.
-                  } else if (slideEls[slideEls.length-1] === this.$el) {
-                      this.atEnd = true
-                  }
-              },
-              'x-intersect:leave.threshold.05'() {
-                  let slideEls = this.$el.parentElement.children
-                  // If this is the first slide.
-                  if (slideEls[0] === this.$el) {
-                      this.atBeginning = false
-                  // If this is the last slide.
-                  } else if (slideEls[slideEls.length-1] === this.$el) {
-                      this.atEnd = false
-                  }
-              },
-          },
-      }"
-        class="flex w-full flex-col">
-        <div
-          x-on:keydown.right="next"
-          x-on:keydown.left="prev"
-          tabindex="0"
-          role="region"
-          aria-labelledby="carousel-label"
-          class="flex flex-col mt-12 w-full">
-          <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
-          <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
-          <!-- Buttons -->
-          <div class="grid grid-cols-1 lg:grid-cols-4 mb-4">
-            <div
-              class="inline-flex items-center space-x-2 order-last mb-4 lg:col-start-4 lg:ml-auto lg:px-2">
-              <button
-                x-on:click="prev"
-                class="hover:bg-white focus:border-blue-500 border text-purple-900 rounded-xl inline-flex items-center text-center hover:text-slate-500 py-2 px-4"
-                :aria-disabled="atBeginning"
-                :tabindex="atEnd ? -1 : 0"
-                :class="{ 'opacity-50 cursor-not-allowed': atBeginning }">
-                <span aria-hidden="true">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="w-4 h-4">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-                  </svg>
-                </span>
-                <span class="sr-only">Skip to previous slide page</span>
-              </button>
-              <button
-                x-on:click="next"
-                class="hover:bg-white focus:border-blue-500 border text-purple-900 rounded-xl inline-flex items-center text-center hover:text-slate-500 py-2 px-4"
-                :aria-disabled="atEnd"
-                :tabindex="atEnd ? -1 : 0"
-                :class="{ 'opacity-50 cursor-not-allowed': atEnd }">
-                <span aria-hidden="true">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="w-4 h-4">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-                  </svg>
-                </span>
-                <span class="sr-only">Skip to next slide page</span>
-              </button>
+<section aria-labelledby="pricing-three-extended" id="pricing-three-extended" class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
+    <div>
+      <h2 class="inline-flex items-center text-blue-600">
+        <span class="text-base font-medium tracking-tight">{checklistItems.sectionTitle}</span>
+      </h2>
+      <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+        {checklistItems.subTitle}
+      </h2>
+    </div>
+    <div class="mx-auto text-left mt-12">
+      <div class="gap-x-2 gap-y-14 lg:gap-12 grid grid-cols-1 lg:grid-cols-4">
+        {checklistItems.categories.map((category, index) => (
+          <div key={index}>
+            <div>
+              <p class="font-semibold text-purple-500 mb-5">{category.categoryName}</p>
+              <ul role="list" class="order-last flex flex-col gap-y-2 text-sm text-slate-500">
+                {category.items.map((item, itemIndex) => (
+                  <li key={itemIndex} class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                      <path d="M9 12l2 2l4 -4"></path>
+                    </svg>
+                    <span class="ml-4">{item.label}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          <ul
-            x-ref="slider"
-            tabindex="0"
-            role="listbox"
-            aria-labelledby="carousel-content-label"
-            class="flex w-full snap-x snap-mandatory overflow-x-scroll scrollbar-hide pb-24 gap-12">
-            <li
-              x-bind="disableNextAndPreviousButtons"
-              class="flex w-full shrink-0 snap-start flex-col items-center justify-center"
-              role="option">
-              <figure>
-                <div
-                  class="h-full group grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-3">
-                  <div class="bg-slate-50 p-4 rounded-2xl">
-                    <ul
-                      role="list"
-                      class="grid grid-cols-1 gap-4 list-none lg:pr-12">
-                      <li>
-                        <div>
-                          <p
-                            class="font-semibold text-purple-900 text-lg lg:text-xl">
-                            Weeks <span class="lg:block">to minutes</span>
-                          </p>
-                        </div>
-                        <div class="mt-2 text-slate-500 text-sm">
-                          Reduction in customer onboarding time
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <p
-                            class="font-semibold text-purple-900 text-lg lg:text-xl">
-                            2-5x <span class="lg:block">faster</span>
-                          </p>
-                        </div>
-                        <div class="mt-2 text-slate-500 text-sm">
-                          Fast reconciliation with a single report
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <p class="font-semibold text-purple-900 text-sm">
-                            Products used
-                          </p>
-                        </div>
-                        <div
-                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-4 h-4 mr-3">
-                            <path
-                              class="stroke-purple-500"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
-                            </path>
-                          </svg>
-                          Deployments
-                        </div>
-                        <div
-                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-4 h-4 mr-3">
-                            <path
-                              class="stroke-purple-500"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"
-                            ></path>
-                          </svg>
-                          Analytics
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="relative lg:col-span-3">
-                    <div
-                      class="relative overflow-hidden rounded-2xl bg-blue-600 p-8 z-50 shadow-xl lg:py-12 lg:grid lg:grid-cols-2 lg:gap-x-8">
-                      <div
-                        class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
-                        <img
-                          src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                          alt=""
-                          class="h-full w-full object-cover"
-                        />
-                      </div>
-                      <div class="relative lg:col-span-1">
-                        <span>
-                          <img src="/images/integrations/notion.svg" alt="" />
-                        </span>
-                        <blockquote class="mt-6 text-white lg:mt-24">
-                          <p class="font-medium">
-                            Spaziobianco Public rollover performance exchange
-                            traded funds junk bonds passively NASDAQ bills upswing
-                            retirement corporate market exposure.
-                          </p>
-                          <p class="mt-6">
-                            <a
-                              href=""
-                              class="text-white hover:text-blue-100 inline-flex items-center group">
-                              Read case study
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                                <path
-                                  fill-rule="evenodd"
-                                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                                  clip-rule="evenodd"></path>
-                              </svg>
-                            </a>
-                          </p>
-                        </blockquote>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </figure>
-            </li>
-            <li
-              x-bind="disableNextAndPreviousButtons"
-              class="flex w-full shrink-0 snap-start flex-col items-center justify-center"
-              role="option">
-              <figure>
-                <div
-                  class="h-full group grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-3">
-                  <div class="bg-slate-50 p-4 rounded-2xl">
-                    <ul
-                      role="list"
-                      class="grid grid-cols-1 gap-4 list-none lg:pr-12">
-                      <li>
-                        <div>
-                          <p
-                            class="font-semibold text-blue-500-500 text-lg lg:text-xl">
-                            1
-                          </p>
-                        </div>
-                        <div class="mt-2 text-slate-500 text-sm">
-                          Processor for all credit card payments
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <p
-                            class="font-semibold text-purple-900 text-lg lg:text-xl">
-                            $2 million
-                          </p>
-                        </div>
-                        <div class="mt-2 text-slate-500 text-sm">
-                          Additional revenue from Card Account Updater
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <p class="font-semibold text-purple-900 text-sm">
-                            Products used
-                          </p>
-                        </div>
-                        <div
-                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-4 h-4 mr-3">
-                            <path
-                              class="stroke-purple-500"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
-                            </path>
-                          </svg>
-                          Deployments
-                        </div>
-                        <div
-                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-4 h-4 mr-3">
-                            <path
-                              class="stroke-purple-500"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"
-                            ></path>
-                          </svg>
-                          Analytics
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="relative lg:col-span-3">
-                    <div
-                      class="relative overflow-hidden rounded-2xl bg-blue-600 p-8 shadow-xl lg:py-12 lg:grid lg:grid-cols-2 lg:gap-x-8">
-                      <div
-                        class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
-                        <img
-                          src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-                          alt=""
-                          class="h-full w-full object-cover"
-                        />
-                      </div>
-                      <div class="relative lg:col-span-1">
-                        <span>
-                          <img src="/images/integrations/zapier.svg" alt="" />
-                        </span>
-                        <blockquote class="mt-6 text-white lg:mt-24">
-                          <p class="font-medium">
-                            Spaziobianco has Economy growth upswing market index
-                            funds capitalization corporate bonds mutual.
-                          </p>
-                          <p class="mt-6">
-                            <a
-                              href=""
-                              class="text-white hover:text-blue-100 inline-flex items-center group">
-                              Read case study
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                                <path
-                                  fill-rule="evenodd"
-                                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                                  clip-rule="evenodd"></path>
-                              </svg>
-                            </a>
-                          </p>
-                        </blockquote>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </figure>
-            </li>
-            <li
-              x-bind="disableNextAndPreviousButtons"
-              class="flex w-full shrink-0 snap-start flex-col items-center justify-center"
-              role="option">
-              <figure>
-                <div
-                  class="h-full group grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-3">
-                  <div class="bg-slate-50 p-4 rounded-2xl">
-                    <ul
-                      role="list"
-                      class="grid grid-cols-1 gap-4 list-none lg:pr-12">
-                      <li>
-                        <div>
-                          <p
-                            class="font-semibold text-blue-500-500 text-lg lg:text-xl">
-                            3,000x
-                          </p>
-                        </div>
-                        <div class="mt-2 text-slate-500 text-sm">
-                          growth in online payments volume in just 6 months
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <p
-                            class="font-semibold text-purple-900 text-lg lg:text-xl">
-                            3 weeks
-                          </p>
-                        </div>
-                        <div class="mt-2 text-slate-500 text-sm">
-                          of development work to go live
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <p class="font-semibold text-purple-900 text-sm">
-                            Products used
-                          </p>
-                        </div>
-                        <div
-                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-4 h-4 mr-3">
-                            <path
-                              class="stroke-purple-500"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
-                            </path>
-                          </svg>
-                          Deployments
-                        </div>
-                        <div
-                          class="mt-2 text-slate-500 text-sm inline-flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-4 h-4 mr-3">
-                            <path
-                              class="stroke-purple-500"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"
-                            ></path>
-                          </svg>
-                          Analytics
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="relative lg:col-span-3">
-                    <div
-                      class="relative overflow-hidden rounded-2xl bg-blue-600 p-8 shadow-xl lg:py-12 lg:grid lg:grid-cols-2 lg:gap-x-8">
-                      <div
-                        class="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
-                        <img
-                          src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-                          alt=""
-                          class="h-full w-full object-cover"
-                        />
-                      </div>
-                      <div class="relative lg:col-span-1">
-                        <span>
-                          <img src="/images/integrations/spotify.svg" alt="" />
-                        </span>
-                        <blockquote class="mt-6 text-white lg:mt-24">
-                          <p class="font-medium">
-                            Spaziobianco has Economy growth upswing market index
-                            funds capitalization corporate bonds mutual.
-                          </p>
-                          <p class="mt-6">
-                            <a
-                              href=""
-                              class="text-white hover:text-blue-100 inline-flex items-center group">
-                              Read case study
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
-                                <path
-                                  fill-rule="evenodd"
-                                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                                  clip-rule="evenodd"></path>
-                              </svg>
-                            </a>
-                          </p>
-                        </blockquote>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </figure>
-            </li>
-          </ul>
-        </div>
+        ))}
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+  
+
+  <Ecosystem/>
   
 
     <!-- FAQS -->
