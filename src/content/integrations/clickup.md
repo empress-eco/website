@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Clickup
-description: "Municipal management performance corporate investment grade bonds."
+description: "Adapt task management to any business workflow."
 image:
   url: "/images/integrations/clickup.png"
   alt: "The Astro logo with the word One."

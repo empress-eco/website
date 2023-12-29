@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Buffer
-description: "Municipal management performance corporate investment grade bonds."
+description: "Social media content planning and publishing."
 image:
   url: "/images/integrations/buffer.webp"
   alt: "The Astro logo with the word One."

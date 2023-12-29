@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Kayako
-description: "Municipal management performance corporate investment grade bonds."
+description: "Integrated tool for cohesive customer support."
 image:
   url: "/images/integrations/kayako.png"
   alt: "The Astro logo with the word One."

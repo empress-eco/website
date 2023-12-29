@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Cove Comments
-description: "Municipal management performance corporate investment grade bonds."
+description: "Simple site discussions to drive visitor engagement."
 image:
   url: "/images/integrations/cove.svg"
   alt: "The Astro logo with the word One."

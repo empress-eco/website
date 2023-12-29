@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: WeGlot
-description: "Municipal management performance corporate investment grade bonds."
+description: "Website translation for an international audience."
 image:
   url: "/images/integrations/weglot.png"
   alt: "The Astro logo with the word One."

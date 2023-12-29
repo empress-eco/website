@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Groove
-description: "Municipal management performance corporate investment grade bonds."
+description: "Streamlined & agile support desk for small teams."
 image:
   url: "/images/integrations/groove.png"
   alt: "The Astro logo with the word One."

@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Slack
-description: "Municipal management performance corporate investment grade bonds."
+description: "Streamline team communication."
 image:
   url: "/images/integrations/slack.svg"
   alt: "The Astro logo with the word One."

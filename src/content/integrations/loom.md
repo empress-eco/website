@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Loom
-description: "Municipal management performance corporate investment grade bonds."
+description: "Quickly share informoation with video messages."
 image:
   url: "/images/integrations/loom.png"
   alt: "The Astro logo with the word One."

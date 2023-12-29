@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Placid
-description: "Municipal management performance corporate investment grade bonds."
+description: "Branded social media image creation and sharing."
 image:
   url: "/images/integrations/placid.webp"
   alt: "The Astro logo with the word One."

@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Intravert
-description: "Municipal management performance corporate investment grade bonds."
+description: "Native business advertising integration for websites."
 image:
   url: "/images/integrations/intravert.webp"
   alt: "The Astro logo with the word One."

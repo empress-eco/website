@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Trello
-description: "Municipal management performance corporate investment grade bonds."
+description: "Simplify project tracking with visual boards."
 image:
   url: "/images/integrations/trello.webp"
   alt: "The Astro logo with the word One."

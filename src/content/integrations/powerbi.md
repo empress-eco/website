@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Power BI
-description: "Municipal management performance corporate investment grade bonds."
+description: "Customized data dashboards for insights."
 image:
   url: "/images/integrations/powerbi.png"
   alt: "The Astro logo with the word One."

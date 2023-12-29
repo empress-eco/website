@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: YouTube
-description: "Municipal management performance corporate investment grade bonds."
+description: "MuMass audience reach through social video content."
 image:
   url: "/images/integrations/youtube.webp"
   alt: "The Astro logo with the word One."
-tags: ["Marketing & Sales"]
+tags: ["Sales & Marketing"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

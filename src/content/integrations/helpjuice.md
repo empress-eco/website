@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Helpjuice
-description: "Municipal management performance corporate investment grade bonds."
+description: "Knowledge consolidation for enhanced support."
 image:
   url: "/images/integrations/helpjuice.png"
   alt: "The Astro logo with the word One."

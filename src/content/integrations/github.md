@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: GitHub
-description: "Municipal management performance corporate investment grade bonds."
+description: "Collaborative code hosting and version control."
 image:
   url: "/images/integrations/github.svg"
   alt: "The Astro logo with the word One."

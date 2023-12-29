@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Calendly
-description: "Municipal management performance corporate investment grade bonds."
+description: "Streamline booking and calendar management."
 image:
   url: "/images/integrations/calendly.png"
   alt: "The Astro logo with the word One."

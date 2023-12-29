@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Miro
-description: "Municipal management performance corporate investment grade bonds."
+description: "Interactive whiteboarding for team ideation and collaboration."
 image:
   url: "/images/integrations/miro.png"
   alt: "The Astro logo with the word One."

@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Fathom Analytics
-description: "Municipal management performance corporate investment grade bonds."
+description: "Privacy-first essential website metrics for business."
 image:
   url: "/images/integrations/fathom.webp"
   alt: "The Astro logo with the word One."

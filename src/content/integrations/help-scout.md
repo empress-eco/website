@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Help Scout
-description: "Municipal management performance corporate investment grade bonds."
+description: "Efficient help desk for improved customer support."
 image:
   url: "/images/integrations/helpscout.webp"
   alt: "The Astro logo with the word One."

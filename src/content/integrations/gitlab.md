@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: GitLab
-description: "Municipal management performance corporate investment grade bonds."
+description: "Complete DevOps platform for lifecycle management."
 image:
   url: "/images/integrations/gitlab.png"
   alt: "The Astro logo with the word One."

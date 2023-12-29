@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Segment
-description: "Municipal management performance corporate investment grade bonds."
+description: "Customer data integration for analytics and marketing."
 image:
   url: "/images/integrations/segment.png"
   alt: "The Astro logo with the word One."

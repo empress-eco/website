@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Simple Analytics
-description: "Municipal management performance corporate investment grade bonds."
+description: "Simplified web analytics with privacy emphasis."
 image:
   url: "/images/integrations/simple-analytics.webp"
   alt: "The Astro logo with the word One."

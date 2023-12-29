@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Google Adsense
-description: "Municipal management performance corporate investment grade bonds."
+description: "Ad revenue generation with Google advertisements."
 image:
   url: "/images/integrations/googleadsense.png"
   alt: "The Astro logo with the word One."

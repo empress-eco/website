@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Intercom
-description: "Municipal management performance corporate investment grade bonds."
+description: "Integrated chat for improved customer dialogue."
 image:
   url: "/images/integrations/intercom.webp"
   alt: "The Astro logo with the word One."

@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Hubspot
-description: "Municipal management performance corporate investment grade bonds."
+description: "Integrated CRM for comprehensive customer management."
 image:
   url: "/images/integrations/hubspot.webp"
   alt: "The Astro logo with the word One."

@@ -1174,13 +1174,6 @@ declare module 'astro:content' {
   collection: "integrations";
   data: any
 } & { render(): Render[".md"] };
-"youtube copy.md": {
-	id: "youtube copy.md";
-  slug: "youtube-copy";
-  body: string;
-  collection: "integrations";
-  data: any
-} & { render(): Render[".md"] };
 "youtube.md": {
 	id: "youtube.md";
   slug: "youtube";

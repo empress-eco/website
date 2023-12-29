@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Big Commerce
-description: "Municipal management performance corporate investment grade bonds."
+description: "Large-scale e-commerce optimization platform."
 image:
   url: "/images/integrations/bigcommerce.webp"
   alt: "The Astro logo with the word One."
-tags: ["popular", "Marketing & Sales"]
+tags: ["popular", "Sales & Marketing"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

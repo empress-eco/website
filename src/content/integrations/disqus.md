@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Disqus
-description: "Municipal management performance corporate investment grade bonds."
+description: "Robust commenting system for community engagement."
 image:
   url: "/images/integrations/disqus.svg"
   alt: "The Astro logo with the word One."

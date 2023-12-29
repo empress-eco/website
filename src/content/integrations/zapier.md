@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Zapier
-description: "Municipal management performance corporate investment grade bonds."
+description: "Connect over 200+ tools with our easy to use Zapier integrations."
 image:
   url: "/images/integrations/zapier.svg"
   alt: "The Astro logo with the word One."

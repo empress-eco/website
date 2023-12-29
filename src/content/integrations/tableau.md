@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Tableau
-description: "Municipal management performance corporate investment grade bonds."
+description: "Data visualization for business insights."
 image:
   url: "/images/integrations/tableau.png"
   alt: "The Astro logo with the word One."

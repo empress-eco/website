@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Viral Loops
-description: "Municipal management performance corporate investment grade bonds."
+description: "Referral campaign tools to boost customer growth."
 image:
   url: "/images/integrations/viral-loops.webp"
   alt: "The Astro logo with the word One."
-tags: ["Marketing & Sales"]
+tags: ["Sales & Marketing"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

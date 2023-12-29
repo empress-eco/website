@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Churnbuster
-description: "Municipal management performance corporate investment grade bonds."
+description: "MunicPayment failure reduction via customer outreach."
 image:
   url: "/images/integrations/churnbuster.webp"
   alt: "The Astro logo with the word One."
-tags: ["Marketing & Sales"]
+tags: ["Sales & Marketing"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

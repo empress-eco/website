@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Tidio
-description: "Municipal management performance corporate investment grade bonds."
+description: "Quick customer response with chat automation."
 image:
   url: "/images/integrations/tidio.png"
   alt: "The Astro logo with the word One."

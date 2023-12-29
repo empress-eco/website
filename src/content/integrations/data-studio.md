@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Data Studio
-description: "Municipal management performance corporate investment grade bonds."
+description: "Customizable data reporting and visualization."
 image:
   url: "/images/integrations/datastudio.png"
   alt: "The Astro logo with the word One."

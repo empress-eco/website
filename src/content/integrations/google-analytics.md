@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Google Analytics
-description: "Municipal management performance corporate investment grade bonds."
+description: "Website performance insights to inform marketing."
 image:
   url: "/images/integrations/google-analytics.webp"
   alt: "The Astro logo with the word One."

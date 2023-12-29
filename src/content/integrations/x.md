@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: X
-description: "Municipal management performance corporate investment grade bonds."
+description: "Global customer engagement instantly via tweets."
 image:
   url: "/images/integrations/twitter.webp"
   alt: "The Astro logo with the word One."
-tags: ["Marketing & Sales"]
+tags: ["Sales & Marketing"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

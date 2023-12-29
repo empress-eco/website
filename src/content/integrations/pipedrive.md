@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Pipedrive
-description: "Municipal management performance corporate investment grade bonds."
+description: "Focused sales pipeline for optimized activities."
 image:
   url: "/images/integrations/pipedrive.png"
   alt: "The Astro logo with the word One."

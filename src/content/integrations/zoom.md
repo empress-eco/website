@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Zoom
-description: "Municipal management performance corporate investment grade bonds."
+description: "Easily host virtual meetings with video technology."
 image:
   url: "/images/integrations/zoom.png"
   alt: "The Astro logo with the word One."

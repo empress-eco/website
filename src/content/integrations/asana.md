@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Asana
-description: "Municipal management performance corporate investment grade bonds."
+description: "Clarify projects with task timelines and assignments."
 image:
   url: "/images/integrations/asana.png"
   alt: "The Astro logo with the word One."

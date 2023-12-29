@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Amplitude
-description: "Municipal management performance corporate investment grade bonds."
+description: "User behavior analytics for product refinement."
 image:
   url: "/images/integrations/amplitude.webp"
   alt: "The Astro logo with the word One."

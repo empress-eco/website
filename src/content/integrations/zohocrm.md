@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Zoho
-description: "Municipal management performance corporate investment grade bonds."
+description: "Integrated CRM for sales and marketing performance."
 image:
   url: "/images/integrations/zoho.png"
   alt: "The Astro logo with the word One."

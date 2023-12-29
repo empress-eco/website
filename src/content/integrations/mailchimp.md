@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Mailchimp
-description: "Municipal management performance corporate investment grade bonds."
+description: "Automated email marketing for audience engagement."
 image:
   url: "/images/integrations/mailchimp.svg"
   alt: "The Astro logo with the word One."
-tags: ["popular", "Marketing & Sales"]
+tags: ["popular", "Sales & Marketing"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Looker
-description: "Municipal management performance corporate investment grade bonds."
+description: "Data-driven business intelligence decision-making."
 image:
   url: "/images/integrations/looker.png"
   alt: "The Astro logo with the word One."

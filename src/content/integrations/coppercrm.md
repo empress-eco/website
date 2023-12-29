@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Copper CRM
-description: "Municipal management performance corporate investment grade bonds."
+description: "Customer relationship management integration with Copper CRM."
 image:
   url: "/images/integrations/copper.png"
   alt: "The Astro logo with the word One."

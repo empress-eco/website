@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Matomo
-description: "Municipal management performance corporate investment grade bonds."
+description: "User data analytics with enhanced privacy control."
 image:
   url: "/images/integrations/matomo.webp"
   alt: "The Astro logo with the word One."

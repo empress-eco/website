@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Notion
-description: "Municipal management performance corporate investment grade bonds."
+description: "Centralize notes, tasks, and docs."
 image:
   url: "/images/integrations/notion.png"
   alt: "The Astro logo with the word One."

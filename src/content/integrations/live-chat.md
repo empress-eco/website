@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Live Chat
-description: "Municipal management performance corporate investment grade bonds."
+description: "Instant customer connection powered by live chat."
 image:
   url: "/images/integrations/livechat.png"
   alt: "The Astro logo with the word One."

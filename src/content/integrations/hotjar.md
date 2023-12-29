@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Hot Jar
-description: "Municipal management performance corporate investment grade bonds."
+description: "Heatmaps for improved website user interaction."
 image:
   url: "/images/integrations/hotjar.webp"
   alt: "The Astro logo with the word One."

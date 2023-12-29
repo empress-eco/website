@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Chart Mogul
-description: "Municipal management performance corporate investment grade bonds."
+description: "Analytics for subscription revenue and customer loyalty."
 image:
   url: "/images/integrations/chartmogul.webp"
   alt: "The Astro logo with the word One."

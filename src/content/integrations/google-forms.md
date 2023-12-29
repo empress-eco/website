@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Google Forms
-description: "Municipal management performance corporate investment grade bonds."
+description: "Create and collect responses with easy forms."
 image:
   url: "/images/integrations/google-forms.webp"
   alt: "The Astro logo with the word One."

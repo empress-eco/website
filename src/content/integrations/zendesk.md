@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Zendesk
-description: "Municipal management performance corporate investment grade bonds."
+description: "Versatile platform for superior customer service."
 image:
   url: "/images/integrations/zendesk.svg"
   alt: "The Astro logo with the word One."

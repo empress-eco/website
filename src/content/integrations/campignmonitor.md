@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Campaign Monitor
-description: "Municipal management performance corporate investment grade bonds."
+description: "Engaging email crafting for customer retention."
 image:
   url: "/images/integrations/campaign-monitor.webp"
   alt: "The Astro logo with the word One."
-tags: ["Marketing & Sales"]
+tags: ["Sales & Marketing"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

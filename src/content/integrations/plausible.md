@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Plausible
-description: "Municipal management performance corporate investment grade bonds."
+description: "Minimalist, privacy-focused web based insights."
 image:
   url: "/images/integrations/plausible.webp"
   alt: "The Astro logo with the word One."

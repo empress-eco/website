@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Gum Road
-description: "Municipal management performance corporate investment grade bonds."
+description: "Simple consumer-direct e-commerce solution."
 image:
   url: "/images/integrations/gumroad.webp"
   alt: "The Astro logo with the word One."
-tags: ["popular", "Marketing & Sales"]
+tags: ["popular", "Sales & Marketing"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Bare Metrics
-description: "Municipal management performance corporate investment grade bonds."
+description: "SaaS and financial metric tracking for strategy."
 image:
   url: "/images/integrations/baremetrics.png"
   alt: "The Astro logo with the word One."

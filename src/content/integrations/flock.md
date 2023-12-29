@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Flock
-description: "Municipal management performance corporate investment grade bonds."
+description: "Enhance team efficiency with integrated tools."
 image:
   url: "/images/integrations/flock.png"
   alt: "The Astro logo with the word One."

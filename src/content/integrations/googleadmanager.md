@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Google Ad Manager
-description: "Municipal management performance corporate investment grade bonds."
+description: "Ad management optimization for revenue maximization."
 image:
   url: "/images/integrations/googleadmanager.png"
   alt: "The Astro logo with the word One."

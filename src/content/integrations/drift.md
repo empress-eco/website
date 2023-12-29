@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Drift
-description: "Municipal management performance corporate investment grade bonds."
+description: "Interactive chats for increased lead conversion."
 image:
   url: "/images/integrations/drift.png"
   alt: "The Astro logo with the word One."

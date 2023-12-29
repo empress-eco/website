@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Airtable
-description: "Municipal management performance corporate investment grade bonds."
+description: "Blend spreadsheets and databases for dynamic data management."
 image:
   url: "/images/integrations/airtable.png"
   alt: "The Astro logo with the word One."

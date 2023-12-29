@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Transistor
-description: "Municipal management performance corporate investment grade bonds."
+description: "Podcast hosting with targeted audience insights."
 image:
   url: "/images/integrations/transistor.webp"
   alt: "The Astro logo with the word One."
-tags: ["Marketing & Sales"]
+tags: ["Sales & Marketing"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

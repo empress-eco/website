@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Basecamp
-description: "Municipal management performance corporate investment grade bonds."
+description: "Gather all of your project components in one spot."
 image:
   url: "/images/integrations/basecamp.png"
   alt: "The Astro logo with the word One."

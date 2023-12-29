@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Keen IO
-description: "Municipal management performance corporate investment grade bonds."
+description: "Custom analytics for application user insights."
 image:
   url: "/images/integrations/keenio.png"
   alt: "The Astro logo with the word One."

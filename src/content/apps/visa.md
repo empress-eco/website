@@ -4,7 +4,7 @@ author: empress.eco
 title: Visa
 description: "Accelerate visa processing with our accurate and user-friendly application."
 image:
-  url: "/images/apps/accounting.svg"
+  url: "/images/apps/visa.svg"
   alt: "The Astro logo with the word One."
 tags: ["specialty"]
 ---

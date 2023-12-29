@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Ghost
-description: "Municipal management performance corporate investment grade bonds."
+description: "Independent contnt management system for modern publishing."
 image:
   url: "/images/integrations/ghost.png"
   alt: "The Astro logo with the word One."

@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Discord
-description: "Municipal management performance corporate investment grade bonds."
+description: "Engage communities via live voice, video, and chat."
 image:
   url: "/images/integrations/discord.webp"
   alt: "The Astro logo with the word One."

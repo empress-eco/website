@@ -2,7 +2,7 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Google Docs
-description: "Municipal management performance corporate investment grade bonds."
+description: "Create and edit documents collaboratively in real-time."
 image:
   url: "/images/integrations/google-docs.webp"
   alt: "The Astro logo with the word One."
