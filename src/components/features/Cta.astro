@@ -5,151 +5,21 @@ import { Icon } from "astro-icon";
 
 const { nomargin } = Astro.props;
 
-// Define your JSON data
-const statsContent = {
-  sectionTitle: "Applications",
-  mainHeading: "Discover tools to scale your business",
-  statsData: [
-    {
-      value: "$70M",
-      description: "total increase in Lexington"
-    },
-    {
-      value: "3m faster",
-      description: "Spazio to launch a platform"
-    },
-    {
-      value: "5%",
-      description: "uplift in Unwrapped payment"
-    },
-    {
-      value: "5 days",
-      description: "Ike expansion in one lexington"
-    }
-  ]
+
+
+const sectionFive = {
+    buttonLink: "/explore-features",
+    buttonText: "Explore Features"
 };
-
-const features = [
-{
-    "title": "Finance",
-    "description": "Simplify Your Finances",
-    "icon": "ph:money-duotone",
-    "link": "/finance",
-    "button": "Learn More",
-     "color": "blue"
-  },
-  {
-    "title": "Sales",
-    "description": "Close More Deals",
-    "icon": "ph:tag-duotone",
-    "link": "/sales",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Product",
-    "description": "Streamline Your Production",
-    "icon": "ph:archive-box-duotone",
-    "link": "/product",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Operations",
-    "description": "Optimize Your Workflow",
-    "icon": "ph:clock-counter-clockwise-duotone",
-    "link": "/operations",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Marketing",
-    "description": "Amplify Your Reach",
-    "icon": "ph:share-network-duotone",
-    "link": "/marketing",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Talent",
-    "description": "Empower Your Workforce",
-    "icon": "ph:users-duotone",
-    "link": "/talent",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Experience",
-    "description": "Elevate Your Service",
-    "icon": "ph:heart-straight-duotone",
-    "link": "/experience",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Technology",
-    "description": "Accelerate Your Innovation",
-    "icon": "ph:device-mobile-camera-duotone",
-    "link": "/technology",
-    "button": "Learn More",
-    "color": "blue"
-  },
-  {
-    "title": "Innovation",
-    "description": "Customize Your Experience",
-    "icon": "ph:circles-three-plus-duotone",
-    "link": "/innovation",
-    "button": "Learn More",
-    "color": "blue"
-  }
-];
-
 ---
 
-<section class="bg-white">
-  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-    <div>
-      <h2 class="inline-flex items-center text-blue-600">
-        <span class="text-base font-medium tracking-tight">{statsContent.sectionTitle}</span>
-      </h2>
-      <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-        {statsContent.mainHeading}
-      </h2>
-    </div>
-    <!-- <div class="mx-auto text-left mt-12">
-        <div class="gap-6 grid grid-cols-1 lg:grid-cols-4">
-          {statsContent.statsData.map((stat) => (
-            <div key={stat.value}>
-              <p class="text-4xl font-light tracking-tight lg:text-5xl text-blue-500">
-                {stat.value}
-              </p>
-              <p class="text-slate-500 mt-6 border-blue-500">
-                {stat.description}
-              </p>
-            </div>
-          ))}
-        </div> -->
-    <div class="mx-auto text-left mt-12">
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
-            {features.map((item) => (
-              <a href={item.link}
-                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform">
-                <div class="flex items-center group rounded-xl transition-all md:-m-5 p-5"
-                     style="background-color: #fff; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9);"
-                     onmouseover="this.style.boxShadow='inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.9)';"
-                     onmouseout="this.style.boxShadow='4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.9)';">
-                  <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
-                    <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
-                  </div>
-                  <div class="flex flex-col justify-center text-left">
-                    <h3 class="font-semibold text-md" style="color: #1e293b;">{item.title}</h3>
-                    <p class="text-slate-500">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-    </div>
-  </div>
-</section>
+<!-- Section Five -->
+  
 
+
+
+    
+          <a href={featureTwo.buttonLink} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4 mt-8" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+            {featureTwo.buttonText}
+          </a>
+        

@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Contracts
-description: "Municipal management performance corporate investment grade bonds."
+description: "Integrate contracts with invoicing and dues management smoothly."
 image:
-  url: "/images/integrations/chrome.svg"
+  url: "/images/apps/contracts.svg"
   alt: "The Astro logo with the word One."
-tags: ["finance"]
+tags: ["finances"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

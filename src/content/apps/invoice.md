@@ -2,11 +2,11 @@
 pubDate: 2022-07-01
 author: empress.eco
 title: Invoice
-description: "Municipal management performance corporate investment grade bonds."
+description: "Optimize invoice management for greater efficiency."
 image:
-  url: "/images/integrations/chrome.svg"
+  url: "/images/apps/invoice.svg"
   alt: "The Astro logo with the word One."
-tags: ["finance"]
+tags: ["finances"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

@@ -1,268 +1,113 @@
 ---
-pubDate: 2022-07-15
+pubDate: 2022-07-01
 author: empress.eco
 title: Quality
-description: "Municipal management performance corporate investment grade bonds."
+description: "Uphold the highest quality standards with minimal effort."
 image:
-  url: "/images/integrations/chrome.svg"
-  alt: "The word community with a heart."
+  url: "/images/apps/quality.svg"
+  alt: "The Astro logo with the word One."
 tags: ["product"]
 ---
 
-## Hello Everyone
+Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
-....– Hey Michael! we don't need more tutorials on how to build a theme, there's 100s!
-You may say...
-I,...simply wanted to do my version because I have been building my own theme and is easier than you may think.
+## Headings
 
-- [My theme, Serendipity](https://serendipitytheme.com/)
+The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
+# H1
 
+## H2
 
-## Let's get our hands dirty.
+### H3
 
-First of all, you can customize the theme you are actually using by opening the **User settings** on VS Code your **command palette**
-Once you are there you can edit the .json by starting with this:
+#### H4
 
-```
-{
-  "workbench.colorCustomizations": {
-    ---- Styles go here ----
-  }
-}
-```
+##### H5
 
-You can see all the scopes here:
+###### H6
 
-- https://code.visualstudio.com/api/references/theme-color
-  But, this is a nightmare to be honest, as you can see there's a lot of scopes and it will take you ages to do it.
+## Paragraph
 
-## Let's create our own theme from scratch
+Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
 
-We are going to need:
-
-- A laptop
-- VS Code installed
-- Microsoft Azure Account
-- Microsoft Marketplace Account
-- GitHub Account
-- Patience
-  We are going to use:
-- VS Code
-- Terminal
-- VS Code Debugger
-- A random but useful color tool
-  For color palettes you use my tool [Colors & Fonts](https://www.colorsandfonts.com/)
+Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
 
 
-## First and foremost
 
-Let's grab the command line tool called [Yo Code extension generator](https://www.npmjs.com/package/generator-code), which it will create all the files you need to build your theme.
-Only build, not publish but more on this later on.
+## Images
 
-1. Open up your terminal window and navigate to your main GitHub folder.
-2. Then run on the terminal:
+![This is a placeholder image description](/card1.svg)
 
-```
-npm install -g yo generator-code
-```
+## Blockquotes
 
-After the it finishes to install run:
+The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
-```
-yo code
-```
+#### Blockquote without attribution
 
-You will get all this options.
-**Select:**
+> Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+> **Note** that you can use _Markdown syntax_ within a blockquote.
 
-1. **New Color Theme**
-   What type of extension do you want to create? (Use arrow keys)
-   New Extension (TypeScript)
-   New Extension (JavaScript)
-   **❯ New Color Theme**
-   New Language Support
-   New Code Snippets
-   New Keymap
-   New Extension Pack
-   New Language Pack (Localization)
-   New Web Extension (TypeScript)
-   New Notebook Renderer
-   **Select**: 2. **No, start fresh**
-   Do you want to import or convert an existing TextMate color theme? (Use arrow keys)
-   **No, start fresh **
-   Yes, import an existing theme but keep it as tmTheme file.
-   Yes, import an existing theme and inline it in the Visual Studio Code color theme file.
-   Then you will be asked this questions.If you are going to create this theme to be publish and grow it into a UI Theme a part of for VS Code, you may want to think about how you name it.
+#### Blockquote with attribution
 
-## Important step
+> Don't communicate by sharing memory, share memory by communicating.<br>
+> — <cite>Rob Pike[^1]</cite>
 
-> Let's say you name it "A" this name you can change it afterwards, as the rest of answers you give but, if you change the identifier and you publish again, this will create a different theme on VS Code Marketplace
-> 3.Answer
-> What's the name of your extension? Your Theme's name
-> **_? What's the identifier of your extension? Your Theme's identifier_**
-> ? What's the description of your extension? Your Theme's Description
-> ? What's the name of your theme shown to the user? Your Theme's name
-> Then we are going to need a starting point and Yo Code gives you the choices so choose the one you want to.
-> Select a base theme: (Use arrow keys)
-> ❯ Dark
-> Light
-> High Contrast 4. Answer
-> **Initialize a git repository? (Y/n)**
-> I say always no because is not always working...so I simply push afterwards. 5. Open do it as you wish.
-> Do you want to open the new folder with Visual Studio Code? (Use arrow keys)
-> ❯ Open with `code`
-> Skip
+[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
-## Files
+## Tables
 
-This are the files generated by Yo Code
-![files](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u8h9v2s54lgcz16g33cu.png)
-Let's go through some of the files.
-**1. .vscode/launch.json**
-You won't use the file but is good to know what it is for.
+| Italics   | Bold     | Code   |
+| --------- | -------- | ------ |
+| _italics_ | **bold** | `code` |
 
-> The launch.json file is used to configure the debugger in Visual Studio Code.
-> **2. themes/your-theme.json**
-> This is the file you are going to be working on to create your theme. Right now it includes the styles for VS Code default theme.
-> **3. .vscodeignore**
-> Basically like .gitignore
-> A VSCODEIGNORE file is a text file used to exclude unnecessary files when packaging a Microsoft Visual Studio Code extension.
-> **4. Changelog.md**
-> You can write this changelog and if you publish it marketplace will link to it directly.
-> **5. package.json**
-> On this file is where we are going to pack, add and write some code to be able to publish it on the marketplace.
-> **6. readme.md**
-> This is well, the read me. Which you are going to edit before you publish, otherwise you won't be able to do so because is detected.
-> **7. vsc-extensions-quickstart.md**
-> Is basically telling you what all the files are but on a short way.
+## Code Blocks
 
-## Building your theme
-
-So, let's go to "your-theme.json" file on the themes folder
-![file ](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cjf7ui3dhus62p75hxyw.png)
-![another file](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/acmb5eruzelih4n13sw3.png)
-You will see two sets of colors:
-Set is mostly for the UI
-
-```
-"colors": {
---- scopes go here ---
-}
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
+</html>
 ```
 
-Set for syntax.
+## List Types
 
-```
-"tokenColors": [
---- scopes go here ---
-]
-```
+#### Ordered List
 
-So how do you know what to style? Well in this case we can press F5 or simply navigate on VS Code to the menu and click on RUN/Start Debugging.
-When you do this it will open another VS Code window showing you the theme colors on the json file. Now you will have two VS Code windows open.
-In my case the left is my VS Code and right is the theme I am debugging.
-![Imageeee](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qv1qx60znnpehyhilsl0.png)
-When you have the window open search for "Inspect editor tokens and scopes"
-![Ima](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1r5zq2o2i6fiv3jm066n.png)
-After you activate it you can click on the editors scopes and it will popup a window with all the information about it.
-![another image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zwxu6878w9jh4gj7ites.png)
-The information you want to get from here is the textmate scopes you can see that there is a hex color applied, look for it and change the color.
-![lskjn](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6vnk2p6rs97dx5jdciyw.png)
+1. First item
+2. Second item
+3. Third item
 
-## Publish your theme
+#### Unordered List
 
-To publish your theme we will need to do some boring work but is less cumbersome to be able to share your theme.
+- List item
+- Another item
+- And another item
 
-- Sign up to [Microsoft Azure DEVOPS](https://dev.azure.com/)
-- Create an organization
-- Publish it
-  **Signing up and creating an organization**
-- Sign up
-- Once in
-  > Click on the icon next to your avatar and select **_personal access tokens_**
-- New Token
-  > Name it
-- Organizations
-  > All accessible organizations
-  > ![Image ökjb](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k7b7qw61u0dc9gd1m0kt.png)
-  > **Click on "Show all scopes", right at the bottom** and look for **_Marketplace_** and check:
-- Manage
-- Click to generate the access token
-  _**Copy the token and save somewhere you think is save.**_
-  ![Image .kjbl hkb ](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/21t6ov68gwb18iiji0dt.png)
-  **Inside the marketplace**
-- Navigate to the [Microsoft Marketplace](https://marketplace.visualstudio.com/) and log in.
-  There should be a "Create publisher" page.
-  ![Image ubyffkf](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n8kw4e44gzd2ix4vgj3z.png)
-  Fill up all the fields.
-  After that you will be redirected to this page. Save this page for later use. **_Remember your passwords....!_**
-  ![Image ouygoyg](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qi214l6orxo8ctmloamd.png)
-  ![Image ihbuybl](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4ixckkow5u64yvbzbdgn.png)
+#### Nested list
 
-## Going back to our package.json
+- Fruit
+  - Apple
+  - Orange
+  - Banana
+- Dairy
+  - Milk
+  - Cheese
 
-The package.json files is not completed when yo code generates it for you, the marketplace requires other scopes like, icons, keywords, publish id and so on.
-Feel free to use this template that I made, is basic, but that's all you need.
-{% gist https://gist.github.com/michael-andreuzza/d5d535a521a120467fd4d5dfd5523e83 %}
-If you are going to make dark and light version you will have to link both of json files here.
-as you can see there's a difference for the light themes:
+## Other Elements — abbr, sub, sup, kbd, mark
 
-```
-"uiTheme": "vs-dark",
-"uiTheme": "vs",
-```
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
 
-Formatted the contributes like this, stack the theme's like this.
+H<sub>2</sub>O
 
-```
- "contributes": {
-    "themes": [
-      {
-        "label": "Your dark theme name",
-        "uiTheme": "vs-dark",
-        "path": "./themes/your-dark-theme-name.json"
-      },
-      {
-        "label": "Your light theme name",
-        "uiTheme": "vs",
-        "path": "./themes/your-light-theme-name.json"
-      }
-    ]
-  }
-```
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
-The first theme is the one that is going to be debugged as default, if you want to debugged the light, in this case you will have to put it on the top, so the debugger can identify which theme you want to debug.
+Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
-## LEt's install VSCE so we can push our theme to the marketplace.
-
-Write this command on your terminal
-`npm install -g vsce`
-After is installed you will have to log in:
-`vsce login your-publish-id`
-it will for the login code, now is when you need to paste the token that we generated before.
-To package your theme run
-`vsce package`
-it will create a vsix file.
-
-> Note: This file you also use to publish on openVSX
-> Publish your theme by running:
-> `vsce publish`
-> if all goes as it should, you will get a terminal msg and/or an email that your theme has been published.
-> Go to your publisher page and you should see your theme deployed, it will say verifying, just be patience, it takes some minutes.
-> Look for your live extension on the marketplace by clicking the menu on this ones.
-> ![Image grsduvtr](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cjz6cc0d6ul4zt9oyqzl.png)
-> If you want to update your theme and publish again, all you instead of running:
-> `vsce publish`
-> you can run:
-> `vsce publish minor`
-> just make sure you are logged in every time you do so.
-
-## Installing your theme on vs code.
-
-Go to the extensions search bar on VS Code and look for your theme, click install and ready to rock.
-
-## IF you have any questions
-
-Feel free to ask here or on twitter: https://twitter.com/Mike_Andreuzza
-/Mike
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
