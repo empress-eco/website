@@ -6,91 +6,49 @@ const { margin } = Astro.props;
 
 const footermenu = {
   products: [
-    {
-      title: "Product Overview",
-      path: "/product"
-    },
-    {
-      title: "All Features",
-      path: "/features"
-    },
-    {
-      title: "Applications",
-      path: "/apps"
-    },
-    {
-      title: "Empress OS",
-      path: "/os"
-    },
-    {
-      title: "Empress Chat",
-      path: "/chat"
-    },
-    {
-      title: "Empress Insights",
-      path: "/insights"
-    }
+    { title: "Finances", path: "/finance" },
+    { title: "Sales", path: "/sales" },
+    { title: "Product", path: "/product" },
+    { title: "Operations", path: "/operations" },
+    { title: "Talent", path: "/talent" },
+    { title: "Experience", path: "/experience" },
+    { title: "Communication", path: "/communication" },
+    { title: "Specialty", path: "/specialty" },
+    { title: "Applications", path: "/suite/apps" },
+    { title: "Integrations", path: "/integrations/apps" },
   ],
   useCases: [
-    {
-      title: "Enterprise",
-      path: "/enterprise"
-    },
-    {
-      title: "Startups",
-      path: "/startups"
-    },
-    {
-      title: "Agencies",
-      path: "/agencies"
-    },
-    {
-      title: "Influencers",
-      path: "/influencers"
-    },
-    {
-      title: "Non-Profits",
-      path: "/non-profits"
-    }
+    { title: "Analysis", path: "/analysis" },
+        { title: "Workflows", path: "/workflows" },
+        { title: "Automations", path: "/automations" },
+        { title: "Views", path: "/views" },
+        { title: "Security", path: "/security" },
+        { title: "Administration", path: "/administration" },
+        { title: "Customization", path: "/customization" },
+        { title: "APIs & Webhooks", path: "/apis" },
+        { title: "Scalability", path: "/scalability" },
   ],
   industries: [
-    { title: "E-Commerce", path: "/e-commerce" },
-    { title: "Financial Services", path: "/financial-services" },
-    { title: "Technology", path: "/technology" },
-    { title: "Healthcare", path: "/healthcare" },
-    { title: "Education", path: "/education" }
+  { title: "Retail", path: "/retail" },
+        { title: "Financial Services", path: "/financial-services" },
+        { title: "Technology", path: "/technology" },
+        { title: "Healthcare", path: "/healthcare" },
+        { title: "Education", path: "/education" },
+        { title: "Enterprise", path: "/enterprise" },
+        { title: "Startups", path: "/startups" },
+        { title: "Agencies", path: "/agencies" },
+        { title: "Government", path: "/government" },
+        { title: "Non-Profits", path: "/non-profits" },
   ],
   resources: [
-    {
-      title: "Find Support",
-      path: "https://support.empress.eco/en",
-      desc: "Contact our support team"
-    },
-    {
-      title: "Join the Community",
-      path: "#",
-      desc: "Join the #PurpleWorld"
-    },
-    {
-      title: "Empress Blog",
-      path: "/blog",
-      desc: "Empress news and stories"
-    },
-    {
-      title: "Empress Guides",
-      path: "/guides",
-      desc: "Tips & tricks from Empress"
-    },
-    {
-      title: "Empress Academy",
-      path: "/academy",
-      desc: "Learn all about Empress"
-    },
-    {
-      title: "Become a Partner",
-      path: "#",
-      desc: "Explore our partner programs"
-    }
+  { title: "Empress Blog", path: "https://blog.empress.eco/" },
+        { title: "Explore Community", path: "/community" },
+        { title: "Become an Advocate", path: "/advocate" },
+        { title: "Join the Discussion", path: "https://grow.empress.eco/" },
+        { title: "Find Support", path: "https://support.empress.eco/en/" },
+        { title: "Leave Feedback", path: "https://empress.canny.io/feedback" },
+        { title: "Contact Sales", path: "/contact" },
+        { title: "Pricing", path: "/pricing" },
   ]
 };
 
@@ -196,7 +154,7 @@ const footermenu = {
         </div>
       </div>
       <div>
-        <h3 class="font-medium text-sm text-slate-800">Use Cases</h3>
+        <h3 class="font-medium text-sm text-slate-800">Features</h3>
         <div class="flex flex-col mt-3">
           {
             footermenu.useCases.map((item) => (
@@ -210,7 +168,7 @@ const footermenu = {
         </div>
       </div>
       <div>
-        <h3 class="font-medium text-sm text-slate-800">Industries</h3>
+        <h3 class="font-medium text-sm text-slate-800">Solutions</h3>
         <div class="flex flex-col mt-3">
           {
             footermenu.industries.map((item) => (
