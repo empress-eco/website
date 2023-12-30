@@ -27,21 +27,21 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Marketing",
-    link: "/marketing",
+    title: "Specialty",
+    link: "/specialty",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/marketing"
+    href: "/specialty"
   },
   {
     name: "Features",
-    href: "/marketing/features"
+    href: "/specialty/features"
   },
   {
     name: "Applications",
-    href: "/apps/marketing"
+    href: "/apps/specialty"
   },
   {
     name: "Docs",
@@ -53,33 +53,30 @@ const navLinks = [
 // Heading
 
 const heading = {
-  title: "Marketing",
-  description: "Empress redefines marketing management, providing innovative solutions to enhance campaign effectiveness and brand growth. Our suite of tools is crafted to empower marketers with precision and creativity in their campaign strategies.",
+  title: "Specialty",
+  description: "Empress is at the forefront of delivering bespoke, industry-focused solutions. Our expertise lies in understanding unique industry challenges and crafting tailored software to elevate business performance.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
 };
 
-// Diplay Image
-
+// Display Image
 const displayImage = {
-  "title": "Empress for Marketing",
-  "subtitle": "Elevate Your Brand,",
-  "subtitleCont": "Expand Your Reach.",
-  imageSrc: "/images/chart.jpg"
+  title: "Industry-Specific Solutions",
+  subtitle: "Customized Excellence,",
+  subtitleCont: "Targeted Innovation.",
+  imageSrc: "/images/dashboard.jpg"
 };
 
-
 // FeatureOne
-
 const featureOne = {
   mainContent: {
-    title: "Unleash Creative Power",
+    title: "Tailored Industry Solutions",
     img: "/images/dashboard.jpg",
-    subtitle: "Ignite Your Marketing Potential",
+    subtitle: "Precision-Crafted for Your Sector",
     paragraphs: [
-      "Empress revolutionizes campaign management, merging creativity with analytics for impactful marketing strategies. Experience a new level of campaign efficiency and effectiveness."
+      "Empress understands that each industry is unique. Our specialized solutions are meticulously designed to align with specific industry requirements, ensuring a perfect fit for your business needs."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -87,21 +84,21 @@ const featureOne = {
     linkHref: "/contact"
   },
   listItems: [
-    "Targeted, Effective Campaigns",
-    "Comprehensive Tracking & Analysis",
-    "Enhanced Campaign ROI"
+    "Customized to Industry Demands",
+    "Streamlined Operational Efficiency",
+    "Innovative and Adaptive Solutions"
   ]
 };
 
-// FeatureTwo
 
+// FeatureTwo
 const featureTwo = {
   mainContent: {
-    title: "Drive Campaign Success",
+    title: "Continuous Innovation",
     img: "/images/dashboard.jpg",
-    subtitle: "Craft and Connect Your Narrative",
+    subtitle: "Stay Ahead with Cutting-Edge Tech",
     paragraphs: [
-      "Empress seamlessly blends content management with social media prowess, offering tools to create, distribute, and amplify content. Enhance your brand's narrative and social presence effectively."
+      "At Empress, innovation is constant. We continuously evolve our solutions to meet the ever-changing needs of industries, ensuring your business stays ahead with the latest in technology."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -109,21 +106,20 @@ const featureTwo = {
     linkHref: "/contact"
   },
   listItems: [
-    "Creative Content Management",
-    "Amplified Social Media Presence",
-    "Engaging Audience Interaction"
+    "Advanced Technology Integration",
+    "Regularly Updated Solutions",
+    "Future-Ready Business Tools"
   ]
 };
 
 // FeatureThree
-
 const featureThree = {
   mainContent: {
-    title: "Transform Email Outreach",
+    title: "Custom Development Services",
     img: "/images/dashboard.jpg",
-    subtitle: "Engage and Convert Your Users",
+    subtitle: "Bespoke Solutions for Unique Needs",
     paragraphs: [
-      "Empress redefines event and marketing strategies with tools that ensure memorable events and effective campaigns. Elevate your outreach for maximum audience engagement."
+      "Empress goes beyond off-the-shelf solutions. Our custom development services are designed to create software that perfectly matches your unique business requirements and industry specifications."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -131,9 +127,9 @@ const featureThree = {
     linkHref: "/contact"
   },
   listItems: [
-    "Memorable, Efficient Event Planning",
-    "Effective Email Campaign Strategies",
-    "Higher Engagement & Open Rates"
+    "Tailor-Made Software Development",
+    "Expert Team Collaboration",
+    "Solutions Built for Your Business"
   ]
 };
 
@@ -142,50 +138,50 @@ const featureThree = {
 
 const applicationShowcase = {
   mainSection: {
-    title: "Marketing Applications",
-    subtitle: "Boost Your Brand's Online Presence",
-    description1: "Explore Empress's extensive marketing features, designed to revolutionize your approach to digital and traditional marketing.",
-    description2: "Blending creativity with analytics, Empress is your partner in crafting impactful marketing strategies.",
-    viewApplicationsLink: "/suite/apps",
-    viewApplicationsText: "View Applications"
+    title: "Explore Our Applications",
+    subtitle: "Specialized for Diverse Industries",
+    description1: "Delve into Empress's suite of specialized applications. Each one is crafted to empower different sectors with tools and features that drive success and innovation.",
+    description2: "From healthcare to retail, our applications bring the power of customized technology to your fingertips.",
+    viewApplicationsLink: "/apps/specialty",
+    viewApplicationsText: "View Specialty Applications"
   },
   contentSections: [
-  {
-    title: "Optimize Campaign Execution",
-    description: "Elevate the effectiveness of your marketing campaigns with our sophisticated campaign management tools. Designed to streamline execution, our platform enhances campaign efficiency, ensuring impactful and successful marketing outcomes.",
-    linkHref: "/suite/campaign",
-    linkText: "View Campaign Management",
-  },
-  {
-    title: "Manage Content Effectively",
-    description: "Revolutionize your content strategy with our comprehensive content management system. Tailored for creative excellence, it simplifies content curation and distribution, enhancing your brand's narrative and audience engagement.",
-    linkHref: "/suite/content",
-    linkText: "View Content Management",
-  },
-  {
-    title: "Enhance Social Presence",
-    description: "Boost your brand's social media impact with our advanced social media tools. Our platform is designed to amplify your social presence, increasing engagement and reach across various social platforms for a stronger digital footprint.",
-    linkHref: "/suite/social",
-    linkText: "View Social Media Tools",
-  },
-  {
-    title: "Organize Events Efficiently",
-    description: "Streamline your event planning and execution with our integrated event management system. It simplifies logistics and coordination, ensuring your events are memorable, well-organized, and effectively engage your target audience.",
-    linkHref: "/suite/events",
-    linkText: "View Event Management",
-  },
-  {
-    title: "Streamline Email Campaigns",
-    description: "Maximize the efficiency of your email marketing with our intuitive email campaign system. It enhances the creation, delivery, and analysis of email campaigns, ensuring higher open rates and engagement for your marketing communications.",
-    linkHref: "/suite/email",
-    linkText: "View Email Campaigns",
-  },
-  {
-    title: "Collect Customer Feedback",
-    description: "Gather valuable insights directly from your customers with our advanced survey tools. Designed for easy deployment and high response rates, our system provides crucial feedback to inform and refine your marketing strategies.",
-    linkHref: "/suite/surveys",
-    linkText: "View Surveys",
-  }
+    {
+      title: "Enterprise Resource Planning",
+      description: "Experience the pinnacle of enterprise resource planning with our comprehensive ERP solution, enhancing business efficiency across all departments.",
+      linkHref: "/apps/specialty",
+      linkText: "See Applications",
+    },
+    {
+      title: "Revolutionize Healthcare Management",
+      description: "Our comprehensive healthcare management system is designed to improve patient care and streamline administrative processes in healthcare facilities.",
+      linkHref: "/apps/specialty",
+      linkText: "See Applications",
+    },
+    {
+      title: "Innovative Insurance Management",
+      description: "Personalize and streamline your insurance operations with our efficient and user-friendly insurance management system.",
+      linkHref: "/apps/specialty",
+      linkText: "See Applications",
+    },
+    {
+      title: "Property Management Optimized",
+      description: "Optimize property management with our all-in-one, user-centric tool, enhancing efficiency in property operations and maintenance.",
+      linkHref: "/apps/specialty",
+      linkText: "See Applications",
+    },
+    {
+      title: "Streamlined Travel Management",
+      description: "Make travel management effortless with our seamless and intuitive platform, simplifying bookings, itineraries, and travel operations.",
+      linkHref: "/apps/specialty",
+      linkText: "See Applications",
+    },
+    {
+      title: "Simplified Legal Practice",
+      description: "Streamline legal practice with our user-friendly case and client management software, enhancing efficiency in legal workflows.",
+      linkHref: "/apps/specialty",
+      linkText: "See Applications",
+    }
   ]
 };
 
@@ -197,52 +193,52 @@ const checklistItems = {
   sectionTitle: "Additional Features",
   subTitle: "Do More with Empress",
   categories: [
-    {
-      categoryName: "Campaign Execution",
+  {
+      categoryName: "Customized Solutions",
       items: [
-        { label: "Campaign Planning" },
-        { label: "Tracking & Analytics" },
-        { label: "Target Audience Focus" },
-        { label: "Budget ROI Optimization" },
-        { label: "Multichannel Integration" },
-        { label: "Performance Monitoring" },
-        { label: "Strategic Execution" }
+        { label: "Tailored Industry Design" },
+        { label: "Adaptive Tech Solutions" },
+        { label: "User-Centric Software" },
+        { label: "Bespoke Development Service" },
+        { label: "Innovative Custom Features" },
+        { label: "Unique Needs Fulfillment" },
+        { label: "Specialized Functionality" }
       ]
     },
     {
-      categoryName: "Content & Social",
+      categoryName: "Efficiency and Productivity",
       items: [
-        { label: "Content Management" },
-        { label: "Social Engagement" },
-        { label: "Analytical Insights" },
-        { label: "Collaborative Strategy" },
-        { label: "Platform Customization" },
-        { label: "Audience Targeting" },
-        { label: "Content Performance" }
+        { label: "Optimized Workflow Processes" },
+        { label: "Automated Routine Tasks" },
+        { label: "Enhanced Performance Tools" },
+        { label: "Efficiency Improvement" },
+        { label: "Time-Saving Functionalities" },
+        { label: "Productivity Boosting Systems" },
+        { label: "Streamlined Operations" }
       ]
     },
     {
-      categoryName: "Customer & Events",
+      categoryName: "Scalability and Growth",
       items: [
-        { label: "Email Marketing" },
-        { label: "Event Coordination" },
-        { label: "Feedback Collection" },
-        { label: "Audience Engagement" },
-        { label: "Campaign Tracking" },
-        { label: "Event Management" },
-        { label: "Interactive Communication" }
+        { label: "Flexible Application Scaling" },
+        { label: "Growth-Oriented Solutions" },
+        { label: "Adaptive Support" },
+        { label: "Market Change Adaptability" },
+        { label: "Scalable Business Tools" },
+        { label: "Expansion Ready Features" },
+        { label: "Dynamic Solution Scaling" }
       ]
     },
     {
-      categoryName: "Analytics & Insights",
+      categoryName: "Data Security and Insights",
       items: [
-        { label: "Market Trend Analysis" },
-        { label: "Survey Management" },
-        { label: "Data-Driven Decisions" },
-        { label: "Performance Review" },
-        { label: "Sales Alignment" },
-        { label: "Strategic Planning" },
-        { label: "Optimization Strategies" }
+        { label: "Robust Data Protection" },
+        { label: "Advanced Analytics Tools" },
+        { label: "Insight-Driven Decision Making" },
+        { label: "Strategic Data Visualization" },
+        { label: "Secure Data Handling" },
+        { label: "Informed Reporting Insights" },
+        { label: "Data Integrity Assurance" }
       ]
     }
   ]
@@ -255,27 +251,28 @@ const faqs = {
   subtitle: "Your Questions, Answered",
   questions: [
     {
-      question: "How Does Empress Enhance Campaign Execution?",
-      answer: "Empress's campaign management tools streamline your marketing strategy with comprehensive tracking systems, enabling dynamic market analysis and creative planning. Our platform offers a holistic view of campaigns, supports multi-channel management, and ensures every campaign is targeted and effective."
+      question: "What Are Empress's Specialized Solutions?",
+      answer: "Empress specializes in creating customized software solutions tailored to specific industry needs. Our solutions encompass a range of services from workflow optimization to advanced data analytics, ensuring each industry receives targeted and effective tools for their unique challenges."
     },
     {
-      question: "What Features Does Empress Offer for Content Management?",
-      answer: "Empress's content management system revolutionizes content strategy, offering tools for easy management, customization, and distribution. It supports diverse content types, systematic categorization, and ensures that your content reaches the right audience on the most effective platforms."
+      question: "How Does Empress Customize Solutions for Different Industries?",
+      answer: "Empress's approach involves an in-depth analysis of each industry's specific challenges and requirements. We use this insight to develop customized software solutions, which are both adaptable and innovative, ensuring they align perfectly with your industry's unique demands."
     },
     {
-      question: "Can Empress Boost My Brand's Social Media Impact?",
-      answer: "Absolutely. Empress provides advanced social media tools to amplify your online presence. Our platform helps increase engagement and broaden reach across various social networks, ensuring a stronger digital footprint and more effective audience interaction."
+      question: "Can Empress's Solutions Scale with My Business?",
+      answer: "Absolutely. Empress's solutions are designed with scalability in mind. They are flexible and adaptable, capable of growing and evolving in line with your business, ensuring you always have the right tools as your needs change and expand."
     },
     {
-      question: "How Can Empress Assist in Event Management?",
-      answer: "Empress simplifies event planning with an integrated event management system. From coordinating logistics to engaging attendees, our tool ensures your events are well-organized and memorable, making every event a success."
+      question: "How Does Empress Ensure Data Security in Its Solutions?",
+      answer: "Data security is a top priority at Empress. We employ advanced encryption and robust privacy protocols to protect your data. Our solutions are built with the highest security standards, ensuring your business data's integrity and confidentiality."
     },
     {
-      question: "What Makes Empress Ideal for Email Marketing?",
-      answer: "Empress enhances your email marketing with an intuitive system that improves creation, delivery, and analysis. It ensures higher engagement rates through effective communication strategies, helping you achieve better outcomes in your email campaigns."
+      question: "Are Empress's Specialized Solutions User-Friendly?",
+      answer: "Yes, user-friendliness is a cornerstone of our solutions. Empress places a strong emphasis on creating intuitive, easy-to-use interfaces, ensuring our software is accessible to all users, regardless of their technical expertise."
     }
   ]
 };
+
 
 
 
