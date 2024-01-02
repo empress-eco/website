@@ -213,27 +213,6 @@ declare module 'astro:content' {
   collection: "apps";
   data: any
 } & { render(): Render[".md"] };
-"car-dealership.md": {
-	id: "car-dealership.md";
-  slug: "car-dealership";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"car-repair.md": {
-	id: "car-repair.md";
-  slug: "car-repair";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"car-reservation.md": {
-	id: "car-reservation.md";
-  slug: "car-reservation";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
 "chat.md": {
 	id: "chat.md";
   slug: "chat";
@@ -248,23 +227,9 @@ declare module 'astro:content' {
   collection: "apps";
   data: any
 } & { render(): Render[".md"] };
-"courier.md": {
-	id: "courier.md";
-  slug: "courier";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
 "crm.md": {
 	id: "crm.md";
   slug: "crm";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"dairy.md": {
-	id: "dairy.md";
-  slug: "dairy";
   body: string;
   collection: "apps";
   data: any
@@ -279,13 +244,6 @@ declare module 'astro:content' {
 "employee-lifecycle.md": {
 	id: "employee-lifecycle.md";
   slug: "employee-lifecycle";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"erp.md": {
-	id: "erp.md";
-  slug: "erp";
   body: string;
   collection: "apps";
   data: any
@@ -325,20 +283,6 @@ declare module 'astro:content' {
   collection: "apps";
   data: any
 } & { render(): Render[".md"] };
-"gym.md": {
-	id: "gym.md";
-  slug: "gym";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"healthcare.md": {
-	id: "healthcare.md";
-  slug: "healthcare";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
 "helpdesk.md": {
 	id: "helpdesk.md";
   slug: "helpdesk";
@@ -353,30 +297,9 @@ declare module 'astro:content' {
   collection: "apps";
   data: any
 } & { render(): Render[".md"] };
-"incidents.md": {
-	id: "incidents.md";
-  slug: "incidents";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"insurance.md": {
-	id: "insurance.md";
-  slug: "insurance";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
 "invoice.md": {
 	id: "invoice.md";
   slug: "invoice";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"law.md": {
-	id: "law.md";
-  slug: "law";
   body: string;
   collection: "apps";
   data: any
@@ -405,13 +328,6 @@ declare module 'astro:content' {
 "manufacturing.md": {
 	id: "manufacturing.md";
   slug: "manufacturing";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"non-profit.md": {
-	id: "non-profit.md";
-  slug: "non-profit";
   body: string;
   collection: "apps";
   data: any
@@ -461,13 +377,6 @@ declare module 'astro:content' {
 "projects.md": {
 	id: "projects.md";
   slug: "projects";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"property.md": {
-	id: "property.md";
-  slug: "property";
   body: string;
   collection: "apps";
   data: any
@@ -535,27 +444,6 @@ declare module 'astro:content' {
   collection: "apps";
   data: any
 } & { render(): Render[".md"] };
-"travel.md": {
-	id: "travel.md";
-  slug: "travel";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"veterinary.md": {
-	id: "veterinary.md";
-  slug: "veterinary";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"visa.md": {
-	id: "visa.md";
-  slug: "visa";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
 "website.md": {
 	id: "website.md";
   slug: "website";
@@ -563,23 +451,9 @@ declare module 'astro:content' {
   collection: "apps";
   data: any
 } & { render(): Render[".md"] };
-"whiteboard.md": {
-	id: "whiteboard.md";
-  slug: "whiteboard";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
 "wiki.md": {
 	id: "wiki.md";
   slug: "wiki";
-  body: string;
-  collection: "apps";
-  data: any
-} & { render(): Render[".md"] };
-"workflows.md": {
-	id: "workflows.md";
-  slug: "workflows";
   body: string;
   collection: "apps";
   data: any
@@ -1207,6 +1081,134 @@ declare module 'astro:content' {
   slug: "zoom";
   body: string;
   collection: "integrations";
+  data: any
+} & { render(): Render[".md"] };
+};
+"other-apps": {
+"car-dealership.md": {
+	id: "car-dealership.md";
+  slug: "car-dealership";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"car-repair.md": {
+	id: "car-repair.md";
+  slug: "car-repair";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"car-reservation.md": {
+	id: "car-reservation.md";
+  slug: "car-reservation";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"courier.md": {
+	id: "courier.md";
+  slug: "courier";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"dairy.md": {
+	id: "dairy.md";
+  slug: "dairy";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"erp.md": {
+	id: "erp.md";
+  slug: "erp";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"gym.md": {
+	id: "gym.md";
+  slug: "gym";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"healthcare.md": {
+	id: "healthcare.md";
+  slug: "healthcare";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"incidents.md": {
+	id: "incidents.md";
+  slug: "incidents";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"insurance.md": {
+	id: "insurance.md";
+  slug: "insurance";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"law.md": {
+	id: "law.md";
+  slug: "law";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"non-profit.md": {
+	id: "non-profit.md";
+  slug: "non-profit";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"property.md": {
+	id: "property.md";
+  slug: "property";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"travel.md": {
+	id: "travel.md";
+  slug: "travel";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"veterinary.md": {
+	id: "veterinary.md";
+  slug: "veterinary";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"visa.md": {
+	id: "visa.md";
+  slug: "visa";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"whiteboard.md": {
+	id: "whiteboard.md";
+  slug: "whiteboard";
+  body: string;
+  collection: "other-apps";
+  data: any
+} & { render(): Render[".md"] };
+"workflows.md": {
+	id: "workflows.md";
+  slug: "workflows";
+  body: string;
+  collection: "other-apps";
   data: any
 } & { render(): Render[".md"] };
 };

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import GetStarted from "../components/features/GetStarted.astro";
+
 import AboutOne from "../components/about/AboutOne.astro";
 import FeatureEleven from "../components/features/FeatureEleven.astro";
 import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
@@ -16,6 +16,7 @@ import CtaTwo from "../components/cta/CtaTwo.astro";
 import Ecosystem from "../components/features/Ecosystem.astro";
 import { Code } from "astro/components";
 import { Icon } from "astro-icon";
+import GetStarted from "../components/features/GetStarted.astro";
 
 import { AstroSeo } from "@astrolib/seo";
 
@@ -27,17 +28,21 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Operations",
-    link: "/operations",
+    title: "Cloud",
+    link: "/cloud",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/operations"
+    href: "/cloud"
   },
   {
     name: "Features",
-    href: "/operations/features"
+    href: "/cloud/features"
+  },
+  {
+    name: "Applications",
+    href: "/apps/cloud"
   },
   {
     name: "Docs",
@@ -49,26 +54,20 @@ const navLinks = [
 // Heading
 
 const heading = {
-  title: "Operations",
-  description: "Seamlessly integrate core operational functions, from inventory management to quality control, to drive unparalleled efficiency and streamlined workflows in your business.",
+  title: "Cloud",
+  description: "Effortlessly craft your brand’s online presence with our low-code, versatile website builder. Create responsive, dynamic sites that captivate and engage your customers.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
-  imageRows: [
-    [
-    { url: "path/to/image1.jpg", alt: "Image Description 1", class: "image-class" },
-      { url: "path/to/image2.jpg", alt: "Image Description 2", class: "image-class" }
-    ],
-  ]
 };
 
-// Display Image
+// Diplay Image
 
 const displayImage = {
-  "title": "Efficient, Effective, Empowered.",
-  "subtitle": "Streamline Processes,",
-  "subtitleCont": "Achieve Operational Excellence.",
+  "title": "Elevate Customer Experience",
+  "subtitle": "Empower Interactions,",
+  "subtitleCont": "Enrich Relationships.",
   imageSrc: "/images/chart.jpg"
 };
 
@@ -76,43 +75,44 @@ const displayImage = {
 
 const featureOne = {
   mainContent: {
-    title: "Advanced Inventory Management",
+    title: "Transform Customer Support",
     img: "/images/dashboard.jpg",
-    subtitle: "Streamline Your Inventory",
+    subtitle: "Amplify Your Customer Service",
     paragraphs: [
-      "Empress streamlines your inventory management with precision and efficiency, offering real-time insights and automated stock replenishment to keep your operations running smoothly."
+      "Empress redefines customer support with our advanced helpdesk solutions. Seamlessly manage support queries to provide quick, accurate responses, thereby elevating customer satisfaction to new heights."
     ],
-    buttonLink: "/features/inventory",
-    buttonText: "Learn More",
-    linkText: "Contact Us",
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
     linkHref: "/contact"
   },
   listItems: [
-    "Real-time Inventory Insights",
-    "Automated Replenishment",
-    "Efficient Warehouse Management"
+    "Effortless Query Management",
+    "Swift, Accurate Responses",
+    "Elevated Customer Satisfaction"
   ]
 };
+
 
 // FeatureTwo
 
 const featureTwo = {
   mainContent: {
-    title: "Production, Perfected",
+    title: "Real-Time Customer Engagement",
     img: "/images/dashboard.jpg",
-    subtitle: "Optimize Your Manufacturing",
+    subtitle: "Connect Instantly, Impress Endlessly",
     paragraphs: [
-      "Empress revolutionizes manufacturing processes, integrating every step from planning to quality control, ensuring superior product quality and operational efficiency."
+      "Empress's Live Chat tool fosters instant connections, providing swift solutions for an exceptional customer experience. Engage in real-time and create memorable encounters with every interaction."
     ],
-    buttonLink: "/features/inventory",
-    buttonText: "Learn More",
-    linkText: "Contact Us",
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
     linkHref: "/contact"
   },
   listItems: [
-    "Integrated Manufacturing Workflow",
-    "Quality Control Assurance",
-    "Efficient Resource Utilization"
+    "Instant Customer Connections",
+    "Swift Issue Resolution",
+    "Memorable Customer Experiences"
   ]
 };
 
@@ -120,73 +120,81 @@ const featureTwo = {
 
 const featureThree = {
   mainContent: {
-    title: "Simplified Supply Chain",
+    title: "Community Engagement & Loyalty",
     img: "/images/dashboard.jpg",
-    subtitle: "Optimize Purchasing & Logistics",
+    subtitle: "Nurture Relationships, Build Community",
     paragraphs: [
-      "Empress's supply chain management tools ensure seamless procurement, supplier management, and streamlined logistics for effective distribution and operational agility."
+      "With Empress, create vibrant community spaces and impactful loyalty programs. Our tools foster engagement, cultivate a sense of belonging, and nurture lasting customer relationships."
     ],
-    buttonLink: "/features/supply-chain",
-    buttonText: "Explore Supply Chain",
-    linkText: "Request Demo",
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
     linkHref: "/contact"
   },
   listItems: [
-    "Efficient Procurement Processes",
-    "Robust Supplier Management",
-    "Streamlined Distribution Channels"
+    "Vibrant Community Forums",
+    "Impactful Loyalty Programs",
+    "Lasting Customer Relationships"
   ]
 };
+
 
 // Application Showcase
 
 const applicationShowcase = {
   mainSection: {
-    title: "Operations Features",
-    subtitle: "Maximize Efficiency, Optimize Workflow",
-    description1: "Explore Empress's suite of operational features, each designed to enhance specific areas of your business operations.",
-    description2: "Our operations cloud brings unmatched efficiency from inventory management to asset maintenance.",
-    viewApplicationsLink: "/apps/operations",
-    viewApplicationsText: "Explore Operations Features"
+    title: "Elevate Your Business Engagement",
+    subtitle: "Transforming Customer Experiences",
+    description1: "Discover how Empress revolutionizes customer interactions. Our comprehensive suite enhances every aspect of customer support and engagement.",
+    description2: "Experience seamless helpdesk operations, engaging live chats, and vibrant community forums. Our applications are tailored for meaningful and effective customer connections.",
+    viewApplicationsLink: "/apps/experience",
+    viewApplicationsText: "Discover Our Applications"
   },
   contentSections: [
-    {
-      title: "Advanced Inventory Management",
-      description: "Achieve complete control over your inventory with our sophisticated system. Ensure optimal stock levels, minimize waste, and streamline warehouse operations for maximum efficiency.",
-      linkHref: "/apps/operations/inventory",
-      linkText: "Discover Inventory Management",
-    },
-    {
-      title: "Manufacturing Operational Excellence",
-      description: "Empress integrates critical manufacturing processes, from production planning to quality assurance. Enhance productivity, maintain high-quality standards, and reduce operational costs.",
-      linkHref: "/apps/operations/manufacturing",
-      linkText: "Explore Manufacturing Tools",
-    },
-    {
-      title: "Streamlined Supply Chain & Purchasing",
-      description: "Simplify and fortify your supply chain and purchasing processes. From supplier management to procurement, our solutions ensure smooth operations, reducing time and cost.",
-      linkHref: "/apps/operations/supply-chain",
-      linkText: "See Supply Chain Solutions",
-    },
-    {
-      title: "Optimized Asset Management",
-      description: "Efficiently manage your company's assets. Track, maintain, and analyze asset performance to ensure optimal utilization and longevity.",
-      linkHref: "/apps/operations/asset-management",
-      linkText: "Manage Assets Effectively",
-    },
-    {
-      title: "Quality Control Systems",
-      description: "Implement rigorous quality control measures. Our system enables you to maintain the highest standards, ensuring product excellence and customer satisfaction.",
-      linkHref: "/apps/operations/quality-control",
-      linkText: "Learn About Quality Control",
-    },
-    {
-      title: "Seamless Approval Workflows",
-      description: "Speed up decision-making with our streamlined approval processes. Reduce delays and enhance operational efficiency with a clear, organized approval workflow.",
-      linkHref: "/apps/operations/approvals",
-      linkText: "Improve Approval Processes",
-    }
-  ]
+  {
+    title: "Build Your Website",
+    description: "Craft and manage your online presence with ease using our user-friendly website builder, designed to enhance user engagement and elevate your brand’s digital experience.",
+    linkHref: "/apps/experience",
+    linkText: "See Applications",
+  },
+  {
+    title: "Optimized Helpdesk Solutions",
+    description: "Streamline your customer support with our efficient helpdesk, ensuring faster, more accurate responses, and elevating overall customer satisfaction and loyalty.",
+    linkHref: "/apps/experience",
+    linkText: "See Applications",
+  },
+  {
+    title: "Instant Customer Engagement",
+    description: "Engage customers in real-time with our Live Chat, ensuring swift, effective communication and enhancing the quality of customer service interactions.",
+    linkHref: "/apps/experience",
+    linkText: "See Applications",
+  },
+  {
+    title: "Insightful Feedback Collection",
+    description: "Gather and utilize valuable customer feedback to drive improvements, enhance user experience, and foster a deeper understanding of your customer base.",
+    linkHref: "/apps/experience",
+    linkText: "See Applications",
+  },
+  {
+    title: "Dynamic Community Forums",
+    description: "Establish active, engaging community forums to promote knowledge sharing, customer interaction, and a stronger sense of community around your brand.",
+    linkHref: "/apps/experience",
+    linkText: "See Applications",
+  },
+  {
+    title: "Loyalty Program Enhancement",
+    description: "Create and manage innovative loyalty programs that effectively engage and retain customers, strengthening brand loyalty and customer relationships.",
+    linkHref: "/apps/experience",
+    linkText: "See Applications",
+  },
+  {
+    title: "Efficient Appointment Scheduling",
+    description: "Optimize your booking process with our efficient appointment system, ensuring a smoother, more organized customer experience.",
+    linkHref: "/apps/experience",
+    linkText: "See Applications",
+  }
+]
+
 };
 
 
@@ -199,55 +207,55 @@ const checklistItems = {
   subTitle: "Do More with Empress",
   categories: [
     {
-      categoryName: "Purchase Order Management",
+      categoryName: "Customer Interaction",
       items: [
-        { label: "Streamlined Order Tracking" },
-        { label: "Efficient Supplier Integration" },
-        { label: "Proactive Delivery Monitoring" },
-        { label: "Detailed Item Insights" },
-        { label: "Real-Time Status Updates" },
-        { label: "Secure Record Keeping" },
-        { label: "In-Depth Order Analysis" },
-        { label: "Customizable Notes Section" }
+        { label: "Ticket Tracking" },
+        { label: "Live Chat Management" },
+        { label: "Issue Resolution Feedback" },
+        { label: "Interaction Records" },
+        { label: "Appointment Scheduling" },
+        { label: "Booking History" },
+        { label: "Appointment Tracking" },
+        { label: "Resource Allocation" }
       ]
     },
     {
-      categoryName: "Production Order Management",
+      categoryName: "Relationship Enhancement",
       items: [
-        { label: "Efficient Manufacturing Tracking" },
-        { label: "Integrated Product Planning" },
-        { label: "Timely Production Scheduling" },
-        { label: "Quantitative Resource Allocation" },
-        { label: "Cost Management Focus" },
-        { label: "Supervisor Assignment Oversight" },
-        { label: "Status Update Monitoring" },
-        { label: "Quality Control Assurance" }
+        { label: "Feedback Analysis" },
+        { label: "Rating Insights" },
+        { label: "Feedback Follow-up" },
+        { label: "Loyalty Program Management" },
+        { label: "Points Monitoring" },
+        { label: "Tier Level Management" },
+        { label: "Relationship Strengthening" },
+        { label: "Loyalty Analysis" }
       ]
     },
     {
-      categoryName: "Shipment & Distribution",
+      categoryName: "Community Engagement",
       items: [
-        { label: "Advanced Shipment Tracking" },
-        { label: "Order Fulfillment Linking" },
-        { label: "Efficient Transit Scheduling" },
-        { label: "Detailed Logistical Recording" },
-        { label: "Freight Cost Management" },
-        { label: "Real-Time Status Updates" },
-        { label: "Accurate Delivery Tracking" },
-        { label: "Distribution Efficiency Focus" }
+        { label: "Forum Management" },
+        { label: "Content Monitoring" },
+        { label: "Topic Tracking" },
+        { label: "Feedback Analysis" },
+        { label: "Moderation Management" },
+        { label: "Community Analytics" },
+        { label: "Engagement Monitoring" },
+        { label: "Community Review" }
       ]
     },
     {
-      categoryName: "Facility Management",
+      categoryName: "Operational Efficiency",
       items: [
-        { label: "Facility Operational Tracking" },
-        { label: "Detailed Manager Assignment" },
-        { label: "Maintenance Schedule Oversight" },
-        { label: "Cost and Usage Monitoring" },
-        { label: "Strategic Facility Planning" },
-        { label: "Efficient Resource Management" },
-        { label: "Comprehensive Facility Records" },
-        { label: "Enhanced Coordination Capability" }
+        { label: "System Integration" },
+        { label: "Data Synchronization" },
+        { label: "Compatibility Support" },
+        { label: "Service Management" },
+        { label: "CRM Integration" },
+        { label: "Automated Processes" },
+        { label: "Data Security" },
+        { label: "Resource Management" }
       ]
     }
   ]
@@ -261,34 +269,45 @@ const faqs = {
   subtitle: "Your Questions, Answered",
   questions: [
     {
-      question: "How does Empress streamline order management operations?",
-      answer: "Empress's advanced order management system facilitates streamlined operations by providing a comprehensive and efficient process for handling orders, from initiation to fulfillment. This integration ensures timely and accurate order processing, enhancing overall business efficiency."
+      question: "How does the Empress Helpdesk improve customer support?",
+      answer: "Empress Helpdesk streamlines support by providing efficient ticket tracking and resolution, ensuring high-quality service and swift responses to customer issues, leading to increased customer satisfaction."
     },
     {
-      question: "Can Empress help optimize our manufacturing processes?",
-      answer: "Yes, Empress offers sophisticated tools designed to optimize manufacturing processes. Our solutions provide seamless integration of production workflows, reducing downtime and enhancing operational efficiency, thus ensuring a more productive manufacturing cycle."
+      question: "Can Empress's Live Chat feature enhance real-time customer engagement?",
+      answer: "Absolutely! Empress's Live Chat offers instant customer communication, fostering quick connections and providing immediate solutions to enhance customer experiences and satisfaction."
     },
     {
-      question: "How does Empress enhance the efficiency of distribution channels?",
-      answer: "Empress's Logistics system is specifically designed to optimize distribution channels. It simplifies and streamlines logistics operations, ensuring efficient and smooth movement of products, which in turn improves delivery times and overall customer satisfaction."
+      question: "How does Empress facilitate customer feedback collection?",
+      answer: "Empress's feedback tools allow you to capture and analyze customer feedback effectively. This helps in understanding customer needs and perceptions, enabling you to tailor services and improve customer relations."
     },
     {
-      question: "What solutions does Empress provide for facility management?",
-      answer: "Empress offers an advanced Facilities Management System that encompasses comprehensive tools for effective facility management. This includes operational tracking, resource management, and maintenance scheduling, all aimed at ensuring optimal functionality and continuity of operations."
+      question: "What role does Empress play in managing loyalty programs?",
+      answer: "Empress's Loyalty Management system helps you track customer engagement and rewards. It enhances customer loyalty by providing incentives for continued patronage and building long-term customer relationships."
     },
     {
-      question: "Does Empress offer tools to simplify the approval process within operations?",
-      answer: "Absolutely. Empress provides an efficient Approval System that simplifies and accelerates decision-making processes. This system is designed to reduce delays in approvals, thereby increasing overall efficiency and streamlining workflows across the organization."
+      question: "Can Empress help in scheduling and managing customer appointments?",
+      answer: "Yes, Empress's Appointment System streamlines the booking process, managing customer appointments efficiently. It ensures accurate scheduling and improves the overall service experience."
+    },
+    {
+      question: "How does Empress contribute to improving customer service strategies?",
+      answer: "Empress offers advanced analytics for deep insights into customer interactions, helping businesses understand and enhance the customer journey. This leads to more effective, targeted strategies and personalized experiences."
+    },
+    {
+      question: "Does Empress offer solutions for community engagement and forums?",
+      answer: "Definitely. Empress provides tools to manage community forums, encouraging knowledge sharing and engagement. This helps in building a vibrant community and fostering a sense of belonging among customers."
+    },
+    {
+      question: "Is Empress capable of integrating with existing business systems?",
+      answer: "Yes, Empress is designed to seamlessly integrate with your current business systems, ensuring data accuracy and a unified operational experience across various departments."
     }
   ]
 };
 
 
-
 ---
 
 <AstroSeo
-  title="Operations"
+  title="Experience"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -639,9 +658,6 @@ const faqs = {
 
 <GetStarted/>
 
-
-
-
   <!-- Section Five -->
   
 
@@ -743,9 +759,10 @@ const faqs = {
       </div>
     </div>
   </section>
-  
 
+  
     <Ecosystem/>  
+
   
 
 <!-- Section Nine -->
