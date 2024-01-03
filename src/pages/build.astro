@@ -64,14 +64,14 @@ const displayImage = {
   title: "Craft Stunning Websites",
   subtitle: "Intuitive Design,",
   subtitleCont: "Strategic Execution.",
-  imageSrc: "/images/chart.jpg"
+  imageSrc: "/images/apps/build/1.png"
 };
 
 // FeatureOne
 const featureOne = {
   mainContent: {
     title: "Intuitive Website Design",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/build/2.png",
     subtitle: "Simplify Your Web Creation Process",
     paragraphs: [
       "Empress Website Builder simplifies creating professional-quality websites, catering to both experienced designers and newcomers."
@@ -93,7 +93,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Responsive and Adaptive Design",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/build/4.png",
     subtitle: "Optimize Websites for Every Device",
     paragraphs: [
       "Empress's responsive design capabilities automatically adjust content to fit various screen sizes, enhancing accessibility and user engagement."
@@ -114,7 +114,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Dynamic Content with CMS Integration",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/build/5.png",
     subtitle: "Elevate Your Site’s Interactivity",
     paragraphs: [
       "Enhance your website with fresh content through easy-to-manage Empress CMS integration, keeping your audience engaged with up-to-date information."
@@ -416,8 +416,8 @@ const faqs = {
           <span class="lg:block">{displayImage.subtitleCont}</span>
         </h2>
       </div>
-      <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
-        <img src={displayImage.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+      <div class="w-full -mb-12 mt-12 ">
+        <img src={displayImage.imageSrc} alt="thumbnail" class="" />
       </div>
     </div>
   </section>
@@ -482,10 +482,12 @@ const faqs = {
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
+      </div>
+    </div>      
       </div>
     </div>
   </div>
@@ -495,13 +497,13 @@ const faqs = {
 
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
-    <div class="lg:w-1/2 lg:order-first">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+    <div class="lg:w-1/2">
+      <div class="flex justify-center lg:justify-end items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" class="w-full h-auto lg:object-cover" />
         </div>
       </div>
-    </div>
+    </div>  
     <div class="lg:w-1/2 lg:pr-12">
       <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
         <div>
@@ -620,12 +622,12 @@ const faqs = {
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureThree.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
       </div>
-    </div>
+    </div>  
   </div>
 </section>
 
