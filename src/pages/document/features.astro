@@ -1,0 +1,621 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import PricingThree from "../../components/pricing/PricingThree.astro";
+import PricingThreeExtended from "../../components/pricing/PricingThreeExtended.astro";
+import TestimonialThree from "../../components/testimonials/TestimonialThree.astro";
+import FaqOne from "../../components/infopages/FaqOne.astro";
+import CtaOne from "../../components/cta/CtaOne.astro";
+
+import { AstroSeo } from "@astrolib/seo";
+import TestimonialOne from "../../components/testimonials/TestimonialOne.astro";
+
+// Navigation Links
+
+const navLinks = [
+{
+    title: "Document",
+    link: "/document",
+    logo: "/images/logo.png"
+  },
+  {
+    name: "Overview",
+    href: "/document"
+  },
+  {
+    name: "Features",
+    href: "/document/features"
+  },
+  {
+    name: "Docs",
+    href: "https://docs.empress.eco/"
+  }
+];
+
+
+const features = [
+{
+    header: {
+    mainTitle: "Interactive Document Editor",
+    subTitle: "Craft with Creativity and Precision",
+    description: "Elevate your document creation with a versatile editor that effortlessly supports both Markdown and Rich Text formats."
+},
+    featureSections: [
+        {
+            title: "Advanced Editing Capabilities",
+            description: "Our editor provides advanced tools for creating well-structured and visually appealing documents, catering to various professional needs and preferences.",
+            listItems: [
+                "Rich Text & Markdown Support",
+                "Professional Document Structuring",
+                "Visual Appeal in Documentation"
+            ]
+        },
+        {
+            title: "Flexible Format Compatibility",
+            description: "Designed to support diverse formats, the editor ensures that your documents meet industry standards while being adaptable to different content types.",
+            listItems: [
+                "Multiple Format Support",
+                "Industry Standard Compliance",
+                "Adaptable Content Creation"
+            ]
+        },
+        {
+            title: "User-Friendly Interface",
+            description: "The intuitive design of our document editor makes it accessible to users of all skill levels, simplifying the document creation process.",
+            listItems: [
+                "Intuitive Design",
+                "Ease of Use for All Skill Levels",
+                "Simplified Document Creation"
+            ]
+        },
+        {
+            title: "Efficient Collaboration Tools",
+            description: "Enhance teamwork with features like collaborative editing and in-document commenting, making it ideal for team projects and joint ventures.",
+            listItems: [
+                "Collaborative Editing",
+                "In-Document Commenting",
+                "Team Project Efficiency"
+            ]
+        },
+        {
+            title: "Seamless Content Management",
+            description: "Organize and manage your documents efficiently, with tools that streamline the process of editing, updating, and maintaining your content.",
+            listItems: [
+                "Efficient Editing and Updating",
+                "Streamlined Content Management",
+                "Document Maintenance Tools"
+            ]
+        },
+        {
+            title: "Visual Consistency and Branding",
+            description: "Maintain visual consistency and adhere to your branding guidelines with customizable formatting and styling options.",
+            listItems: [
+                "Customizable Formatting",
+                "Branding Consistency",
+                "Styling Options"
+            ]
+        }
+    ]
+}
+,
+{
+    header: {
+    mainTitle: "Advanced Access Control",
+    subTitle: "Guard Your Creations",
+    description: "Secure your documents with precision, managing access with unparalleled control and compliance."
+    },
+    featureSections: [
+        {
+            title: "Precise Permission Settings",
+            description: "Tailor specific access controls for each document, giving you the power to determine who can view, edit, or share your sensitive information.",
+            listItems: [
+                "Customizable Access Levels",
+                "Individual Document Control",
+                "Selective Sharing Options"
+            ]
+        },
+        {
+            title: "Enhanced Data Confidentiality",
+            description: "Protect your confidential information with robust access controls, crucial for industries handling sensitive data.",
+            listItems: [
+                "Secure Confidential Data",
+                "Critical for Sensitive Industries",
+                "Robust Information Protection"
+            ]
+        },
+        {
+            title: "Compliance Assurance",
+            description: "Ensure compliance with industry standards and regulations through controlled document access, a must-have feature for legal and regulatory adherence.",
+            listItems: [
+                "Meet Industry Regulations",
+                "Legal Compliance",
+                "Regulatory Adherence"
+            ]
+        },
+        {
+            title: "Intellectual Property Protection",
+            description: "Safeguard your intellectual property by controlling who can access and distribute your documents, maintaining the integrity of your business's innovations.",
+            listItems: [
+                "Protect Business Innovations",
+                "Control IP Distribution",
+                "Maintain Integrity of Creations"
+            ]
+        },
+        {
+            title: "Streamlined Access Management",
+            description: "Manage document permissions efficiently with an intuitive interface, allowing quick adjustments to access as needed.",
+            listItems: [
+                "Efficient Permission Management",
+                "Intuitive Control Interface",
+                "Quick Access Adjustments"
+            ]
+        },
+        {
+            title: "Audit Trails for Document Access",
+            description: "Keep track of who accessed your documents and when, providing a clear audit trail for enhanced security and accountability.",
+            listItems: [
+                "Document Access Logs",
+                "Enhanced Security Tracking",
+                "Accountability and Transparency"
+            ]
+        }
+    ]
+}, 
+{
+    header: {
+    mainTitle: "Real-Time Collaborative Document Editing",
+    subTitle: "Synchronize Your Success",
+    description: "Boost team productivity with a platform that enables seamless, real-time collaborative editing."
+},
+    featureSections: [
+        {
+            title: "Integrated Document Editor",
+            description: "Empress's robust document editor seamlessly integrates with the platform, enabling teams to collaborate in real time on various document types.",
+            listItems: [
+                "Seamless Editor Integration",
+                "Supports Various Document Types",
+                "Streamlined Editing Interface"
+            ]
+        },
+        {
+            title: "Simultaneous Multi-User Editing",
+            description: "Multiple team members can work on the same document simultaneously, significantly speeding up the editing process and enhancing collaborative efforts.",
+            listItems: [
+                "Multiple Users Editing Concurrently",
+                "Accelerated Document Editing",
+                "Enhanced Team Collaboration"
+            ]
+        },
+        {
+            title: "Increased Productivity and Efficiency",
+            description: "Real-time collaborative editing minimizes delays and miscommunications, leading to increased overall productivity and efficiency in document handling.",
+            listItems: [
+                "Minimize Editing Delays",
+                "Reduce Miscommunications",
+                "Boost Overall Productivity"
+            ]
+        },
+        {
+            title: "Improved Document Accuracy",
+            description: "Collaborative editing ensures higher accuracy and consistency in documents, as multiple perspectives are involved in the creation and review process.",
+            listItems: [
+                "Higher Document Accuracy",
+                "Consistent Content Quality",
+                "Multiple Reviewer Perspectives"
+            ]
+        },
+        {
+            title: "Dynamic Content Development",
+            description: "Empower your team to develop dynamic content collaboratively, fostering creativity and allowing for the incorporation of diverse ideas and inputs.",
+            listItems: [
+                "Foster Creative Development",
+                "Incorporate Diverse Inputs",
+                "Create Dynamic Content"
+            ]
+        },
+        {
+            title: "Real-Time Feedback and Revision",
+            description: "Facilitate immediate feedback and revisions during the document creation process, enabling quicker turnaround and adaptation to changes.",
+            listItems: [
+                "Immediate Feedback Implementation",
+                "Quick Document Revisions",
+                "Adapt Quickly to Changes"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Enhance Your Documents",
+        subTitle: "Enhance Your Documents",
+        description: "Include and manage of diverse file types, from images to videos and data files."
+    },
+    featureSections: [
+        {
+            title: "Diverse File Embedding",
+            description: "Effortlessly embed a variety of file types into your documents, enhancing the depth and clarity of your content.",
+            listItems: [
+                "Supports Multiple File Types",
+                "Enhanced Document Depth",
+                "Clarity with Rich Media"
+            ]
+        },
+        {
+            title: "Streamlined File Management",
+            description: "Manage attached files with ease, ensuring your documents are always up-to-date with the relevant and necessary information.",
+            listItems: [
+                "Easy File Updates",
+                "Relevant Document Information",
+                "Necessary Content Inclusion"
+            ]
+        },
+        {
+            title: "Seamless Integration",
+            description: "Our system integrates attachments smoothly within your documents, providing a cohesive and organized user experience.",
+            listItems: [
+                "Cohesive Document Layout",
+                "Organized User Experience",
+                "Smooth Media Integration"
+            ]
+        },
+        {
+            title: "Enhanced Communication",
+            description: "Improve the communicative value of your documents with multimedia attachments that provide clearer context and understanding.",
+            listItems: [
+                "Clearer Context",
+                "Enhanced Understanding",
+                "Multimedia Communication"
+            ]
+        },
+        {
+            title: "Efficient Information Sharing",
+            description: "Share comprehensive information effortlessly, making your documents a powerful tool for communication and collaboration.",
+            listItems: [
+                "Comprehensive Data Sharing",
+                "Powerful Communication Tool",
+                "Collaborative Information Exchange"
+            ]
+        },
+        {
+            title: "Customizable Attachment Options",
+            description: "Customize how attachments are displayed and accessed within your documents, tailoring them to best suit your business needs.",
+            listItems: [
+                "Display Customization",
+                "Accessible Attachment Options",
+                "Business-Specific Tailoring"
+            ]
+        }
+    ]
+}
+,
+{
+    header: {
+        mainTitle: "Revision History Tracking",
+        subTitle: "Document Evolution at Your Fingertips",
+        description: "Ensuring every change and revision is captured for quality assurance and compliance with a comprehensive history log."
+    },
+    featureSections: [
+        {
+            title: "Complete Change Log",
+            description: "Access a detailed log of all document changes, providing transparency and control over the evolution of your content.",
+            listItems: [
+                "Detailed Document Changes",
+                "Transparent Content Evolution",
+                "Control Over Revisions"
+            ]
+        },
+        {
+            title: "Version Control Mastery",
+            description: "Master version control by tracking every iteration of your document, ensuring you always have access to previous versions.",
+            listItems: [
+                "Track Document Iterations",
+                "Access Previous Versions",
+                "Version Control Excellence"
+            ]
+        },
+        {
+            title: "Quality Assurance Compliance",
+            description: "Leverage revision tracking for quality assurance, ensuring all document changes meet compliance standards and industry practices.",
+            listItems: [
+                "Assure Document Quality",
+                "Meet Compliance Standards",
+                "Industry Practices Alignment"
+            ]
+        },
+        {
+            title: "Audit-Ready Documentation",
+            description: "Prepare for audits with ease, as our revision history provides a clear trail of changes and approvals, simplifying compliance processes.",
+            listItems: [
+                "Simplify Compliance Processes",
+                "Clear Change Trails",
+                "Audit-Ready Records"
+            ]
+        },
+        {
+            title: "Collaborative Edit Tracking",
+            description: "Keep track of collaborative edits, ensuring team contributions are recognized and document integrity is maintained.",
+            listItems: [
+                "Track Team Contributions",
+                "Recognize Collaborative Edits",
+                "Maintain Document Integrity"
+            ]
+        },
+        {
+            title: "Historical Insight Access",
+            description: "Gain valuable insights from your document's history, understanding how content has evolved and improved over time.",
+            listItems: [
+                "Understand Content Evolution",
+                "Gain Historical Insights",
+                "Content Improvement Analysis"
+            ]
+        }
+    ]
+}
+,
+{
+    header: {
+    mainTitle: "Navigate with Intuition",
+    subTitle: "Dynamic Content Organization",
+    description: "Simplify document management with an intuitive system that streamlines information retrieval and navigation."
+},
+    featureSections: [
+        {
+            title: "Intuitive Hierarchy System",
+            description: "Utilize our user-friendly hierarchy system to organize documents, making it simple to navigate through extensive documentation.",
+            listItems: [
+                "User-Friendly Organization",
+                "Simple Navigation",
+                "Efficient Document Structuring"
+            ]
+        },
+        {
+            title: "Efficient Information Retrieval",
+            description: "Quickly find the information you need with our efficient organization system, saving valuable time and enhancing productivity.",
+            listItems: [
+                "Rapid Information Access",
+                "Time-Saving Search",
+                "Productivity Enhancement"
+            ]
+        },
+        {
+            title: "Customizable Organization",
+            description: "Tailor the document structure to your business needs, offering flexibility to accommodate various types and volumes of documentation.",
+            listItems: [
+                "Flexible Structure Customization",
+                "Adapts to Business Needs",
+                "Accommodates Various Document Types"
+            ]
+        },
+        {
+            title: "Streamlined Document Access",
+            description: "Access your documents effortlessly, thanks to a well-organized system that categorizes content logically and efficiently.",
+            listItems: [
+                "Logical Content Categorization",
+                "Effortless Document Access",
+                "Organized Content System"
+            ]
+        },
+        {
+            title: "Simplified Large-Scale Management",
+            description: "Manage large volumes of documents with ease, leveraging our dynamic organization system to handle extensive documentation.",
+            listItems: [
+                "Large-Volume Management",
+                "Handles Extensive Documentation",
+                "Ease of Large-Scale Use"
+            ]
+        },
+        {
+            title: "Navigation Efficiency",
+            description: "Boost overall efficiency with a system that simplifies the process of finding and accessing the right documents at the right time.",
+            listItems: [
+                "Enhanced Document Finding",
+                "Right Information at Right Time",
+                "Overall Navigation Efficiency"
+            ]
+        }
+    ]
+},
+{
+    header: {
+    mainTitle: "Unite and Conquer",
+    subTitle: "Collaboration and Comments",
+    description: "Enhance teamwork with in-document commenting and editing, making collaboration efficient and effective."
+},
+    featureSections: [
+        {
+            title: "Real-Time Collaborative Editing",
+            description: "Enable simultaneous editing by multiple team members, fostering a dynamic collaborative environment for creating and refining content.",
+            listItems: [
+                "Simultaneous Multi-User Editing",
+                "Dynamic Collaboration",
+                "Content Creation and Refinement"
+            ]
+        },
+        {
+            title: "In-Document Commenting",
+            description: "Facilitate effective communication within documents, allowing team members to provide feedback, suggestions, and insights directly on the content.",
+            listItems: [
+                "Direct Content Feedback",
+                "Effective Team Communication",
+                "Insightful Suggestions and Edits"
+            ]
+        },
+        {
+            title: "Streamlined Workflow",
+            description: "Optimize your team's workflow with collaborative tools, reducing the need for external communication channels and centralizing feedback.",
+            listItems: [
+                "Workflow Optimization",
+                "Reduced External Communication",
+                "Centralized Feedback System"
+            ]
+        },
+        {
+            title: "Enhanced Document Accuracy",
+            description: "Improve document accuracy and quality by harnessing the collective knowledge and input of your team, ensuring thorough content review and verification.",
+            listItems: [
+                "Collective Knowledge Utilization",
+                "Thorough Content Review",
+                "Quality and Accuracy Improvement"
+            ]
+        },
+        {
+            title: "Fostering Team Responsibility",
+            description: "Build a culture of collective responsibility for content quality, encouraging team members to actively participate in the creation and maintenance of documents.",
+            listItems: [
+                "Collective Content Responsibility",
+                "Active Team Participation",
+                "Culture of Quality Maintenance"
+            ]
+        },
+        {
+            title: "Efficient Information Exchange",
+            description: "Facilitate efficient exchange of ideas and information within your team, making the document creation process more inclusive and comprehensive.",
+            listItems: [
+                "Idea and Information Sharing",
+                "Inclusive Creation Process",
+                "Comprehensive Document Development"
+            ]
+        }
+    ]
+}
+
+];
+
+
+
+
+
+---
+
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="Experience Features"
+  description="Your site description goes here"
+  canonical="https://www.lexingtonthemes.com"
+  openGraph={{
+    url: "https://www.lexingtonthemes.com",
+    title: "Open Graph Title",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
+/>
+
+
+
+
+<BaseLayout>
+
+ 
+   <!-- NAVIGATION BAR -->
+
+   <nav style="background-color: #fff; box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <img src={navLinks[0].logo} alt="Logo" style="height: 32px; width: auto;" />
+        <a href={navLinks[0].link} 
+          class="inline-flex items-center justify-center font-medium"
+          style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+          onmouseover="this.style.color='#333';"
+          onmouseout="this.style.color='#5046e4';">
+          {navLinks[0].title}
+        </a>
+      </div>
+      <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+        {navLinks.slice(1).map(link => (
+          <li key={link.href}>
+            <a href={link.href} 
+              class="inline-flex items-center justify-center font-medium"
+              style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+              onmouseover="this.style.color='#333';"
+              onmouseout="this.style.color='#5046e4';">
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+
+  
+  
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
+            {feature.header.mainTitle}
+           </h2>
+           <p class="mt-4 text-slate-600 text-lg">
+            {feature.header.description}
+        </p>
+          <div class="mt-16">
+            {feature.featureSections.map((section, index) => (
+              <div key={index} class="lg:col-span-3 lg:col-start-3">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                  <div class="bg-slate-50 border-l-2 border-blue-500">
+                    <div class="p-6 border-t">
+                      <p class="font-semibold text-purple-900">{section.title}</p>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l border-l-0">
+                    <p class="text-slate-500 text-sm">{section.description}</p>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l">
+                    <ul role="list" class="order-last flex flex-col gap-y-3 text-sm text-slate-500">
+                      {section.listItems.map((item, itemIndex) => (
+                        <li key={itemIndex} class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M9 12l2 2l4 -4"></path>
+                          </svg>
+                          <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {featureIndex < features.length - 1 && (
+            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+  <CtaOne />
+</BaseLayout>

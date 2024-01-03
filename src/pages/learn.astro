@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import GetStarted from "../components/features/GetStarted.astro";
+
 import AboutOne from "../components/about/AboutOne.astro";
 import FeatureEleven from "../components/features/FeatureEleven.astro";
 import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
@@ -16,6 +16,7 @@ import CtaTwo from "../components/cta/CtaTwo.astro";
 import Ecosystem from "../components/features/Ecosystem.astro";
 import { Code } from "astro/components";
 import { Icon } from "astro-icon";
+import GetStarted from "../components/features/GetStarted.astro";
 
 import { AstroSeo } from "@astrolib/seo";
 
@@ -27,17 +28,17 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Communication",
-    link: "/communication",
+    title: "Learn",
+    link: "/learn",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/communication"
+    href: "/learn"
   },
   {
     name: "Features",
-    href: "/communication/features"
+    href: "/learn/features"
   },
   {
     name: "Docs",
@@ -45,53 +46,45 @@ const navLinks = [
   }
 ];
 
+
 // Heading
+
 const heading = {
-  title: "Communication",
-  description: "Revolutionize how your team connects with Empress's communication tools. Experience seamless interactions for effective project management and business growth.",
+  title: "Learn",
+  description: "Enhance customer relationships and streamline sales processes with Empress, boosting your deal-closing efficiency.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
-};
-
-// Display Image
-const displayImage = {
-  title: "Communicate with Confidence",
-  subtitle: "Empower Conversations,",
-  subtitleCont: "Anytime, Anywhere.",
-  imageSrc: "/images/chart.jpg"
-};
-
-// FeatureOne - Intuitive Messaging Interface
-const featureOne = {
-  mainContent: {
-    title: "Seamless Messaging Experience",
-    img: "/images/dashboard.jpg",
-    subtitle: "Conversations at Your Fingertips",
-    paragraphs: [
-      "Designed for ease of use, our platform enables seamless engagement across various channels, tailored to your team's unique communication needs."
+  imageRows: [
+    // Image URLs and alt texts can be updated here
+    // Example structure:
+    [
+      { url: "path/to/image1.jpg", alt: "Sales Team Collaboration", class: "image-class" },
+      { url: "path/to/image2.jpg", alt: "Customer Relationship Management", class: "image-class" }
     ],
-    buttonLink: "/pricing",
-    buttonText: "View Pricing",
-    linkText: "Contact Sales",
-    linkHref: "/contact"
-  },
-  listItems: [
-    "User-Friendly Messaging System",
-    "Organized Channels for Efficient Communication",
-    "Direct and Group Messaging Capabilities"
+    // Additional rows of images can be added here
   ]
 };
 
-// FeatureTwo 
-const featureTwo = {
+// Diplay Image
+
+const displayImage = {
+  "title": "Revolutionize Your Sales",
+  "subtitle": "Connect Efficiently,",
+  "subtitleCont": "Sell Effectively.",
+  imageSrc: "/images/chart.jpg"
+};
+
+// FeatureOne
+
+const featureOne = {
   mainContent: {
-    title: "Empower Your Conversations",
+    title: "Reach New Heights",
     img: "/images/dashboard.jpg",
-    subtitle: "Versatility in Every Message",
+    subtitle: "Elevate Sales Performance",
     paragraphs: [
-      "Share files, react with emojis, and provide clear replies to streamline your conversations and make every interaction count."
+      "Empress redefines customer engagement, offering deep insights and personalized strategies to foster strong, lasting relationships. Elevate your sales approach with our CRM solutions."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -99,194 +92,162 @@ const featureTwo = {
     linkHref: "/contact"
   },
   listItems: [
-    "File Sharing for Collaborative Work",
-    "Expressive Emoji Reactions",
-    "Clear Message Replies and Quoting"
+    "Build Stronger Customer Relationships",
+    "Personalized Sales Strategies",
+    "Insight-Driven Client Management"
+  ]
+};
+
+
+// FeatureTwo
+
+const featureTwo = {
+  mainContent: {
+    title: "Effortless Execution",
+    img: "/images/dashboard.jpg",
+    subtitle: "Streamline Your Sales Processes",
+    paragraphs: [
+      "Empress streamlines your sales process from order to fulfillment. Experience enhanced efficiency with our optimized systems, driving rapid and accurate sales operations."
+    ],
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
+  },
+  listItems: [
+    "Rapid Order Processing",
+    "Accurate Fulfillment Operations",
+    "Smoother Sales Workflow"
   ]
 };
 
 // FeatureThree
+
 const featureThree = {
   mainContent: {
-    title: "Communication with Convenience",
+    title: "Data-Driven Success",
     img: "/images/dashboard.jpg",
-    subtitle: "Enhanced User Experience",
+    subtitle: "Sales Insights Reimagined",
     paragraphs: [
-      "Bookmark important messages, utilize our efficient search functionality, and keep your chats organized and meaningful."
+      "Empress brings your sales data to life. Uncover actionable insights with our advanced analytics to make informed decisions and strategize for success."
     ],
-    buttonLink: "/features/user-friendly",
-    buttonText: "See Features",
-    linkText: "More Details",
-    linkHref: "/user-friendly-features"
+    buttonLink: "/pricing",
+    buttonText: "View Pricing",
+    linkText: "Contact Sales",
+    linkHref: "/contact"
   },
   listItems: [
-    "Bookmark Messages for Quick Reference",
-    "Advanced Search Across Conversations",
-    "Message Quoting for Contextual Clarity"
+    "In-depth Sales Analysis",
+    "Strategic Decision Making",
+    "Actionable Business Insights"
   ]
 };
-
 
 // Application Showcase
 
 const applicationShowcase = {
   mainSection: {
-    title: "Collaboration Features",
-    subtitle: "Elevate Your Team's Communication",
-    description1: "Empress is expertly designed to enhance team communication, offering intuitive tools for seamless collaboration, irrespective of geographical barriers.",
-    description2: "From direct messaging to dynamic file sharing, our tools are crafted to streamline communication and foster a cohesive team environment.",
-    viewApplicationsLink: "/apps/communication",
-    viewApplicationsText: "Explore Communication Features"
+    title: "Sales Applications",
+    subtitle: "Empower Your Sales Team",
+    description1: "Discover the extensive range of sales-focused features designed to boost your team's performance.",
+    description2: "From client management to transaction processing, Empress equips your sales team with the tools they need to succeed.",
+    viewApplicationsLink: "/apps/sales",
+    viewApplicationsText: "Explore Applications"
   },
   contentSections: [
-    {
-      title: "Intuitive Messaging Interface",
-      description: "Experience seamless communication with Empress’s intuitive messaging interface. Organize discussions in open, private, and public channels, and facilitate private conversations effortlessly, enhancing team interaction.",
-      linkHref: "/apps/messaging-interface",
-      linkText: "Discover Messaging Interface",
-    },
-    {
-      title: "Dynamic File Sharing and Reactions",
-      description: "Elevate team collaboration with versatile file sharing options. Share documents, images, and snippets, and react with emojis for engaging and effective communication.",
-      linkHref: "/apps/file-sharing",
-      linkText: "Explore File Sharing Tools",
-    },
-    {
-      title: "Enhanced Messaging Features",
-      description: "Maximize communication efficiency with user-friendly features. Bookmark important messages, utilize efficient search functionality, and maintain clarity with direct message replies and quoting.",
-      linkHref: "/apps/messaging-features",
-      linkText: "View Enhanced Features",
-    },
-    {
-      title: "Effortless Emoji Reactions and Replies",
-      description: "Respond to team messages quickly and expressively with emoji reactions. Use direct replies for clear communication, keeping conversations organized and contextually relevant.",
-      linkHref: "/apps/emoji-reactions",
-      linkText: "Learn About Emoji Reactions",
-    },
-    {
-      title: "Advanced Search and Bookmarking",
-      description: "Quickly find essential messages and files with advanced search capabilities. Bookmark critical communications for easy access, ensuring no important information is lost.",
-      linkHref: "/apps/search-bookmarking",
-      linkText: "Explore Search & Bookmarking",
-    },
-    {
-      title: "Direct Messaging Channels",
-      description: "Facilitate private and direct conversations with Empress's direct messaging feature. Ensure personalized communication within your team, including self-messaging for note-keeping.",
-      linkHref: "/apps/direct-messaging",
-      linkText: "See Direct Messaging",
-    }
+  {
+    title: "Enhance Customer Relationships",
+    description: "Elevate your customer engagement to new heights with our CRM solutions. Designed to enrich interactions, our platform offers deep insights into client behaviors, boosting your sales strategy and fostering lasting relationships.",
+    linkHref: "/apps/sales",
+    linkText: "See Applications",
+  },
+  {
+    title: "Streamline Order Processing",
+    description: "Revolutionize your fulfillment operations with our optimized order processing system. Tailored for efficiency, it ensures rapid and accurate handling of orders, enhancing customer satisfaction and streamlining your sales workflow.",
+    linkHref: "/apps/sales",
+    linkText: "See Applications",
+  },
+  {
+    title: "Optimize Billing Systems",
+    description: "Transform your invoicing process with our advanced billing system. Built for sales professionals, it automates and simplifies invoicing, enhancing accuracy and saving valuable time for strategic sales activities.",
+    linkHref: "/apps/sales",
+    linkText: "See Applications",
+  },
+  {
+    title: "Generate Quick Estimates",
+    description: "Accelerate your quoting process with our rapid estimate generation tool. It's designed to provide quick, accurate quotes, enabling you to respond faster to client inquiries and stay ahead in the fast-paced sales environment.",
+    linkHref: "/apps/sales",
+    linkText: "See Applications",
+  },
+  {
+    title: "Simplify Retail Transactions",
+    description: "Our Point of Sale system is engineered for retail simplicity and efficiency. It streamlines transactions, making sales processes smoother and more customer-friendly, ultimately enhancing the retail experience.",
+    linkHref: "/apps/sales",
+    linkText: "See Applications",
+  },
+  {
+    title: "Manage Rental Operations",
+    description: "Take control of your rental operations with our comprehensive rental management system. It simplifies the complexities of rental transactions, ensuring a seamless process from start to finish, enhancing both efficiency and customer satisfaction.",
+    linkHref: "/apps/sales",
+    linkText: "See Applications",
+  },
   ]
 };
-
-
 
 
 
 // Checklist Items
 
 const checklistItems = {
-  "sectionTitle": "Enhanced Communication Features",
-  "subTitle": "Expand Capabilities with Empress",
-  "categories": [
+  sectionTitle: "Additional Features",
+  subTitle: "Do More with Empress",
+  categories: [
     {
-      "categoryName": "Intuitive Messaging",
-      "items": [
-        {
-          "label": "Organized Channel Discussions"
-        },
-        {
-          "label": "Direct Private Messaging"
-        },
-        {
-          "label": "Self Messaging Notes"
-        },
-        {
-          "label": "User-Friendly Interface"
-        },
-        {
-          "label": "Seamless Team Engagement"
-        },
-        {
-          "label": "Public Channel Access"
-        },
-        {
-          "label": "Private Channel Security"
-        }
+      categoryName: "Core Sales Features",
+      items: [
+        { label: "CRM Integration" },
+        { label: "Customer Data Access" },
+        { label: "Contact Details Management" },
+        { label: "Client Interaction Tracking" },
+        { label: "Sales Rep Assignment" },
+        { label: "Customer Segmentation" }
       ]
     },
     {
-      "categoryName": "Versatile Communication",
-      "items": [
-        {
-          "label": "Diverse File Sharing"
-        },
-        {
-          "label": "In-App File Previews"
-        },
-        {
-          "label": "Expressive Emoji Reactions"
-        },
-        {
-          "label": "Clear Message Replies"
-        },
-        {
-          "label": "Contextual Message Quoting"
-        },
-        {
-          "label": "Effective Communication Tools"
-        }
+      categoryName: "Sales Process Enhancements",
+      items: [
+        { label: "Order Fulfillment Tracking" },
+        { label: "Delivery Scheduling" },
+        { label: "Order Management" },
+        { label: "Quote Management" },
+        { label: "Price Estimation" },
+        { label: "Terms Customization" }
       ]
     },
     {
-      "categoryName": "User-Centric Features",
-      "items": [
-        {
-          "label": "Message Bookmarking"
-        },
-        {
-          "label": "Efficient Search Functionality"
-        },
-        {
-          "label": "Multi-Channel Search"
-        },
-        {
-          "label": "Quick User Finding"
-        },
-        {
-          "label": "Conversational Clarity"
-        },
-        {
-          "label": "Saved Messages Access"
-        }
+      categoryName: "Operational Efficiency Tools",
+      items: [
+        { label: "Automated Alerts" },
+        { label: "Seamless System Integration" },
+        { label: "Real-Time Data Updates" },
+        { label: "Efficient Document Management" },
+        { label: "Reimbursement Processes" },
+        { label: "Approval Workflows" }
       ]
     },
     {
-      "categoryName": "Enhanced Messaging Capabilities",
-      "items": [
-        {
-          "label": "Real-Time Notifications"
-        },
-        {
-          "label": "Personalized Communication"
-        },
-        {
-          "label": "Efficient Information Sharing"
-        },
-        {
-          "label": "Dynamic Interaction Options"
-        },
-        {
-          "label": "Team Collaboration"
-        },
-        {
-          "label": "Direct and Group Messaging"
-        }
+      categoryName: "Advanced Sales Systems",
+      items: [
+        { label: "POS System Integration" },
+        { label: "Sales Itemization" },
+        { label: "Payment Method Diversity" },
+        { label: "Sales Rep Accountability" },
+        { label: "Rental Transaction Management" },
+        { label: "Financial Rental Oversight" }
       ]
     }
   ]
 };
-
-
 
 // FAQs
 
@@ -295,27 +256,27 @@ const faqs = {
   "subtitle": "Your Questions, Answered",
   "questions": [
     {
-      "question": "What makes Empress's messaging system unique for team communication?",
-      "answer": "Empress's messaging system is designed for seamless team communication, offering organized channels, direct and group messaging capabilities, and a user-friendly interface, tailored for efficient and engaging team interactions."
+      "question": "How does Empress's CRM improve sales relationships?",
+      "answer": "Empress's CRM solutions are designed to build and strengthen customer relationships. By providing personalized sales strategies and deep client insights, it enables more effective and meaningful interactions, leading to lasting customer connections."
     },
     {
-      "question": "How does Empress facilitate effective file sharing and reactions in communication?",
-      "answer": "Empress enhances communication with dynamic file sharing and expressive emoji reactions. Share documents, images, and react to messages instantly, streamlining collaboration and making interactions more engaging."
+      "question": "Can Empress streamline my sales workflow?",
+      "answer": "Yes, Empress streamlines sales workflows by optimizing the entire sales process from order to fulfillment. This results in rapid order processing, accurate operations, and an overall smoother sales experience."
     },
     {
-      "question": "Can Empress improve the efficiency of searching and organizing messages?",
-      "answer": "Absolutely. Empress offers advanced search across conversations and the ability to bookmark important messages, ensuring quick reference and maintaining contextual clarity in your team's communication."
+      "question": "What advanced analytics does Empress offer for sales?",
+      "answer": "Empress provides advanced analytics that bring sales data to life. These tools offer in-depth analysis and strategic insights, enabling informed decision-making and successful sales planning."
     },
     {
-      "question": "Does Empress support direct and private messaging for confidential discussions?",
-      "answer": "Yes, Empress supports direct and private messaging channels, allowing for confidential and personalized conversations within your team, ensuring privacy and focused discussions."
+      "question": "Does Empress have solutions for efficient order processing?",
+      "answer": "Absolutely. Empress revolutionizes order processing with an optimized system that ensures rapid and accurate handling of orders, thereby enhancing customer satisfaction and streamlining your sales workflow."
     },
     {
-      "question": "How does Empress's intuitive messaging interface enhance team collaboration?",
-      "answer": "Empress's intuitive messaging interface organizes discussions in open, private, and public channels, facilitating effortless team collaboration. Its clear message replies and quoting features keep conversations contextually relevant."
+      "question": "How does Empress support retail sales management?",
+      "answer": "Empress supports retail sales management through its efficient Point of Sale system, designed to simplify transactions, enhance customer experience, and improve overall retail operational efficiency."
     }
   ]
-}
+};
 
 
 
@@ -324,7 +285,7 @@ const faqs = {
 ---
 
 <AstroSeo
-  title="Communication"
+  title="Sales"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -780,9 +741,9 @@ const faqs = {
     </div>
   </section>
 
-  
+  <Ecosystem/>  
 
-    <Ecosystem/>  
+
   
 
 <!-- Section Nine -->

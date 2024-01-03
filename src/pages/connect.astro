@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+import GetStarted from "../components/features/GetStarted.astro";
 import AboutOne from "../components/about/AboutOne.astro";
 import FeatureEleven from "../components/features/FeatureEleven.astro";
 import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
@@ -16,7 +16,6 @@ import CtaTwo from "../components/cta/CtaTwo.astro";
 import Ecosystem from "../components/features/Ecosystem.astro";
 import { Code } from "astro/components";
 import { Icon } from "astro-icon";
-import GetStarted from "../components/features/GetStarted.astro";
 
 import { AstroSeo } from "@astrolib/seo";
 
@@ -28,17 +27,17 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Build",
-    link: "/build",
+    title: "Connect",
+    link: "/connect",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/build"
+    href: "/connect"
   },
   {
     name: "Features",
-    href: "/build/features"
+    href: "/connect/features"
   },
   {
     name: "Docs",
@@ -46,35 +45,32 @@ const navLinks = [
   }
 ];
 
-
 // Heading
-
 const heading = {
-  title: "Build",
-  description: "Effortlessly craft your brand’s online presence with our low-code, versatile website builder. Create responsive, dynamic sites that captivate and engage your customers.",
+  title: "Connect",
+  description: "Revolutionize how your team connects with Empress's communication tools. Experience seamless interactions for effective project management and business growth.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
 };
 
-// Diplay Image
-
+// Display Image
 const displayImage = {
-  title: "Craft Stunning Websites",
-  subtitle: "Intuitive Design,",
-  subtitleCont: "Strategic Execution.",
+  title: "Communicate with Confidence",
+  subtitle: "Empower Conversations,",
+  subtitleCont: "Anytime, Anywhere.",
   imageSrc: "/images/chart.jpg"
 };
 
-// FeatureOne
+// FeatureOne - Intuitive Messaging Interface
 const featureOne = {
   mainContent: {
-    title: "Intuitive Website Design",
+    title: "Seamless Messaging Experience",
     img: "/images/dashboard.jpg",
-    subtitle: "Simplify Your Web Creation Process",
+    subtitle: "Conversations at Your Fingertips",
     paragraphs: [
-      "Empress Website Builder simplifies creating professional-quality websites, catering to both experienced designers and newcomers."
+      "Designed for ease of use, our platform enables seamless engagement across various channels, tailored to your team's unique communication needs."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -82,21 +78,20 @@ const featureOne = {
     linkHref: "/contact"
   },
   listItems: [
-    "User-Friendly Design Interface",
-    "Quick Learning Curve",
-    "Professional-Quality Websites"
+    "User-Friendly Messaging System",
+    "Organized Channels for Efficient Communication",
+    "Direct and Group Messaging Capabilities"
   ]
 };
 
-
-// FeatureTwo
+// FeatureTwo 
 const featureTwo = {
   mainContent: {
-    title: "Responsive and Adaptive Design",
+    title: "Empower Your Conversations",
     img: "/images/dashboard.jpg",
-    subtitle: "Optimize Websites for Every Device",
+    subtitle: "Versatility in Every Message",
     paragraphs: [
-      "Empress's responsive design capabilities automatically adjust content to fit various screen sizes, enhancing accessibility and user engagement."
+      "Share files, react with emojis, and provide clear replies to streamline your conversations and make every interaction count."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -104,30 +99,30 @@ const featureTwo = {
     linkHref: "/contact"
   },
   listItems: [
-    "Seamless Cross-Device Experience",
-    "Automatic Content Adjustment",
-    "Enhanced User Accessibility"
+    "File Sharing for Collaborative Work",
+    "Expressive Emoji Reactions",
+    "Clear Message Replies and Quoting"
   ]
 };
 
 // FeatureThree
 const featureThree = {
   mainContent: {
-    title: "Dynamic Content with CMS Integration",
+    title: "Communication with Convenience",
     img: "/images/dashboard.jpg",
-    subtitle: "Elevate Your Site’s Interactivity",
+    subtitle: "Enhanced User Experience",
     paragraphs: [
-      "Enhance your website with fresh content through easy-to-manage Empress CMS integration, keeping your audience engaged with up-to-date information."
+      "Bookmark important messages, utilize our efficient search functionality, and keep your chats organized and meaningful."
     ],
-    buttonLink: "/pricing",
-    buttonText: "View Pricing",
-    linkText: "Contact Sales",
-    linkHref: "/contact"
+    buttonLink: "/features/user-friendly",
+    buttonText: "See Features",
+    linkText: "More Details",
+    linkHref: "/user-friendly-features"
   },
   listItems: [
-    "Seamless CMS Integration",
-    "Easy Content Management",
-    "Engaging, Up-to-Date Information"
+    "Bookmark Messages for Quick Reference",
+    "Advanced Search Across Conversations",
+    "Message Quoting for Contextual Clarity"
   ]
 };
 
@@ -136,49 +131,49 @@ const featureThree = {
 
 const applicationShowcase = {
   mainSection: {
-    title: "Unleash Digital Creativity",
-    subtitle: "Empowering Your Online Strategy",
-    description1: "Explore Empress's advanced website building tools, designed to bring agility, creativity, and efficiency to your digital strategy.",
-    description2: "From intuitive design to advanced customization, discover how our website builder transforms your online presence.",
-    viewApplicationsLink: "/apps/web-builder",
-    viewApplicationsText: "Explore Web Builder Features"
+    title: "Collaboration Features",
+    subtitle: "Elevate Your Team's Communication",
+    description1: "Empress is expertly designed to enhance team communication, offering intuitive tools for seamless collaboration, irrespective of geographical barriers.",
+    description2: "From direct messaging to dynamic file sharing, our tools are crafted to streamline communication and foster a cohesive team environment.",
+    viewApplicationsLink: "/apps/communication",
+    viewApplicationsText: "Explore Communication Features"
   },
   contentSections: [
     {
-      title: "Custom Scripting and Styling",
-      description: "Tailor your website with advanced scripting and styling capabilities, ensuring a unique and branded online experience.",
-      linkHref: "/apps/web-builder",
-      linkText: "Customization Tools",
+      title: "Intuitive Messaging Interface",
+      description: "Experience seamless communication with Empress’s intuitive messaging interface. Organize discussions in open, private, and public channels, and facilitate private conversations effortlessly, enhancing team interaction.",
+      linkHref: "/apps/messaging-interface",
+      linkText: "Discover Messaging Interface",
     },
     {
-      title: "Efficient Workflow Enhancement",
-      description: "Boost your productivity with features like image dropping and streamlined page management, enhancing the web development process.",
-      linkHref: "/apps/web-builder",
-      linkText: "Workflow Tools",
+      title: "Dynamic File Sharing and Reactions",
+      description: "Elevate team collaboration with versatile file sharing options. Share documents, images, and snippets, and react with emojis for engaging and effective communication.",
+      linkHref: "/apps/file-sharing",
+      linkText: "Explore File Sharing Tools",
     },
     {
-      title: "One-Click Publishing",
-      description: "Deploy your website effortlessly with one-click publishing, simplifying the process of going live and making updates.",
-      linkHref: "/apps/web-builder",
-      linkText: "Publishing Features",
+      title: "Enhanced Messaging Features",
+      description: "Maximize communication efficiency with user-friendly features. Bookmark important messages, utilize efficient search functionality, and maintain clarity with direct message replies and quoting.",
+      linkHref: "/apps/messaging-features",
+      linkText: "View Enhanced Features",
     },
     {
-      title: "Optimized Performance",
-      description: "Build websites that load quickly and perform excellently, essential for enhancing user experience and SEO rankings.",
-      linkHref: "/apps/web-builder",
-      linkText: "Performance Optimization",
+      title: "Effortless Emoji Reactions and Replies",
+      description: "Respond to team messages quickly and expressively with emoji reactions. Use direct replies for clear communication, keeping conversations organized and contextually relevant.",
+      linkHref: "/apps/emoji-reactions",
+      linkText: "Learn About Emoji Reactions",
     },
     {
-      title: "Responsive Design for All Devices",
-      description: "Ensure your site is flawlessly viewable on any device, thanks to Empress's responsive design technology.",
-      linkHref: "/apps/web-builder",
-      linkText: "Responsive Design",
+      title: "Advanced Search and Bookmarking",
+      description: "Quickly find essential messages and files with advanced search capabilities. Bookmark critical communications for easy access, ensuring no important information is lost.",
+      linkHref: "/apps/search-bookmarking",
+      linkText: "Explore Search & Bookmarking",
     },
     {
-      title: "Dynamic Content with CMS",
-      description: "Keep your site fresh and engaging by easily managing dynamic content with Empress's integrated CMS.",
-      linkHref: "/apps/web-builder",
-      linkText: "CMS Integration",
+      title: "Direct Messaging Channels",
+      description: "Facilitate private and direct conversations with Empress's direct messaging feature. Ensure personalized communication within your team, including self-messaging for note-keeping.",
+      linkHref: "/apps/direct-messaging",
+      linkText: "See Direct Messaging",
     }
   ]
 };
@@ -190,57 +185,104 @@ const applicationShowcase = {
 // Checklist Items
 
 const checklistItems = {
-  sectionTitle: "Empress Website Builder Features",
-  subTitle: "Expand Your Digital Capabilities",
-  categories: [
+  "sectionTitle": "Enhanced Communication Features",
+  "subTitle": "Expand Capabilities with Empress",
+  "categories": [
     {
-      categoryName: "Design and Customization",
-      items: [
-        { label: "Drag-and-Drop Editor" },
-        { label: "Custom CSS/JS Integration" },
-        { label: "Pre-designed Templates" },
-        { label: "Font and Color Customization" },
-        { label: "Layout Adjustment Tools" },
-        { label: "Multimedia Content Management" },
-        { label: "Brand Identity Alignment" }
+      "categoryName": "Intuitive Messaging",
+      "items": [
+        {
+          "label": "Organized Channel Discussions"
+        },
+        {
+          "label": "Direct Private Messaging"
+        },
+        {
+          "label": "Self Messaging Notes"
+        },
+        {
+          "label": "User-Friendly Interface"
+        },
+        {
+          "label": "Seamless Team Engagement"
+        },
+        {
+          "label": "Public Channel Access"
+        },
+        {
+          "label": "Private Channel Security"
+        }
       ]
     },
     {
-      categoryName: "Performance and Optimization",
-      items: [
-        { label: "SEO Tools Integration" },
-        { label: "Speed Optimization" },
-        { label: "Responsive Design Testing" },
-        { label: "Google Lighthouse Compliance" },
-        { label: "Browser Compatibility Checks" },
-        { label: "Load Time Analysis" },
-        { label: "Performance Monitoring" }
+      "categoryName": "Versatile Communication",
+      "items": [
+        {
+          "label": "Diverse File Sharing"
+        },
+        {
+          "label": "In-App File Previews"
+        },
+        {
+          "label": "Expressive Emoji Reactions"
+        },
+        {
+          "label": "Clear Message Replies"
+        },
+        {
+          "label": "Contextual Message Quoting"
+        },
+        {
+          "label": "Effective Communication Tools"
+        }
       ]
     },
     {
-      categoryName: "Content and CMS",
-      items: [
-        { label: "Dynamic Content Handling" },
-        { label: "CMS Data Integration" },
-        { label: "Content Scheduling" },
-        { label: "Blog Management" },
-        { label: "SEO-Friendly Content Features" },
-        { label: "Content Version Control" },
-        { label: "Multimedia Content Optimization" }
+      "categoryName": "User-Centric Features",
+      "items": [
+        {
+          "label": "Message Bookmarking"
+        },
+        {
+          "label": "Efficient Search Functionality"
+        },
+        {
+          "label": "Multi-Channel Search"
+        },
+        {
+          "label": "Quick User Finding"
+        },
+        {
+          "label": "Conversational Clarity"
+        },
+        {
+          "label": "Saved Messages Access"
+        }
       ]
     },
     {
-      categoryName: "Publishing and Deployment",
-      items: [
-        { label: "One-Click Site Publishing" },
-        { label: "Staging and Testing Environments" },
-        { label: "Update Rollouts" },
-        { label: "Domain Management" },
-        { label: "SSL Certificate Setup" },
-        { label: "Backup and Restore Functions" },
-        { label: "Publishing Workflow Management" }
+      "categoryName": "Enhanced Messaging Capabilities",
+      "items": [
+        {
+          "label": "Real-Time Notifications"
+        },
+        {
+          "label": "Personalized Communication"
+        },
+        {
+          "label": "Efficient Information Sharing"
+        },
+        {
+          "label": "Dynamic Interaction Options"
+        },
+        {
+          "label": "Team Collaboration"
+        },
+        {
+          "label": "Direct and Group Messaging"
+        }
       ]
-    },
+    }
   ]
 };
 
@@ -253,34 +295,36 @@ const faqs = {
   "subtitle": "Your Questions, Answered",
   "questions": [
     {
-      "question": "What makes Empress Website Builder stand out for beginners?",
-      "answer": "Empress offers an exceptionally user-friendly interface, making it ideal for beginners. The intuitive drag-and-drop editor and easy learning curve empower anyone to craft professional-quality websites with ease."
+      "question": "What makes Empress's messaging system unique for team communication?",
+      "answer": "Empress's messaging system is designed for seamless team communication, offering organized channels, direct and group messaging capabilities, and a user-friendly interface, tailored for efficient and engaging team interactions."
     },
     {
-      "question": "How does Empress handle responsive and mobile-friendly design?",
-      "answer": "Empress excels in responsive design, ensuring websites automatically adjust to any screen size for a seamless experience on desktops, tablets, and smartphones, enhancing user accessibility."
+      "question": "How does Empress facilitate effective file sharing and reactions in communication?",
+      "answer": "Empress enhances communication with dynamic file sharing and expressive emoji reactions. Share documents, images, and react to messages instantly, streamlining collaboration and making interactions more engaging."
     },
     {
-      "question": "Can Empress Website Builder integrate dynamic content via CMS?",
-      "answer": "Absolutely! Empress enables seamless CMS integration, allowing easy content updates and management to keep your website dynamic, fresh, and engaging for your audience."
+      "question": "Can Empress improve the efficiency of searching and organizing messages?",
+      "answer": "Absolutely. Empress offers advanced search across conversations and the ability to bookmark important messages, ensuring quick reference and maintaining contextual clarity in your team's communication."
     },
     {
-      "question": "Is Empress capable of optimizing website performance and SEO?",
-      "answer": "Empress ensures top-notch website performance and SEO. It integrates SEO tools and speed optimization strategies, coupled with performance monitoring, to boost site speed and search engine rankings."
+      "question": "Does Empress support direct and private messaging for confidential discussions?",
+      "answer": "Yes, Empress supports direct and private messaging channels, allowing for confidential and personalized conversations within your team, ensuring privacy and focused discussions."
     },
     {
-      "question": "Does Empress support advanced customization for unique website design?",
-      "answer": "Definitely. Empress supports advanced customization, including custom CSS and JavaScript. This allows for unique, branded online experiences, making each website stand out."
+      "question": "How does Empress's intuitive messaging interface enhance team collaboration?",
+      "answer": "Empress's intuitive messaging interface organizes discussions in open, private, and public channels, facilitating effortless team collaboration. Its clear message replies and quoting features keep conversations contextually relevant."
     }
   ]
 }
 
 
 
+
+
 ---
 
 <AstroSeo
-  title="Experience"
+  title="Communication"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -631,6 +675,9 @@ const faqs = {
 
 <GetStarted/>
 
+
+
+
   <!-- Section Five -->
   
 
@@ -734,8 +781,8 @@ const faqs = {
   </section>
 
   
-    <Ecosystem/>  
 
+    <Ecosystem/>  
   
 
 <!-- Section Nine -->

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+import GetStarted from "../components/features/GetStarted.astro";
 import AboutOne from "../components/about/AboutOne.astro";
 import FeatureEleven from "../components/features/FeatureEleven.astro";
 import TestimonialFour from "../components/testimonials/TestimonialFour.astro";
@@ -16,7 +16,6 @@ import CtaTwo from "../components/cta/CtaTwo.astro";
 import Ecosystem from "../components/features/Ecosystem.astro";
 import { Code } from "astro/components";
 import { Icon } from "astro-icon";
-import GetStarted from "../components/features/GetStarted.astro";
 
 import { AstroSeo } from "@astrolib/seo";
 
@@ -28,17 +27,17 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Collaboration",
-    link: "/collaboration",
+    title: "Manage",
+    link: "/manage",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/files"
+    href: "/manage"
   },
   {
     name: "Features",
-    href: "/collaboration/features"
+    href: "/manage/features"
   },
   {
     name: "Docs",
@@ -46,194 +45,209 @@ const navLinks = [
   }
 ];
 
+
 // Heading
 
 const heading = {
-  title: "Collaboration",
-  description: "Empress's document management system streamlines file sharing and organization, enhancing team productivity and collaboration.",
+  title: "Manage",
+  description: "Seamlessly integrate core operational functions, from inventory management to quality control, to drive unparalleled efficiency and streamlined workflows in your business.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
   buttonTwoUrl: "contact",
+  imageRows: [
+    [
+    { url: "path/to/image1.jpg", alt: "Image Description 1", class: "image-class" },
+      { url: "path/to/image2.jpg", alt: "Image Description 2", class: "image-class" }
+    ],
+  ]
 };
 
-// Diplay Image
+// Display Image
 
 const displayImage = {
-  title: "Efficient File Management",
-  subtitle: "Secure, Organize,",
-  subtitleCont: "and Collaborate.",
-  imageSrc: "/images/dashboard.jpg"
+  "title": "Efficient, Effective, Empowered.",
+  "subtitle": "Streamline Processes,",
+  "subtitleCont": "Achieve Operational Excellence.",
+  imageSrc: "/images/chart.jpg"
 };
 
 // FeatureOne
 
 const featureOne = {
   mainContent: {
-    title: "Seamless File Integration",
+    title: "Advanced Inventory Management",
     img: "/images/dashboard.jpg",
-    subtitle: "Streamlined File Sharing Across Platforms",
+    subtitle: "Streamline Your Inventory",
     paragraphs: [
-      "Empress's document management tool revolutionizes file storage and sharing across multiple platforms, offering unparalleled ease and efficiency for team collaboration."
+      "Empress streamlines your inventory management with precision and efficiency, offering real-time insights and automated stock replenishment to keep your operations running smoothly."
     ],
-    buttonLink: "/pricing",
-    buttonText: "View Pricing",
-    linkText: "Contact Sales",
+    buttonLink: "/features/inventory",
+    buttonText: "Learn More",
+    linkText: "Contact Us",
     linkHref: "/contact"
   },
   listItems: [
-    "Multi-Platform File Upload",
-    "Organized File and Folder Views",
-    "Efficient Document Access and Sharing"
+    "Real-time Inventory Insights",
+    "Automated Replenishment",
+    "Efficient Warehouse Management"
   ]
 };
-
 
 // FeatureTwo
 
 const featureTwo = {
   mainContent: {
-    title: "Dynamic File Interaction",
+    title: "Production, Perfected",
     img: "/images/dashboard.jpg",
-    subtitle: "Collaborate with Rich Media and Documents",
+    subtitle: "Optimize Your Manufacturing",
     paragraphs: [
-      "Enhance team collaboration with Empress's dynamic file preview and sharing capabilities, including images, videos, PDFs, and more, fostering a richer, more interactive workspace."
+      "Empress revolutionizes manufacturing processes, integrating every step from planning to quality control, ensuring superior product quality and operational efficiency."
     ],
-    buttonLink: "/pricing",
-    buttonText: "View Pricing",
-    linkText: "Contact Sales",
+    buttonLink: "/features/inventory",
+    buttonText: "Learn More",
+    linkText: "Contact Us",
     linkHref: "/contact"
   },
   listItems: [
-    "Versatile File Previews",
-    "Rich Media and Document Sharing",
-    "Interactive File Engagement"
+    "Integrated Manufacturing Workflow",
+    "Quality Control Assurance",
+    "Efficient Resource Utilization"
   ]
 };
 
 // FeatureThree
+
 const featureThree = {
   mainContent: {
-    title: "Efficient Document Collaboration",
+    title: "Simplified Supply Chain",
     img: "/images/dashboard.jpg",
-    subtitle: "Real-Time Editing and Teamwork",
+    subtitle: "Optimize Purchasing & Logistics",
     paragraphs: [
-      "Empress's robust document editor integrates seamlessly with the drive, supporting real-time collaborative editing and enhancing team productivity and document accuracy."
+      "Empress's supply chain management tools ensure seamless procurement, supplier management, and streamlined logistics for effective distribution and operational agility."
     ],
-    buttonLink: "/pricing",
-    buttonText: "View Pricing",
-    linkText: "Contact Sales",
+    buttonLink: "/features/supply-chain",
+    buttonText: "Explore Supply Chain",
+    linkText: "Request Demo",
     linkHref: "/contact"
   },
   listItems: [
-    "Real-Time Collaborative Editing",
-    "Integrated Document Editor",
-    "Enhanced Team Productivity"
+    "Efficient Procurement Processes",
+    "Robust Supplier Management",
+    "Streamlined Distribution Channels"
   ]
 };
 
 // Application Showcase
+
 const applicationShowcase = {
   mainSection: {
-    title: "Revolutionize Your Document Management",
-    subtitle: "Empower Your Team with Advanced Tools",
-    description1: "Explore the capabilities of Empress's document management system, designed to enhance team productivity and document handling efficiency.",
-    description2: "From advanced file sharing to intuitive document editing, our tools streamline every aspect of document management for optimal collaboration and efficiency.",
-    viewApplicationsLink: "/apps/document-management",
-    viewApplicationsText: "Explore Document Tools"
+    title: "Operations Features",
+    subtitle: "Maximize Efficiency, Optimize Workflow",
+    description1: "Explore Empress's suite of operational features, each designed to enhance specific areas of your business operations.",
+    description2: "Our operations cloud brings unmatched efficiency from inventory management to asset maintenance.",
+    viewApplicationsLink: "/apps/operations",
+    viewApplicationsText: "Explore Operations Features"
   },
   contentSections: [
     {
-      title: "Multi-Platform File Upload",
-      description: "Empress supports uploading and storing various file types across multiple platforms, making it a versatile solution for all document management needs.",
-      linkHref: "/apps/document-management",
-      linkText: "View Multi-Platform Features",
+      title: "Advanced Inventory Management",
+      description: "Achieve complete control over your inventory with our sophisticated system. Ensure optimal stock levels, minimize waste, and streamline warehouse operations for maximum efficiency.",
+      linkHref: "/apps/operations/inventory",
+      linkText: "Discover Inventory Management",
     },
     {
-      title: "Interactive File Previews",
-      description: "Preview images, videos, PDFs, and more within the platform, streamlining the review process without the need for additional software.",
-      linkHref: "/apps/document-management",
-      linkText: "Explore File Preview Options",
+      title: "Manufacturing Operational Excellence",
+      description: "Empress integrates critical manufacturing processes, from production planning to quality assurance. Enhance productivity, maintain high-quality standards, and reduce operational costs.",
+      linkHref: "/apps/operations/manufacturing",
+      linkText: "Explore Manufacturing Tools",
     },
     {
-      title: "Enhanced File Sharing and Permissions",
-      description: "Share documents securely with comprehensive control over user permissions, ensuring data security and collaborative flexibility.",
-      linkHref: "/apps/document-management",
-      linkText: "Learn About Sharing Options",
+      title: "Streamlined Supply Chain & Purchasing",
+      description: "Simplify and fortify your supply chain and purchasing processes. From supplier management to procurement, our solutions ensure smooth operations, reducing time and cost.",
+      linkHref: "/apps/operations/supply-chain",
+      linkText: "See Supply Chain Solutions",
     },
     {
-      title: "Robust Document Editor Integration",
-      description: "Utilize the integrated document editor for real-time collaborative editing, making document creation more dynamic and efficient.",
-      linkHref: "/apps/document-management",
-      linkText: "See Editing Tools",
+      title: "Optimized Asset Management",
+      description: "Efficiently manage your company's assets. Track, maintain, and analyze asset performance to ensure optimal utilization and longevity.",
+      linkHref: "/apps/operations/asset-management",
+      linkText: "Manage Assets Effectively",
     },
     {
-      title: "Advanced Search and Bookmarking",
-      description: "Easily locate and organize important documents with advanced search functionality and bookmarking, enhancing information retrieval and management.",
-      linkHref: "/apps/document-management",
-      linkText: "Discover Search and Bookmarking",
+      title: "Quality Control Systems",
+      description: "Implement rigorous quality control measures. Our system enables you to maintain the highest standards, ensuring product excellence and customer satisfaction.",
+      linkHref: "/apps/operations/quality-control",
+      linkText: "Learn About Quality Control",
     },
     {
-      title: "Access Management",
-      description: "Manage document access and visibility with ease, ensuring that sensitive information is only shared with the intended audience.",
-      linkHref: "/apps/document-management",
-      linkText: "View Access Management Features",
+      title: "Seamless Approval Workflows",
+      description: "Speed up decision-making with our streamlined approval processes. Reduce delays and enhance operational efficiency with a clear, organized approval workflow.",
+      linkHref: "/apps/operations/approvals",
+      linkText: "Improve Approval Processes",
     }
   ]
 };
 
+
+
+
 // Checklist Items
 
 const checklistItems = {
-  sectionTitle: "Collaboration Suite Features",
-  subTitle: "Enhance Efficiency with Empress",
+  sectionTitle: "Additional Features",
+  subTitle: "Do More with Empress",
   categories: [
     {
-      categoryName: "Document Management",
+      categoryName: "Purchase Order Management",
       items: [
-        { label: "Multi-Platform File Upload" },
-        { label: "Organized File Views" },
-        { label: "Efficient Document Sharing" },
-        { label: "Versatile File Previews" },
-        { label: "Rich Media Collaboration" },
-        { label: "Interactive Document Editing" },
-        { label: "Real-Time Editing Collaboration" }
+        { label: "Streamlined Order Tracking" },
+        { label: "Efficient Supplier Integration" },
+        { label: "Proactive Delivery Monitoring" },
+        { label: "Detailed Item Insights" },
+        { label: "Real-Time Status Updates" },
+        { label: "Secure Record Keeping" },
+        { label: "In-Depth Order Analysis" },
+        { label: "Customizable Notes Section" }
       ]
     },
     {
-      categoryName: "File Sharing and Security",
+      categoryName: "Production Order Management",
       items: [
-        { label: "Secure File Sharing" },
-        { label: "Advanced Permission Controls" },
-        { label: "Information Management" },
-        { label: "Access Management" },
-        { label: "Collaborative Flexibility" },
-        { label: "Data Security Assurance" },
-        { label: "Permission-Based Access" }
+        { label: "Efficient Manufacturing Tracking" },
+        { label: "Integrated Product Planning" },
+        { label: "Timely Production Scheduling" },
+        { label: "Quantitative Resource Allocation" },
+        { label: "Cost Management Focus" },
+        { label: "Supervisor Assignment Oversight" },
+        { label: "Status Update Monitoring" },
+        { label: "Quality Control Assurance" }
       ]
     },
     {
-      categoryName: "Efficient File Navigation",
+      categoryName: "Shipment & Distribution",
       items: [
-        { label: "Advanced Search Functionality" },
-        { label: "Bookmarking for Quick Access" },
-        { label: "Streamlined File Retrieval" },
-        { label: "Easy Information Organization" },
-        { label: "User-Friendly Interface" },
-        { label: "Seamless Navigation Tools" },
-        { label: "Document Management" }
+        { label: "Advanced Shipment Tracking" },
+        { label: "Order Fulfillment Linking" },
+        { label: "Efficient Transit Scheduling" },
+        { label: "Detailed Logistical Recording" },
+        { label: "Freight Cost Management" },
+        { label: "Real-Time Status Updates" },
+        { label: "Accurate Delivery Tracking" },
+        { label: "Distribution Efficiency Focus" }
       ]
     },
     {
-      categoryName: "Integration and Accessibility",
+      categoryName: "Facility Management",
       items: [
-        { label: "Seamless Platform Integration" },
-        { label: "Multi-Device Accessibility" },
-        { label: "Integrated Document Editor" },
-        { label: "Unified Collaboration Space" },
-        { label: "Cross-Platform Compatibility" },
-        { label: "Intuitive Setup and Use" },
-        { label: "Comprehensive Tool Suite" }
+        { label: "Facility Operational Tracking" },
+        { label: "Detailed Manager Assignment" },
+        { label: "Maintenance Schedule Oversight" },
+        { label: "Cost and Usage Monitoring" },
+        { label: "Strategic Facility Planning" },
+        { label: "Efficient Resource Management" },
+        { label: "Comprehensive Facility Records" },
+        { label: "Enhanced Coordination Capability" }
       ]
     }
   ]
@@ -247,24 +261,24 @@ const faqs = {
   "subtitle": "Your Questions, Answered",
   "questions": [
     {
-      "question": "How does Empress enhance file sharing and organization for teams?",
-      "answer": "Empress revolutionizes team collaboration by streamlining file sharing across multiple platforms. It offers organized file and folder views, enabling efficient document access and sharing, enhancing team productivity."
+      "question": "What makes Empress a leader in inventory management?",
+      "answer": "Empress revolutionizes inventory management with features like real-time insights and automated replenishment, ensuring efficient warehouse management and streamlined operations."
     },
     {
-      "question": "Can Empress support real-time collaborative document editing?",
-      "answer": "Yes, Empress's robust document editor integrates seamlessly with its drive, supporting real-time collaborative editing. This feature significantly enhances team productivity and document accuracy."
+      "question": "How does Empress enhance manufacturing process efficiency?",
+      "answer": "Empress seamlessly integrates all aspects of manufacturing, from planning to quality control, improving product quality and boosting overall operational efficiency."
     },
     {
-      "question": "What file types and media does Empress support for team collaboration?",
-      "answer": "Empress supports a wide range of file types and rich media, including images, videos, PDFs, and more. This versatility allows for more dynamic and interactive file engagement within teams."
+      "question": "Can Empress streamline my company’s supply chain operations?",
+      "answer": "Yes, Empress significantly streamlines supply chain operations with efficient procurement, robust supplier management, and optimized logistics for effective distribution and heightened operational agility."
     },
     {
-      "question": "How does Empress's document management system improve file accessibility?",
-      "answer": "Empress enhances file accessibility with features like advanced search functionality and bookmarking. This makes it easy to locate and organize important documents, streamlining file retrieval and management."
+      "question": "What solutions does Empress offer for asset management?",
+      "answer": "Empress provides comprehensive asset management tools that enable efficient tracking, maintenance, and analysis, ensuring optimal utilization and extending asset lifespan."
     },
     {
-      "question": "Does Empress offer secure file sharing with customizable permissions?",
-      "answer": "Absolutely. Empress provides secure document sharing with comprehensive control over user permissions. This ensures data security and offers collaborative flexibility while maintaining information confidentiality."
+      "question": "How does Empress improve shipment and distribution processes?",
+      "answer": "Empress offers advanced solutions for shipment and distribution, including efficient tracking, transit scheduling, and real-time updates, ensuring distribution efficiency and accurate delivery tracking."
     }
   ]
 };
@@ -274,7 +288,7 @@ const faqs = {
 ---
 
 <AstroSeo
-  title="Experience"
+  title="Operations"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -625,6 +639,9 @@ const faqs = {
 
 <GetStarted/>
 
+
+
+
   <!-- Section Five -->
   
 
@@ -726,10 +743,9 @@ const faqs = {
       </div>
     </div>
   </section>
-
   
-    <Ecosystem/>  
 
+    <Ecosystem/>  
   
 
 <!-- Section Nine -->

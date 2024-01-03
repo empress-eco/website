@@ -28,17 +28,17 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Build",
-    link: "/build",
+    title: "Share",
+    link: "/share",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/build"
+    href: "/share"
   },
   {
     name: "Features",
-    href: "/build/features"
+    href: "/share/features"
   },
   {
     name: "Docs",
@@ -46,12 +46,11 @@ const navLinks = [
   }
 ];
 
-
 // Heading
 
 const heading = {
-  title: "Build",
-  description: "Effortlessly craft your brand’s online presence with our low-code, versatile website builder. Create responsive, dynamic sites that captivate and engage your customers.",
+  title: "Share",
+  description: "Empress's document management system streamlines file sharing and organization, enhancing team productivity and collaboration.",
   buttonText: "View Pricing",
   buttonTextTwo: "Contact Sales",
   buttonUrl: "pricing",
@@ -61,20 +60,21 @@ const heading = {
 // Diplay Image
 
 const displayImage = {
-  title: "Craft Stunning Websites",
-  subtitle: "Intuitive Design,",
-  subtitleCont: "Strategic Execution.",
-  imageSrc: "/images/chart.jpg"
+  title: "Efficient File Management",
+  subtitle: "Secure, Organize,",
+  subtitleCont: "and Collaborate.",
+  imageSrc: "/images/dashboard.jpg"
 };
 
 // FeatureOne
+
 const featureOne = {
   mainContent: {
-    title: "Intuitive Website Design",
+    title: "Seamless File Integration",
     img: "/images/dashboard.jpg",
-    subtitle: "Simplify Your Web Creation Process",
+    subtitle: "Streamlined File Sharing Across Platforms",
     paragraphs: [
-      "Empress Website Builder simplifies creating professional-quality websites, catering to both experienced designers and newcomers."
+      "Empress's document management tool revolutionizes file storage and sharing across multiple platforms, offering unparalleled ease and efficiency for team collaboration."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -82,21 +82,22 @@ const featureOne = {
     linkHref: "/contact"
   },
   listItems: [
-    "User-Friendly Design Interface",
-    "Quick Learning Curve",
-    "Professional-Quality Websites"
+    "Multi-Platform File Upload",
+    "Organized File and Folder Views",
+    "Efficient Document Access and Sharing"
   ]
 };
 
 
 // FeatureTwo
+
 const featureTwo = {
   mainContent: {
-    title: "Responsive and Adaptive Design",
+    title: "Dynamic File Interaction",
     img: "/images/dashboard.jpg",
-    subtitle: "Optimize Websites for Every Device",
+    subtitle: "Collaborate with Rich Media and Documents",
     paragraphs: [
-      "Empress's responsive design capabilities automatically adjust content to fit various screen sizes, enhancing accessibility and user engagement."
+      "Enhance team collaboration with Empress's dynamic file preview and sharing capabilities, including images, videos, PDFs, and more, fostering a richer, more interactive workspace."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -104,20 +105,20 @@ const featureTwo = {
     linkHref: "/contact"
   },
   listItems: [
-    "Seamless Cross-Device Experience",
-    "Automatic Content Adjustment",
-    "Enhanced User Accessibility"
+    "Versatile File Previews",
+    "Rich Media and Document Sharing",
+    "Interactive File Engagement"
   ]
 };
 
 // FeatureThree
 const featureThree = {
   mainContent: {
-    title: "Dynamic Content with CMS Integration",
+    title: "Efficient Document Collaboration",
     img: "/images/dashboard.jpg",
-    subtitle: "Elevate Your Site’s Interactivity",
+    subtitle: "Real-Time Editing and Teamwork",
     paragraphs: [
-      "Enhance your website with fresh content through easy-to-manage Empress CMS integration, keeping your audience engaged with up-to-date information."
+      "Empress's robust document editor integrates seamlessly with the drive, supporting real-time collaborative editing and enhancing team productivity and document accuracy."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -125,125 +126,118 @@ const featureThree = {
     linkHref: "/contact"
   },
   listItems: [
-    "Seamless CMS Integration",
-    "Easy Content Management",
-    "Engaging, Up-to-Date Information"
+    "Real-Time Collaborative Editing",
+    "Integrated Document Editor",
+    "Enhanced Team Productivity"
   ]
 };
 
-
 // Application Showcase
-
 const applicationShowcase = {
   mainSection: {
-    title: "Unleash Digital Creativity",
-    subtitle: "Empowering Your Online Strategy",
-    description1: "Explore Empress's advanced website building tools, designed to bring agility, creativity, and efficiency to your digital strategy.",
-    description2: "From intuitive design to advanced customization, discover how our website builder transforms your online presence.",
-    viewApplicationsLink: "/apps/web-builder",
-    viewApplicationsText: "Explore Web Builder Features"
+    title: "Revolutionize Your Document Management",
+    subtitle: "Empower Your Team with Advanced Tools",
+    description1: "Explore the capabilities of Empress's document management system, designed to enhance team productivity and document handling efficiency.",
+    description2: "From advanced file sharing to intuitive document editing, our tools streamline every aspect of document management for optimal collaboration and efficiency.",
+    viewApplicationsLink: "/apps/document-management",
+    viewApplicationsText: "Explore Document Tools"
   },
   contentSections: [
     {
-      title: "Custom Scripting and Styling",
-      description: "Tailor your website with advanced scripting and styling capabilities, ensuring a unique and branded online experience.",
-      linkHref: "/apps/web-builder",
-      linkText: "Customization Tools",
+      title: "Multi-Platform File Upload",
+      description: "Empress supports uploading and storing various file types across multiple platforms, making it a versatile solution for all document management needs.",
+      linkHref: "/apps/document-management",
+      linkText: "View Multi-Platform Features",
     },
     {
-      title: "Efficient Workflow Enhancement",
-      description: "Boost your productivity with features like image dropping and streamlined page management, enhancing the web development process.",
-      linkHref: "/apps/web-builder",
-      linkText: "Workflow Tools",
+      title: "Interactive File Previews",
+      description: "Preview images, videos, PDFs, and more within the platform, streamlining the review process without the need for additional software.",
+      linkHref: "/apps/document-management",
+      linkText: "Explore File Preview Options",
     },
     {
-      title: "One-Click Publishing",
-      description: "Deploy your website effortlessly with one-click publishing, simplifying the process of going live and making updates.",
-      linkHref: "/apps/web-builder",
-      linkText: "Publishing Features",
+      title: "Enhanced File Sharing and Permissions",
+      description: "Share documents securely with comprehensive control over user permissions, ensuring data security and collaborative flexibility.",
+      linkHref: "/apps/document-management",
+      linkText: "Learn About Sharing Options",
     },
     {
-      title: "Optimized Performance",
-      description: "Build websites that load quickly and perform excellently, essential for enhancing user experience and SEO rankings.",
-      linkHref: "/apps/web-builder",
-      linkText: "Performance Optimization",
+      title: "Robust Document Editor Integration",
+      description: "Utilize the integrated document editor for real-time collaborative editing, making document creation more dynamic and efficient.",
+      linkHref: "/apps/document-management",
+      linkText: "See Editing Tools",
     },
     {
-      title: "Responsive Design for All Devices",
-      description: "Ensure your site is flawlessly viewable on any device, thanks to Empress's responsive design technology.",
-      linkHref: "/apps/web-builder",
-      linkText: "Responsive Design",
+      title: "Advanced Search and Bookmarking",
+      description: "Easily locate and organize important documents with advanced search functionality and bookmarking, enhancing information retrieval and management.",
+      linkHref: "/apps/document-management",
+      linkText: "Discover Search and Bookmarking",
     },
     {
-      title: "Dynamic Content with CMS",
-      description: "Keep your site fresh and engaging by easily managing dynamic content with Empress's integrated CMS.",
-      linkHref: "/apps/web-builder",
-      linkText: "CMS Integration",
+      title: "Access Management",
+      description: "Manage document access and visibility with ease, ensuring that sensitive information is only shared with the intended audience.",
+      linkHref: "/apps/document-management",
+      linkText: "View Access Management Features",
     }
   ]
 };
 
-
-
-
-
 // Checklist Items
 
 const checklistItems = {
-  sectionTitle: "Empress Website Builder Features",
-  subTitle: "Expand Your Digital Capabilities",
+  sectionTitle: "Collaboration Suite Features",
+  subTitle: "Enhance Efficiency with Empress",
   categories: [
     {
-      categoryName: "Design and Customization",
+      categoryName: "Document Management",
       items: [
-        { label: "Drag-and-Drop Editor" },
-        { label: "Custom CSS/JS Integration" },
-        { label: "Pre-designed Templates" },
-        { label: "Font and Color Customization" },
-        { label: "Layout Adjustment Tools" },
-        { label: "Multimedia Content Management" },
-        { label: "Brand Identity Alignment" }
+        { label: "Multi-Platform File Upload" },
+        { label: "Organized File Views" },
+        { label: "Efficient Document Sharing" },
+        { label: "Versatile File Previews" },
+        { label: "Rich Media Collaboration" },
+        { label: "Interactive Document Editing" },
+        { label: "Real-Time Editing Collaboration" }
       ]
     },
     {
-      categoryName: "Performance and Optimization",
+      categoryName: "File Sharing and Security",
       items: [
-        { label: "SEO Tools Integration" },
-        { label: "Speed Optimization" },
-        { label: "Responsive Design Testing" },
-        { label: "Google Lighthouse Compliance" },
-        { label: "Browser Compatibility Checks" },
-        { label: "Load Time Analysis" },
-        { label: "Performance Monitoring" }
+        { label: "Secure File Sharing" },
+        { label: "Advanced Permission Controls" },
+        { label: "Information Management" },
+        { label: "Access Management" },
+        { label: "Collaborative Flexibility" },
+        { label: "Data Security Assurance" },
+        { label: "Permission-Based Access" }
       ]
     },
     {
-      categoryName: "Content and CMS",
+      categoryName: "Efficient File Navigation",
       items: [
-        { label: "Dynamic Content Handling" },
-        { label: "CMS Data Integration" },
-        { label: "Content Scheduling" },
-        { label: "Blog Management" },
-        { label: "SEO-Friendly Content Features" },
-        { label: "Content Version Control" },
-        { label: "Multimedia Content Optimization" }
+        { label: "Advanced Search Functionality" },
+        { label: "Bookmarking for Quick Access" },
+        { label: "Streamlined File Retrieval" },
+        { label: "Easy Information Organization" },
+        { label: "User-Friendly Interface" },
+        { label: "Seamless Navigation Tools" },
+        { label: "Document Management" }
       ]
     },
     {
-      categoryName: "Publishing and Deployment",
+      categoryName: "Integration and Accessibility",
       items: [
-        { label: "One-Click Site Publishing" },
-        { label: "Staging and Testing Environments" },
-        { label: "Update Rollouts" },
-        { label: "Domain Management" },
-        { label: "SSL Certificate Setup" },
-        { label: "Backup and Restore Functions" },
-        { label: "Publishing Workflow Management" }
+        { label: "Seamless Platform Integration" },
+        { label: "Multi-Device Accessibility" },
+        { label: "Integrated Document Editor" },
+        { label: "Unified Collaboration Space" },
+        { label: "Cross-Platform Compatibility" },
+        { label: "Intuitive Setup and Use" },
+        { label: "Comprehensive Tool Suite" }
       ]
-    },
+    }
   ]
 };
-
 
 
 // FAQs
@@ -253,27 +247,27 @@ const faqs = {
   "subtitle": "Your Questions, Answered",
   "questions": [
     {
-      "question": "What makes Empress Website Builder stand out for beginners?",
-      "answer": "Empress offers an exceptionally user-friendly interface, making it ideal for beginners. The intuitive drag-and-drop editor and easy learning curve empower anyone to craft professional-quality websites with ease."
+      "question": "How does Empress enhance file sharing and organization for teams?",
+      "answer": "Empress revolutionizes team collaboration by streamlining file sharing across multiple platforms. It offers organized file and folder views, enabling efficient document access and sharing, enhancing team productivity."
     },
     {
-      "question": "How does Empress handle responsive and mobile-friendly design?",
-      "answer": "Empress excels in responsive design, ensuring websites automatically adjust to any screen size for a seamless experience on desktops, tablets, and smartphones, enhancing user accessibility."
+      "question": "Can Empress support real-time collaborative document editing?",
+      "answer": "Yes, Empress's robust document editor integrates seamlessly with its drive, supporting real-time collaborative editing. This feature significantly enhances team productivity and document accuracy."
     },
     {
-      "question": "Can Empress Website Builder integrate dynamic content via CMS?",
-      "answer": "Absolutely! Empress enables seamless CMS integration, allowing easy content updates and management to keep your website dynamic, fresh, and engaging for your audience."
+      "question": "What file types and media does Empress support for team collaboration?",
+      "answer": "Empress supports a wide range of file types and rich media, including images, videos, PDFs, and more. This versatility allows for more dynamic and interactive file engagement within teams."
     },
     {
-      "question": "Is Empress capable of optimizing website performance and SEO?",
-      "answer": "Empress ensures top-notch website performance and SEO. It integrates SEO tools and speed optimization strategies, coupled with performance monitoring, to boost site speed and search engine rankings."
+      "question": "How does Empress's document management system improve file accessibility?",
+      "answer": "Empress enhances file accessibility with features like advanced search functionality and bookmarking. This makes it easy to locate and organize important documents, streamlining file retrieval and management."
     },
     {
-      "question": "Does Empress support advanced customization for unique website design?",
-      "answer": "Definitely. Empress supports advanced customization, including custom CSS and JavaScript. This allows for unique, branded online experiences, making each website stand out."
+      "question": "Does Empress offer secure file sharing with customizable permissions?",
+      "answer": "Absolutely. Empress provides secure document sharing with comprehensive control over user permissions. This ensures data security and offers collaborative flexibility while maintaining information confidentiality."
     }
   ]
-}
+};
 
 
 
