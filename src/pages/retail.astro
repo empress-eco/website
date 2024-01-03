@@ -58,6 +58,81 @@ export const hero = {
 
 };
 
+const sectionTwo = {
+  mainContent: {
+    title: "Streamline Company Sales",
+    subtitle: "Enhance Your Retail Strategy",
+    paragraphs: [
+      "Unlock the full potential of your business with Empress Cloud's single subscription platform, offering comprehensive solutions for every operational aspect.",
+      "Efficiently manage finances, customer engagement, and more with our integrated suite of innovative tools, designed for seamless business operations."
+    ],
+      linkText: "Discover Empress OS",
+      linkHref: "/os"
+  },
+  listItems: [
+  {
+      title: "Create Your Website",
+      description: "Effortlessly craft your brand’s online presence with our low-code, versatile website builder. Create responsive, dynamic sites that captivate and engage your customers.",
+      linkHref: "/build",
+      linkTitle: "Build with Empress"
+    },
+    {
+      title: "Streamline Your Operations",
+      description: "Accelerate product development with Empress’s tools. Drive efficient manufacturing, distribution, and operations across your organization.",
+      linkHref: "/manage",
+      linkTitle: "Manage with Empress"
+    },
+    {
+      title: "Elevate Your Services",
+      description: "Transform your customer experience with our innovative digital suite, fostering deeper engagement and lasting loyalty.",
+      linkHref: "/experience",
+      linkTitle: "Experience with Empress"
+    },
+    {
+      title: "Close More Deals",
+      description: "Enhance customer relationships and streamline sales processes with Empress, boosting your deal-closing efficiency.",
+      linkHref: "/sell",
+      linkTitle: "Sell with Empress"
+    },
+    {
+      title: "Simplify Your Finances",
+      description: "Transform financial management with advanced analytics and intuitive tools. Empress helps you make smarter decisions for sustainable growth.",
+      linkHref: "/finance",
+      linkTitle: "Finance with Empress"
+    },
+    {
+      title: "Empower Your Workforce",
+      description: "Build a winning team with Empress’s talent management. Attract, nurture, and retain top talent to drive innovation and productivity.",
+      linkHref: "/talent",
+      linkTitle: "Talent with Empress"
+    },
+    {
+      title: "Improve Your Communication",
+      description: "Empress’s communication tools bridge gaps, enabling seamless communication and project management for accelerated business growth.",
+      linkHref: "/connect",
+      linkTitle: "Connect with Empress"
+    },
+    {
+      title: "Enhance Your Collaboration",
+      description: "Streamline collaboration and file management, enhancing productivity and facilitating seamless access to information across teams.",
+      linkHref: "/share",
+      linkTitle: "Share with Empress"
+    },
+    {
+  title: "Organize Your Information",
+  description: "Streamline your knowledge management with our intuitive wiki creation tool, perfect for centralizing and accessing vital information with ease.",
+  linkHref: "/document",
+  linkTitle: "Document with Empress"
+},
+{
+  title: "Advance Your Training",
+  description: "Transform your educational approach with our course-building platform, offering engaging, tailored, and interactive learning experiences.",
+  linkHref: "/learn",
+  linkTitle: "Learn with Empress"
+},
+  ]
+};
+
 // Overview
 
 const overview = {
@@ -81,7 +156,7 @@ const displayImage = {
   title: "Streamline Company Sales",
   subtitle: "Enhance Your Strategy,",
   subtitleCont: "Elevate Your Business.",
-  imageSrc: "/images/dashboard.jpg"
+  imageSrc: "https://images.unsplash.com/photo-1556741533-411cf82e4e2d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 };
 
 
@@ -89,7 +164,7 @@ const displayImage = {
 const featureOne = {
   mainContent: {
     title: "Retail Inventory, Transformed",
-    img: "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/solutions/retail/1.svg",
     subtitle: "Achieve Efficiency Across All Channels",
     paragraphs: [
       "Empress delivers a seamless retail experience, from back-office operations to the sales floor. Experience unparalleled efficiency with our integrated retail solutions."
@@ -111,7 +186,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Empower Retail Growth",
-    img: "https://plus.unsplash.com/premium_photo-1678565546661-bf43274dd428?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
+    img: "/images/solutions/retail/2.svg",
     subtitle: "Engage and Convert Customers",
     paragraphs: [
       "Empress redefines customer engagement in retail, offering personalized shopping experiences that build loyalty and drive sales."
@@ -132,7 +207,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Retail Analytics & Insights",
-    img: "https://plus.unsplash.com/premium_photo-1678565546661-bf43274dd428?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
+    img: "/images/solutions/retail/3.svg",
     subtitle: "Uncover Trends, Drive Strategy",
     paragraphs: [
       "Empress brings your retail data to life. Gain actionable insights for informed decisions and successful retail strategies."
@@ -576,10 +651,74 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
+
+
+  <!-- Section Two -->
+
+  <!-- Section Two -->
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-24">
+    <div class="lg:w-1/2 lg:pr-12">
+      <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+        <div>
+          <div class="lg:pl-24 md:pl-12">
+            <h2 class="inline-flex items-center text-blue-600">
+              <span class="text-base font-medium tracking-tight">{sectionTwo.mainContent.title}</span>
+            </h2>
+            <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+              {sectionTwo.mainContent.subtitle}
+            </h2>
+            {sectionTwo.mainContent.paragraphs.map(paragraph => (
+              <p class="text-slate-500 mt-5">{paragraph}</p>
+            ))}
+            <p class="mt-5">
+              <a href={sectionTwo.mainContent.linkHref} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                {sectionTwo.mainContent.linkText}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2 lg:order-first">
+      <div class="flex-shrink-0">
+        <div>
+          <ul role="list" class="grid grid-cols-1 gap-12 lg:gap-24 list-none mt-24">
+            {sectionTwo.listItems.map(item => (
+              <li>
+                <div>
+                  <p class="text-purple-900 font-semibold tracking-tighter text-3xl">{item.title}</p>
+                </div>
+                <div class="mt-2 text-slate-500">{item.description}</div>
+                <p class="mt-5">
+                  <a href={item.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                    {item.linkTitle}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+                  </a>
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   
 
   <!-- Header -->
-
+<!-- 
   <section>
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
       <div class="lg:text-center">
@@ -595,11 +734,11 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <img src={displayImage.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
       </div>
     </div>
-  </section>
+  </section> -->
   
 
 
-    <!-- FeatureOne -->
+<!-- FeatureOne -->
 
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
@@ -660,7 +799,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
     <div class="lg:w-1/2">
       <div class="flex-shrink-0 mt-10">
         <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: 500px; object-fit: cover; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+          <img src={featureOne.mainContent.img} alt="Dashboard" />
         </div>
       </div>
     </div>
@@ -674,7 +813,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
     <div class="lg:w-1/2 lg:order-first">
       <div class="flex-shrink-0 mt-10">
         <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: 500px; object-fit: cover; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+          <img src={featureTwo.mainContent.img} alt="Dashboard" />
         </div>
       </div>
     </div>
@@ -796,20 +935,21 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img 
-          src={featureThree.mainContent.img} 
-          alt="Dashboard" 
-          class="w-full h-[500px] object-cover rounded-lg shadow-lg transition-all duration-300 ease-in-out"
-          style="box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" 
-        />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[100%] flex-shrink-0">
+          <img src={featureThree.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
       </div>
-    </div>
+    </div> 
+    <!-- <div class="lg:w-1/2">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureThree.mainContent.img} alt="Dashboard" />
+        </div>
+      </div>
+    </div> -->
   </div>
 </section>
-  
 
   <GetStarted/>
 
