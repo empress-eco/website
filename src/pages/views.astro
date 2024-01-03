@@ -11,6 +11,7 @@ import CtaOne from "../components/cta/CtaOne.astro";
 import { Code } from "astro/components";
 import GetStarted from "../components/features/GetStarted.astro";
 import { AstroSeo } from "@astrolib/seo";
+import { Icon } from "astro-icon";
 
 
 // Header
@@ -19,7 +20,7 @@ const header = {
   title: "Empress Views",
   subtitle: "Visualize Everything,",
   subtitleCont: "Customize Anything.",
-  imageSrc: "/images/chart.jpg"
+  imageSrc: "/images/apps/views/3.png"
 };
 
 
@@ -56,22 +57,30 @@ const fourFeatures = {
     {
       title: "Kanban Boards",
       description: "Streamline your workflow with Kanban boards, ideal for visualizing task progression and enhancing team productivity.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:kanban-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Gantt Charts",
       description: "Plan and track project timelines with Gantt charts, offering a comprehensive view of deadlines and dependencies.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:strategy",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Calendar Views",
       description: "Manage appointments and deadlines effectively with intuitive calendar views, keeping your team aligned and on schedule.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:calendar-plus-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Data Views",
       description: "Gain actionable insights with customizable data views, analyzing key metrics to inform strategic decisions.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:chart-bar-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
   ],
 };
@@ -103,7 +112,7 @@ const featureTwo = {
       ]
     }
   ],
-  imageSrc: "/images/dashboard.jpg"
+  imageSrc: "/images/apps/views/2.png"
 };
 
 
@@ -187,10 +196,10 @@ const overview = {
   secondaryParagraph: "Step into a world where workflow management is not just efficient but intuitive and insightful, with Empress Views.",
   quote: "Empress Views: Where clarity meets efficiency in business management.",
   callToAction: {
-    text: "Explore Empress Views",
-    link: "/views"
+    text: "View Pricing",
+    link: "/pricing"
   },
-  image: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+  image: "/images/apps/views/1.png"
 };
 
 
@@ -339,8 +348,8 @@ Use AstroSeo in all the pages you want different Seo than the index page
           <span class="lg:block">{header.subtitleCont}</span>
         </h2>
       </div>
-      <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
-        <img src={header.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+      <div class="w-full -mb-12 mt-12 p-3">
+        <img src={header.imageSrc} alt="thumbnail" class="drop-shadow-2xl" />
       </div>
     </div>
   </section>
@@ -395,19 +404,22 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <ul role="list" class="grid grid-cols-2 lg:grid-cols-2 gap-4 list-none lg:gap-24 mt-6 lg:mt-24">
           {fourFeatures.features.map((feature) => (
             <li key={feature.title}>
+              <div class={`bg-${feature.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6 mb-5`}>
+                  <Icon class={`text-${feature.color}-500`} name={feature.icon} size="28" />
+                </div>
               <div>
                 <p class="font-semibold text-purple-900 text-2xl">{feature.title}</p>
               </div>
               <div class="mt-2 text-slate-500">
                 {feature.description}
               </div>
-              <img src={feature.imageUrl} alt="thumbnail" class="shadow-xl rounded-4xl mt-12" />
             </li>
           ))}
         </ul>
       </div>
     </div>
   </section>
+
 
   
 
@@ -547,16 +559,19 @@ Use AstroSeo in all the pages you want different Seo than the index page
                 </a>
               </p>
             </div>
-            <div class="relative overflow-hidden rounded-2xl p-8 shadow-xl lg:py-12 h-full">
-              <div class="absolute inset-0">
-                <img src={overview.image} alt="" class="h-full w-full object-cover"/>
+            <div class="lg:w-1/2">
+              <div class="flex justify-right items-center lg:mt-10 mt-10">
+                <div class="w-full lg:w-[225%] flex-shrink-0">
+                  <img src={overview.image} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
+                </div>
               </div>
-            </div>
+            </div>   
           </div>
         </div>
       </div>
     </div>
-  </section>  
+  </section>
+  
 
   
 
