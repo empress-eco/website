@@ -11,6 +11,7 @@ import CtaOne from "../components/cta/CtaOne.astro";
 import { Code } from "astro/components";
 import { AstroSeo } from "@astrolib/seo";
 import GetStarted from "../components/features/GetStarted.astro";
+import { Icon } from "astro-icon";
 
 
 // Header
@@ -19,7 +20,7 @@ const header = {
   title: "Empress Administration",
   subtitle: "Take Control,",
   subtitleCont: "Maximize Efficiency.",
-  imageSrc: "/images/chart.jpg"
+  imageSrc: "/images/apps/administration/3.png"
 };
 
 
@@ -56,22 +57,30 @@ const fourFeatures = {
     {
       title: "Site Administration",
       description: "Efficiently manage multiple business sites from a single dashboard, ensuring consistency and ease of operation.",
-      imageUrl: "/images/creditcard.png",
+      icon: "ph:app-window-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Application Management",
       description: "Install, update, and customize applications to suit your business needs, ensuring a seamless and productive workflow.",
-      imageUrl: "/images/creditcard.png",
+      icon: "ph:computer-tower-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "User Role Management",
       description: "Assign and control user roles and permissions, safeguarding your business data and processes.",
-      imageUrl: "/images/creditcard.png",
+      icon: "ph:users-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Integrations and Customizations",
       description: "Seamlessly integrate with external systems and tailor features to meet your specific business requirements.",
-      imageUrl: "/images/creditcard.png",
+      icon: "ph:plugs-connected-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
   ],
 };
@@ -102,7 +111,7 @@ const featureTwo = {
       ]
     }
   ],
-  imageSrc: "/images/dashboard.jpg"
+  imageSrc: "/images/apps/administration/1.png"
 };
 
 // Feature List
@@ -186,10 +195,10 @@ const overview = {
   secondaryParagraph: "Empress Administration is more than just tools; it's a strategic ally in your business's journey towards operational excellence and security.",
   quote: "Empress Administration: Where control meets innovation.",
   callToAction: {
-    text: "Elevate Your Business Administration",
-    link: "/administration"
+    text: "View Pricing",
+    link: "/pricing"
   },
-  image: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+  image: "/images/apps/administration/2.png"
 };
 
 
@@ -395,13 +404,15 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <ul role="list" class="grid grid-cols-2 lg:grid-cols-2 gap-4 list-none lg:gap-24 mt-6 lg:mt-24">
           {fourFeatures.features.map((feature) => (
             <li key={feature.title}>
+              <div class={`bg-${feature.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6 mb-5`}>
+                  <Icon class={`text-${feature.color}-500`} name={feature.icon} size="28" />
+                </div>
               <div>
                 <p class="font-semibold text-purple-900 text-2xl">{feature.title}</p>
               </div>
               <div class="mt-2 text-slate-500">
                 {feature.description}
               </div>
-              <img src={feature.imageUrl} alt="thumbnail" class="shadow-xl rounded-4xl mt-12" />
             </li>
           ))}
         </ul>
@@ -547,17 +558,18 @@ Use AstroSeo in all the pages you want different Seo than the index page
                 </a>
               </p>
             </div>
-            <div class="relative overflow-hidden rounded-2xl p-8 shadow-xl lg:py-12 h-full">
-              <div class="absolute inset-0">
-                <img src={overview.image} alt="" class="h-full w-full object-cover"/>
+            <div class="lg:w-1/2">
+              <div class="flex justify-right items-center lg:mt-10 mt-10">
+                <div class="w-full lg:w-[225%] flex-shrink-0">
+                  <img src={overview.image} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
+                </div>
               </div>
-            </div>
+            </div>   
           </div>
         </div>
       </div>
     </div>
-  </section>  
-
+  </section>
   
 
   <!-- Feature List -->

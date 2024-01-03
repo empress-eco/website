@@ -11,6 +11,7 @@ import CtaOne from "../components/cta/CtaOne.astro";
 import { Code } from "astro/components";
 import { AstroSeo } from "@astrolib/seo";
 import GetStarted from "../components/features/GetStarted.astro";
+import { Icon } from "astro-icon";
 
 
 // Header
@@ -19,7 +20,7 @@ const header = {
   title: "Empress APIs & Webhooks",
   subtitle: "Extend Functionality,",
   subtitleCont: "Enhance Integration.",
-  imageSrc: "/images/chart.jpg"
+  imageSrc: "/images/apps/webhooks/2.png"
 };
 
 
@@ -56,22 +57,30 @@ const fourFeatures = {
     {
       title: "API Integration",
       description: "Utilize Empress APIs to seamlessly connect your applications with external services, enhancing functionality and user experience.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:code-simple-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Real-Time Data with Webhooks",
       description: "Employ webhooks for instant data updates between your applications and services, ensuring timely and accurate information.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:database-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Custom Solution Development",
       description: "Leverage the flexibility of APIs and webhooks to develop custom solutions tailored to your specific business needs.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:user-focus-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Operational Automation",
       description: "Automate key business processes using APIs and webhooks, streamlining operations and increasing overall efficiency.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:flow-arrow-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
   ],
 };
@@ -102,7 +111,7 @@ const featureTwo = {
       ]
     }
   ],
-  imageSrc: "/images/dashboard.jpg"
+  imageSrc: "/images/apps/webhooks/1.png"
 };
 
 
@@ -189,7 +198,7 @@ const overview = {
     text: "Unlock the Power of Integration",
     link: "/apis-webhooks"
   },
-  image: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+  image: "/images/apps/webhooks/4.png"
 };
 
 
@@ -395,13 +404,15 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <ul role="list" class="grid grid-cols-2 lg:grid-cols-2 gap-4 list-none lg:gap-24 mt-6 lg:mt-24">
           {fourFeatures.features.map((feature) => (
             <li key={feature.title}>
+              <div class={`bg-${feature.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6 mb-5`}>
+                  <Icon class={`text-${feature.color}-500`} name={feature.icon} size="28" />
+                </div>
               <div>
                 <p class="font-semibold text-purple-900 text-2xl">{feature.title}</p>
               </div>
               <div class="mt-2 text-slate-500">
                 {feature.description}
               </div>
-              <img src={feature.imageUrl} alt="thumbnail" class="shadow-xl rounded-4xl mt-12" />
             </li>
           ))}
         </ul>
@@ -549,16 +560,19 @@ Use AstroSeo in all the pages you want different Seo than the index page
                 </a>
               </p>
             </div>
-            <div class="relative overflow-hidden rounded-2xl p-8 shadow-xl lg:py-12 h-full">
-              <div class="absolute inset-0">
-                <img src={overview.image} alt="" class="h-full w-full object-cover"/>
+            <div class="lg:w-1/2">
+              <div class="flex justify-right items-center lg:mt-10 mt-10">
+                <div class="w-full lg:w-[225%] flex-shrink-0">
+                  <img src={overview.image} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
+                </div>
               </div>
-            </div>
+            </div>   
           </div>
         </div>
       </div>
     </div>
-  </section>  
+  </section>
+ 
 
   
 

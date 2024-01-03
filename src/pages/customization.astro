@@ -11,6 +11,7 @@ import CtaOne from "../components/cta/CtaOne.astro";
 import { Code } from "astro/components";
 import { AstroSeo } from "@astrolib/seo";
 import GetStarted from "../components/features/GetStarted.astro";
+import { Icon } from "astro-icon";
 
 
 // Header
@@ -19,7 +20,7 @@ const header = {
   title: "Empress Customization",
   subtitle: "Shape Your Business,",
   subtitleCont: "Your Way.",
-  imageSrc: "/images/chart.jpg"
+  imageSrc: "/images/apps/customization/1.png"
 };
 
 
@@ -56,22 +57,30 @@ const fourFeatures = {
     {
       title: "Custom Site Development",
       description: "Create and customize your business sites with intuitive design tools, reflecting your brand’s unique identity.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:user-focus-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Application Customization",
       description: "Modify and enhance existing applications or develop new ones to meet specific business requirements.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:computer-tower-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Workflow Customization",
       description: "Design workflows that align with your business processes for increased efficiency and productivity.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:flow-arrow-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Developer Access",
       description: "Gain full access to the underlying code, offering endless possibilities for customization and extension.",
-      imageUrl: "/images/dashboard.jpg",
+      icon: "ph:code-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
   ],
 };
@@ -103,7 +112,7 @@ const featureTwo = {
       ]
     }
   ],
-  imageSrc: "/images/dashboard.jpg"
+  imageSrc: "/images/apps/customization/3.png"
 };
 
 
@@ -187,10 +196,10 @@ const overview = {
   secondaryParagraph: "Empress Customization opens a world of possibilities for businesses, providing the tools to innovate, adapt, and thrive in the digital age.",
   quote: "Empress Customization: Where your business's unique needs meet cutting-edge technology.",
   callToAction: {
-    text: "Transform Your Business with Empress",
-    link: "/customization"
+    text: "View Pricing",
+    link: "/pricing"
   },
-  image: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+  image: "/images/apps/customization/2.png"
 };
 
 
@@ -395,13 +404,15 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <ul role="list" class="grid grid-cols-2 lg:grid-cols-2 gap-4 list-none lg:gap-24 mt-6 lg:mt-24">
           {fourFeatures.features.map((feature) => (
             <li key={feature.title}>
+              <div class={`bg-${feature.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6 mb-5`}>
+                  <Icon class={`text-${feature.color}-500`} name={feature.icon} size="28" />
+                </div>
               <div>
                 <p class="font-semibold text-purple-900 text-2xl">{feature.title}</p>
               </div>
               <div class="mt-2 text-slate-500">
                 {feature.description}
               </div>
-              <img src={feature.imageUrl} alt="thumbnail" class="shadow-xl rounded-4xl mt-12" />
             </li>
           ))}
         </ul>
@@ -546,16 +557,18 @@ Use AstroSeo in all the pages you want different Seo than the index page
                 </a>
               </p>
             </div>
-            <div class="relative overflow-hidden rounded-2xl p-8 shadow-xl lg:py-12 h-full">
-              <div class="absolute inset-0">
-                <img src={overview.image} alt="" class="h-full w-full object-cover"/>
+            <div class="lg:w-1/2">
+              <div class="flex justify-right items-center lg:mt-10 mt-10">
+                <div class="w-full lg:w-[225%] flex-shrink-0">
+                  <img src={overview.image} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
+                </div>
               </div>
-            </div>
+            </div>   
           </div>
         </div>
       </div>
     </div>
-  </section>  
+  </section>
 
   
 
