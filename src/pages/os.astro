@@ -28,21 +28,17 @@ const isActive = (path) => currentPath === path;
 
 const navLinks = [
 {
-    title: "Cloud",
-    link: "/cloud",
+    title: "Empress OS",
+    link: "/os",
     logo: "/images/logo.png"
   },
   {
     name: "Overview",
-    href: "/cloud"
+    href: "/os"
   },
   {
     name: "Features",
-    href: "/cloud/features"
-  },
-  {
-    name: "Applications",
-    href: "/apps/cloud"
+    href: "/os/features"
   },
   {
     name: "Docs",
@@ -54,32 +50,33 @@ const navLinks = [
 // Heading
 
 const heading = {
-  title: "Cloud",
-  description: "Effortlessly craft your brand’s online presence with our low-code, versatile website builder. Create responsive, dynamic sites that captivate and engage your customers.",
-  buttonText: "View Pricing",
-  buttonTextTwo: "Contact Sales",
-  buttonUrl: "pricing",
-  buttonTwoUrl: "contact",
+  title: "Empress OS",
+  description: "Transform your business management with Empress OS. Our platform streamlines your operations, providing swift and easy access to our comprehensive suite of tools.",
+  buttonText: "Explore Features",
+  buttonTextTwo: "Get Started",
+  buttonUrl: "/features",
+  buttonTwoUrl: "/get-started",
 };
+
 
 // Diplay Image
 
 const displayImage = {
-  "title": "Elevate Customer Experience",
-  "subtitle": "Empower Interactions,",
-  "subtitleCont": "Enrich Relationships.",
-  imageSrc: "/images/chart.jpg"
+  title: "Transform Your Business",
+  subtitle: "Simple, Effective,",
+  subtitleCont: "Empowering Solutions.",
+  imageSrc: "/images/dashboard.jpg"
 };
 
 // FeatureOne
 
 const featureOne = {
   mainContent: {
-    title: "Transform Customer Support",
+    title: "Empower Your Business Journey",
     img: "/images/dashboard.jpg",
-    subtitle: "Amplify Your Customer Service",
+    subtitle: "Simplicity Meets Innovation",
     paragraphs: [
-      "Empress redefines customer support with our advanced helpdesk solutions. Seamlessly manage support queries to provide quick, accurate responses, thereby elevating customer satisfaction to new heights."
+      "Effortlessly set up and tailor your online operations to fit your unique business needs with Empress OS's intuitive platform."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -87,22 +84,23 @@ const featureOne = {
     linkHref: "/contact"
   },
   listItems: [
-    "Effortless Query Management",
-    "Swift, Accurate Responses",
-    "Elevated Customer Satisfaction"
+    "Effortless Setup and Management",
+    "Seamless App Integration",
+    "Your Vision, Our Platform"
   ]
 };
+
 
 
 // FeatureTwo
 
 const featureTwo = {
   mainContent: {
-    title: "Real-Time Customer Engagement",
+    title: "Secure Your Business Data",
     img: "/images/dashboard.jpg",
-    subtitle: "Connect Instantly, Impress Endlessly",
+    subtitle: "Hassle Free Business Solutions",
     paragraphs: [
-      "Empress's Live Chat tool fosters instant connections, providing swift solutions for an exceptional customer experience. Engage in real-time and create memorable encounters with every interaction."
+      "Rest assured with Empress OS, where advanced security safeguards your essential business and customer data around the clock."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -110,21 +108,22 @@ const featureTwo = {
     linkHref: "/contact"
   },
   listItems: [
-    "Instant Customer Connections",
-    "Swift Issue Resolution",
-    "Memorable Customer Experiences"
+    "State-of-the-Art Data Protection",
+    "Always-On Customer Support",
+    "Worry-Free Management"
   ]
 };
+
+
 
 // FeatureThree
-
 const featureThree = {
   mainContent: {
-    title: "Community Engagement & Loyalty",
+    title: "Master Your Market with Data",
     img: "/images/dashboard.jpg",
-    subtitle: "Nurture Relationships, Build Community",
+    subtitle: "Insights for Impactful Actions",
     paragraphs: [
-      "With Empress, create vibrant community spaces and impactful loyalty programs. Our tools foster engagement, cultivate a sense of belonging, and nurture lasting customer relationships."
+      "Leverage Empress OS's powerful analytics to gain crucial insights, driving strategic decisions and fostering business growth."
     ],
     buttonLink: "/pricing",
     buttonText: "View Pricing",
@@ -132,69 +131,71 @@ const featureThree = {
     linkHref: "/contact"
   },
   listItems: [
-    "Vibrant Community Forums",
-    "Impactful Loyalty Programs",
-    "Lasting Customer Relationships"
+    "Strategic Data Insights",
+    "Deep Customer Understanding",
+    "Drive Growth and Efficiency"
   ]
 };
+
+
+
 
 
 // Application Showcase
 
 const applicationShowcase = {
   mainSection: {
-    title: "Elevate Your Business Engagement",
-    subtitle: "Transforming Customer Experiences",
-    description1: "Discover how Empress revolutionizes customer interactions. Our comprehensive suite enhances every aspect of customer support and engagement.",
-    description2: "Experience seamless helpdesk operations, engaging live chats, and vibrant community forums. Our applications are tailored for meaningful and effective customer connections.",
-    viewApplicationsLink: "/apps/experience",
-    viewApplicationsText: "Discover Our Applications"
+    title: "Empower Your Business",
+    subtitle: "Your Complete Digital Solution",
+    description1: "Empress OS revolutionizes your business's online platform. From site analytics to custom app integration, enhance every aspect of your digital operations.",
+    description2: "Enjoy features like automated backups, SSL security, and push-to-deploy updates, ensuring a smooth, secure, and up-to-date online presence.",
+    viewApplicationsLink: "/apps/overview",
+    viewApplicationsText: "Explore Features"
   },
   contentSections: [
   {
-    title: "Build Your Website",
-    description: "Craft and manage your online presence with ease using our user-friendly website builder, designed to enhance user engagement and elevate your brand’s digital experience.",
-    linkHref: "/apps/experience",
-    linkText: "See Applications",
+    title: "Advanced Site Analytics",
+    description: "Make informed decisions about scaling your business with comprehensive site analytics, monitoring performance for optimal growth.",
+    linkHref: "/apps/analytics",
+    linkText: "Explore Analytics",
   },
   {
-    title: "Optimized Helpdesk Solutions",
-    description: "Streamline your customer support with our efficient helpdesk, ensuring faster, more accurate responses, and elevating overall customer satisfaction and loyalty.",
-    linkHref: "/apps/experience",
-    linkText: "See Applications",
+    title: "Custom Application Integration",
+    description: "Customize your site with ease, integrating a range of applications for a personalized and powerful online presence.",
+    linkHref: "/apps/custom-apps",
+    linkText: "Custom Apps",
   },
   {
-    title: "Instant Customer Engagement",
-    description: "Engage customers in real-time with our Live Chat, ensuring swift, effective communication and enhancing the quality of customer service interactions.",
-    linkHref: "/apps/experience",
-    linkText: "See Applications",
+    title: "Effortless Update Deployment",
+    description: "Keep your site current with automatic updates, seamlessly integrated directly from GitHub for a hassle-free experience.",
+    linkHref: "/apps/updates",
+    linkText: "Learn About Updates",
   },
   {
-    title: "Insightful Feedback Collection",
-    description: "Gather and utilize valuable customer feedback to drive improvements, enhance user experience, and foster a deeper understanding of your customer base.",
-    linkHref: "/apps/experience",
-    linkText: "See Applications",
+    title: "Robust Security Measures",
+    description: "Secure your online platform with free SSL certificates and HTTP/2 protocol, ensuring data safety and faster site performance.",
+    linkHref: "/apps/security",
+    linkText: "Security Features",
   },
   {
-    title: "Dynamic Community Forums",
-    description: "Establish active, engaging community forums to promote knowledge sharing, customer interaction, and a stronger sense of community around your brand.",
-    linkHref: "/apps/experience",
-    linkText: "See Applications",
+    title: "Automated Data Backups",
+    description: "Never worry about losing data with automated, secure backups, maintaining your site's integrity and reliability.",
+    linkHref: "/apps/backups",
+    linkText: "Backup Solutions",
   },
   {
-    title: "Loyalty Program Enhancement",
-    description: "Create and manage innovative loyalty programs that effectively engage and retain customers, strengthening brand loyalty and customer relationships.",
-    linkHref: "/apps/experience",
-    linkText: "See Applications",
+    title: "Unlimited Custom Domains",
+    description: "Expand your brand's reach with unlimited custom domains, each secured with SSL for a professional and trusted online presence.",
+    linkHref: "/apps/domains",
+    linkText: "Domain Options",
   },
   {
-    title: "Efficient Appointment Scheduling",
-    description: "Optimize your booking process with our efficient appointment system, ensuring a smoother, more organized customer experience.",
-    linkHref: "/apps/experience",
-    linkText: "See Applications",
+    title: "Streamlined Site Management",
+    description: "Manage your online presence effortlessly with our intuitive admin panel, designed for seamless operation and user-friendly experience.",
+    linkHref: "/apps/site-management",
+    linkText: "Manage Your Site",
   }
 ]
-
 };
 
 
@@ -203,63 +204,58 @@ const applicationShowcase = {
 // Checklist Items
 
 const checklistItems = {
-  sectionTitle: "Additional Features",
-  subTitle: "Do More with Empress",
+  sectionTitle: "Empress OS Features",
+  subTitle: "Elevate Your Online Business Operations",
   categories: [
     {
-      categoryName: "Customer Interaction",
+      categoryName: "Organization Management",
       items: [
-        { label: "Ticket Tracking" },
-        { label: "Live Chat Management" },
-        { label: "Issue Resolution Feedback" },
-        { label: "Interaction Records" },
-        { label: "Appointment Scheduling" },
-        { label: "Booking History" },
-        { label: "Appointment Tracking" },
-        { label: "Resource Allocation" }
+        { label: "Setup and Customization" },
+        { label: "Application Integration" },
+        { label: "User-Friendly Admin Panel" },
+        { label: "Automated Updates" },
+        { label: "Unlimited Custom Domains" },
+        { label: "SSL Certificate Integration" },
       ]
     },
     {
-      categoryName: "Relationship Enhancement",
+      categoryName: "Data Security",
       items: [
-        { label: "Feedback Analysis" },
-        { label: "Rating Insights" },
-        { label: "Feedback Follow-up" },
-        { label: "Loyalty Program Management" },
-        { label: "Points Monitoring" },
-        { label: "Tier Level Management" },
-        { label: "Relationship Strengthening" },
-        { label: "Loyalty Analysis" }
+        { label: "Advanced Data Protection" },
+        { label: "24/7 Customer Access" },
+        { label: "Automated Data Backups" },
+        { label: "Real-Time Data Encryption" },
+        { label: "Secure Hosting Infrastructure" },
+        { label: "Data Recovery Options" },
+        { label: "Enhanced Privacy Controls" }
       ]
     },
     {
-      categoryName: "Community Engagement",
+      categoryName: "Strategic Analytics",
       items: [
-        { label: "Forum Management" },
-        { label: "Content Monitoring" },
-        { label: "Topic Tracking" },
-        { label: "Feedback Analysis" },
-        { label: "Moderation Management" },
-        { label: "Community Analytics" },
-        { label: "Engagement Monitoring" },
-        { label: "Community Review" }
+        { label: "Comprehensive Site Analytics" },
+        { label: "Customer Behavior Tracking" },
+        { label: "Performance Monitoring" },
+        { label: "Data-Driven Decision Making" },
+        { label: "Market Trend Analysis" },
+        { label: "User Interaction Insights" },
       ]
     },
     {
       categoryName: "Operational Efficiency",
       items: [
-        { label: "System Integration" },
-        { label: "Data Synchronization" },
-        { label: "Compatibility Support" },
-        { label: "Service Management" },
-        { label: "CRM Integration" },
-        { label: "Automated Processes" },
-        { label: "Data Security" },
-        { label: "Resource Management" }
+        { label: "Streamlined Site Management" },
+        { label: "Platform Synchronization" },
+        { label: "Efficient Resource Allocation" },
+        { label: "Custom Tool Integration" },
+        { label: "Automated Management" },
+        { label: "System Compatibility" },
+        { label: "Unified Business Ecosystem" }
       ]
     }
   ]
 };
+
 
 
 // FAQs
@@ -269,39 +265,28 @@ const faqs = {
   subtitle: "Your Questions, Answered",
   questions: [
     {
-      question: "How does the Empress Helpdesk improve customer support?",
-      answer: "Empress Helpdesk streamlines support by providing efficient ticket tracking and resolution, ensuring high-quality service and swift responses to customer issues, leading to increased customer satisfaction."
+      question: "How does Empress OS streamline my business operations?",
+      answer: "Empress OS simplifies your business management by offering an intuitive platform for effortless setup, seamless app integration, and streamlined site management. It's designed to fit your unique business needs, enhancing operational efficiency and user experience."
     },
     {
-      question: "Can Empress's Live Chat feature enhance real-time customer engagement?",
-      answer: "Absolutely! Empress's Live Chat offers instant customer communication, fostering quick connections and providing immediate solutions to enhance customer experiences and satisfaction."
+      question: "How does Empress OS ensure the security of my business data?",
+      answer: "Empress OS employs state-of-the-art data protection measures, including advanced encryption, automated data backups, and robust security protocols like SSL certificates and HTTP/2. These features safeguard your business and customer data around the clock."
     },
     {
-      question: "How does Empress facilitate customer feedback collection?",
-      answer: "Empress's feedback tools allow you to capture and analyze customer feedback effectively. This helps in understanding customer needs and perceptions, enabling you to tailor services and improve customer relations."
+      question: "What insights can I gain from Empress OS's analytics?",
+      answer: "Empress OS's analytics provide comprehensive site metrics and customer behavior tracking. These insights help you make strategic decisions, understand market trends, and enhance your business growth and efficiency through data-driven actions."
     },
     {
-      question: "What role does Empress play in managing loyalty programs?",
-      answer: "Empress's Loyalty Management system helps you track customer engagement and rewards. It enhances customer loyalty by providing incentives for continued patronage and building long-term customer relationships."
+      question: "How does Empress OS enhance my online business presence?",
+      answer: "Empress OS offers a complete digital solution for your online business. Features like automated updates, custom app integration, and unlimited custom domains ensure your online platform is secure, up-to-date, and aligned with your brand's reach and vision."
     },
     {
-      question: "Can Empress help in scheduling and managing customer appointments?",
-      answer: "Yes, Empress's Appointment System streamlines the booking process, managing customer appointments efficiently. It ensures accurate scheduling and improves the overall service experience."
-    },
-    {
-      question: "How does Empress contribute to improving customer service strategies?",
-      answer: "Empress offers advanced analytics for deep insights into customer interactions, helping businesses understand and enhance the customer journey. This leads to more effective, targeted strategies and personalized experiences."
-    },
-    {
-      question: "Does Empress offer solutions for community engagement and forums?",
-      answer: "Definitely. Empress provides tools to manage community forums, encouraging knowledge sharing and engagement. This helps in building a vibrant community and fostering a sense of belonging among customers."
-    },
-    {
-      question: "Is Empress capable of integrating with existing business systems?",
-      answer: "Yes, Empress is designed to seamlessly integrate with your current business systems, ensuring data accuracy and a unified operational experience across various departments."
+      question: "Can I self-host Empress applications without the Empress OS platform?",
+      answer: "Yes, you can choose to self-host your Empress OS platform. While this option offers more control, please note that you will be responsible for the setup, maintenance, updates, security, and other management aspects of the platform."
     }
   ]
 };
+
 
 
 ---

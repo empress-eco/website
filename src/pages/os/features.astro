@@ -1,0 +1,555 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import PricingThree from "../../components/pricing/PricingThree.astro";
+import PricingThreeExtended from "../../components/pricing/PricingThreeExtended.astro";
+import TestimonialThree from "../../components/testimonials/TestimonialThree.astro";
+import FaqOne from "../../components/infopages/FaqOne.astro";
+import CtaOne from "../../components/cta/CtaOne.astro";
+
+import { AstroSeo } from "@astrolib/seo";
+import TestimonialOne from "../../components/testimonials/TestimonialOne.astro";
+
+// Navigation Links
+
+const navLinks = [
+{
+    title: "Empress OS",
+    link: "/os",
+    logo: "/images/logo.png"
+  },
+  {
+    name: "Overview",
+    href: "/os"
+  },
+  {
+    name: "Features",
+    href: "/os/features"
+  },
+  {
+    name: "Docs",
+    href: "https://docs.empress.eco/"
+  }
+];
+
+
+const features = [
+{
+    header: {
+      mainTitle: "Advanced Site Analytics",
+      subTitle: "Empower Your Data-Driven Decisions",
+      description: "Harness the full potential of Empress OS's analytics to gain actionable insights into your website's performance and user engagement."
+    },
+    featureSections: [
+      {
+        title: "Real-Time Traffic Analysis",
+        description: "Monitor your website's traffic in real-time. Understand visitor flow to optimize user experience and engagement strategies.",
+        listItems: [
+          "Live Traffic Monitoring",
+          "Visitor Flow Analysis",
+          "Optimization of User Experience",
+        ]
+      },
+      {
+        title: "User Behavior Insights",
+        description: "Delve into user behavior patterns. Analyze how visitors interact with your site to tailor content and design for maximum engagement.",
+        listItems: [
+          "Detailed Interaction Tracking",
+          "Behavior Pattern Analysis",
+          "Content and Design Tailoring",
+        ]
+      },
+      {
+        title: "Engagement and Conversion Metrics",
+        description: "Track engagement metrics like page views, bounce rates, and conversion rates to understand what drives user action and improve conversion strategies.",
+        listItems: [
+          "Engagement Metric Tracking",
+          "Bounce Rate Analysis",
+          "Conversion Rate Optimization",
+        ]
+      },
+      {
+        title: "Demographic and Segment Analysis",
+        description: "Gain insights into user demographics. Segment your audience for targeted marketing and personalized user experiences.",
+        listItems: [
+          "Audience Demographic Insights",
+          "Targeted Marketing Strategies",
+          "Personalized User Experiences",
+        ]
+      },
+      {
+        title: "Agile Marketing Strategy Adaptation",
+        description: "Use real-time data to quickly adapt marketing strategies. Respond effectively to market trends and user feedback for agile decision-making.",
+        listItems: [
+          "Quick Strategy Adaptation",
+          "Market Trend Response",
+          "Agile Decision-Making Tools",
+        ]
+      },
+      {
+        title: "Comprehensive Reporting Dashboard",
+        description: "Access a comprehensive dashboard for a holistic view of your site's analytics. Utilize customizable reports for in-depth analysis and reporting.",
+        listItems: [
+          "Holistic Analytics Dashboard",
+          "Customizable Reporting Tools",
+          "In-depth Data Analysis",
+        ]
+      },
+    ]
+  },
+,
+{
+    header: {
+      mainTitle: "Custom Application Integration",
+      subTitle: "Tailor Your Digital Experience",
+      description: "Empress OS's versatile integration capabilities allow you to enhance your website's functionality with a range of custom applications, perfectly suited to your unique business needs."
+    },
+    featureSections: [
+      {
+        title: "E-commerce Integration",
+        description: "Seamlessly integrate e-commerce platforms to your site, enabling an efficient and streamlined online shopping experience for your customers.",
+        listItems: [
+          "Seamless Online Store Integration",
+          "Streamlined Shopping Experience",
+          "Enhanced E-commerce Functionality",
+        ]
+      },
+      {
+        title: "CRM Software Integration",
+        description: "Incorporate CRM tools into your website, facilitating better customer relationship management and data-driven sales strategies.",
+        listItems: [
+          "Customer Relationship Management Tools",
+          "Data-Driven Sales Insights",
+          "Improved Customer Interaction",
+        ]
+      },
+      {
+        title: "Marketing Tool Synchronization",
+        description: "Sync your website with advanced marketing applications to drive engagement, track campaigns, and boost your marketing efforts.",
+        listItems: [
+          "Campaign Tracking Integration",
+          "Enhanced Engagement Tools",
+          "Boosted Marketing Efforts",
+        ]
+      },
+      {
+        title: "Customized Functionality",
+        description: "Empress OS offers the flexibility to integrate bespoke applications, providing custom solutions to meet specific business requirements.",
+        listItems: [
+          "Bespoke Application Integration",
+          "Tailored Business Solutions",
+          "Unique Functional Needs Met",
+        ]
+      },
+      {
+        title: "Seamless User Experience",
+        description: "Ensure a smooth and cohesive user experience by integrating applications that work in harmony with your website's design and usability.",
+        listItems: [
+          "Unified Website and App Experience",
+          "Harmonious Design and Usability",
+          "Seamless User Interaction",
+        ]
+      },
+      {
+        title: "Diverse Application Support",
+        description: "Empress OS supports a wide array of applications, offering diverse options to expand your website’s capabilities across different functionalities.",
+        listItems: [
+          "Wide Range of Supported Applications",
+          "Expanded Website Capabilities",
+          "Diverse Functional Options",
+        ]
+      },
+    ]
+  },
+,
+{
+    header: {
+      mainTitle: "Effortless Update Deployment",
+      subTitle: "Automatic, Secure, and Up-to-Date",
+      description: "Empress OS simplifies the process of keeping your site current with its automatic update feature. Enjoy the latest functionalities and enhanced security without the manual hassle."
+    },
+    featureSections: [
+      {
+        title: "Seamless GitHub Integration",
+        description: "Directly integrate updates from GitHub to your site. Empress OS ensures seamless transition of the latest features and improvements directly into your digital environment.",
+        listItems: [
+          "Direct GitHub Integration",
+          "Seamless Feature Transition",
+          "Latest Improvements Updated",
+        ]
+      },
+      {
+        title: "Automated Security Patches",
+        description: "With automated security patches, your website remains protected against vulnerabilities. Empress OS's updates include the latest security enhancements to safeguard your online presence.",
+        listItems: [
+          "Regular Security Updates",
+          "Protection Against Vulnerabilities",
+          "Enhanced Online Safety",
+        ]
+      },
+      {
+        title: "Time-Saving Update Process",
+        description: "Eliminate the need for manual updates. Empress OS’s automated system saves you time, letting you focus on your business rather than website maintenance.",
+        listItems: [
+          "Eliminate Manual Updating",
+          "Save Time and Effort",
+          "Focus on Core Business Activities",
+        ]
+      },
+      {
+        title: "Error Reduction",
+        description: "Automated updates mean fewer errors compared to manual processes. Enjoy a more reliable and error-free website operation.",
+        listItems: [
+          "Minimize Update Errors",
+          "Reliable Website Operation",
+          "Increased Operational Efficiency",
+        ]
+      },
+      {
+        title: "Continuous Performance Enhancement",
+        description: "Regular updates ensure continuous enhancement of your website’s performance, keeping it fast, responsive, and user-friendly.",
+        listItems: [
+          "Ongoing Performance Improvement",
+          "Maintain Fast, Responsive Site",
+          "Enhanced User Experience",
+        ]
+      },
+      {
+        title: "Stay Ahead of the Curve",
+        description: "With Empress OS, your website stays ahead of technological advancements and trends, ensuring a competitive edge in the digital marketplace.",
+        listItems: [
+          "Adopt Latest Technological Advancements",
+          "Stay Competitive",
+          "Leading Edge in Digital Market",
+        ]
+      },
+    ]
+  },
+  {
+    header: {
+      mainTitle: "Robust Security Measures",
+      subTitle: "Advanced Protection for Your Online Platform",
+      description: "Empress OS commits to top-tier online security. Our robust security features, including free SSL certificates and HTTP/2 protocol, ensure the integrity and performance of your website."
+    },
+    featureSections: [
+      {
+        title: "Free SSL Certificates",
+        description: "Empress OS provides complimentary SSL certificates for your website, encrypting data transmitted between your server and visitors. This encryption is crucial for protecting sensitive information and maintaining customer trust.",
+        listItems: [
+          "Complimentary SSL Encryption",
+          "Protection of Sensitive Data",
+          "Building Customer Trust",
+        ]
+      },
+      {
+        title: "HTTP/2 Protocol Implementation",
+        description: "Leverage the latest in web protocol technology with HTTP/2. Empress OS utilizes HTTP/2 to enhance your website's loading times and overall performance, offering an improved user experience.",
+        listItems: [
+          "Enhanced Loading Times",
+          "Improved Site Performance",
+          "Optimized User Experience",
+        ]
+      },
+      {
+        title: "Data Security and Integrity",
+        description: "Our security measures ensure the integrity and confidentiality of your website's data, protecting against breaches and unauthorized access.",
+        listItems: [
+          "Safeguard Against Breaches",
+          "Prevent Unauthorized Access",
+          "Maintain Data Confidentiality",
+        ]
+      },
+      {
+        title: "Trust and Reliability",
+        description: "Empress OS's security features not only protect your site but also enhance its reliability and trustworthiness, a crucial factor in retaining and attracting customers.",
+        listItems: [
+          "Enhance Site Reliability",
+          "Increase Trustworthiness",
+          "Retain and Attract Customers",
+        ]
+      },
+      {
+        title: "Continuous Security Monitoring",
+        description: "Stay ahead of potential threats with continuous security monitoring. Our systems are always on guard, keeping your online presence safe 24/7.",
+        listItems: [
+          "Always-On Security Monitoring",
+          "Proactive Threat Detection",
+          "24/7 Online Presence Protection",
+        ]
+      },
+      {
+        title: "Regular Security Updates",
+        description: "Benefit from regular updates that fortify your website against the latest security threats and vulnerabilities, keeping your platform modern and secure.",
+        listItems: [
+          "Up-to-Date Security Measures",
+          "Protection Against New Threats",
+          "Modern, Secure Web Platform",
+        ]
+      },
+    ]
+  },
+,
+{
+    header: {
+      mainTitle: "Automated Data Backups",
+      subTitle: "Reliable Safety Net for Your Digital Assets",
+      description: "Empress OS's automated backup solutions offer unparalleled security and peace of mind. Protect and restore your website data effortlessly, ensuring continuous business operations."
+    },
+    featureSections: [
+      {
+        title: "Seamless Data Backup Process",
+        description: "Empress OS automates the backup process, securely storing your website data at regular intervals. This hands-off approach ensures your data is always up to date and protected without manual intervention.",
+        listItems: [
+          "Hands-Off Backup Automation",
+          "Regular Interval Data Storage",
+          "Updated and Protected Data",
+        ]
+      },
+      {
+        title: "Rapid Data Recovery",
+        description: "In case of data loss or corruption, quickly restore your website to its previous state. Our rapid recovery process minimizes downtime, ensuring your business operations are barely impacted.",
+        listItems: [
+          "Quick Website Restoration",
+          "Minimized Operational Downtime",
+          "Business Continuity Assurance",
+        ]
+      },
+      {
+        title: "Secure Backup Storage",
+        description: "Our backups are stored in secure, encrypted servers, providing the highest level of data protection against breaches and unauthorized access.",
+        listItems: [
+          "Encrypted Server Storage",
+          "High-Level Data Protection",
+          "Secure Against Breaches",
+        ]
+      },
+      {
+        title: "Customizable Backup Scheduling",
+        description: "Tailor the backup schedule to fit your business needs. Whether it's daily, weekly, or monthly, Empress OS adapts to your preferred frequency, offering flexibility and control.",
+        listItems: [
+          "Flexible Backup Scheduling",
+          "Adaptable to Business Needs",
+          "Control Over Backup Frequency",
+        ]
+      },
+      {
+        title: "Peace of Mind",
+        description: "Knowing your website's data is backed up and can be restored at any time provides peace of mind. Focus on growing your business, while we handle the data security.",
+        listItems: [
+          "Reliable Data Safety",
+          "Focus on Business Growth",
+          "Stress-Free Data Management",
+        ]
+      },
+      {
+        title: "Historical Data Preservation",
+        description: "Maintain historical versions of your website. This archival feature is not just a safety measure, but also a resource for reviewing and understanding the evolution of your digital presence.",
+        listItems: [
+          "Website Version Archival",
+          "Review and Understand Changes",
+          "Resource for Digital Evolution",
+        ]
+      },
+    ]
+  },
+  {
+    header: {
+      mainTitle: "Expand and Manage Your Digital Presence",
+      subTitle: "Unlimited Domains and Streamlined Management",
+      description: "Empress OS offers unparalleled flexibility and ease in managing your online presence. Expand your brand’s reach with unlimited custom domains and effortlessly manage your site with our intuitive admin panel."
+    },
+    featureSections: [
+      {
+        title: "Unlimited Custom Domains",
+        description: "Empress OS's unlimited custom domains feature allows you to broaden your brand's digital footprint. Create multiple domains for various aspects of your business, each secured with SSL, to provide a professional and trustworthy experience for your visitors.",
+        listItems: [
+          "Expand Brand's Online Presence",
+          "SSL Security for Every Domain",
+          "Suitable for Business Scaling and Diversification",
+        ]
+      },
+      {
+        title: "Effortless Domain Management",
+        description: "Efficiently manage all your custom domains through Empress OS's user-friendly interface. Register, set up, and maintain multiple domains with ease, streamlining your digital strategy.",
+        listItems: [
+          "User-Friendly Domain Setup",
+          "Efficient Multi-Domain Maintenance",
+          "Streamlined Digital Strategy Implementation",
+        ]
+      },
+      {
+        title: "Intuitive Site Administration",
+        description: "Empress OS's admin panel simplifies website management. Its intuitive interface allows you to easily update content, manage user roles, and monitor site performance, making it accessible for both technical and non-technical users.",
+        listItems: [
+          "Simple Content Updates and Role Management",
+          "Monitor Site Performance Effortlessly",
+          "Accessible to All User Levels",
+        ]
+      },
+      {
+        title: "Tailored Efficiency",
+        description: "The admin panel is designed for operational efficiency, ensuring that website management tasks are straightforward and time-effective, regardless of your technical expertise.",
+        listItems: [
+          "Optimized for Operational Efficiency",
+          "Time-Saving Website Management Features",
+          "Suitable for Users of All Technical Backgrounds",
+        ]
+      },
+      {
+        title: "Unified Digital Management",
+        description: "Empress OS seamlessly integrates domain and website management, providing a unified experience. Manage your entire digital presence from one central location.",
+        listItems: [
+          "Centralized Management of Digital Assets",
+          "Unified Experience for Domains and Site",
+          "Comprehensive Digital Presence Oversight",
+        ]
+      },
+      {
+        title: "Enhanced Online Strategy Execution",
+        description: "Leverage Empress OS's capabilities to execute a robust online strategy. Utilize custom domains and streamlined management to enhance your online presence and engage effectively with your audience.",
+        listItems: [
+          "Robust Tools for Online Strategy",
+          "Enhance Online Presence",
+          "Effective Audience Engagement",
+        ]
+      },
+    ]
+  },
+];
+
+
+
+
+---
+
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="Communication Features"
+  description="Your site description goes here"
+  canonical="https://www.lexingtonthemes.com"
+  openGraph={{
+    url: "https://www.lexingtonthemes.com",
+    title: "Open Graph Title",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
+/>
+
+
+
+
+<BaseLayout>
+
+ 
+   <!-- NAVIGATION BAR -->
+
+   <nav style="background-color: #fff; box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <img src={navLinks[0].logo} alt="Logo" style="height: 32px; width: auto;" />
+        <a href={navLinks[0].link} 
+          class="inline-flex items-center justify-center font-medium"
+          style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+          onmouseover="this.style.color='#333';"
+          onmouseout="this.style.color='#5046e4';">
+          {navLinks[0].title}
+        </a>
+      </div>
+      <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+        {navLinks.slice(1).map(link => (
+          <li key={link.href}>
+            <a href={link.href} 
+              class="inline-flex items-center justify-center font-medium"
+              style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+              onmouseover="this.style.color='#333';"
+              onmouseout="this.style.color='#5046e4';">
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+
+  
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
+            {feature.header.mainTitle}
+           </h2>
+           <p class="mt-4 text-slate-600 text-lg">
+            {feature.header.description}
+        </p>
+          <div class="mt-16">
+            {feature.featureSections.map((section, index) => (
+              <div key={index} class="lg:col-span-3 lg:col-start-3">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                  <div class="bg-slate-50 border-l-2 border-blue-500">
+                    <div class="p-6 border-t">
+                      <p class="font-semibold text-purple-900">{section.title}</p>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l border-l-0">
+                    <p class="text-slate-500 text-sm">{section.description}</p>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l">
+                    <ul role="list" class="order-last flex flex-col gap-y-3 text-sm text-slate-500">
+                      {section.listItems.map((item, itemIndex) => (
+                        <li key={itemIndex} class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M9 12l2 2l4 -4"></path>
+                          </svg>
+                          <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {featureIndex < features.length - 1 && (
+            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+  <CtaOne />
+</BaseLayout>
