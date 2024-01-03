@@ -73,7 +73,7 @@ const displayImage = {
   "title": "Revolutionize Your Sales",
   "subtitle": "Connect Efficiently,",
   "subtitleCont": "Sell Effectively.",
-  imageSrc: "/images/chart.jpg"
+  imageSrc: "/images/apps/sell/2.png"
 };
 
 // FeatureOne
@@ -81,7 +81,7 @@ const displayImage = {
 const featureOne = {
   mainContent: {
     title: "Reach New Heights",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/sell/3.png",
     subtitle: "Elevate Sales Performance",
     paragraphs: [
       "Empress redefines customer engagement, offering deep insights and personalized strategies to foster strong, lasting relationships. Elevate your sales approach with our CRM solutions."
@@ -104,7 +104,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Effortless Execution",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/sell/4.png",
     subtitle: "Streamline Your Sales Processes",
     paragraphs: [
       "Empress streamlines your sales process from order to fulfillment. Experience enhanced efficiency with our optimized systems, driving rapid and accurate sales operations."
@@ -126,7 +126,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Data-Driven Success",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/sell/5.png",
     subtitle: "Sales Insights Reimagined",
     paragraphs: [
       "Empress brings your sales data to life. Uncover actionable insights with our advanced analytics to make informed decisions and strategize for success."
@@ -285,7 +285,7 @@ const faqs = {
 ---
 
 <AstroSeo
-  title="Sales"
+  title="Sell"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -487,10 +487,12 @@ const faqs = {
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
+      </div>
+    </div>      
       </div>
     </div>
   </div>
@@ -500,13 +502,13 @@ const faqs = {
 
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
-    <div class="lg:w-1/2 lg:order-first">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+    <div class="lg:w-1/2">
+      <div class="flex justify-center lg:justify-end items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" class="w-full h-auto lg:object-cover" />
         </div>
       </div>
-    </div>
+    </div>  
     <div class="lg:w-1/2 lg:pr-12">
       <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
         <div>
@@ -625,12 +627,12 @@ const faqs = {
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureThree.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
       </div>
-    </div>
+    </div>  
   </div>
 </section>
 
