@@ -11,6 +11,7 @@ import CtaOne from "../components/cta/CtaOne.astro";
 import { Code } from "astro/components";
 import { AstroSeo } from "@astrolib/seo";
 import GetStarted from "../components/features/GetStarted.astro";
+import { Icon } from "astro-icon";
 
 // Header
 
@@ -18,7 +19,7 @@ const header = {
   title: "Empress Insights",
   subtitle: "Harness Data,",
   subtitleCont: "Drive Business Growth.",
-  imageSrc: "/images/chart.jpg"
+  imageSrc: "/images/apps/insights/1.png"
 };
 
 // Stats Content
@@ -53,22 +54,34 @@ const fourFeatures = {
     {
       title: "In-Depth Analytics",
       description: "Empress offers comprehensive analytics, revealing deep insights into market trends, customer behaviors, and operational efficiencies for strategic decision-making.",
-      imageUrl: "/images/creditcard.png",
+      imageUrl: "/images/apps/insights/2.png",
+      icon: "ph:chart-bar-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Real-Time Intelligence",
       description: "Stay ahead with real-time data analysis, enabling immediate responses to market changes and internal process adjustments, keeping your business agile.",
-      imageUrl: "/images/creditcardTwo.png",
+      imageUrl: "/images/apps/insights/3.png",
+      icon: "ph:robot-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Customizable Dashboards",
       description: "Tailor your data views with Empress's customizable dashboards, focusing on the key metrics that drive your business, ensuring clear and actionable insights.",
-      imageUrl: "/images/creditcard.png",
+      imageUrl: "/images/apps/insights/4.png",
+      icon: "ph:chart-line-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
     {
       title: "Predictive Analysis",
       description: "Empress's predictive analytics foresee future market movements and customer behaviors, allowing for proactive strategy development and risk mitigation.",
-      imageUrl: "/images/creditcardTwo.png",
+      imageUrl: "/images/apps/insights/5.webp",
+      icon: "ph:database-duotone",
+      link: "/analysis",
+      color: "indigo"
     },
   ],
 };
@@ -100,7 +113,7 @@ const featureTwo = {
       ]
     }
   ],
-  imageSrc: "/images/dashboard.jpg"
+  imageSrc: "/images/apps/insights/2.png"
 };
 
 // Feature List
@@ -182,10 +195,10 @@ const overview = {
   secondaryParagraph: "Embrace the power of Empress Insights to gain insights that drive growth, innovation, and competitive advantage in your industry.",
   quote: "With Empress, data analysis becomes a cornerstone of your business strategy.",
   callToAction: {
-    text: "Discover Empress Insights",
-    link: "/analysis"
+    text: "View Pricing",
+    link: "/pricing"
   },
-  image: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+  image: "/images/apps/insights/4.png"
 };
 
 
@@ -389,13 +402,15 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <ul role="list" class="grid grid-cols-2 lg:grid-cols-2 gap-4 list-none lg:gap-24 mt-6 lg:mt-24">
           {fourFeatures.features.map((feature) => (
             <li key={feature.title}>
+              <div class={`bg-${feature.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6 mb-5`}>
+                  <Icon class={`text-${feature.color}-500`} name={feature.icon} size="28" />
+                </div>
               <div>
                 <p class="font-semibold text-purple-900 text-2xl">{feature.title}</p>
               </div>
               <div class="mt-2 text-slate-500">
                 {feature.description}
               </div>
-              <img src={feature.imageUrl} alt="thumbnail" class="shadow-xl rounded-4xl mt-12" />
             </li>
           ))}
         </ul>
