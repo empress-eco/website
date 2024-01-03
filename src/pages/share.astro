@@ -63,7 +63,7 @@ const displayImage = {
   title: "Efficient File Management",
   subtitle: "Secure, Organize,",
   subtitleCont: "and Collaborate.",
-  imageSrc: "/images/dashboard.jpg"
+  imageSrc: "/images/apps/share/1.png"
 };
 
 // FeatureOne
@@ -71,7 +71,7 @@ const displayImage = {
 const featureOne = {
   mainContent: {
     title: "Seamless File Integration",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/share/2.png",
     subtitle: "Streamlined File Sharing Across Platforms",
     paragraphs: [
       "Empress's document management tool revolutionizes file storage and sharing across multiple platforms, offering unparalleled ease and efficiency for team collaboration."
@@ -94,7 +94,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Dynamic File Interaction",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/share/3.png",
     subtitle: "Collaborate with Rich Media and Documents",
     paragraphs: [
       "Enhance team collaboration with Empress's dynamic file preview and sharing capabilities, including images, videos, PDFs, and more, fostering a richer, more interactive workspace."
@@ -115,7 +115,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Efficient Document Collaboration",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/share/4.png",
     subtitle: "Real-Time Editing and Teamwork",
     paragraphs: [
       "Empress's robust document editor integrates seamlessly with the drive, supporting real-time collaborative editing and enhancing team productivity and document accuracy."
@@ -475,11 +475,13 @@ const faqs = {
         </div>
       </div>
     </div>
-    <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="lg:w-1/2">
+        <div class="flex justify-right items-center lg:mt-10 mt-10">
+          <div class="w-full lg:w-[175%] flex-shrink-0">
+            <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
+          </div>
         </div>
+      </div>   
       </div>
     </div>
   </div>
@@ -489,13 +491,13 @@ const faqs = {
 
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
-    <div class="lg:w-1/2 lg:order-first">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+    <div class="lg:w-1/2">
+      <div class="flex justify-center lg:justify-end items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" class="w-full h-auto lg:object-cover drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>  
     <div class="lg:w-1/2 lg:pr-12">
       <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
         <div>
@@ -614,16 +616,19 @@ const faqs = {
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureThree.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>    
   </div>
 </section>
 
 <GetStarted/>
+
+
+
 
   <!-- Section Five -->
   
@@ -727,8 +732,8 @@ const faqs = {
     </div>
   </section>
 
-  
-    <Ecosystem/>  
+  <Ecosystem/>  
+
 
   
 

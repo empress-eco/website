@@ -60,14 +60,14 @@ const displayImage = {
   title: "Communicate with Confidence",
   subtitle: "Empower Conversations,",
   subtitleCont: "Anytime, Anywhere.",
-  imageSrc: "/images/chart.jpg"
+  imageSrc: "/images/apps/connect/1.png"
 };
 
 // FeatureOne - Intuitive Messaging Interface
 const featureOne = {
   mainContent: {
     title: "Seamless Messaging Experience",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/connect/2.png",
     subtitle: "Conversations at Your Fingertips",
     paragraphs: [
       "Designed for ease of use, our platform enables seamless engagement across various channels, tailored to your team's unique communication needs."
@@ -88,7 +88,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Empower Your Conversations",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/connect/3.png",
     subtitle: "Versatility in Every Message",
     paragraphs: [
       "Share files, react with emojis, and provide clear replies to streamline your conversations and make every interaction count."
@@ -109,7 +109,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Communication with Convenience",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/connect/4.png",
     subtitle: "Enhanced User Experience",
     paragraphs: [
       "Bookmark important messages, utilize our efficient search functionality, and keep your chats organized and meaningful."
@@ -324,7 +324,7 @@ const faqs = {
 ---
 
 <AstroSeo
-  title="Communication"
+  title="Connect"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -525,11 +525,13 @@ const faqs = {
         </div>
       </div>
     </div>
-    <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="lg:w-1/2">
+        <div class="flex justify-right items-center lg:mt-10 mt-10">
+          <div class="w-full lg:w-[175%] flex-shrink-0">
+            <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
+          </div>
         </div>
+      </div>   
       </div>
     </div>
   </div>
@@ -539,13 +541,13 @@ const faqs = {
 
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
-    <div class="lg:w-1/2 lg:order-first">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+    <div class="lg:w-1/2">
+      <div class="flex justify-center lg:justify-end items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" class="w-full h-auto lg:object-cover drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>  
     <div class="lg:w-1/2 lg:pr-12">
       <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
         <div>
@@ -664,12 +666,12 @@ const faqs = {
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureThree.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>    
   </div>
 </section>
 
@@ -780,9 +782,9 @@ const faqs = {
     </div>
   </section>
 
-  
+  <Ecosystem/>  
 
-    <Ecosystem/>  
+
   
 
 <!-- Section Nine -->
