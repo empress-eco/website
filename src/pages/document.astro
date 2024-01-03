@@ -73,7 +73,7 @@ const displayImage = {
   title: "Organize and Share Knowledge",
   subtitle: "Streamlined,",
   subtitleCont: "Efficient Documentation.",
-  imageSrc: "/images/chart.jpg"
+  imageSrc: "/images/apps/document/1.png"
 };
 
 // FeatureOne
@@ -81,7 +81,7 @@ const displayImage = {
 const featureOne = {
   mainContent: {
     title: "Dynamic Content Creation",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/document/2.png",
     subtitle: "Craft and Collaborate",
     paragraphs: [
       "Create and organize wiki pages with ease, enabling seamless collaboration and efficient knowledge sharing within your organization."
@@ -104,7 +104,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Enhanced Document Management",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/document/3.png",
     subtitle: "Control and Flexibility",
     paragraphs: [
       "Manage your documentation with controlled updates and a customizable sidebar hierarchy, ensuring information is always current and easily navigable."
@@ -126,7 +126,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Collaborative and Secure",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/document/4.png",
     subtitle: "Share and Protect Your Information",
     paragraphs: [
       "Foster teamwork with secure file sharing and attachments, enhanced by a robust approval mechanism for content integrity."
@@ -485,11 +485,13 @@ const faqs = {
         </div>
       </div>
     </div>
-    <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="lg:w-1/2">
+        <div class="flex justify-right items-center lg:mt-10 mt-10">
+          <div class="w-full lg:w-[175%] flex-shrink-0">
+            <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
+          </div>
         </div>
+      </div>   
       </div>
     </div>
   </div>
@@ -499,13 +501,13 @@ const faqs = {
 
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
-    <div class="lg:w-1/2 lg:order-first">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+    <div class="lg:w-1/2">
+      <div class="flex justify-center lg:justify-end items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" class="w-full h-auto lg:object-cover drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>  
     <div class="lg:w-1/2 lg:pr-12">
       <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
         <div>
@@ -624,12 +626,12 @@ const faqs = {
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureThree.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>    
   </div>
 </section>
 

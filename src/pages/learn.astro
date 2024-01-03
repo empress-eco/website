@@ -73,7 +73,7 @@ const displayImage = {
   title: "Transform Your Training",
   subtitle: "Empower Your Learning,",
   subtitleCont: "Enhance Your Impact.",
-  imageSrc: "/images/dashboard.jpg"
+  imageSrc: "/images/apps/learn/1.png"
 };
 
 // FeatureOne
@@ -81,7 +81,7 @@ const displayImage = {
 const featureOne = {
   mainContent: {
     title: "Streamlined Course Creation",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/learn/2.png",
     subtitle: "Simplify Your Training Approach",
     paragraphs: [
       "Design and deploy custom courses effortlessly, catering to diverse learning styles and business objectives with Empress Learn."
@@ -104,7 +104,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Engaging Learning Tools",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/learn/3.png",
     subtitle: "Elevate Engagement and Retention",
     paragraphs: [
       "Keep learners engaged with interactive tools like quizzes and multimedia content, ensuring high retention and effective learning."
@@ -126,7 +126,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Collaborative Learning Environment",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/learn/4.png",
     subtitle: "Foster Team Collaboration",
     paragraphs: [
       "Empress Learn encourages a collaborative learning environment with features that promote communication and teamwork."
@@ -149,8 +149,8 @@ const featureThree = {
 
 const applicationShowcase = {
   mainSection: {
-    title: "Empress Learn Capabilities",
-    subtitle: "Redefine Business Learning",
+    title: "Learn Features",
+    subtitle: "Redefine Your Training",
     description1: "Empress Learn offers a spectrum of features to transform your corporate training and development landscape.",
     description2: "From interactive course design to efficient learning management, explore how Empress Learn can elevate your organization's educational experience.",
     viewApplicationsLink: "/pricing",
@@ -292,7 +292,7 @@ const faqs = {
 ---
 
 <AstroSeo
-  title="Sales"
+  title="Learn"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -428,8 +428,8 @@ const faqs = {
           <span class="lg:block">{displayImage.subtitleCont}</span>
         </h2>
       </div>
-      <div class="w-full -mb-12 mt-12 ring-1 ring-slate-200 bg-slate-50 rounded-t-3xl p-3">
-        <img src={displayImage.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
+      <div class="w-full -mb-12 mt-12 ">
+        <img src={displayImage.imageSrc} alt="thumbnail" class="" />
       </div>
     </div>
   </section>
@@ -493,11 +493,13 @@ const faqs = {
         </div>
       </div>
     </div>
-    <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="lg:w-1/2">
+        <div class="flex justify-right items-center lg:mt-10 mt-10">
+          <div class="w-full lg:w-[175%] flex-shrink-0">
+            <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
+          </div>
         </div>
+      </div>   
       </div>
     </div>
   </div>
@@ -507,13 +509,13 @@ const faqs = {
 
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
-    <div class="lg:w-1/2 lg:order-first">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+    <div class="lg:w-1/2">
+      <div class="flex justify-center lg:justify-end items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" class="w-full h-auto lg:object-cover drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>  
     <div class="lg:w-1/2 lg:pr-12">
       <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
         <div>
@@ -632,12 +634,12 @@ const faqs = {
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureThree.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>    
   </div>
 </section>
 
