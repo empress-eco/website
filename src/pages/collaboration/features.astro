@@ -1,0 +1,554 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import PricingThree from "../../components/pricing/PricingThree.astro";
+import PricingThreeExtended from "../../components/pricing/PricingThreeExtended.astro";
+import TestimonialThree from "../../components/testimonials/TestimonialThree.astro";
+import FaqOne from "../../components/infopages/FaqOne.astro";
+import CtaOne from "../../components/cta/CtaOne.astro";
+
+import { AstroSeo } from "@astrolib/seo";
+import TestimonialOne from "../../components/testimonials/TestimonialOne.astro";
+
+// Navigation Links
+
+const navLinks = [
+{
+    title: "Collaboration",
+    link: "/collaboration",
+    logo: "/images/logo.png"
+  },
+  {
+    name: "Overview",
+    href: "/collaboration"
+  },
+  {
+    name: "Features",
+    href: "/collaboration/features"
+  },
+  {
+    name: "Docs",
+    href: "https://docs.empress.eco/"
+  }
+];
+
+
+const features = [
+{
+    header: {
+        mainTitle: "Multi-Platform File Management",
+        subTitle: "Seamless Integration Across Platforms",
+        description: "Utilize seamless file uploads and storage across multiple platforms, enhancing accessibility and efficiency."
+    },
+    featureSections: [
+        {
+            title: "Versatile File Upload System",
+            description: "Empress allows for the uploading and storing of a wide range of file types, accommodating various digital assets from multiple platforms.",
+            listItems: [
+                "Support for Diverse File Types",
+                "Seamless Multi-Platform Uploads",
+                "Centralized Digital Asset Management"
+            ]
+        },
+        {
+            title: "Streamlined Document Accessibility",
+            description: "Empress's system ensures that all documents are easily accessible, streamlining the process of managing and retrieving essential files.",
+            listItems: [
+                "Easy Access to Stored Documents",
+                "Efficient File Retrieval and Management",
+                "Optimized for User Convenience"
+            ]
+        },
+        {
+            title: "Unified Document Repository",
+            description: "Create a centralized repository for all your documents, making it simpler to manage and access files from various sources.",
+            listItems: [
+                "Centralized File Storage",
+                "Unified Management of Documents",
+                "Integrated Document Repository"
+            ]
+        },
+        {
+            title: "Enhanced Collaboration and Productivity",
+            description: "By providing a unified platform for document management, Empress boosts team collaboration and overall productivity.",
+            listItems: [
+                "Facilitates Team Collaboration",
+                "Boosts Overall Productivity",
+                "Unified Platform for Teamwork"
+            ]
+        },
+        {
+            title: "Flexible and Scalable Solutions",
+            description: "Empress's file management system is designed to scale with your business, supporting a growing range of file types and storage needs.",
+            listItems: [
+                "Scales with Business Growth",
+                "Adaptable to Expanding File Types",
+                "Supports Increasing Storage Needs"
+            ]
+        },
+        {
+            title: "Cross-Platform Compatibility",
+            description: "Ensure compatibility across various platforms and devices, allowing seamless file management and access regardless of where the files originate.",
+            listItems: [
+                "Compatible Across Devices",
+                "Seamless Cross-Platform Access",
+                "Flexible File Management"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Dynamic File Interaction and Sharing",
+        subTitle: "Revolutionize Your Team's Collaboration",
+        description: "Access advanced file interaction and sharing features, supporting a range of media formats for an interactive and engaging workspace."
+    },
+    featureSections: [
+        {
+            title: "Rich Media Sharing Capabilities",
+            description: "Empress enables the sharing of various media formats, including images, videos, and PDFs, streamlining the way teams share and collaborate on rich media content.",
+            listItems: [
+                "Supports Diverse Media Formats",
+                "Seamless Sharing of Rich Content",
+                "Enhanced Collaborative Experience"
+            ]
+        },
+        {
+            title: "Interactive File Previews",
+            description: "Preview files directly within Empress, providing an immediate understanding and interaction with the content without the need to download or open in external applications.",
+            listItems: [
+                "In-App File Previews",
+                "Immediate Content Understanding",
+                "No External Application Required"
+            ]
+        },
+        {
+            title: "Efficient Document Collaboration",
+            description: "Empress's file sharing system is designed for efficient collaboration, allowing team members to easily share and interact with documents and media, enhancing teamwork and productivity.",
+            listItems: [
+                "Streamlined Document Sharing",
+                "Facilitates Efficient Teamwork",
+                "Boosts Productivity"
+            ]
+        },
+        {
+            title: "Engaging Workspace Environment",
+            description: "Create an engaging and interactive workspace with dynamic file sharing, encouraging creative collaboration and idea exchange among team members.",
+            listItems: [
+                "Fosters Creative Collaboration",
+                "Encourages Idea Exchange",
+                "Interactive Workspace"
+            ]
+        },
+        {
+            title: "Quick Access to Shared Media",
+            description: "Empress allows for quick access and sharing of media, ensuring that teams can efficiently work with the necessary files, keeping projects moving forward seamlessly.",
+            listItems: [
+                "Rapid Media Access and Sharing",
+                "Keeps Projects Moving Seamlessly",
+                "Efficient File Access"
+            ]
+        },
+        {
+            title: "Cross-Platform File Compatibility",
+            description: "Empress ensures that all shared files are compatible across different platforms and devices, enhancing accessibility and usability within diverse team environments.",
+            listItems: [
+                "Universal File Compatibility",
+                "Accessible Across Platforms",
+                "Enhanced Usability"
+            ]
+        }
+    ]
+}, 
+{
+    header: {
+        mainTitle: "Real-Time Collaborative Document Editing",
+        subTitle: "Enhance Team Productivity and Accuracy",
+        description: "Collaborate, share, and edit documents for improved productivity and accuracy."
+    },
+    featureSections: [
+        {
+            title: "Integrated Document Editor",
+            description: "Empress's robust document editor seamlessly integrates with the platform, enabling teams to collaborate in real time on various document types.",
+            listItems: [
+                "Seamless Editor Integration",
+                "Supports Various Document Types",
+                "Streamlined Editing Interface"
+            ]
+        },
+        {
+            title: "Simultaneous Multi-User Editing",
+            description: "Multiple team members can work on the same document simultaneously, significantly speeding up the editing process and enhancing collaborative efforts.",
+            listItems: [
+                "Multiple Users Editing Concurrently",
+                "Accelerated Document Editing",
+                "Enhanced Team Collaboration"
+            ]
+        },
+        {
+            title: "Increased Productivity and Efficiency",
+            description: "Real-time collaborative editing minimizes delays and miscommunications, leading to increased overall productivity and efficiency in document handling.",
+            listItems: [
+                "Minimize Editing Delays",
+                "Reduce Miscommunications",
+                "Boost Overall Productivity"
+            ]
+        },
+        {
+            title: "Improved Document Accuracy",
+            description: "Collaborative editing ensures higher accuracy and consistency in documents, as multiple perspectives are involved in the creation and review process.",
+            listItems: [
+                "Higher Document Accuracy",
+                "Consistent Content Quality",
+                "Multiple Reviewer Perspectives"
+            ]
+        },
+        {
+            title: "Dynamic Content Development",
+            description: "Empower your team to develop dynamic content collaboratively, fostering creativity and allowing for the incorporation of diverse ideas and inputs.",
+            listItems: [
+                "Foster Creative Development",
+                "Incorporate Diverse Inputs",
+                "Create Dynamic Content"
+            ]
+        },
+        {
+            title: "Real-Time Feedback and Revision",
+            description: "Facilitate immediate feedback and revisions during the document creation process, enabling quicker turnaround and adaptation to changes.",
+            listItems: [
+                "Immediate Feedback Implementation",
+                "Quick Document Revisions",
+                "Adapt Quickly to Changes"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Efficient Search and Bookmarking Capabilities",
+        subTitle: "Streamlined Document Access and Organization",
+        description: "Enhance information retrieval and organization with advanced search functionality and bookmarking."
+    },
+    featureSections: [
+        {
+            title: "Advanced Search Functionality",
+            description: "Empress's sophisticated search tool enables quick and precise location of documents, streamlining the process of finding the right information at the right time.",
+            listItems: [
+                "Quick and Precise Document Search",
+                "Streamlined Information Retrieval",
+                "Enhanced Search Efficiency"
+            ]
+        },
+        {
+            title: "Document Bookmarking",
+            description: "With bookmarking capabilities, users can easily mark and access important documents, significantly speeding up the process of referring back to crucial information.",
+            listItems: [
+                "Easy Marking of Important Documents",
+                "Quick Access to Bookmarked Files",
+                "Speeds Up Information Reference"
+            ]
+        },
+        {
+            title: "Improved Document Accessibility",
+            description: "Empress's search and bookmarking features improve overall document accessibility, making it simpler for teams to access the information they need when they need it.",
+            listItems: [
+                "Simplified Document Access",
+                "Quick Access to Needed Information",
+                "Improves Team Productivity"
+            ]
+        },
+        {
+            title: "Efficient Information Organization",
+            description: "These features enable better organization of documents within the system, leading to a more structured and efficient digital workspace.",
+            listItems: [
+                "Better Document Organization",
+                "Structured Digital Workspace",
+                "Efficient Workspace Management"
+            ]
+        },
+        {
+            title: "Time-Saving Capabilities",
+            description: "By enhancing the speed of information retrieval and organization, Empress's search and bookmarking tools save valuable time, allowing teams to focus on more critical tasks.",
+            listItems: [
+                "Saves Valuable Time",
+                "Focus on Critical Tasks",
+                "Reduces Time Spent Searching"
+            ]
+        },
+        {
+            title: "Customizable Search Filters",
+            description: "Empress offers customizable search filters, allowing users to narrow down search results quickly and find exactly what they are looking for.",
+            listItems: [
+                "Narrow Down Search Results",
+                "Customizable Search Options",
+                "Find Exactly What's Needed"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Advanced File Sharing and Permissions",
+        subTitle: "Secure and Controlled Document Collaboration",
+        description: "Share files with extensive control over user permissions, balancing data security with collaborative needs."
+    },
+    featureSections: [
+        {
+            title: "Secure Document Sharing",
+            description: "Empress ensures the security of shared documents, providing a safe platform for distributing sensitive information while maintaining the necessary confidentiality.",
+            listItems: [
+                "Safe Distribution of Sensitive Data",
+                "Maintain Confidentiality",
+                "Secure Sharing Platform"
+            ]
+        },
+        {
+            title: "Comprehensive Permission Control",
+            description: "Empress offers detailed control over document access permissions, allowing businesses to precisely manage who can view, edit, or share each document.",
+            listItems: [
+                "Detailed Access Management",
+                "Precise Editing Permissions",
+                "Customizable Sharing Options"
+            ]
+        },
+        {
+            title: "Collaborative Flexibility",
+            description: "While prioritizing security, Empress's system also provides the flexibility needed for effective team collaboration, allowing controlled access to shared documents.",
+            listItems: [
+                "Balance Security with Collaboration",
+                "Controlled Access for Team Members",
+                "Effective Collaborative Environment"
+            ]
+        },
+        {
+            title: "Data Security Assurance",
+            description: "Empress's advanced sharing features come with robust security measures to protect against unauthorized access, ensuring the integrity and safety of business data.",
+            listItems: [
+                "Robust Security Measures",
+                "Protection Against Unauthorized Access",
+                "Assured Data Integrity"
+            ]
+        },
+        {
+            title: "Regulatory Compliance and Confidentiality",
+            description: "The system is designed to help businesses meet regulatory compliance requirements regarding data sharing and confidentiality, making it ideal for sectors handling sensitive information.",
+            listItems: [
+                "Meet Regulatory Compliance",
+                "Ideal for Sensitive Sectors",
+                "Enforce Data Confidentiality"
+            ]
+        },
+        {
+            title: "User Access Management",
+            description: "Efficiently manage user roles and access levels, streamlining how permissions are assigned and maintained across your organization.",
+            listItems: [
+                "Manage User Roles",
+                "Streamline Permission Assignments",
+                "Efficient Access Level Management"
+            ]
+        }
+    ]
+},
+{
+    header: {
+        mainTitle: "Comprehensive Access Management",
+        subTitle: "Secure and Controlled Document Access",
+        description: "Securely manage documents and limit accessibility to authorized personnel, safeguarding confidential data."
+    },
+    featureSections: [
+        {
+            title: "Streamlined Access Control",
+            description: "Empress provides an intuitive system for controlling access to documents, making it simple to manage who can view, edit, or share sensitive business information.",
+            listItems: [
+                "Intuitive Access Control System",
+                "Manage Viewing and Editing Rights",
+                "Simplified Sharing Management"
+            ]
+        },
+        {
+            title: "Enhanced Data Security",
+            description: "The platform's robust access management capabilities play a crucial role in enhancing the security of your business data, particularly for sensitive and confidential documents.",
+            listItems: [
+                "Robust Data Security Measures",
+                "Protection for Sensitive Documents",
+                "Prevent Unauthorized Access"
+            ]
+        },
+        {
+            title: "Confidentiality Assurance",
+            description: "Empress's access management tools ensure that confidentiality is maintained, making it an ideal solution for businesses that prioritize data privacy and compliance.",
+            listItems: [
+                "Maintain Document Confidentiality",
+                "Ideal for Compliance-Driven Businesses",
+                "Assure Data Privacy"
+            ]
+        },
+        {
+            title: "Customizable Permission Settings",
+            description: "Set up custom permission settings for different users and groups, tailoring access according to the specific needs and roles within your organization.",
+            listItems: [
+                "Tailored User Permissions",
+                "Custom Settings for User Groups",
+                "Adaptable to Organizational Needs"
+            ]
+        },
+        {
+            title: "Visibility Control for Documents",
+            description: "Manage the visibility of your documents effectively, ensuring that team members have access only to the information pertinent to their roles.",
+            listItems: [
+                "Effective Document Visibility Management",
+                "Role-Based Information Access",
+                "Controlled Document Exposure"
+            ]
+        },
+        {
+            title: "Audit and Compliance Readiness",
+            description: "The access management system aids in maintaining audit readiness, keeping track of document access history and ensuring compliance with various regulatory standards.",
+            listItems: [
+                "Maintain Audit Readiness",
+                "Track Document Access History",
+                "Ensure Regulatory Compliance"
+            ]
+        }
+    ]
+},
+];
+
+
+
+
+
+---
+
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="Experience Features"
+  description="Your site description goes here"
+  canonical="https://www.lexingtonthemes.com"
+  openGraph={{
+    url: "https://www.lexingtonthemes.com",
+    title: "Open Graph Title",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "YourSitesName",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@site",
+    cardType: "summary_large_image",
+  }}
+/>
+
+
+
+
+<BaseLayout>
+
+ 
+   <!-- NAVIGATION BAR -->
+
+   <nav style="background-color: #fff; box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <img src={navLinks[0].logo} alt="Logo" style="height: 32px; width: auto;" />
+        <a href={navLinks[0].link} 
+          class="inline-flex items-center justify-center font-medium"
+          style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+          onmouseover="this.style.color='#333';"
+          onmouseout="this.style.color='#5046e4';">
+          {navLinks[0].title}
+        </a>
+      </div>
+      <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+        {navLinks.slice(1).map(link => (
+          <li key={link.href}>
+            <a href={link.href} 
+              class="inline-flex items-center justify-center font-medium"
+              style="text-decoration: none; color: #5046e4; font-weight: 500; transition: color 0.2s ease;"
+              onmouseover="this.style.color='#333';"
+              onmouseout="this.style.color='#5046e4';">
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+
+  
+  
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-32 items-center">
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
+          <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-8 text-3xl">
+            {feature.header.mainTitle}
+           </h2>
+           <p class="mt-4 text-slate-600 text-lg">
+            {feature.header.description}
+        </p>
+          <div class="mt-16">
+            {feature.featureSections.map((section, index) => (
+              <div key={index} class="lg:col-span-3 lg:col-start-3">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                  <div class="bg-slate-50 border-l-2 border-blue-500">
+                    <div class="p-6 border-t">
+                      <p class="font-semibold text-purple-900">{section.title}</p>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l border-l-0">
+                    <p class="text-slate-500 text-sm">{section.description}</p>
+                  </div>
+                  <div class="lg:col-span-1 p-6 border-t lg:border-l">
+                    <ul role="list" class="order-last flex flex-col gap-y-3 text-sm text-slate-500">
+                      {section.listItems.map((item, itemIndex) => (
+                        <li key={itemIndex} class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M9 12l2 2l4 -4"></path>
+                          </svg>
+                          <span class="ml-4">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {featureIndex < features.length - 1 && (
+            <div class="grid grid-cols-1 lg:grid-cols-5 pt-8 border-t"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+  <CtaOne />
+</BaseLayout>
