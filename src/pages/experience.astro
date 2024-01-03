@@ -68,12 +68,10 @@ const displayImage = {
 };
 
 // FeatureOne
-
-// FeatureOne
 const featureOne = {
   mainContent: {
     title: "Intuitive Ticket Management",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/experience/3.png",
     subtitle: "Simplify Every Interaction",
     paragraphs: [
       "Discover the art of simplicity with Empress. Our intuitive ticket management system effortlessly organizes customer inquiries, transforming challenges into seamless experiences."
@@ -94,7 +92,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Unified Multi-Channel Engagement",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/experience/4.png",
     subtitle: "Engage Customers on Every Front",
     paragraphs: [
       "Empress brings your customer conversations into harmony. Engage across channels with our unified platform, ensuring every customer feels heard and valued."
@@ -115,7 +113,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Empower with Knowledge",
-    img: "/images/dashboard.jpg",
+    img: "/images/apps/experience/5.png",
     subtitle: "Put Knowledge at Their Fingertips",
     paragraphs: [
       "Empress reimagines customer independence. Our Knowledge Base and Customer Portal put the power of information in your customers' hands, fostering confidence and autonomy."
@@ -485,11 +483,13 @@ const faqs = {
         </div>
       </div>
     </div>
-    <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="lg:w-1/2">
+        <div class="flex justify-right items-center lg:mt-10 mt-10">
+          <div class="w-full lg:w-[175%] flex-shrink-0">
+            <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
+          </div>
         </div>
+      </div>   
       </div>
     </div>
   </div>
@@ -499,13 +499,13 @@ const faqs = {
 
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
-    <div class="lg:w-1/2 lg:order-first">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+    <div class="lg:w-1/2">
+      <div class="flex justify-center lg:justify-end items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" class="w-full h-auto lg:object-cover drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>  
     <div class="lg:w-1/2 lg:pr-12">
       <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
         <div>
@@ -624,16 +624,19 @@ const faqs = {
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-right items-center lg:mt-10 mt-10">
+        <div class="w-full lg:w-[175%] flex-shrink-0">
+          <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto drop-shadow-2xl rounded-t-3xl ring-slate-200" />
         </div>
       </div>
-    </div>
+    </div>    
   </div>
 </section>
 
 <GetStarted/>
+
+
+
 
   <!-- Section Five -->
   
@@ -737,8 +740,8 @@ const faqs = {
     </div>
   </section>
 
-  
-    <Ecosystem/>  
+  <Ecosystem/>  
+
 
   
 
