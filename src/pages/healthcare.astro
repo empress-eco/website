@@ -82,12 +82,87 @@ const displayImage = {
   imageSrc: "/images/dashboard.jpg"
 };
 
+const sectionTwo = {
+  mainContent: {
+    title: "Revolutionize Healthcare Management",
+    subtitle: "Improving Care, Enhancing Outcomes",
+    paragraphs: [
+      "Empower your healthcare organization with Empress's comprehensive platform, delivering integrated solutions for every aspect of patient care and administrative management.",
+      "From improving patient engagement to streamlining clinical workflows, our suite of innovative tools is designed to enhance healthcare delivery and operational effectiveness."
+    ],
+    linkText: "Discover Empress",
+    linkHref: "/os"
+  },
+  listItems: [
+    {
+      title: "Establish Your Online Presence",
+      description: "Create an engaging online platform for your healthcare services using our easy-to-use website builder, enhancing patient interaction and online visibility.",
+      linkHref: "/build",
+      linkTitle: "Build with Empress"
+    },
+    {
+      title: "Streamline Healthcare Workflows",
+      description: "Utilize Empress to automate and optimize healthcare processes, from patient intake to treatment and discharge, improving efficiency and patient care.",
+      linkHref: "/manage",
+      linkTitle: "Manage with Empress"
+    },
+    {
+      title: "Elevate Patient Experience",
+      description: "Enhance patient engagement and satisfaction with our digital suite, offering personalized care and interactive health management solutions.",
+      linkHref: "/experience",
+      linkTitle: "Experience with Empress"
+    },
+    {
+      title: "Improve Healthcare Service Sales",
+      description: "Boost your healthcare facility’s growth with effective marketing and patient outreach strategies, leveraging Empress to enhance service offerings.",
+      linkHref: "/sell",
+      linkTitle: "Sell with Empress"
+    },
+    {
+      title: "Optimize Financial Management in Healthcare",
+      description: "Empress provides advanced analytics and tools for effective financial management in healthcare, ensuring smart budgeting and resource allocation.",
+      linkHref: "/finance",
+      linkTitle: "Finance with Empress"
+    },
+    {
+      title: "Empower Your Healthcare Staff",
+      description: "Enhance your healthcare team’s performance with our talent management solutions, focusing on training, retention, and operational excellence.",
+      linkHref: "/talent",
+      linkTitle: "Talent with Empress"
+    },
+    {
+      title: "Improve Healthcare Communications",
+      description: "Streamline communication within your healthcare organization, ensuring efficient collaboration and information sharing among medical professionals.",
+      linkHref: "/connect",
+      linkTitle: "Connect with Empress"
+    },
+    {
+      title: "Collaborate on Healthcare Initiatives",
+      description: "Facilitate effective teamwork and information management in healthcare projects, enhancing cooperative care and operational workflows.",
+      linkHref: "/share",
+      linkTitle: "Share with Empress"
+    },
+    {
+      title: "Centralize Healthcare Information",
+      description: "Organize and manage medical records and healthcare data efficiently, ensuring easy access and compliance with healthcare standards.",
+      linkHref: "/document",
+      linkTitle: "Document with Empress"
+    },
+    {
+      title: "Advance Healthcare Education",
+      description: "Elevate training for healthcare professionals with our interactive and tailored learning platform, enhancing clinical skills and medical knowledge.",
+      linkHref: "/learn",
+      linkTitle: "Learn with Empress"
+    },
+  ]
+};
+
 
 // FeatureOne
 const featureOne = {
   mainContent: {
     title: "Healthcare Management",
-    img: "/images/dashboard.jpg",
+    img: "/images/solutions/healthcare/1.svg",
     subtitle: "Coordinate Your Patient Care",
     paragraphs: [
       "Empress redefines patient management with integrated solutions that streamline patient intake, treatment planning, and follow-up care."
@@ -109,7 +184,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Optimize Operations",
-    img: "/images/dashboard.jpg",
+    img: "/images/solutions/healthcare/2.svg",
     subtitle: "Streamline Your Healthcare",
     paragraphs: [
       "Empress helps optimize operational efficiency in healthcare, managing care with our all-in-one solutions."
@@ -132,7 +207,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Data-Driven Analytics",
-    img: "/images/dashboard.jpg",
+    img: "/images/solutions/healthcare/3.svg",
     subtitle: "Insightful Patient Care Decisions",
     paragraphs: [
       "Empress transforms healthcare data into actionable insights, supporting evidence-based decisions and personalized care strategies."
@@ -578,11 +653,71 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-24">
+      <div class="lg:w-1/2 lg:pr-12">
+        <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+          <div>
+            <div class="lg:pl-24 md:pl-12">
+              <h2 class="inline-flex items-center text-blue-600">
+                <span class="text-base font-medium tracking-tight">{sectionTwo.mainContent.title}</span>
+              </h2>
+              <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+                {sectionTwo.mainContent.subtitle}
+              </h2>
+              {sectionTwo.mainContent.paragraphs.map(paragraph => (
+                <p class="text-slate-500 mt-5">{paragraph}</p>
+              ))}
+              <p class="mt-5">
+                <a href={sectionTwo.mainContent.linkHref} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                  {sectionTwo.mainContent.linkText}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2 lg:order-first">
+        <div class="flex-shrink-0">
+          <div>
+            <ul role="list" class="grid grid-cols-1 gap-12 lg:gap-24 list-none mt-24">
+              {sectionTwo.listItems.map(item => (
+                <li>
+                  <div>
+                    <p class="text-purple-900 font-semibold tracking-tighter text-3xl">{item.title}</p>
+                  </div>
+                  <div class="mt-2 text-slate-500">{item.description}</div>
+                  <p class="mt-5">
+                    <a href={item.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                      {item.linkTitle}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+                    </a>
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   
 
   <!-- Header -->
 
-  <section>
+  <!-- <section>
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
       <div class="lg:text-center">
         <h2 class="inline-flex items-center text-blue-600">
@@ -597,11 +732,11 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <img src={displayImage.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
       </div>
     </div>
-  </section>
+  </section> -->
   
 
 
-  <!-- FeatureOne -->
+    <!-- FeatureOne -->
 
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
@@ -660,12 +795,19 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-center items-center lg:mt-0 mt-0">
+        <div class="w-full lg:w-[130%] flex-shrink-0">
+          <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
       </div>
-    </div>
+    </div> 
+    <!-- <div class="lg:w-1/2">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureOne.mainContent.img} alt="Dashboard" />
+        </div>
+      </div>
+    </div> -->
   </div>
 </section>
 
@@ -674,9 +816,9 @@ Use AstroSeo in all the pages you want different Seo than the index page
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
     <div class="lg:w-1/2 lg:order-first">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-center items-center lg:mt-0 mt-0">
+        <div class="w-full lg:w-[125%] flex-shrink-0">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
       </div>
     </div>
@@ -798,12 +940,12 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-center items-center lg:mt-0 mt-0">
+        <div class="w-full lg:w-[130%] flex-shrink-0">
+          <img src={featureThree.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 </section>
   

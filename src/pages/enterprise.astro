@@ -82,11 +82,88 @@ const displayImage = {
   imageSrc: "/images/dashboard.jpg"
 };
 
+const sectionTwo = {
+  mainContent: {
+    title: "Empower Your Enterprise",
+    subtitle: "Drive Business Excellence with Advanced Solutions",
+    paragraphs: [
+      "Empower your enterprise with Empress's comprehensive platform, offering advanced solutions to streamline business processes and elevate operational efficiency.",
+      "From managing complex workflows to enhancing customer engagement, our suite of tools is designed to meet the diverse needs of modern enterprises."
+    ],
+    linkText: "Discover Empress",
+    linkHref: "/os"
+  },
+  listItems: [
+    {
+      title: "Bring Your Enterprise Online",
+      description: "Develop a dynamic online presence for your enterprise, showcasing your services and engaging with clients and stakeholders effectively.",
+      linkHref: "/build",
+      linkTitle: "Build with Empress"
+    },
+    {
+      title: "Streamline Enterprise Operations",
+      description: "Leverage Empress to optimize your business processes, enhancing efficiency across departments and functions in your enterprise.",
+      linkHref: "/manage",
+      linkTitle: "Manage with Empress"
+    },
+    {
+      title: "Elevate Customer and Client Services",
+      description: "Transform your customer and client interactions with our innovative digital suite, fostering deeper engagement and lasting business relationships.",
+      linkHref: "/experience",
+      linkTitle: "Experience with Empress"
+    },
+    {
+      title: "Enhance Business Development",
+      description: "Drive your enterprise’s growth and expand market reach with strategic sales processes and customer relationship management.",
+      linkHref: "/sell",
+      linkTitle: "Sell with Empress"
+    },
+    {
+      title: "Optimize Financial Management",
+      description: "Employ advanced analytics and tools from Empress for strategic financial planning, budgeting, and resource allocation in your enterprise.",
+      linkHref: "/finance",
+      linkTitle: "Finance with Empress"
+    },
+    {
+      title: "Develop a High-Performing Workforce",
+      description: "Utilize our talent management solutions to build and sustain a skilled team, enhancing productivity and innovation in your enterprise.",
+      linkHref: "/talent",
+      linkTitle: "Talent with Empress"
+    },
+    {
+      title: "Streamline Enterprise Communication",
+      description: "Facilitate seamless internal and external communication within your enterprise, ensuring efficient collaboration and project management.",
+      linkHref: "/connect",
+      linkTitle: "Connect with Empress"
+    },
+    {
+      title: "Collaborate Effectively in Business Projects",
+      description: "Enhance collaboration and information sharing in business projects, boosting teamwork and operational efficiency in your enterprise.",
+      linkHref: "/share",
+      linkTitle: "Share with Empress"
+    },
+    {
+      title: "Organize Business Information",
+      description: "Manage your enterprise’s critical information effectively, ensuring easy access and decision-making efficiency with our document management tools.",
+      linkHref: "/document",
+      linkTitle: "Document with Empress"
+    },
+    {
+      title: "Advance Corporate Training",
+      description: "Elevate the skills and knowledge of your enterprise team with our interactive and customizable learning platform, tailored to business needs.",
+      linkHref: "/learn",
+      linkTitle: "Learn with Empress"
+    },
+  ]
+};
+
+
+
 // FeatureOne
 const featureOne = {
   mainContent: {
     title: "Unify Your Systems",
-    img: "/images/dashboard.jpg",
+    img: "/images/solutions/enterprise/1.svg",
     subtitle: "Connect Your Operations",
     paragraphs: [
       "Empress sets a new standard for enterprise integration, offering a unified platform that brings together diverse business functions into a harmonious ecosystem."
@@ -107,7 +184,7 @@ const featureOne = {
 const featureTwo = {
   mainContent: {
     title: "Intelligent Analytics",
-    img: "/images/dashboard.jpg",
+    img: "/images/solutions/enterprise/4.svg",
     subtitle: "Drive Decisions with Smarter Data",
     paragraphs: [
       "Empress reimagines data analytics, providing enterprises with the insights needed to make informed, strategic decisions that propel growth and efficiency."
@@ -128,7 +205,7 @@ const featureTwo = {
 const featureThree = {
   mainContent: {
     title: "Scale Your Management",
-    img: "/images/dashboard.jpg",
+    img: "/images/solutions/enterprise/3.svg",
     subtitle: "Optimize Your Performance",
     paragraphs: [
       "Empress is engineered for scalability, ensuring that as your enterprise grows, our solutions evolve in tandem, supporting your journey every step of the way."
@@ -573,11 +650,70 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
   </section>
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-24">
+      <div class="lg:w-1/2 lg:pr-12">
+        <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
+          <div>
+            <div class="lg:pl-24 md:pl-12">
+              <h2 class="inline-flex items-center text-blue-600">
+                <span class="text-base font-medium tracking-tight">{sectionTwo.mainContent.title}</span>
+              </h2>
+              <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
+                {sectionTwo.mainContent.subtitle}
+              </h2>
+              {sectionTwo.mainContent.paragraphs.map(paragraph => (
+                <p class="text-slate-500 mt-5">{paragraph}</p>
+              ))}
+              <p class="mt-5">
+                <a href={sectionTwo.mainContent.linkHref} class="inline-flex items-center justify-center px-4 py-2 rounded-full font-medium mr-4" style="background-color: #5046e4; color: #fff; border: 1px solid #6767ff; border-radius: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7); transition: all 0.2s ease; font-size: 0.875rem; height: 2.625rem;">
+                  {sectionTwo.mainContent.linkText}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2 lg:order-first">
+        <div class="flex-shrink-0">
+          <div>
+            <ul role="list" class="grid grid-cols-1 gap-12 lg:gap-24 list-none mt-24">
+              {sectionTwo.listItems.map(item => (
+                <li>
+                  <div>
+                    <p class="text-purple-900 font-semibold tracking-tighter text-3xl">{item.title}</p>
+                  </div>
+                  <div class="mt-2 text-slate-500">{item.description}</div>
+                  <p class="mt-5">
+                    <a href={item.linkHref} class="text-blue-500 hover:text-blue-600 inline-flex items-center group">
+                      {item.linkTitle}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-4 h-4 ml-3 group-hover:translate-x-2 transition duration-500 ease-in-out transform">
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+                    </a>
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
 
   <!-- Header -->
 
-  <section>
+  <!-- <section>
     <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
       <div class="lg:text-center">
         <h2 class="inline-flex items-center text-blue-600">
@@ -592,7 +728,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
         <img src={displayImage.imageSrc} alt="thumbnail" class="drop-shadow-2xl rounded-t-2xl w-full ring-1 ring-slate-200" />
       </div>
     </div>
-  </section>
+  </section> -->
   
 
 
@@ -655,12 +791,19 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureOne.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-center items-center lg:mt-0 mt-0">
+        <div class="w-full lg:w-[135%] flex-shrink-0">
+          <img src={featureOne.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
       </div>
-    </div>
+    </div> 
+    <!-- <div class="lg:w-1/2">
+      <div class="flex-shrink-0 mt-10">
+        <div style="flex-shrink: 0;">
+          <img src={featureOne.mainContent.img} alt="Dashboard" />
+        </div>
+      </div>
+    </div> -->
   </div>
 </section>
 
@@ -669,9 +812,9 @@ Use AstroSeo in all the pages you want different Seo than the index page
 <section class="bg-white">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 lg:flex py-14">
     <div class="lg:w-1/2 lg:order-first">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureTwo.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-center items-center lg:mt-0 mt-0">
+        <div class="w-full lg:w-[115%] flex-shrink-0">
+          <img src={featureTwo.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
       </div>
     </div>
@@ -793,68 +936,15 @@ Use AstroSeo in all the pages you want different Seo than the index page
       </div>
     </div>
     <div class="lg:w-1/2">
-      <div class="flex-shrink-0 mt-10">
-        <div style="flex-shrink: 0;">
-          <img src={featureThree.mainContent.img} alt="Dashboard" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);" />
+      <div class="flex justify-center items-center lg:mt-0 mt-0">
+        <div class="w-full lg:w-[130%] flex-shrink-0">
+          <img src={featureThree.mainContent.img} alt="Dashboard" class="w-full h-auto" />
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 </section>
   
-
-  <!-- Dark Background -->
-
-
-<GetStarted/>
-
-
-  <!-- Information -->
-
-  <section aria-labelledby="feature-four" id="feature-four">
-    <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24 items-center">
-      <div>
-        <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl text-3xl w-1/2">
-          {overview.title}
-        </h2>
-        <div class="mx-auto text-left mt-12">
-          <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2">
-            {overview.paragraphs.map((paragraph, index) => (
-              <div key={index}>
-                <p class="text-slate-500">{paragraph}</p>
-              </div>
-            ))}
-          </div>
-          <div class="lg:gap-12 grid grid-cols-1 lg:grid-cols-2 mt-24">
-            <div>
-              <h2 class="text-purple-900 font-semibold tracking-tighter lg:text-5xl mt-6 text-3xl">
-                {overview.secondaryTitle}
-              </h2>
-              <p class="text-slate-500 mt-4">
-                {overview.secondaryParagraph}
-              </p>
-              <blockquote class="text-slate-500 mt-4">
-                <p class="font-medium">
-                  {overview.quote}
-                </p>
-              </blockquote>
-              <p class="mt-12">
-                <a href={overview.callToAction.link}
-                  class="text-blue-600 font-semibold hover:text-purple-900 text-sm inline-flex items-center group">
-                  {overview.callToAction.text} &nbsp; &rarr;
-                </a>
-              </p>
-            </div>
-            <div class="relative overflow-hidden rounded-2xl p-8 shadow-xl lg:py-12 h-full">
-              <div class="absolute inset-0">
-                <img src={overview.image} alt="" class="h-full w-full object-cover"/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- Use Cases -->
