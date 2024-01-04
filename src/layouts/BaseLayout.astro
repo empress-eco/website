@@ -10,6 +10,16 @@ import MobileNavbar from "../components/global/mobile-navbar.astro";
   class="scroll-smooth selection:bg-blue-500 selection:text-white">
   <head>
     <BaseHead />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNXZRTZ77S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BNXZRTZ77S');
+    </script>
   </head>
 
   <body class="bg-white">
@@ -43,3 +53,5 @@ import MobileNavbar from "../components/global/mobile-navbar.astro";
       </script>
   </body>
 </html>
+
+
